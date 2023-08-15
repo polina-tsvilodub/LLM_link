@@ -35,14 +35,20 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
 
 **Measurements we could use:** 
 1. Models can see all options
-    1.1. Proportion of generated Responses (baseline, directly comparable to human data); 
-    1.2. Surprisal of generated Responses
+    1.1. Proportion of generated Responses (start point); 
+    1.2. Surprisal of generated Responses (baseline, directly comparable to human data)
 2. Models can only see the critical response (i.e. non-literal meaning)
     2.1. Ask models the categorical likelihood of that reading (proportion)
     2.2. Surprisal of embedded Responses
 3. Models see nothing
     3.1. Ask the model for its interpretation and manually annotate them into categories
+    3.2. Look at the embeddings?
 
+4 Measurements (), 3 tasks, 3 models, 40 Sätze * 5 mal (HW: statistisch power)
+4 * 3 * 3 * 200 (HW: Schätzung von Zeit)
+
+40 Sätze * 10 mal (Durchgänge) * 5 mal (Durchläufe)
+40 Sätze * 30 PPs (1 Durchlauf)
 ## Data Analysis
 
 ## Writing
@@ -60,4 +66,14 @@ Until 10 Days: First draft of manuscript.
 Until 10 Days: Send a manuscript to Michael, and schedule a meeting with Michael
 
 Until 7 Days: Meet with Michael
+
+## Meeting & TODO:
+
+### 15.08.2023
+
+We discussed choices of models, tasks, measurements. We come to an agreement in the end (see section Programming). And make an initial plan for concrete implementation.
+
+**TODO:**
+Sharon will start with Proportion of generated Responses (start point) on Maxim using Model of OPENAI. 
+Hening will look for options using other models and think about how to implement other measurements.
 
