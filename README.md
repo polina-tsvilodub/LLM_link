@@ -29,7 +29,20 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
 
 **Data analysis methods:** "For each item, we computed the human empirical distribution over answer choices, and compared it to **models' probability assigned to the answer tokens**"
 ## Programming 
-**Models we could test:** InstructGPT (text-davinci-002, based on GPT3.5), Flan-T5-xl, LIAMA-2-7B (free, but it takes some effort to build them locally)
+**Models we could test:** InstructGPT (text-davinci-002, based on GPT3.5), Flan-T5-xxl, LLAMA-2-7B (free, but it takes some effort to build them locally), tkinstruct-3B
+
+**Tasks:** Humor, Irony, Conversational Maxims (start with Conversational Maxims?)
+
+**Measurements we could use:** 
+1. Models can see all options
+    1.1 Proportion of generated Responses (baseline, directly comparable to human data); 
+    1.2 Surprisal of generated Responses
+2. Models can only see the critical response (i.e. non-literal meaning)
+    2.1 Ask models the categorical likelihood of that reading (proportion)
+    2.2 Surprisal of embedded Responses
+3. Models see nothing
+    3.1 Ask the model for its interpretation and manually annotate them into categories
+
 ## Data Analysis
 
 ## Writing
@@ -47,3 +60,4 @@ Until 10 Days: First draft of manuscript.
 Until 10 Days: Send a manuscript to Michael, and schedule a meeting with Michael
 
 Until 7 Days: Meet with Michael
+
