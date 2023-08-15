@@ -32,7 +32,12 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
 
 **Deadline: 01.09.2023, Countdown: 17 Days**
 
-Today to u. 14 Days: Make a concrete plan about which phenomena we are going to investigate and start a scratch for scripts (i.e. set up methods)
-Until 14 Days: First draft of manuscript
+Today to u. 15 Days: Make a concrete plan about which phenomena we are going to investigate and start a scratch for scripts (i.e. set up methods)
+
+Until 13 Days: First data.
+
+Until 10 Days: First draft of manuscript.
+
 Until 10 Days: Send a manuscript to Michael, and schedule a meeting with Michael
+
 Until 7 Days: Meet with Michael
