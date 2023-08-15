@@ -35,13 +35,13 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
 
 **Measurements we could use:** 
 1. Models can see all options
-    1.1 Proportion of generated Responses (baseline, directly comparable to human data); 
-    1.2 Surprisal of generated Responses
+    1.1. Proportion of generated Responses (baseline, directly comparable to human data); 
+    1.2. Surprisal of generated Responses
 2. Models can only see the critical response (i.e. non-literal meaning)
-    2.1 Ask models the categorical likelihood of that reading (proportion)
-    2.2 Surprisal of embedded Responses
+    2.1. Ask models the categorical likelihood of that reading (proportion)
+    2.2. Surprisal of embedded Responses
 3. Models see nothing
-    3.1 Ask the model for its interpretation and manually annotate them into categories
+    3.1. Ask the model for its interpretation and manually annotate them into categories
 
 ## Data Analysis
 
