@@ -9,21 +9,20 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
 
 **Questions:**
 1. Why only text-davinci-002 is better than other models in all phenomena? (The role of RLHF?)
-2. Why coherence is the only phenomenon that all models are good at? What linguistic features distinguish it from other phenomena?
-3. The performance of other models for other phenomena is basically under at chance level. Could it be overcome with different link functions?
-4. They report that models are bad at Humor, Irony, and Maxim. They provide a possible explanation that listeners in those tasks need to explicit reason about speakers' mental state representations. May adding an RSA-like module (or in general a module using fine-tuning that separates pragmatic reasoning from semantic computation, since they can capture the literal meaning quite well) could lead to improvement? 
-5. It seems that the performance is correlated with the size of the parameters. 
-6. The prompt they used to 
+2. Why coherence is the only phenomenon that all models are good at? What linguistic features distinguish it from other phenomena?  
+3. The performance of other models for other phenomena is basically under at chance level. Could it be overcome with different link functions?  
+4. They report that models are bad at Humor, Irony, and Maxim. They provide a possible explanation that listeners in those tasks need to explicit reason about speakers' mental state representations. May adding an RSA-like module (or in general a module using fine-tuning that separates pragmatic reasoning from semantic computation,  since they can capture the literal meaning quite well) could lead to improvement?  
+5. It seems that the performance is correlated with the size of the parameters.   
 ### Reading Hu et al. (2023)
-**About why they add more binary options:** "However, prior empirical studies have primarily evaluated LMs based on a binary distinction between pragmatic and non-pragmatic responses, providing limited insights into models’ weaknesses. A model could fail to reach the target pragmatic interpretation in multiple ways – for example, by preferring a literal interpretation, or by preferring a non-literal interpretation that violates certain social norms." The value reveals itself when it comes to the results of Humor.
+**About why they add more binary options:** "However, prior empirical studies have primarily evaluated LMs based on a binary distinction between pragmatic and non-pragmatic responses, providing limited insights into models’ weaknesses. A model could fail to reach the target pragmatic interpretation in multiple ways – for example, by preferring a literal interpretation, or by preferring a non-literal interpretation that violates certain social norms." The value reveals itself when it comes to the results of Humor.  
 
-**Prompts they used:** zero-shot prompting 1. Task + 2. Scenario (i.e. stimuli human participants read) + 3. Options (HW: How is this zero-shot?); Scenario consists of 1. Cover story + 2. Utterance (critical linguistic stimuli) + 3. Question
+**Prompts they used:** zero-shot prompting 1. Task + 2. Scenario (i.e. stimuli human participants read) + 3. Options (HW: How is this zero-shot?); Scenario consists of 1. Cover story + 2. Utterance (critical linguistic stimuli) + 3. Question  
 
 **Models they tested:** Among others (GPT-2, Tk-Instruct, Flan-T5-xl, InstructGPT), Flan-T5 and InstructGPT (text-davinci-002, based on GPT3.5) achieve better results.
 
-**Results they achieved:** Preliminary results show that models and humans are "sensitive" (HW: that's very arbitrary) to similar (HW: Here come link functions) linguistic cues. Models are bad at humor, irony and conversational maxims. (HW: May we should look at these tasks first? Because it's easy to achieve an improvement and such improvements are more interesting for practical reasons.) 
+**Results they achieved:** Preliminary results show that models and humans are "sensitive" (HW: that's very arbitrary) to similar (HW: Here come link functions) linguistic cues. Models are bad at humor, irony and conversational maxims. (HW: May we should look at these tasks first? Because it's easy to achieve an improvement and such improvements are more interesting for practical reasons.)  
 
-**Questions they asked:** 1. if models can recover pragmatic interpretation (qualitatively); 2. if not, what errors do they make (the role of distractors); 3. do models and humans use similar cues (HW: How to understand cues?)
+**Questions they asked:** 1. if models can recover pragmatic interpretation (qualitatively); 2. if not, what errors do they make (the role of distractors); 3. do models and humans use similar cues (HW: How to understand cues?)  
 
 **About similar cues:** 1. with or without a cover story; 2. with or without scrambling (against compositionality of nature language); 3. by item random effect
 
@@ -34,21 +33,23 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
 **Tasks:** Humor, Irony, Conversational Maxims (start with Conversational Maxims?)
 
 **Measurements we could use:** 
-1. Models can see all options
-    1.1. Proportion of generated Responses (start point); 
-    1.2. Surprisal of generated Responses (baseline, directly comparable to human data)
-2. Models can only see the critical response (i.e. non-literal meaning)
-    2.1. Ask models the categorical likelihood of that reading (proportion)
-    2.2. Surprisal of embedded Responses
-3. Models see nothing
-    3.1. Ask the model for its interpretation and manually annotate them into categories
-    3.2. Look at the embeddings?
+1. Models can see all options  
+    1.1. Proportion of generated Responses (start point, directly comparable to human data);   
+    1.2. Surprisal of generated Responses (continuous variable instead of discrete)  
+    1.3 Categorise response according to their conditional probability (baseline, very similar to 1.1)  
+2. Models can only see the critical response (i.e. non-literal meaning)  
+    2.1. Ask models for the categorical likelihood of that reading (proportion)  
+    2.2. Surprisal of embedded Responses  
+3. Models see nothing  
+    3.1. Ask the model for its interpretation and manually annotate them into categories  
+    3.2. Look at word embeddings?  
 
-4 Measurements (), 3 tasks, 3 models, 40 Sätze * 5 mal (HW: statistisch power)
-4 * 3 * 3 * 200 (HW: Schätzung von Zeit)
+**How many trials per experiment run, and how many runs:**
+4 Measurements (), 3 tasks, 3 models, 40 Sätze * 5 mal (HW: statistisch power)  
+4 * 3 * 3 * 200 (HW: Schätzung von Zeit)  
 
-40 Sätze * 10 mal (Durchgänge) * 5 mal (Durchläufe)
-40 Sätze * 30 PPs (1 Durchlauf)
+40 Sätze * 10 mal (Durchgänge) * 5 mal (Durchläufe)  
+40 Sätze * 30 PPs (1 Durchlauf)  
 ## Data Analysis
 
 ## Writing
