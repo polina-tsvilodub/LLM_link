@@ -16,11 +16,17 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
 6. The prompt they used to 
 ### Reading Hu et al. (2023)
 **About why they add more binary options:** "However, prior empirical studies have primarily evaluated LMs based on a binary distinction between pragmatic and non-pragmatic responses, providing limited insights into models’ weaknesses. A model could fail to reach the target pragmatic interpretation in multiple ways – for example, by preferring a literal interpretation, or by preferring a non-literal interpretation that violates certain social norms." The value reveals itself when it comes to the results of Humor.
+
 **Prompts they used:** zero-shot prompting 1. Task + 2. Scenario (i.e. stimuli human participants read) + 3. Options (HW: How is this zero-shot?); Scenario consists of 1. Cover story + 2. Utterance (critical linguistic stimuli) + 3. Question
+
 **Models they tested:** Among others (GPT-2, Tk-Instruct, Flan-T5-xl, InstructGPT), Flan-T5 and InstructGPT (text-davinci-002, based on GPT3.5) achieve better results.
+
 **Results they achieved:** Preliminary results show that models and humans are "sensitive" (HW: that's very arbitrary) to similar (HW: Here come link functions) linguistic cues. Models are bad at humor, irony and conversational maxims. (HW: May we should look at these tasks first? Because it's easy to achieve an improvement and such improvements are more interesting for practical reasons.) 
+
 **Questions they asked:** 1. if models can recover pragmatic interpretation (qualitatively); 2. if not, what errors do they make (the role of distractors); 3. do models and humans use similar cues (HW: How to understand cues?)
+
 **About similar cues:** 1. with or without a cover story; 2. with or without scrambling (against compositionality of nature language); 3. by item random effect
+
 **Data analysis methods:** "For each item, we computed the human empirical distribution over answer choices, and compared it to **models' probability assigned to the answer tokens**"
 ## Programming 
 **Models we could test:** InstructGPT (text-davinci-002, based on GPT3.5), Flan-T5-xl, LIAMA-2-7B (free, but it takes some effort to build them locally)
