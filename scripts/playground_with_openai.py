@@ -1,6 +1,5 @@
 import openai
 
-openai.api_key = "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"
 
 # Set the prompt you want the model to complete
 prompt = "Once upon a time, in a land far away,"
