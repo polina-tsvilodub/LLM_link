@@ -45,6 +45,7 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
     3.2. Look at word embeddings?  
 
 **How many trials per experiment run, and how many runs:**
+There are in total of 20 items for Maxims, 
 4 Measurements (), 3 tasks, 3 models, 40 Sätze * 5 mal (HW: statistisch power)  
 4 * 3 * 3 * 200 (HW: Schätzung von Zeit)  
 
@@ -56,7 +57,7 @@ The questions Hu et al. asked are related to the presence of pragmatic ability (
 
 ## Time Plan
 
-**Deadline: 01.09.2023, Countdown: 17 Days**
+**Deadline: 01.09.2023, Countdown: 15 Days**
 
 Today to u. 15 Days: Make a concrete plan about which phenomena we are going to investigate and start a scratch for scripts (i.e. set up methods)
 
@@ -77,4 +78,14 @@ We discussed choices of models, tasks, measurements. We come to an agreement in 
 **TODO:**
 Sharon will start with Proportion of generated Responses (start point) on Maxim using Model of OPENAI. 
 Hening will look for options using other models and think about how to implement other measurements.
+
+### 17.08.2023
+
+Sharon can successfully get OpenAI API working and Hening locally installed Flan-t5-xl with Huggingface and LLAMA-2-7B with Ollama.  
+We took a closer look at Hu et al.'s scripts and results. We determined that Hu et al. employed a decoding scheme that essentially corresponds to a Greedy Search with randomly ordered options for generating responses. This is very close to our intended approach, where we aim to utilize a straightforward Greedy Search for generating responses (perhaps just looking at a single seed? TODO: Examine this, and make sure of it.). They also recorded distributions of responses, which is what we meant by the measurement of generated surprisal. In sum, their original results have all the necessary information we need for our Measurement 1: Models can see all options.
+
+**TODO:**
+Sharon will adopt the analysis script and begin to analyze the first results.
+Hening will change prompts to compute Measurement 2.
+
 
