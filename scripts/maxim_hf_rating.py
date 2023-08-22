@@ -52,14 +52,25 @@ def get_completion(prompt, model, tokenizer, answer_choices=["very unlikely", "u
     # Retrieve logits for each answer choice and aggregate them (e.g., by summing)
     answer_logits = [sum(logits[id].item() for id in token_ids) for token_ids in answer_token_ids]
 
+    # Convert the generated token IDs back to text
+    generated_text = tokenizer.decode(outputs.sequences[0], skip_special_tokens=True)
+
+    # Calculate the sum of logits for the generated sequence
+    #sum_logits = logits.sum().item()
+
+    #return generated_text, sum_logits
+
+    # Retrieve logits for each answer choice and aggregate them (e.g., by summing)
+    answer_logits = [sum(logits[id].item() for id in token_ids) for token_ids in answer_token_ids]
+
     # Find the answer choice with the highest logit
-    generated_answer = answer_choices[np.argmax(answer_logits)]
+    #generated_answer = answer_choices[np.argmax(answer_logits)]
 
     # Convert logits to probabilities
     probs = softmax(answer_logits)
     probs_dict = {answer: prob for answer, prob in zip(answer_choices, probs)}
 
-    return generated_answer, probs_dict
+    return generated_text, probs_dict
 
 
 def main():
@@ -85,11 +96,11 @@ def main():
         scenarios.loc[i, "distribution"] = str(probs)
         #scenarios.loc[i, "prob_true_answer"] = probs[str(row.randomized_true_answer)]
         # Take model "answer" to be argmax of the distribution.
-        sorted_probs = [probs[answer] for answer in answer_choices]
-        chosen_answer = str(np.argmax(sorted_probs) + 1)
-        scenarios.loc[i, "answer"] = chosen_answer
-        scenarios.loc[i, "correct"] = (chosen_answer == str(row.randomized_true_answer))
-        scenarios.loc[i, "answer_label_complex"] = eval(row.randomized_labels_complex)[int(chosen_answer)-1]
+        #sorted_probs = [probs[answer] for answer in answer_choices]
+       # chosen_answer = str(np.argmax(sorted_probs) + 1)
+        #scenarios.loc[i, "answer"] = chosen_answer
+        #scenarios.loc[i, "correct"] = (chosen_answer == str(row.randomized_true_answer))
+        #scenarios.loc[i, "answer_label_complex"] = eval(row.randomized_labels_complex)[int(chosen_answer)-1]
 
     scenarios.to_csv(f"prompts_modified/Maxims_results_Rating.csv", index=False)
 
