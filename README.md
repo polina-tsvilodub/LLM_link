@@ -86,6 +86,9 @@ We took a closer look at Hu et al.'s scripts and results. We determined that Hu 
 
 **TODO:**
 Sharon will adopt the analysis script and begin to analyze the first results.
-Hening will change prompts to compute Measurement 2.
+Hening will change prompts to compute Measurement.
+
+### 21. 08
+Questions: Why Maxims stimuli miss number 13?
 
 
