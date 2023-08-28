@@ -26,7 +26,7 @@ def load_model():
 
     return tokenizer, model
 
-def get_completion(prompt, model, tokenizer, answer_choices=["very unlikely", "unlikely", "at chance", "likely", "very likely"], **kwargs):
+def get_completion(prompt, model, tokenizer, answer_choices=["very implausible", "implausible", "at chance", "plausible", "very plausible"], **kwargs):
     
     # Tokenize the prompt
     input_ids = tokenizer(prompt, return_tensors="pt").to(DEVICE)
@@ -82,7 +82,7 @@ def main():
     tokenizer, model = load_model()
 
     # define answer choices
-    answer_choices=["very unlikely","unlikely","at chance","likely","very likely"]
+    answer_choices=["very implausible", "implausible", "at chance", "plausible", "very plausible"]
 
     for i, row in tqdm(scenarios.iterrows()):
         prompt = row.prompt
