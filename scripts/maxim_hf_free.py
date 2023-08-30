@@ -34,10 +34,11 @@ def get_completion(prompt, model, tokenizer, **kwargs):
     # Generate output from the model with a maximum length of 20 tokens
     outputs = model.generate(
         **input_ids,
-        max_length =20, # Initial length + 20 more tokens
+        max_new_tokens =100, # Initial length + 20 more tokens
         output_scores=True,
         num_return_sequences=1,
-        return_dict_in_generate=True
+        return_dict_in_generate=True,
+        temperature=1.0,
     )
 
     # Retrieve logits from the output
