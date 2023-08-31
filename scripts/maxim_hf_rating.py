@@ -4,6 +4,7 @@ from tqdm import tqdm
 import torch
 import numpy as np
 import pandas as pd
+from transformers import LlamaForCausalLM, LlamaTokenizer, LlamaModel
 
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Device = {DEVICE}")
@@ -16,8 +17,11 @@ def softmax(x):
 
 def load_model():
     # Load the tokenizer and model
-    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xl")
-    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl")
+    model_path = "meta-llama/Llama-2-7b-hf"
+    tokenizer = LlamaTokenizer.from_pretrained(model_path)
+    model = LlamaForCausalLM.from_pretrained(model_path)
+    #tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xl")
+    #model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl")
 
     return tokenizer, model
 
@@ -62,39 +66,46 @@ def get_completion(prompt, model, tokenizer, answer_choices=["very implausible",
 
 
 def main():
-    # Load data set
-    
-
     # Load model and tokenizer
     tokenizer, model = load_model()
+
+    # Define scales
     scales = ["plausible", "appropriate", "possible", "likely"]
-    for scale in scales:
-        scenarios = pd.read_csv(f"prompts_modified/prompt_rating/Maxims_prompts_Rating_{scale}.csv").dropna()
-        print(scenarios.head())
-        # Define answer choices given scales
-        if scale == "plausible":
-            answer_choices=["very implausible", "implausible", "neural", "plausible", "very plausible"]
-        elif scale == "appropriate":
-            answer_choices=["very inappropriate", "inappropriate", "neural", "appropriate", "very appropriate"]
-        elif scale == "possible":
-            answer_choices=["very impossible", "impossible", "neural", "possible", "very possible"]
-        elif scale == "likely":
-            answer_choices=["very unlikely", "unlikely", "neural", "likely", "very likely"]
 
-        # Iterate over rows in prompt csv 
-        for i, row in tqdm(scenarios.iterrows()):
-            # Get prompt and generate answer
-            prompt = row.prompt
-            generated_answer, probs = get_completion(
-                prompt, model, tokenizer, answer_choices=answer_choices
-            )
-            # Evaluate generated text
-            scenarios.loc[i, "generation"] = generated_answer.strip()
-            scenarios.loc[i, "generation_isvalid"] = (generated_answer.strip() in answer_choices)
-            # Record probability distribution over valid answers.
-            scenarios.loc[i, "distribution"] = str(probs)
+    # Generate five random seeds for repeated sampling
+    seeds = range(5)
 
-        scenarios.to_csv(f"prompts_modified/Maxims_results_Rating_{scale}.csv", index=False)
+    # Iterate over seeds
+    for seed in seeds:
+        # Reseed the singleton RandomState instance.
+        np.random.seed(seed)
+        for scale in scales:
+            scenarios = pd.read_csv(f"prompt/prompt_rating/Maxims_prompts_Rating_{scale}.csv").dropna()
+            print(scenarios.head())
+            # Define answer choices given scales
+            if scale == "plausible":
+                answer_choices=["very implausible", "implausible", "neural", "plausible", "very plausible"]
+            elif scale == "appropriate":
+                answer_choices=["very inappropriate", "inappropriate", "neural", "appropriate", "very appropriate"]
+            elif scale == "possible":
+                answer_choices=["very impossible", "impossible", "neural", "possible", "very possible"]
+            elif scale == "likely":
+                answer_choices=["very unlikely", "unlikely", "neural", "likely", "very likely"]
+
+            # Iterate over rows in prompt csv 
+            for i, row in tqdm(scenarios.iterrows()):
+                # Get prompt and generate answer
+                prompt = row.prompt
+                generated_answer, probs = get_completion(
+                    prompt, model, tokenizer, answer_choices=answer_choices
+                )
+                # Evaluate generated text
+                scenarios.loc[i, "generation"] = generated_answer.strip()
+                scenarios.loc[i, "generation_isvalid"] = (generated_answer.strip() in answer_choices)
+                # Record probability distribution over valid answers.
+                scenarios.loc[i, "distribution"] = str(probs)
+
+            scenarios.to_csv(f"results/rating/Maxims_results_Rating_{scale}_seed{seed}.csv", index=False)
 
 if __name__ == "__main__":
     main()

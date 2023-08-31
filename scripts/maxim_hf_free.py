@@ -59,32 +59,37 @@ def get_completion(prompt, model, tokenizer, **kwargs):
 
 def main():
     # load data set
-    scenarios = pd.read_csv("prompts_modified/Maxims_prompts_Free.csv").dropna()
+    scenarios = pd.read_csv("prompt/prompt_free/Maxims_prompts_Free.csv").dropna()
     print(scenarios.head())
+
+    # Define seeds
+    seeds = range(5)
 
     # load model and tokenizer
     tokenizer, model = load_model()
+    for seed in seeds:
+        # Reseed the singleton RandomState instance.
+        np.random.seed(seed)
+        for i, row in tqdm(scenarios.iterrows()):
+            prompt = row.prompt
+            generated_text, sum_logits = get_completion(prompt, model, tokenizer)
 
-    for i, row in tqdm(scenarios.iterrows()):
-        prompt = row.prompt
-        generated_text, sum_logits = get_completion(prompt, model, tokenizer)
+            # Record the generated text and its sum of logits
+            scenarios.loc[i, "generation"] = generated_text.strip()
+            scenarios.loc[i, "sum_logits"] = sum_logits
 
-        # Record the generated text and its sum of logits
-        scenarios.loc[i, "generation"] = generated_text.strip()
-        scenarios.loc[i, "sum_logits"] = sum_logits
+            # The following lines are related to predefined answer choices and may no longer apply.
+            # You can keep, modify, or remove them based on your needs.
 
-        # The following lines are related to predefined answer choices and may no longer apply.
-        # You can keep, modify, or remove them based on your needs.
+            # scenarios.loc[i, "generation_isvalid"] = (generated_text.strip() in answer_choices)
+            # scenarios.loc[i, "distribution"] = str(probs)
+            # sorted_probs = [probs[answer] for answer in answer_choices]
+            # chosen_answer = str(np.argmax(sorted_probs) + 1)
+            # scenarios.loc[i, "answer"] = chosen_answer
+            # scenarios.loc[i, "correct"] = (chosen_answer == str(row.randomized_true_answer))
+            # scenarios.loc[i, "answer_label_complex"] = eval(row.randomized_labels_complex)[int(chosen_answer)-1]
 
-        # scenarios.loc[i, "generation_isvalid"] = (generated_text.strip() in answer_choices)
-        # scenarios.loc[i, "distribution"] = str(probs)
-        # sorted_probs = [probs[answer] for answer in answer_choices]
-        # chosen_answer = str(np.argmax(sorted_probs) + 1)
-        # scenarios.loc[i, "answer"] = chosen_answer
-        # scenarios.loc[i, "correct"] = (chosen_answer == str(row.randomized_true_answer))
-        # scenarios.loc[i, "answer_label_complex"] = eval(row.randomized_labels_complex)[int(chosen_answer)-1]
-
-    scenarios.to_csv(f"prompts_modified/Maxims_results_Free.csv", index=False)
+        scenarios.to_csv(f"results/free/Maxims_results_Free_seed{seed}.csv", index=False)
 
 
 if __name__ == "__main__":
