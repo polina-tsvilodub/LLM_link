@@ -21,19 +21,16 @@ def load_model():
 
     return tokenizer, model
 
-def get_completion(prompt, model, tokenizer, answer_choices=["very implausible", "implausible", "at chance", "plausible", "very plausible"], **kwargs):
+def get_completion(prompt, model, tokenizer, **kwargs):
     # TODO: add docstring
 
     # Tokenize the prompt
     input_ids = tokenizer(prompt, return_tensors="pt").to(DEVICE)
 
-    # Tokenize the answer choices
-    answer_token_ids = [tokenizer(answer, add_special_tokens=False).input_ids for answer in answer_choices]
-
     # Generate output from the model
     outputs = model.generate(
         **input_ids,
-        max_new_tokens=2,
+        max_length=50,
         output_scores=True,
         num_return_sequences=1,
         return_dict_in_generate=True
@@ -45,20 +42,13 @@ def get_completion(prompt, model, tokenizer, answer_choices=["very implausible",
     else:
         logits = outputs.scores
 
-    # Retrieve logits for each answer choice and aggregate them (e.g., by summing)
-    answer_logits = [sum(logits[id].item() for id in token_ids) for token_ids in answer_token_ids]
-
-    # Convert the generated token IDs back to text
+     # Convert the generated token IDs back to text
     generated_text = tokenizer.decode(outputs.sequences[0], skip_special_tokens=True)
 
-    # Retrieve logits for each answer choice and aggregate them (e.g., by summing)
-    answer_logits = [sum(logits[id].item() for id in token_ids) for token_ids in answer_token_ids]
+    # Calculate the sum of logits for the generated sequence
+    sum_logits = logits.sum().item()
 
-    # Convert logits to probabilities
-    probs = softmax(answer_logits)
-    probs_dict = {answer: prob for answer, prob in zip(answer_choices, probs)}
-
-    return generated_text, probs_dict
+    return generated_text, sum_logits
 
 
 def main():
@@ -67,34 +57,33 @@ def main():
 
     # Load model and tokenizer
     tokenizer, model = load_model()
-    scales = ["plausible", "appropriate", "possible", "likely"]
-    for scale in scales:
-        scenarios = pd.read_csv(f"prompts_modified/prompt_rating/Maxims_prompts_Rating_{scale}.csv").dropna()
-        print(scenarios.head())
-        # Define answer choices given scales
-        if scale == "plausible":
-            answer_choices=["very implausible", "implausible", "neural", "plausible", "very plausible"]
-        elif scale == "appropriate":
-            answer_choices=["very inappropriate", "inappropriate", "neural", "appropriate", "very appropriate"]
-        elif scale == "possible":
-            answer_choices=["very impossible", "impossible", "neural", "possible", "very possible"]
-        elif scale == "likely":
-            answer_choices=["very unlikely", "unlikely", "neural", "likely", "very likely"]
 
-        # Iterate over rows in prompt csv 
-        for i, row in tqdm(scenarios.iterrows()):
-            # Get prompt and generate answer
-            prompt = row.prompt
-            generated_answer, probs = get_completion(
-                prompt, model, tokenizer, answer_choices=answer_choices
-            )
-            # Evaluate generated text
-            scenarios.loc[i, "generation"] = generated_answer.strip()
-            scenarios.loc[i, "generation_isvalid"] = (generated_answer.strip() in answer_choices)
-            # Record probability distribution over valid answers.
-            scenarios.loc[i, "distribution"] = str(probs)
+    # Define answer types
+    anwsers = ["Both", "Content", "Number"]
 
-        scenarios.to_csv(f"prompts_modified/Maxims_results_Rating_{scale}.csv", index=False)
+    # Define seeds
+    seeds = range(5)
+
+    for seed in seeds:
+        # Reseed the singleton RandomState instance.
+        np.random.seed(seed)
+        for anwser in anwsers:
+            scenarios = pd.read_csv(f"prompt/prompt_fc/Maxims_prompts_FC_{anwser}.csv").dropna()
+            print(scenarios.head())
+
+            # Iterate over rows in prompt csv 
+            for i, row in tqdm(scenarios.iterrows()):
+                # Get prompt and generate answer
+                prompt = row.prompt
+
+                # Evaluate generated text
+                generated_text, sum_logits = get_completion(prompt, model, tokenizer)
+
+                # Record the generated text and its sum of logits
+                scenarios.loc[i, "generation"] = generated_text.strip()
+                scenarios.loc[i, "sum_logits"] = sum_logits
+
+        scenarios.to_csv(f"results/fc/Maxims_results_FC_{anwser}_seed{seed}.csv", index=False)
 
 if __name__ == "__main__":
     main()

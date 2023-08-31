@@ -4,7 +4,7 @@ from tqdm import tqdm
 import torch
 import numpy as np
 import pandas as pd
-from transformers import LlamaForCausalLM, LlamaTokenizer, LlamaModel
+from transformers import LlamaForCausalLM, LlamaTokenizer, AutoTokenizer
 
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Device = {DEVICE}")
@@ -18,7 +18,7 @@ def softmax(x):
 def load_model():
     # Load the tokenizer and model
     model_path = "meta-llama/Llama-2-7b-hf"
-    tokenizer = LlamaTokenizer.from_pretrained(model_path)
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = LlamaForCausalLM.from_pretrained(model_path)
     #tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xl")
     #model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl")
@@ -37,10 +37,11 @@ def get_completion(prompt, model, tokenizer, answer_choices=["very implausible",
     # Generate output from the model
     outputs = model.generate(
         **input_ids,
-        max_new_tokens=2,
+        max_new_tokens=5,
         output_scores=True,
         num_return_sequences=1,
-        return_dict_in_generate=True
+        return_dict_in_generate=True,
+        temperature=1.0,
     )
 
     # Retrieve logits from the output

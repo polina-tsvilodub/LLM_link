@@ -4,6 +4,7 @@ from tqdm import tqdm
 import torch
 import numpy as np
 import pandas as pd
+from transformers import LlamaForCausalLM, LlamaTokenizer, LlamaModel, AutoTokenizer
 
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Device = {DEVICE}")
@@ -16,13 +17,12 @@ def softmax(x):
 
 def load_model():
     # Load the tokenizer and model
-    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xl")
-    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl")
+    model_path = "meta-llama/Llama-2-7b-hf"
+    #tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xl")
+    #model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl")
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    model = LlamaForCausalLM.from_pretrained(model_path)
 
-    #input_text = "translate English to German: How old are you?"
-    #input_ids = tokenizer(input_text, return_tensors="pt").input_ids
-
-    #outputs = model.generate(input_ids)
 
     return tokenizer, model
 
