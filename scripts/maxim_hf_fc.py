@@ -83,7 +83,7 @@ def main():
                 scenarios.loc[i, "generation"] = generated_text.strip()
                 scenarios.loc[i, "sum_logits"] = sum_logits
 
-        scenarios.to_csv(f"results/fc/Maxims_results_FC_{anwser}_seed{seed}.csv", index=False)
+            scenarios.to_csv(f"results/fc/Maxims_results_FC_{anwser}_seed{seed}.csv", index=False)
 
 if __name__ == "__main__":
     main()
