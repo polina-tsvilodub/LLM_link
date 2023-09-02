@@ -16,17 +16,26 @@ def softmax(x):
     return np.exp(x)/sum(np.exp(x))
 
 def load_model():
-    # Load the tokenizer and model
-    model_path = "meta-llama/Llama-2-7b-hf"
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model = LlamaForCausalLM.from_pretrained(model_path)
-    #tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xl")
-    #model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl")
+
+    '''
+    Load the tokenizer and model
+    Model are accessed via the HuggingFace model hub
+    For replication: You need to download and deploy the model locally.
+    '''
+    tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xl")
+    model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl")
 
     return tokenizer, model
 
 def get_completion(prompt, model, tokenizer, answer_choices=["very implausible", "implausible", "at chance", "plausible", "very plausible"], **kwargs):
-    # TODO: add docstring
+    '''
+    prompt: str
+    model: T5ForConditionalGeneration
+    tokenizer: T5Tokenizer
+    answer_choices: list of str
+    kwargs: additional arguments to pass to model.generate
+    return: generated_text: str, probs_dict: dict
+    '''
 
     # Tokenize the prompt
     input_ids = tokenizer(prompt, return_tensors="pt").to(DEVICE)
@@ -80,9 +89,11 @@ def main():
     for seed in seeds:
         # Reseed the singleton RandomState instance.
         np.random.seed(seed)
+        # Iterate over scales
         for scale in scales:
             scenarios = pd.read_csv(f"prompt/prompt_rating/Maxims_prompts_Rating_{scale}.csv").dropna()
             print(scenarios.head())
+
             # Define answer choices given scales
             if scale == "plausible":
                 answer_choices=["very implausible", "implausible", "neural", "plausible", "very plausible"]
@@ -95,17 +106,21 @@ def main():
 
             # Iterate over rows in prompt csv 
             for i, row in tqdm(scenarios.iterrows()):
+
                 # Get prompt and generate answer
                 prompt = row.prompt
                 generated_answer, probs = get_completion(
                     prompt, model, tokenizer, answer_choices=answer_choices
                 )
+
                 # Evaluate generated text
                 scenarios.loc[i, "generation"] = generated_answer.strip()
                 scenarios.loc[i, "generation_isvalid"] = (generated_answer.strip() in answer_choices)
+
                 # Record probability distribution over valid answers.
                 scenarios.loc[i, "distribution"] = str(probs)
 
+            # Save results
             scenarios.to_csv(f"results/rating/Maxims_results_Rating_{scale}_seed{seed}.csv", index=False)
 
 if __name__ == "__main__":

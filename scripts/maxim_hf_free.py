@@ -15,18 +15,27 @@ import os
 def softmax(x):
     return np.exp(x)/sum(np.exp(x))
 
+
 def load_model():
-    # Load the tokenizer and model
-    model_path = "meta-llama/Llama-2-7b-hf"
+
+    '''
+    Load the tokenizer and model
+    Model are accessed via the HuggingFace model hub
+    For replication: You need to download and deploy the model locally.
+    '''
     tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xl")
     model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl")
-    #tokenizer = AutoTokenizer.from_pretrained(model_path)
-    #model = LlamaForCausalLM.from_pretrained(model_path)
-
 
     return tokenizer, model
 
 def get_completion(prompt, model, tokenizer, **kwargs):
+    '''
+    prompt: str
+    model: T5ForConditionalGeneration
+    tokenizer: T5Tokenizer
+    kwargs: additional arguments to pass to model.generate
+    return: generated_text: str, sum_logits: float
+    '''
     
     # Tokenize the prompt
     input_ids = tokenizer(prompt, return_tensors="pt").to(DEVICE)
@@ -58,19 +67,23 @@ def get_completion(prompt, model, tokenizer, **kwargs):
 
 
 def main():
-    # load data set
+    # Load data set
     scenarios = pd.read_csv("prompt/prompt_free/Maxims_prompts_Free.csv").dropna()
     print(scenarios.head())
 
     # Define seeds
     seeds = range(5)
 
-    # load model and tokenizer
+    # Load model and tokenizer
     tokenizer, model = load_model()
     for seed in seeds:
         # Reseed the singleton RandomState instance.
+        # TODO: Figure out why random seed not working for free production
         np.random.seed(seed)
+
+        # Iterate over scenarios
         for i, row in tqdm(scenarios.iterrows()):
+            # Get the prompt and generate anwsers
             prompt = row.prompt
             generated_text, sum_logits = get_completion(prompt, model, tokenizer)
 
@@ -78,17 +91,7 @@ def main():
             scenarios.loc[i, "generation"] = generated_text.strip()
             scenarios.loc[i, "sum_logits"] = sum_logits
 
-            # The following lines are related to predefined answer choices and may no longer apply.
-            # You can keep, modify, or remove them based on your needs.
-
-            # scenarios.loc[i, "generation_isvalid"] = (generated_text.strip() in answer_choices)
-            # scenarios.loc[i, "distribution"] = str(probs)
-            # sorted_probs = [probs[answer] for answer in answer_choices]
-            # chosen_answer = str(np.argmax(sorted_probs) + 1)
-            # scenarios.loc[i, "answer"] = chosen_answer
-            # scenarios.loc[i, "correct"] = (chosen_answer == str(row.randomized_true_answer))
-            # scenarios.loc[i, "answer_label_complex"] = eval(row.randomized_labels_complex)[int(chosen_answer)-1]
-
+        # Save the results
         scenarios.to_csv(f"results/free/Maxims_results_Free_seed{seed}.csv", index=False)
 
 
