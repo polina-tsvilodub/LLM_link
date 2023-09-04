@@ -16,7 +16,7 @@ import seaborn as sns
 # In[6]:
 
 
-os.chdir("C:/Users/shagr/OneDrive/Desktop/LLM-Project/github/LLM_link-master/results/fc")
+os.chdir("./results/fc")
 
 
 # In[7]:
@@ -92,7 +92,7 @@ final_df
 
 
 # Save the dataframe
-#final_df.to_csv('C:/Users/shagr/OneDrive/Desktop/LLM-Project/github/LLM_link-master/analysis/dataframe_fc.csv', index=False, mode='w')
+#final_df.to_csv('./analysis/dataframe_fc.csv', index=False, mode='w')
 final_df.to_csv('./analysis', index=False, mode='w')
 
 
@@ -103,7 +103,7 @@ final_df.to_csv('./analysis', index=False, mode='w')
 
 def read_human_data():
     dfs = []
-    df_dir = "C:/Users/shagr/OneDrive/Desktop/LLM-Project/github/LLM_link-master/human_data/Human_Maxims.csv"
+    df_dir = "./human_data/Human_Maxims.csv"
     df = pd.read_csv(df_dir)
     dfs.append(df)
     df = pd.concat(dfs).drop("Unnamed: 0", axis=1).reset_index().drop("index", axis=1)
@@ -235,14 +235,11 @@ plt.ylabel("Proportion of Correct Answers")
 plt.title("Correctness of Answers")
 
 # Save the plot as PDF
-plot_filename = 'C:/Users/shagr/OneDrive/Desktop/LLM-Project/github/LLM_link-master/analysis/figures/correctness_fc.pdf'
+plot_filename = './analysis/figures/correctness_fc.pdf'
 plt.savefig(plot_filename, bbox_inches='tight')
 
 # Show the plot
 plt.show()
-
-
-# In[ ]:
 
 
 
