@@ -17,7 +17,7 @@ import seaborn as sns
 
 
 # Specify the path to the folder containing your CSV files
-csv_folder_path = 'C:/Users/shagr/OneDrive/Desktop/LLM-Project/github/LLM_link-master/results/rating'
+csv_folder_path = './results/rating'
 
 # Change the working directory to the CSV folder
 os.chdir(csv_folder_path)
@@ -229,14 +229,12 @@ fig.text(0.06, 0.5, 'Values', va='center', rotation='vertical')
 plt.subplots_adjust(wspace=0.3)
 
 # Save the plot as a file 
-# plot_filename = 'C:/Users/shagr/OneDrive/Desktop/LLM-Project/github/LLM_link-master/analysis/figures/answercounts_rating.pdf'
+# plot_filename = './analysis/figures/answercounts_rating.pdf'
 # plt.savefig(plot_filename, bbox_inches='tight')
 
 # Show the plot
 plt.show()
 
-
-# In[ ]:
 
 
 
