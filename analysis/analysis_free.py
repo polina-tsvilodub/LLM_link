@@ -18,7 +18,7 @@ import glob
 
 
 # Specify the path to the folder containing your CSV files
-folder_path = 'C:/Users/shagr/OneDrive/Desktop/LLM-Project/github/LLM_link-master/results/free'
+folder_path = './results/free'
 
 # Use glob to find CSV files ending with "...annotated.csv"
 csv_files = glob.glob(os.path.join(folder_path, '*annotated.csv'))
