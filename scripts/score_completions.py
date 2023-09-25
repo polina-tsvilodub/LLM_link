@@ -1,13 +1,13 @@
-from transformers import T5Tokenizer, T5ForConditionalGeneration, AutoModelForCausalLM, AutoTokenizer
 from tqdm import tqdm
 import openai
 import torch
 import numpy as np
 import pandas as pd
 from dotenv import load_dotenv
-from utils import load_model, compute_mi, softmax
+from utils import load_model, compute_mi
 import argparse
 import string
+from datetime import datetime
 
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Device = {DEVICE}")
@@ -167,6 +167,9 @@ def main(
         option_numbering=None,
         use_option_numbering_only=False,
 ):
+    # initialize path for dumping output
+    time = datetime.now().strftime("%Y%m%d_%H%M")
+    out_name = file_path.split("/")[-1].replace(".csv", "")
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
@@ -191,8 +194,10 @@ def main(
 
         # Iterate over anwsers
         for anwser in anwsers:
+            # final results output file
+            out_file = f"../results/log_probs/{out_name}_{anwser}_seed{seed}_{time}.csv"
+    
             # Load data set
-
             scenarios = pd.read_csv(file_path).dropna()
             print(scenarios.head())
             
@@ -302,8 +307,11 @@ def main(
                 #####################################
 
                 # Record the retrieved log probs
+                # TODO record other configs
                 # initialize results df, so that we can write result in long format
                 results_df = pd.DataFrame({
+                    "model_name": model_name,
+                    "temperature": temperature,
                     "answer": [anwser] * len(options),
                     "item_id": [row.item_number]  * len(options),
                     "prompt": [prompt] * len(options),
@@ -323,36 +331,18 @@ def main(
                     "ppl": ppl,
                 })
                 print(results_df)
-
-                # results_df_long = results_df.explode([
-                #     "options",
-                #     "option_numbering",
-                #     "token_cond_log_probs",
-                #     "token_cond_probs",
-                #     "prior_token_log_probs",
-                #     "token_probs",
-                #     "sentence_cond_probs",
-                #     "mean_sentence_cond_probs",
-                #     "prior_sentence_probs",
-                #     "mean_sentence_mi",
-                #     "sentence_surprisal",
-                #     "mean_sentence_surprisal",
-                #     "mean_sentence_mi_surprisal",
-                #     "ppl",
-                # ])
             
 
                 # Save results to csv continuously
-                out_name = file_path.split("/")[-1].replace(".csv", "")
                 # write header depending on whether the file already exists
-                if os.path.exists(f"../results/log_probs/{out_name}_{anwser}_seed{seed}.csv"):
-                    results_df.to_csv(f"../results/log_probs/{out_name}_{anwser}_seed{seed}.csv", 
+                if os.path.exists(out_file):
+                    results_df.to_csv(out_file, 
                                     index=False,
                                     mode="a",
                                     header=False,
                                     )
                 else:
-                    results_df.to_csv(f"../results/log_probs/{out_name}_{anwser}_seed{seed}.csv", 
+                    results_df.to_csv(out_file, 
                                     index=False,
                                     mode="a",
                                     header=True,
