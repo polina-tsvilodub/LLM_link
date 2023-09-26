@@ -171,10 +171,10 @@ def main(
                 with open(instructions_path, "r") as f:
                     instructions = f.read()
                 # Get prompt and generate answer
-                prompt = instructions + "\n\n" + row.prompt + row.trigger
+                prompt = instructions + "\n\n" + row.prompt
                 # construct task question
                 question = question.format(row.speaker) #f"Why has {row.speaker} responded like this? \nYour answer:\n"
-                prompt = prompt + "\n\n" + question
+                prompt = prompt + "\n\n" + question + "\nYour answer:\n"
                 
                 # retrieve response
                 response = get_completion(

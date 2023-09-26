@@ -232,7 +232,7 @@ def main(
             shuffled_options = list(shuffled_options)
 
             # add the list of options in a randomized seed dependent order
-            prompt_randomized = prompt + row.trigger + question + "\n Which of the following options would you choose?\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+            prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
             print("---- formatted prompt ---- ", prompt_randomized)
             
             option_conditional_log_probs, log_probs = retrieve_log_probs(
