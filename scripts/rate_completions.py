@@ -45,7 +45,7 @@ def aggregare_ratings(
         )
     # assign numeric weights to each option
     # e.g., assume they go from 1 to 5
-    options_weights = list(range(len(rating_log_probs[0])))
+    options_weights = list(range(1, len(rating_log_probs[0]) + 2))
     # multiply the weights with the probs
     weighted_options = []
     for p in options_probs:

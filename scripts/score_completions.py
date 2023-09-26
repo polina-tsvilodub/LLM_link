@@ -62,7 +62,7 @@ def retrieve_log_probs(
     # iterate over items here so that the model won't have to be reloaded for each item & option
     for o in options:
         optionTokenLogProbs = []
-        
+
         input_prompt = prompt + o
         print("\n---- INPUT PROMPT ----- \n ", input_prompt, "\n----------------------")
 
@@ -166,9 +166,6 @@ def retrieve_log_probs(
 
     return conditional_log_probs, log_probs
 
-
-# TODO construct the context (i.e., A / B / 1 / 2) 
-# and the option order shuffling here
 
 def main(
         file_path,
@@ -321,8 +318,6 @@ def main(
             print(option_conditional_log_probs, token_cond_probs, sentence_cond_probs, mean_sentence_mi, mean_sentence_surprisal)
 
             # TODO deal with re-normalization somewhere
-
-            # TODO utils for label probability and ranking probability
 
             #####################################
 
