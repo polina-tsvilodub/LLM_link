@@ -55,6 +55,9 @@ def retrieve_log_probs(
     conditional_log_probs = []
     log_probs = []
 
+    # check if only the option labels should be scored
+    if kwargs['use_option_numbering_only']:
+        options = kwargs['option_numbering']
     # iterate over items here so that the model won't have to be reloaded for each item & option
     for o in options:
         input_prompt = prompt + o
@@ -188,7 +191,8 @@ def main(
         option_numbering = list(string.ascii_uppercase[:len(options)])
     else:
         option_numbering = option_numbering.split(",")
-
+    # string about options to append to the instructions
+    option_instructions = ", ".join(option_numbering)
      # Load data set
     scenarios = pd.read_csv(file_path).dropna()
     print(scenarios.head())
@@ -211,9 +215,9 @@ def main(
             with open(instructions_path, "r") as f:
                 instructions = f.read()
             # Get prompt and generate answer
-            prompt = instructions + "\n\n" + row.prompt
+            prompt = instructions + " The answer options are " + option_instructions + ".\n\n" + row.prompt
             # construct task question
-            question = question.format(row.speaker) #f"Why has {row.speaker} responded like this? \n"
+            question = question.format(row.speaker)
             # the df should have the target option and then other options as last columns
             options = list(row.loc['target':])
             # shuffle options
@@ -228,7 +232,7 @@ def main(
             shuffled_options = list(shuffled_options)
 
             # add the list of options in a randomized seed dependent order
-            prompt_randomized = prompt + row.trigger + question + "\n ".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+            prompt_randomized = prompt + row.trigger + question + "\n Which of the following options would you choose?\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
             print("---- formatted prompt ---- ", prompt_randomized)
             
             option_conditional_log_probs, log_probs = retrieve_log_probs(
@@ -238,6 +242,8 @@ def main(
                 model, 
                 tokenizer,
                 temperature=temperature,
+                use_option_numbering_only=use_option_numbering_only,
+                option_numbering=option_numbering,
             )
             ###### compute derived metrics ######
             # 0. token probabilities
