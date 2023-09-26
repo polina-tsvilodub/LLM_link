@@ -27,6 +27,7 @@ def retrieve_log_probs(
         model=None, # only to be used with HF models
         tokenizer=None, # only to be used with HF models
         phenomenon=None,
+        score_prior=True,
         **kwargs
     ):
     '''
@@ -60,6 +61,8 @@ def retrieve_log_probs(
         options = kwargs['option_numbering']
     # iterate over items here so that the model won't have to be reloaded for each item & option
     for o in options:
+        optionTokenLogProbs = []
+        
         input_prompt = prompt + o
         print("\n---- INPUT PROMPT ----- \n ", input_prompt, "\n----------------------")
 
@@ -82,26 +85,27 @@ def retrieve_log_probs(
                 temperature=kwargs['temperature'],
             )
 
-            # Convert the generated token IDs back to text
-            optionTokens = tokenizer.decode(
-                outputs.sequences[0], 
-                skip_special_tokens=True
-            ) # TODO check if these need to be ported back to cpu
+            if score_prior:
+                # Convert the generated token IDs back to text
+                optionTokens = tokenizer.decode(
+                    outputs.sequences[0], 
+                    skip_special_tokens=True
+                ) # TODO check if these need to be ported back to cpu
 
-            #### retrieve unconditional log prob of the option ####
-            option_input_ids = tokenizer(
-                o, 
-                return_tensors="pt",
-            ).to(DEVICE)
-
-            option_outputs = model.generate(
-                **option_input_ids,
-                max_new_tokens = 0, # we only want to score, not produce new tokens
-                output_scores=True,
-                num_return_sequences=1,
-                return_dict_in_generate=True,
-                temperature=kwargs['temperature'],
-            )
+                #### retrieve unconditional log prob of the option ####
+                option_input_ids = tokenizer(
+                    o, 
+                    return_tensors="pt",
+                ).to(DEVICE)
+                
+                option_outputs = model.generate(
+                    **option_input_ids,
+                    max_new_tokens = 0, # we only want to score, not produce new tokens
+                    output_scores=True,
+                    num_return_sequences=1,
+                    return_dict_in_generate=True,
+                    temperature=kwargs['temperature'],
+                )
             ####
 
         elif "gpt-3.5" in model_name:
@@ -116,14 +120,15 @@ def retrieve_log_probs(
             )
 
             #### retrieve unconditional log prob of the option ####
-            option_outputs = openai.Completion.create(
-                model    = model_name, 
-                prompt   = o,
-                max_tokens  = 0, # we only want to score, so no new tokens
-                temperature = kwargs['temperature'], 
-                logprobs = 0,
-                echo = True,
-            )
+            if score_prior:
+                option_outputs = openai.Completion.create(
+                    model    = model_name, 
+                    prompt   = o,
+                    max_tokens  = 0, # we only want to score, so no new tokens
+                    temperature = kwargs['temperature'], 
+                    logprobs = 0,
+                    echo = True,
+                )
 
         else:
             raise ValueError(f"Model {model_name} is not supported as a backbone.")
@@ -136,8 +141,8 @@ def retrieve_log_probs(
             # [0] retrieves first element in batch (assume we always use batch size = 1)
             optionTokenConditionalLogProbs = outputs.scores[0].tolist()
             print("Log probs of HF answer tokens:", optionTokenConditionalLogProbs)
-
-            optionTokenLogProbs = option_outputs.scores[0].tolist()
+            if score_prior:
+                optionTokenLogProbs = option_outputs.scores[0].tolist()
 
         except:
             # retrieve OpenAI log probs
@@ -149,11 +154,12 @@ def retrieve_log_probs(
             print("Answer tokens:", optionTokens)
             print("Log probs of answer tokens:", optionTokenConditionalLogProbs)
 
-            # unconditional log probs (see class code)
-            endIndex = len(option_outputs.choices[0]["logprobs"]["tokens"])
-            optionTokenLogProbs = option_outputs.choices[0]["logprobs"]["token_logprobs"][:endIndex] 
-            print("Uncut prior log Ps ", optionTokenLogProbs)
-            optionTokenLogProbs = optionTokenLogProbs[1:endIndex]
+            if score_prior:
+                # unconditional log probs (see class code)
+                endIndex = len(option_outputs.choices[0]["logprobs"]["tokens"])
+                optionTokenLogProbs = option_outputs.choices[0]["logprobs"]["token_logprobs"][:endIndex] 
+                print("Uncut prior log Ps ", optionTokenLogProbs)
+                optionTokenLogProbs = optionTokenLogProbs[1:endIndex]
 
         conditional_log_probs.append(optionTokenConditionalLogProbs)
         log_probs.append(optionTokenLogProbs)
@@ -180,9 +186,6 @@ def main(
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
-    # Define answer types
-    # anwsers = ["Both", "Content", "Number"]
-
     # Define seeds
     seeds = range(n_seeds)
 
@@ -204,9 +207,7 @@ def main(
         np.random.seed(seed)
         random.seed(seed)
 
-        # Iterate over anwsers
-        # for anwser in anwsers:
-            # final results output file
+        # final results output file
         out_file = f"../results/log_probs/{out_name}_FC_seed{seed}_{time}.csv"
         
         # Iterate over rows in prompt csv 
