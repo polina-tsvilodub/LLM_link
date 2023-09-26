@@ -6,6 +6,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from utils import load_model, compute_mi
 import argparse
+import random
 import string
 from datetime import datetime
 
@@ -166,6 +167,9 @@ def main(
         model_name="gpt-3.5-turbo-instruct",
         option_numbering=None,
         use_option_numbering_only=False,
+        instructions_path=None,
+        question="",
+        n_seeds=5,
 ):
     # initialize path for dumping output
     time = datetime.now().strftime("%Y%m%d_%H%M")
@@ -174,12 +178,10 @@ def main(
     tokenizer, model = load_model(model_name)
 
     # Define answer types
-    # TODO
-    anwsers = ["Both", "Content", "Number"]
+    # anwsers = ["Both", "Content", "Number"]
 
-    # TODO
     # Define seeds
-    seeds = range(5)
+    seeds = range(n_seeds)
 
     # set option numbering
     if option_numbering is None:
@@ -187,166 +189,181 @@ def main(
     else:
         option_numbering = option_numbering.split(",")
 
+     # Load data set
+    scenarios = pd.read_csv(file_path).dropna()
+    print(scenarios.head())
+    # retrieve option names for shuffling and then mapping results back to the type of response
+    option_names = list(scenarios.loc[:, 'target':].columns)
     # Iterate over seeds
     for seed in seeds:
         # Reseed the singleton RandomState instance.
         np.random.seed(seed)
+        random.seed(seed)
 
         # Iterate over anwsers
-        for anwser in anwsers:
+        # for anwser in anwsers:
             # final results output file
-            out_file = f"../results/log_probs/{out_name}_{anwser}_seed{seed}_{time}.csv"
-    
-            # Load data set
-            scenarios = pd.read_csv(file_path).dropna()
-            print(scenarios.head())
-            
-
-            # Iterate over rows in prompt csv 
-            for i, row in tqdm(scenarios.iterrows()):
-                # load instructions
-                with open("../prompt/prompt_fc/MaximsInstructions_FC_Both.txt", "r") as f:
-                    instructions = f.read()
-                # Get prompt and generate answer
-                prompt = instructions + "\n\n" + row.prompt
-                # construct task question
-                question = f"Why has {row.speaker} responded like this? \n"
-                # the df should have the target option and then other options as last columns
-                options = list(row.loc['target':])
-
-                # TODO add the list of options in a randomized seed dependent order
-                prompt_randomized = prompt + row.trigger + question + "\n ".join([". ".join(o) for o in zip(option_numbering, options)]) + "\nYour answer:\n"
-                print("---- formatted prompt ---- ", prompt_randomized)
-                
-                option_conditional_log_probs, log_probs = retrieve_log_probs(
-                    prompt_randomized, 
+        out_file = f"../results/log_probs/{out_name}_FC_seed{seed}_{time}.csv"
+        
+        # Iterate over rows in prompt csv 
+        for i, row in tqdm(scenarios.iterrows()):
+            # load instructions
+            with open(instructions_path, "r") as f:
+                instructions = f.read()
+            # Get prompt and generate answer
+            prompt = instructions + "\n\n" + row.prompt
+            # construct task question
+            question = question.format(row.speaker) #f"Why has {row.speaker} responded like this? \n"
+            # the df should have the target option and then other options as last columns
+            options = list(row.loc['target':])
+            # shuffle options
+            shuffled_options = list(zip(
+                    option_names,
                     options,
-                    model_name,
-                    model, 
-                    tokenizer,
-                    temperature=temperature,
-                )
-                ###### compute derived metrics ######
-                # 0. token probabilities
-                # nested list of conditional token probs
-                token_cond_probs = []
-                for o in option_conditional_log_probs:
-                    token_cond_probs.append(
-                        [np.exp(p) for p in o]
-                    )
-                # and prior unconditional token probs
-                # nested list of prior token probs
-                token_probs = []
-                print("unconditional log probs ", log_probs)
-                for o in log_probs:
-                    token_probs.append(
-                        [np.exp(p) for p in o]
-                    )
-                # list of prior sentence probs
-                prior_probs = [
-                    np.prod(
-                        np.array(t)
-                    ) for t 
-                    in token_probs
-                ]
-                # 1. sentence probability
-                sentence_cond_probs = [
-                    np.prod(
-                        np.array(t)
-                    ) for t 
-                    in token_cond_probs
-                ]
-                # 2. length-normalized sentence probability
-                mean_sentence_cond_probs = [
-                    (1/len(t))* np.prod(
-                        np.array(t)
-                    ) for t 
-                    in token_cond_probs
-                ]
-                # 3. prior correction (= empirical MI)
-                # NOTE: MI computed without length normalization
-                mean_sentence_mi = [
-                    compute_mi(s, p)
-                    for s, p
-                    in zip(sentence_cond_probs, prior_probs)
-                ]
+                ))
+            random.shuffle(shuffled_options)
+            # unpack
+            shuffled_option_names, shuffled_options = zip(*shuffled_options)
+            shuffled_option_names = list(shuffled_option_names)
+            shuffled_options = list(shuffled_options)
 
-                # 4. sentence surprisal
-                sentence_surprisal = [
-                    - np.sum(
-                        np.array(p)
-                    ) for p 
-                    in option_conditional_log_probs
-                ]
-                # 5. length-normalized sentence surprisal
-                mean_sentence_surprisal = [
-                    - (1/len(p)) * np.sum(
-                        np.array(p)
-                    ) for p 
-                    in option_conditional_log_probs
-                ]
-                # 6. prior corrected (= empirical MI) sentence surprisal
-                # TODO: what is this metric conceptually?
-                mean_sentence_mi_surprisal = [
-                    compute_mi(s, p)
-                    for s, p
-                    in zip(sentence_surprisal, 
-                           [- np.sum(np.array(t)) for t in log_probs])
-                ]
-                # 7. perplexity TODO double check
-                ppl = [
-                    np.exp(s) for s
-                    in sentence_surprisal
-                ]
-                print(option_conditional_log_probs, token_cond_probs, sentence_cond_probs, mean_sentence_mi, mean_sentence_surprisal)
-
-                # TODO deal with re-normalization somewhere
-
-                # TODO utils for label probability and ranking probability
-
-                #####################################
-
-                # Record the retrieved log probs
-                # TODO record other configs
-                # initialize results df, so that we can write result in long format
-                results_df = pd.DataFrame({
-                    "model_name": model_name,
-                    "temperature": temperature,
-                    "answer": [anwser] * len(options),
-                    "item_id": [row.item_number]  * len(options),
-                    "prompt": [prompt] * len(options),
-                    "options": options, # TODO record randomization, if needed
-                    "option_numbering": option_numbering,
-                    "token_cond_log_probs": option_conditional_log_probs,
-                    "token_cond_probs": token_cond_probs,
-                    "prior_token_log_probs": log_probs,
-                    "token_probs": token_probs,
-                    "sentence_cond_probs": sentence_cond_probs,
-                    "mean_sentence_cond_probs": mean_sentence_cond_probs,
-                    "prior_sentence_probs": prior_probs,
-                    "mean_sentence_mi": mean_sentence_mi,
-                    "sentence_surprisal": sentence_surprisal,
-                    "mean_sentence_surprisal": mean_sentence_surprisal,
-                    "mean_sentence_mi_surprisal": mean_sentence_mi_surprisal,
-                    "ppl": ppl,
-                })
-                print(results_df)
+            # add the list of options in a randomized seed dependent order
+            prompt_randomized = prompt + row.trigger + question + "\n ".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+            print("---- formatted prompt ---- ", prompt_randomized)
             
+            option_conditional_log_probs, log_probs = retrieve_log_probs(
+                prompt_randomized, 
+                options,
+                model_name,
+                model, 
+                tokenizer,
+                temperature=temperature,
+            )
+            ###### compute derived metrics ######
+            # 0. token probabilities
+            # nested list of conditional token probs
+            token_cond_probs = []
+            for o in option_conditional_log_probs:
+                token_cond_probs.append(
+                    [np.exp(p) for p in o]
+                )
+            # and prior unconditional token probs
+            # nested list of prior token probs
+            token_probs = []
+            print("unconditional log probs ", log_probs)
+            for o in log_probs:
+                token_probs.append(
+                    [np.exp(p) for p in o]
+                )
+            # list of prior sentence probs
+            prior_probs = [
+                np.prod(
+                    np.array(t)
+                ) for t 
+                in token_probs
+            ]
+            # 1. sentence probability
+            sentence_cond_probs = [
+                np.prod(
+                    np.array(t)
+                ) for t 
+                in token_cond_probs
+            ]
+            # 2. length-normalized sentence probability
+            mean_sentence_cond_probs = [
+                (1/len(t))* np.prod(
+                    np.array(t)
+                ) for t 
+                in token_cond_probs
+            ]
+            # 3. prior correction (= empirical MI)
+            # NOTE: MI computed without length normalization
+            mean_sentence_mi = [
+                compute_mi(s, p)
+                for s, p
+                in zip(sentence_cond_probs, prior_probs)
+            ]
 
-                # Save results to csv continuously
-                # write header depending on whether the file already exists
-                if os.path.exists(out_file):
-                    results_df.to_csv(out_file, 
-                                    index=False,
-                                    mode="a",
-                                    header=False,
-                                    )
-                else:
-                    results_df.to_csv(out_file, 
-                                    index=False,
-                                    mode="a",
-                                    header=True,
-                                    )
+            # 4. sentence surprisal
+            sentence_surprisal = [
+                - np.sum(
+                    np.array(p)
+                ) for p 
+                in option_conditional_log_probs
+            ]
+            # 5. length-normalized sentence surprisal
+            mean_sentence_surprisal = [
+                - (1/len(p)) * np.sum(
+                    np.array(p)
+                ) for p 
+                in option_conditional_log_probs
+            ]
+            # 6. prior corrected (= empirical MI) sentence surprisal
+            # TODO: what is this metric conceptually?
+            mean_sentence_mi_surprisal = [
+                compute_mi(s, p)
+                for s, p
+                in zip(sentence_surprisal, 
+                        [- np.sum(np.array(t)) for t in log_probs])
+            ]
+            # 7. perplexity TODO double check
+            ppl = [
+                np.exp(s) for s
+                in sentence_surprisal
+            ]
+            print(option_conditional_log_probs, token_cond_probs, sentence_cond_probs, mean_sentence_mi, mean_sentence_surprisal)
+
+            # TODO deal with re-normalization somewhere
+
+            # TODO utils for label probability and ranking probability
+
+            #####################################
+
+            # Record the retrieved log probs
+            # TODO record other configs
+            # initialize results df, so that we can write result in long format
+            results_df = pd.DataFrame({
+                "model_name": [model_name] * len(options),
+                "temperature": [temperature] * len(options),
+                "seed": [seed] * len(options),
+                "item_id": [row.item_number]  * len(options),
+                "prompt": [prompt] * len(options),
+                "question": [question] * len(options),
+                "options": options,
+                "option_names": option_names,
+                "shuffled_options": shuffled_options, # record randomization
+                "shuffled_option_names": shuffled_option_names,
+                "option_numbering": option_numbering,
+                "token_cond_log_probs": option_conditional_log_probs,
+                "token_cond_probs": token_cond_probs,
+                "prior_token_log_probs": log_probs,
+                "token_probs": token_probs,
+                "sentence_cond_probs": sentence_cond_probs,
+                "mean_sentence_cond_probs": mean_sentence_cond_probs,
+                "prior_sentence_probs": prior_probs,
+                "mean_sentence_mi": mean_sentence_mi,
+                "sentence_surprisal": sentence_surprisal,
+                "mean_sentence_surprisal": mean_sentence_surprisal,
+                "mean_sentence_mi_surprisal": mean_sentence_mi_surprisal,
+                "ppl": ppl,
+            })
+            print(results_df)
+        
+
+            # Save results to csv continuously
+            # write header depending on whether the file already exists
+            if os.path.exists(out_file):
+                results_df.to_csv(out_file, 
+                                index=False,
+                                mode="a",
+                                header=False,
+                                )
+            else:
+                results_df.to_csv(out_file, 
+                                index=False,
+                                mode="a",
+                                header=True,
+                                )
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -384,6 +401,26 @@ if __name__ == "__main__":
         help="Whether to use only labels for options as options to be scored",
     )
 
+    parser.add_argument(
+        "--instructions_path",
+        type=str,
+        help="Path to the text file containing instructions for the task",
+    )
+
+    parser.add_argument(
+        "--question",
+        type=str,
+        default="",
+        help="Task question to append to the context",
+    )
+
+    parser.add_argument(
+        "--n_seeds",
+        type=int,
+        default=5,
+        help="Number of seeds to run the experiment for",
+    )
+
     args = parser.parse_args()
 
     main(
@@ -392,4 +429,7 @@ if __name__ == "__main__":
         model_name=args.model_name,
         option_numbering=args.option_numbering,
         use_option_numbering_only=args.use_option_numbering_only,
+        instructions_path=args.instructions_path,
+        question=args.question,
+        n_seeds=args.n_seeds,
     )

@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from utils import load_model
 import argparse
 from datetime import datetime
+import random
 
 if torch.cuda.is_available():
     DEVICE = "cuda:0" 
@@ -46,21 +47,49 @@ def get_completion(
     '''
     load_dotenv()
     openai.api_key = os.getenv("OPENAI_API_KEY")
-
-    # TODO open q: do we do the diff random seeds / orders of options, too?
+    # check if decoding scheme was specified, othrwise default to argmax / greedy
+    decoding = kwargs["decoding_scheme"] if kwargs["decoding_scheme"] else "greedy"
+    # specific decding schemes are only supported for HF models
+    if ("gpt" in model_name) and (decoding != "greedy"):
+        raise ValueError(f"Decoding scheme {decoding} is not supported for GPT models.")
+    
     # Tokenize the prompt
     if ("google/flan-t5" in model_name) or ("meta" in model_name):
         model = model #.to(DEVICE)
         input_ids = tokenizer(prompt, return_tensors="pt") #.to(DEVICE)
         # Generate output from the model with a maximum length of 20 tokens
-        outputs = model.generate(
-            **input_ids,
-            max_new_tokens = max_new_tokens, # Initial length + 20 more tokens
-            output_scores=True,
-            num_return_sequences=1,
-            return_dict_in_generate=True,
-            temperature=kwargs["temperature"],
-        )
+        # with the respective decoding scheme
+        if decoding == "greedy":
+            outputs = model.generate(
+                **input_ids,
+                max_new_tokens = max_new_tokens, # Initial length + 20 more tokens
+                output_scores=True,
+                num_return_sequences=1,
+                return_dict_in_generate=True,
+                temperature=kwargs["temperature"],
+            )
+        elif decoding == "beam_search":
+            outputs = model.generate(
+                **input_ids,
+                max_new_tokens = max_new_tokens, # Initial length + 20 more tokens
+                output_scores=True,
+                num_return_sequences=1,
+                return_dict_in_generate=True,
+                temperature=kwargs["temperature"],
+                num_beams=5,
+            )
+        elif decoding == "softmax":
+            model.generate(
+                **input_ids,
+                max_new_tokens = max_new_tokens, # Initial length + 20 more tokens
+                output_scores=True,
+                num_return_sequences=1,
+                return_dict_in_generate=True,
+                temperature=kwargs["temperature"],
+                do_sample=True,
+            )
+        else:
+            raise ValueError(f"Decoding scheme {decoding} is not supported.")
 
         # Convert the generated token IDs back to text
         answerTokens = tokenizer.decode(
@@ -97,10 +126,13 @@ def get_completion(
 
 def main(
     file_path,
-    temperature=0.1,
+    temperatures="0.1",
     model_name="gpt-3.5-turbo-instruct",
     max_new_tokens=20,
-    # TODO parametrize decoding schemes if necessary 
+    instructions_path=None,
+    question="",
+    decoding_scheme="greedy", # parametrize decoding schemes if necessary 
+    n_seeds=5,
 ):
     # initialize path for dumping output
     time = datetime.now().strftime("%Y%m%d_%H%M")
@@ -108,24 +140,26 @@ def main(
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
-    # Define answer types
-    # TODO
-    anwsers = ["Both", "Content", "Number"]
+    # Define temperatures to iterate over
+    temperatures_list = [
+        float(t) for t 
+        in temperatures.split(",")
+    ]
 
     # TODO
     # Define seeds
-    seeds = range(5)
+    seeds = range(n_seeds)
 
     # Iterate over seeds
     for seed in seeds:
         # Reseed the singleton RandomState instance.
         np.random.seed(seed)
-
+        random.seed(seed)
         # Iterate over anwsers
-        for anwser in anwsers:
+        for temperature in temperatures_list:
             # final results file
-            out_file = f"../results/free/{out_name}_free_{anwser}_seed{seed}_{time}.csv"
-    
+            out_file = f"../results/free/{out_name}_free_temp{temperature}_seed{seed}_{time}.csv"
+
             # Load data set
             scenarios = pd.read_csv(file_path).dropna()
             print(scenarios.head())
@@ -134,12 +168,12 @@ def main(
             # Iterate over rows in prompt csv 
             for i, row in tqdm(scenarios.iterrows()):
                 # load instructions
-                with open("../prompt/prompt_free/MaximsInstructions_Free.txt", "r") as f:
+                with open(instructions_path, "r") as f:
                     instructions = f.read()
                 # Get prompt and generate answer
-                prompt = instructions + "\n\n" + row.prompt
+                prompt = instructions + "\n\n" + row.prompt + row.trigger
                 # construct task question
-                question = f"Why has {row.speaker} responded like this? \nYour answer:\n"
+                question = question.format(row.speaker) #f"Why has {row.speaker} responded like this? \nYour answer:\n"
                 prompt = prompt + "\n\n" + question
                 
                 # retrieve response
@@ -150,6 +184,7 @@ def main(
                     model,
                     tokenizer, 
                     temperature=temperature,
+                    decoding_scheme=decoding_scheme,
                 )
 
                 print("generate response: ", response)
@@ -158,7 +193,9 @@ def main(
                 results_df = pd.DataFrame({
                     "model_name": model_name,
                     "temperature": temperature,
-                    "answer": anwser,
+                    "decoding_scheme": decoding_scheme,
+                    "question": question,
+                    "seed": seed,
                     "item_id": row.item_number,
                     "prompt": prompt,
                     "response": response,
@@ -187,10 +224,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        "--temperature",
-        type=float,
-        default=0.1,
-        help="Temperature for pragmatic speaker",
+        "--temperatures",
+        type=str,
+        default="0.1",
+        help="Temperature for pragmatic speaker. Can be a list of temperatures to iterate over separated by commas.",
     )
 
     parser.add_argument(
@@ -213,11 +250,43 @@ if __name__ == "__main__":
         help="Number of new tokens to predict for the answer explanation.",
     )
 
+    parser.add_argument(
+        "--instructions_path",
+        type=str,
+        help="Path to the text file containing instructions for the task",
+    )
+
+    parser.add_argument(
+        "--question",
+        type=str,
+        default="",
+        help="Task question to append to the context",
+    )
+
+    parser.add_argument(
+        "--decoding_scheme",
+        type=str,
+        choices=["greedy", "beam_search", "softmax"],
+        default="greedy",
+        help="Task question to append to the context",
+    )
+    
+    parser.add_argument(
+        "--n_seeds",
+        type=int,
+        default=5,
+        help="Number of seeds to run the experiment for",
+    )
+
     args = parser.parse_args()
 
     main(
         file_path=args.file_path,
-        temperature=args.temperature,
+        temperatures=args.temperatures,
         model_name=args.model_name,
         max_new_tokens=args.max_new_tokens,
+        instructions_path=args.instructions_path,
+        question=args.question,
+        decoding_scheme=args.decoding_scheme,
+        n_seeds=args.n_seeds,
     )
