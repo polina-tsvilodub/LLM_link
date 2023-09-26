@@ -48,11 +48,10 @@ def get_completion(
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
     # TODO open q: do we do the diff random seeds / orders of options, too?
-    
     # Tokenize the prompt
-    if ("google/flan-t5" in model_name) or ("meta/" in model_name):
-        model = model.to(DEVICE)
-        input_ids = tokenizer(prompt, return_tensors="pt").to(DEVICE)
+    if ("google/flan-t5" in model_name) or ("meta" in model_name):
+        model = model #.to(DEVICE)
+        input_ids = tokenizer(prompt, return_tensors="pt") #.to(DEVICE)
         # Generate output from the model with a maximum length of 20 tokens
         outputs = model.generate(
             **input_ids,

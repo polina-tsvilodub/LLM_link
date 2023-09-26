@@ -60,14 +60,14 @@ def retrieve_log_probs(
         print("\n---- INPUT PROMPT ----- \n ", input_prompt, "\n----------------------")
 
         # Tokenize the prompt
-        if ("google/flan-t5" in model_name) or ("meta/" in model_name):
+        if ("google/flan-t5" in model_name) or ("meta" in model_name):
             print("Using HF code")
             ##### retreiver conditional log prob #####
             input_ids = tokenizer(
                 input_prompt, 
                 return_tensors="pt",
-            ).to(DEVICE)
-            model = model.to(DEVICE)
+            ) #.to(DEVICE)
+            model = model #.to(DEVICE)
             # Generate output from the model with a maximum length of 20 tokens
             outputs = model.generate(
                 **input_ids,

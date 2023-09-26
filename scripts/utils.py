@@ -23,7 +23,7 @@ def load_model(model_name):
     For replication: You need to download and deploy the model locally.
     '''
     # return None if the model is an OpenAI model
-    if "gpt" or "embedding" in model_name:
+    if ("gpt" in model_name) or ("embedding" in model_name):
         return None, None
     
     else:
