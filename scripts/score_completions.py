@@ -215,7 +215,10 @@ def main(
             # Get prompt and generate answer
             prompt = instructions + " The answer options are " + option_instructions + ".\n\n" + row.prompt
             # construct task question
-            question = question.format(row.speaker)
+            try:
+                question = question.format(row.speaker)
+            except:
+                pass
             # the df should have the target option and then other options as last columns
             options = list(row.loc['target':])
             # shuffle options

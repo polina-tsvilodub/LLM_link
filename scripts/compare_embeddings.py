@@ -52,7 +52,7 @@ def compute_embedding_similarity(
         in options_embeddings
     ]
     choice_probs = softmax(cosine_sims)
-    best_choice = choice_probs.index(max(choice_probs))
+    best_choice = choice_probs.tolist().index(max(choice_probs))
     chosen_option = kwargs["option_names"][best_choice]
 
     return cosine_sims, choice_probs, chosen_option
@@ -105,7 +105,10 @@ def main(
             # Get prompt and generate answer
             prompt = instructions + " The answer options are " + option_instructions + ".\n\n" + row.prompt
             # construct task question
-            question = question.format(row.speaker)
+            try:
+                question = question.format(row.speaker)
+            except:
+                pass
             # the df should have the target option and then other options as last columns
             options = list(row.loc['target':])
             # shuffle options
@@ -118,9 +121,9 @@ def main(
             shuffled_option_names, shuffled_options = zip(*shuffled_options)
             shuffled_option_names = list(shuffled_option_names)
             shuffled_options = list(shuffled_options)
-
+            breakpoint()
             # add the list of options in a randomized seed dependent order
-            prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+            prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n" + "\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
             print("---- formatted prompt ---- ", prompt_randomized)
             
             cosine_sims, choice_probs_round, chosen_option = compute_embedding_similarity(

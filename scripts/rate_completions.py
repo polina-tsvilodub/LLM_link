@@ -122,7 +122,10 @@ def main(
                 with open(instructions_path, "r") as f:
                     instructions = f.read()
                 # construct task question
-                question = question.format(row.speaker)
+                try:
+                    question = question.format(row.speaker)
+                except:
+                    pass
                 # Get prompt and generate answer
                 prompt = instructions + row.prompt + question + "\nHow would you rate the following answer: "
                 # retrieve the actual options

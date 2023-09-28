@@ -173,7 +173,10 @@ def main(
                 # Get prompt and generate answer
                 prompt = instructions + "\n\n" + row.prompt
                 # construct task question
-                question = question.format(row.speaker) #f"Why has {row.speaker} responded like this? \nYour answer:\n"
+                try:
+                    question = question.format(row.speaker) #f"Why has {row.speaker} responded like this? \nYour answer:\n"
+                except:
+                    pass
                 prompt = prompt + "\n\n" + question + "\nYour answer:\n"
                 
                 # retrieve response
