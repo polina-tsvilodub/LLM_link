@@ -132,7 +132,7 @@ def main(
     instructions_path=None,
     question="",
     decoding_scheme="greedy", # parametrize decoding schemes if necessary 
-    n_seeds=5,
+    n_seeds=1,
 ):
     # initialize path for dumping output
     time = datetime.now().strftime("%Y%m%d_%H%M")
@@ -277,7 +277,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--n_seeds",
         type=int,
-        default=5,
+        default=1,
         help="Number of seeds to run the experiment for",
     )
 

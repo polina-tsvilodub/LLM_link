@@ -74,7 +74,7 @@ def main(
     use_option_numbering_only=False,
     instructions_path=None,
     question="",
-    n_seeds=5,
+    n_seeds=1,
 ):
     # initialize path for dumping output
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
@@ -230,7 +230,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--n_seeds",
         type=int,
-        default=5,
+        default=1,
         help="Number of seeds to run the experiment for",
     )
 

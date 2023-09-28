@@ -65,7 +65,7 @@ def main(
         use_option_numbering_only=False,
         instructions_path=None,
         question="",
-        n_seeds=5,
+        n_seeds=1,
 ):
     # initialize path for dumping output
     time = datetime.now().strftime("%Y%m%d_%H%M")
