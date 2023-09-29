@@ -56,9 +56,7 @@ def retrieve_log_probs(
     conditional_log_probs = []
     log_probs = []
 
-    # check if only the option labels should be scored
-    if kwargs['use_option_numbering_only']:
-        options = kwargs['option_numbering']
+
     # iterate over items here so that the model won't have to be reloaded for each item & option
     for o in options:
         optionTokenLogProbs = []
@@ -172,7 +170,7 @@ def main(
         temperature=0.1,
         model_name="gpt-3.5-turbo-instruct",
         option_numbering=None,
-        use_option_numbering_only=False,
+        use_labels_only=False,
         instructions_path=None,
         question="",
         n_seeds=1,
@@ -210,10 +208,17 @@ def main(
         # Iterate over rows in prompt csv 
         for i, row in tqdm(scenarios.iterrows()):
             # load instructions
+            if not use_labels_only:
+                instructions_path = instructions_path.replace(".txt", "_prob.txt")
+
             with open(instructions_path, "r") as f:
                 instructions = f.read()
-            # Get prompt and generate answer
-            prompt = instructions + " The answer options are " + option_instructions + ".\n\n" + row.prompt
+            # Get prompt and generate answer options for labels scoring condition
+            if use_labels_only:
+                prompt = instructions + " The answer options are " + option_instructions + "\n\n" + row.prompt
+            # leave out answer options for sentence prob / surprisal condition
+            else:
+                prompt = instructions + "\n\n" + row.prompt
             # construct task question
             try:
                 question = question.format(row.speaker)
@@ -233,7 +238,12 @@ def main(
             shuffled_options = list(shuffled_options)
 
             # add the list of options in a randomized seed dependent order
-            prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+            if use_labels_only:
+                prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+                options = option_numbering
+            else:
+                prompt_randomized = prompt + question + "\nYour answer:\n"
+
             print("---- formatted prompt ---- ", prompt_randomized)
             
             option_conditional_log_probs, log_probs = retrieve_log_probs(
@@ -243,7 +253,7 @@ def main(
                 model, 
                 tokenizer,
                 temperature=temperature,
-                use_option_numbering_only=use_option_numbering_only,
+                use_labels_only=use_labels_only,
                 option_numbering=option_numbering,
             )
             ###### compute derived metrics ######
@@ -293,14 +303,14 @@ def main(
 
             # 4. sentence surprisal
             sentence_surprisal = [
-                - np.sum(
+                np.sum(
                     np.array(p)
                 ) for p 
                 in option_conditional_log_probs
             ]
             # 5. length-normalized sentence surprisal
             mean_sentence_surprisal = [
-                - (1/len(p)) * np.sum(
+                (1/len(p)) * np.sum(
                     np.array(p)
                 ) for p 
                 in option_conditional_log_probs
@@ -311,13 +321,9 @@ def main(
                 compute_mi(s, p)
                 for s, p
                 in zip(sentence_surprisal, 
-                        [- np.sum(np.array(t)) for t in log_probs])
+                        [np.sum(np.array(t)) for t in log_probs])
             ]
-            # 7. perplexity TODO double check
-            ppl = [
-                np.exp(s) for s
-                in sentence_surprisal
-            ]
+            
             print(option_conditional_log_probs, token_cond_probs, sentence_cond_probs, mean_sentence_mi, mean_sentence_surprisal)
 
             # TODO deal with re-normalization somewhere
@@ -350,7 +356,6 @@ def main(
                 "sentence_surprisal": sentence_surprisal,
                 "mean_sentence_surprisal": mean_sentence_surprisal,
                 "mean_sentence_mi_surprisal": mean_sentence_mi_surprisal,
-                "ppl": ppl,
             })
             print(results_df)
         
@@ -400,10 +405,10 @@ if __name__ == "__main__":
         help="Option labels to prepend to option sentences",
     )
     parser.add_argument(
-        "--use_option_numbering_only",
+        "--use_labels_only",
         type=bool,
         default=False,
-        help="Whether to use only labels for options as options to be scored",
+        help="Whether to use only labels for options as options to be scored, with options in context",
     )
 
     parser.add_argument(
@@ -433,7 +438,7 @@ if __name__ == "__main__":
         temperature=args.temperature,
         model_name=args.model_name,
         option_numbering=args.option_numbering,
-        use_option_numbering_only=args.use_option_numbering_only,
+        use_labels_only=args.use_labels_only,
         instructions_path=args.instructions_path,
         question=args.question,
         n_seeds=args.n_seeds,

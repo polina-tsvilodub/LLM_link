@@ -27,7 +27,7 @@ def compute_embedding_similarity(
         model=None, 
         tokenizer=None,
         temperature=None,
-        use_option_numbering_only=None,
+        use_labels_only=None,
         option_numbering=None,
         **kwargs,
 ):
@@ -62,7 +62,7 @@ def main(
         temperature=0.1,
         model_name="text-embedding-ada-002",
         option_numbering=None,
-        use_option_numbering_only=False,
+        use_labels_only=False,
         instructions_path=None,
         question="",
         n_seeds=1,
@@ -103,7 +103,10 @@ def main(
             with open(instructions_path, "r") as f:
                 instructions = f.read()
             # Get prompt and generate answer
-            prompt = instructions + " The answer options are " + option_instructions + ".\n\n" + row.prompt
+            if use_labels_only:
+                prompt = instructions + " The answer options are " + option_instructions + ".\n\n" + row.prompt
+            else:
+                prompt = instructions + "\n\n" + row.prompt
             # construct task question
             try:
                 question = question.format(row.speaker)
@@ -123,7 +126,11 @@ def main(
             shuffled_options = list(shuffled_options)
             breakpoint()
             # add the list of options in a randomized seed dependent order
-            prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n" + "\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+            if use_labels_only:
+                prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n" + "\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+            else:
+                prompt_randomized = prompt + question + "\nYour answer:\n"
+                
             print("---- formatted prompt ---- ", prompt_randomized)
             
             cosine_sims, choice_probs_round, chosen_option = compute_embedding_similarity(
@@ -133,7 +140,7 @@ def main(
                 model, 
                 tokenizer,
                 temperature=temperature,
-                use_option_numbering_only=use_option_numbering_only,
+                use_labels_only=use_labels_only,
                 option_numbering=option_numbering,
                 option_names=shuffled_option_names,
             )
@@ -206,10 +213,10 @@ if __name__ == "__main__":
         help="Option labels to prepend to option sentences",
     )
     parser.add_argument(
-        "--use_option_numbering_only",
+        "--use_labels_only",
         type=bool,
         default=False,
-        help="Whether to use only labels for options as options to be scored",
+        help="Whether to use only labels for options as options to be scored, with options in context",
     )
 
     parser.add_argument(
@@ -239,7 +246,7 @@ if __name__ == "__main__":
         temperature=args.temperature,
         model_name=args.model_name,
         option_numbering=args.option_numbering,
-        use_option_numbering_only=args.use_option_numbering_only,
+        use_labels_only=args.use_labels_only,
         instructions_path=args.instructions_path,
         question=args.question,
         n_seeds=args.n_seeds,

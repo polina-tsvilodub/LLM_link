@@ -6,7 +6,7 @@ These configs are (availability might differ by script):
 * `--temperature`: sampling temperature
 * `--model_name`: string name of the model (OpenAO or HuggingFace LLama 2 and FLAN-T5 should be supported)
 * `--option_numbering`: string representing the option prefixes to be used (e.g., A, B, C etc). Defaults to A,B,C,D. **Important**: for phenomena with a different number of interpretation options than 2, the option numering must be set appropriately. Relevant for FC and embedding metrics.
-* `--use_option_numbering_only`: boolean indicating whether the options should have the shape, e.g., "A" only, or e.g., both "A. Coherent". Relevant for FC and embedding metrics.
+* `--use_labels_only`: boolean indicating whether the options should have the shape, e.g., "A" only, or e.g., both "A. Coherent". Relevant for FC metrics (string probability and surprisal vs label probability).
 * `--question`: Task question string. Defaults to "". **IMPORTANT**: for coherent prompts, the following phenomena require passing the respective question:
   * `coherence`: Is this story coherent or not?
   * `maxims`: Why has {} responded like this?

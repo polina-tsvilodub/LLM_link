@@ -71,7 +71,7 @@ def main(
     temperature=0.1,
     model_name="gpt-3.5-turbo-instruct",
     option_numbering=None,
-    use_option_numbering_only=False,
+    use_labels_only=False,
     instructions_path=None,
     question="",
     n_seeds=1,
@@ -134,7 +134,7 @@ def main(
                 option_conditional_log_probs = []
                 options_log_probs = []
                 for o in options:
-                    prompt_with_option = prompt + o + "\nChoose one of the following response options: " + ", ".join(answer_choices) + "\n" 
+                    prompt_with_option = prompt + o + "\nChoose one of the following response options: " + ", ".join(answer_choices) + "\nYour answer: " 
                     cond_rating_probs, rating_probs = retrieve_log_probs(
                         prompt_with_option, 
                         options=answer_choices,
@@ -142,7 +142,7 @@ def main(
                         model=model, 
                         tokenizer=tokenizer, 
                         score_prior=False,
-                        use_option_numbering_only=False,
+                        use_labels_only=False,
                         temperature=0.1, 
                     )
                     # lists of nested lists (each top level list corresponds to one option)
