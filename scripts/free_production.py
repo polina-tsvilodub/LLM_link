@@ -97,7 +97,7 @@ def get_completion(
             skip_special_tokens=True
         )
 
-    elif "gpt-3.5" or "embedding" in model_name:
+    elif ("gpt-3.5" in model_name) or ("davinci" in model_name):
         # alternative with the completions endpoint
         # TODO check if i need to update the openai package version
         outputs = openai.Completion.create(

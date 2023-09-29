@@ -106,7 +106,7 @@ def retrieve_log_probs(
                 )
             ####
 
-        elif "gpt-3.5" in model_name:
+        elif ("gpt-3.5" in model_name) or ("davinci" in model_name):
             ##### retreiver conditional log prob #####
             outputs = openai.Completion.create(
                 model    = model_name, 

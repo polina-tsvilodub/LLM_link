@@ -31,6 +31,7 @@ Please create the following subdirectories within the `results` directory, if yo
 * correct instructions file for given phenomenon and metric?
 * correct number and type of labels provided via `--option_numbering`?
 * correct task question passed for the given phenomenon?
+* correct model name set?
 * if needed, is the `--use_labels_only` option set?
 * results subdirectory for the metric created?
 
