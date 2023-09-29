@@ -178,6 +178,7 @@ def main(
     # initialize path for dumping output
     time = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
+    phenomenon = out_name.split("_")[-1]
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
@@ -203,7 +204,10 @@ def main(
         random.seed(seed)
 
         # final results output file
-        out_file = f"../results/log_probs/{out_name}_FC_seed{seed}_{time}.csv"
+        if use_labels_only:
+            out_file = f"../results/log_probs/{out_name}_FC_labels_seed{seed}_{time}.csv"
+        else:
+            out_file = f"../results/log_probs/{out_name}_FC_optionString_seed{seed}_{time}.csv"
         
         # Iterate over rows in prompt csv 
         for i, row in tqdm(scenarios.iterrows()):
@@ -338,6 +342,7 @@ def main(
                 "temperature": [temperature] * len(options),
                 "seed": [seed] * len(options),
                 "item_id": [row.item_number]  * len(options),
+                "phenomenon": [phenomenon] * len(options),
                 "prompt": [prompt] * len(options),
                 "question": [question] * len(options),
                 "options": options,

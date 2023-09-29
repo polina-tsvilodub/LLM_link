@@ -70,6 +70,7 @@ def main(
     # initialize path for dumping output
     time = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
+    phenomenon = out_name.split("_")[-1]
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
@@ -95,11 +96,17 @@ def main(
         random.seed(seed)
 
         # final results output file
-        out_file = f"../results/embedding_similarity/{out_name}_embedding_seed{seed}_{time}.csv"
+        if use_labels_only:
+            out_file = f"../results/embedding_similarity/{out_name}_embedding_labels_seed{seed}_{time}.csv"
+        else:
+            out_file = f"../results/embedding_similarity/{out_name}_embedding_optionString_seed{seed}_{time}.csv"
         
         # Iterate over rows in prompt csv 
         for i, row in tqdm(scenarios.iterrows()):
             # load instructions
+            if not use_labels_only:
+                instructions_path = instructions_path.replace(".txt", "_prob.txt")
+
             with open(instructions_path, "r") as f:
                 instructions = f.read()
             # Get prompt and generate answer
@@ -124,13 +131,12 @@ def main(
             shuffled_option_names, shuffled_options = zip(*shuffled_options)
             shuffled_option_names = list(shuffled_option_names)
             shuffled_options = list(shuffled_options)
-            breakpoint()
             # add the list of options in a randomized seed dependent order
             if use_labels_only:
                 prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n" + "\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
             else:
                 prompt_randomized = prompt + question + "\nYour answer:\n"
-                
+
             print("---- formatted prompt ---- ", prompt_randomized)
             
             cosine_sims, choice_probs_round, chosen_option = compute_embedding_similarity(
@@ -153,6 +159,7 @@ def main(
                 "model_name": [model_name] * len(options),
                 "seed": [seed] * len(options),
                 "item_id": [row.item_number]  * len(options),
+                "phenomenon": [phenomenon] * len(options),
                 "prompt": [prompt_randomized] * len(options),
                 "question": [question] * len(options),
                 "options": options,

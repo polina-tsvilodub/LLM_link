@@ -137,6 +137,7 @@ def main(
     # initialize path for dumping output
     time = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
+    phenomenon = out_name.split("_")[-1]
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
@@ -196,6 +197,7 @@ def main(
                 results_df = pd.DataFrame({
                     "model_name": model_name,
                     "temperature": temperature,
+                    "phenomenon": phenomenon,
                     "decoding_scheme": decoding_scheme,
                     "question": question,
                     "seed": seed,

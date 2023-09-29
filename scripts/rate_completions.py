@@ -79,6 +79,7 @@ def main(
     # initialize path for dumping output
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
+    phenomenon = out_name.split("_")[-1]
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
@@ -126,8 +127,10 @@ def main(
                     question = question.format(row.speaker)
                 except:
                     pass
+                # add degree scale description to instructions
+                degree_instructions = "The scale consists of the following options: " + ", ".join(answer_choices) + ".\n\n"
                 # Get prompt and generate answer
-                prompt = instructions + row.prompt + question + "\nHow would you rate the following answer: "
+                prompt = instructions + degree_instructions + row.prompt + question + "\nHow would you rate the following answer: "
                 # retrieve the actual options
                 options = list(row.loc['target':])
                 # iterate over the options
@@ -163,11 +166,13 @@ def main(
                     "temperature": [temperature] * len(options),
                     "seed": [seed] * len(options),
                     "item_id": [row.item_number]  * len(options),
+                    "phenomenon": [phenomenon] * len(options),
                     "prompt": [prompt] * len(options),
                     "question": [question] * len(options),
                     "options": options,
                     "option_names": option_names,
                     "scale": [scale] * len(options), 
+                    "rating_options": [", ".join(answer_choices)] * len(options),
                     "weighted_options": weighted_options,
                     "chosen_option": [chosen_option] * len(options),
                     "token_cond_log_probs": option_conditional_log_probs,
