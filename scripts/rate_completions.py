@@ -179,6 +179,7 @@ def main(
                     "item_id": [row.item_number]  * len(options),
                     "phenomenon": [phenomenon] * len(options),
                     "prompt": [prompt] * len(options),
+                    "prior_prompt": [prior_prompt] * len(options),
                     "question": [question] * len(options),
                     "options": options,
                     "option_names": option_names,
