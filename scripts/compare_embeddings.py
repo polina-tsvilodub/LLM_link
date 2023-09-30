@@ -10,6 +10,7 @@ import random
 import string
 from datetime import datetime
 from openai.embeddings_utils import cosine_similarity
+import time
 
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Device = {DEVICE}")
@@ -70,7 +71,7 @@ def main(
     file_path = "../data/data_hu_" + phenomenon + ".csv"
     instructions_path = "../prompt/prompts/" + phenomenon + "_instructions_FC.txt"
     # initialize path for dumping output
-    time = datetime.now().strftime("%Y%m%d_%H%M")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
     
     # Load model and tokenizer
@@ -99,23 +100,17 @@ def main(
 
         # final results output file
         if use_labels_only:
-            out_file = f"../results/embedding_similarity/{out_name}_embedding_labels_seed{seed}_{time}.csv"
+            out_file = f"../results/embedding_similarity/{out_name}_embedding_labels_seed{seed}_{timestamp}.csv"
         else:
-            out_file = f"../results/embedding_similarity/{out_name}_embedding_optionString_seed{seed}_{time}.csv"
+            out_file = f"../results/embedding_similarity/{out_name}_embedding_optionString_seed{seed}_{timestamp}.csv"
         
         # Iterate over rows in prompt csv 
         for i, row in tqdm(scenarios.iterrows()):
             # load instructions
-            if not use_labels_only:
-                instructions_path = instructions_path.replace(".txt", "_prob.txt")
-
             with open(instructions_path, "r") as f:
                 instructions = f.read()
             # Get prompt and generate answer
-            if use_labels_only:
-                prompt = instructions + " The answer options are " + option_instructions + ".\n\n" + row.prompt
-            else:
-                prompt = instructions + "\n\n" + row.prompt
+            prompt = instructions + "\n\n" + row.prompt
             # construct task question
             try:
                 question = question.format(row.speaker)
@@ -135,7 +130,8 @@ def main(
             shuffled_options = list(shuffled_options)
             # add the list of options in a randomized seed dependent order
             if use_labels_only:
-                prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n" + "\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+                prompt_randomized = prompt + question + "\n Choose one of the following options and return the label of that option.\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+                options = option_numbering
             else:
                 prompt_randomized = prompt + question + "\nYour answer:\n"
 
@@ -190,6 +186,8 @@ def main(
                                 mode="a",
                                 header=True,
                                 )
+                
+            time.sleep(5)
             
 
 if __name__ == "__main__":

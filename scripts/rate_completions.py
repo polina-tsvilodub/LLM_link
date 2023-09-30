@@ -129,31 +129,40 @@ def main(
                     question = question.format(row.speaker)
                 except:
                     pass
-                # add degree scale description to instructions
-                degree_instructions = "The scale consists of the following options: " + ", ".join(answer_choices) + ".\n\n"
+                
+                instructions_formatted = instructions.format(scale)
                 # Get prompt and generate answer
-                prompt = instructions + degree_instructions + row.prompt + question + "\nHow would you rate the following answer: "
+                prompt = instructions_formatted + row.prompt + question + "\nHow would you rate the following answer: "
+                prior_prompt = instructions_formatted + "\nHow would you rate the following answer: "
+                # construct numbered answer choices
+                answer_choices_formatted = "\n".join([
+                    str(i+1) + ". " + option
+                    for i, option
+                    in enumerate(answer_choices)
+                ])
                 # retrieve the actual options
                 options = list(row.loc['target':])
                 # iterate over the options
                 option_conditional_log_probs = []
                 options_log_probs = []
+                null_options_log_probs = []
                 for o in options:
-                    prompt_with_option = prompt + o + "\nChoose one of the following response options: " + ", ".join(answer_choices) + "\nYour answer: " 
-                    cond_rating_probs, rating_probs = retrieve_log_probs(
+                    prompt_with_option = prompt + o + "\nChoose one of the following options and return the number of that option: \n" + answer_choices_formatted + "\nYour answer: " 
+                    prior_prompt_with_option = prior_prompt + o + "\nChoose one of the following options and return the number of that option: \n" + answer_choices_formatted + "\nYour answer: " 
+                    cond_rating_probs, rating_probs, null_rating_probs = retrieve_log_probs(
                         prompt_with_option, 
-                        options=answer_choices,
+                        prior_prompt_with_option,
+                        options=[str(i+1) for i in range(len(answer_choices))],
                         model_name=model_name,
                         model=model, 
                         tokenizer=tokenizer, 
-                        score_prior=False,
                         use_labels_only=False,
                         temperature=0.1, 
                     )
                     # lists of nested lists (each top level list corresponds to one option)
                     option_conditional_log_probs.append(cond_rating_probs)
                     options_log_probs.append(rating_probs)
-
+                    null_options_log_probs.append(null_rating_probs)
                     # sleep
                     time.sleep(10)
                 
@@ -179,6 +188,7 @@ def main(
                     "chosen_option": [chosen_option] * len(options),
                     "token_cond_log_probs": option_conditional_log_probs,
                     "prior_token_log_probs": options_log_probs,
+                    "null_prior_token_log_probs": null_options_log_probs,
                 })
                 print(results_df)
 
@@ -196,7 +206,8 @@ def main(
                                     mode="a",
                                     header=True,
                                     )
-                    
+                
+                time.sleep(5)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

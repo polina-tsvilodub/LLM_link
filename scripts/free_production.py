@@ -9,6 +9,7 @@ from utils import load_model
 import argparse
 from datetime import datetime
 import random
+import time
 
 if torch.cuda.is_available():
     DEVICE = "cuda:0" 
@@ -137,7 +138,7 @@ def main(
     file_path = "../data/data_hu_" + phenomenon + ".csv"
     instructions_path = "../prompt/prompts/" + phenomenon + "_instructions_FC.txt"
     # initialize path for dumping output
-    time = datetime.now().strftime("%Y%m%d_%H%M")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
     
     # Load model and tokenizer
@@ -161,7 +162,7 @@ def main(
         # Iterate over anwsers
         for temperature in temperatures_list:
             # final results file
-            out_file = f"../results/free/{out_name}_free_temp{temperature}_seed{seed}_{time}.csv"
+            out_file = f"../results/free/{out_name}_free_temp{temperature}_seed{seed}_{timestamp}.csv"
 
             # Load data set
             scenarios = pd.read_csv(file_path).dropna()
@@ -224,6 +225,8 @@ def main(
                                     mode="a",
                                     header=True,
                                     )
+                
+                time.sleep(5)
 
 
 

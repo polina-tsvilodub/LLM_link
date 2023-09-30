@@ -9,6 +9,7 @@ import argparse
 import random
 import string
 from datetime import datetime
+import time
 
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Device = {DEVICE}")
@@ -22,6 +23,7 @@ def softmax(x):
 
 def retrieve_log_probs(
         prompt, # or item / row in the df
+        prior_prompt, # prior prompt for unconditional log probs
         options, # options to be scored (as a list so that there can be varying numbers by phenomenon)
         model_name=None, # only to be used for openAI models
         model=None, # only to be used with HF models
@@ -55,6 +57,7 @@ def retrieve_log_probs(
     
     conditional_log_probs = []
     log_probs = []
+    null_log_probs = []
 
 
     # iterate over items here so that the model won't have to be reloaded for each item & option
@@ -62,6 +65,7 @@ def retrieve_log_probs(
         optionTokenLogProbs = []
 
         input_prompt = prompt + o
+        null_input_prompt = prior_prompt + o
         print("\n---- INPUT PROMPT ----- \n ", input_prompt, "\n----------------------")
 
         # Tokenize the prompt
@@ -82,14 +86,13 @@ def retrieve_log_probs(
                 return_dict_in_generate=True,
                 temperature=kwargs['temperature'],
             )
+            # Convert the generated token IDs back to text
+            optionTokens = tokenizer.decode(
+                outputs.sequences[0], 
+                skip_special_tokens=True
+            ) # TODO check if these need to be ported back to cpu
 
             if score_prior:
-                # Convert the generated token IDs back to text
-                optionTokens = tokenizer.decode(
-                    outputs.sequences[0], 
-                    skip_special_tokens=True
-                ) # TODO check if these need to be ported back to cpu
-
                 #### retrieve unconditional log prob of the option ####
                 option_input_ids = tokenizer(
                     o, 
@@ -98,6 +101,20 @@ def retrieve_log_probs(
                 
                 option_outputs = model.generate(
                     **option_input_ids,
+                    max_new_tokens = 0, # we only want to score, not produce new tokens
+                    output_scores=True,
+                    num_return_sequences=1,
+                    return_dict_in_generate=True,
+                    temperature=kwargs['temperature'],
+                )
+                # also, compute null prompt prior
+                null_option_input_ids = tokenizer(
+                    null_input_prompt, 
+                    return_tensors="pt",
+                ).to(DEVICE)
+                
+                null_option_outputs = model.generate(
+                    **null_option_input_ids,
                     max_new_tokens = 0, # we only want to score, not produce new tokens
                     output_scores=True,
                     num_return_sequences=1,
@@ -117,11 +134,12 @@ def retrieve_log_probs(
                 echo = True,
             )
 
-            #### retrieve unconditional log prob of the option ####
+            #### retrieve unconditional log prob of the option in the null context ####
+            # just option scoring isn't done with OpenAI since it doesn't return log probs of the first token
             if score_prior:
-                option_outputs = openai.Completion.create(
+                null_option_outputs = openai.Completion.create(
                     model    = model_name, 
-                    prompt   = o,
+                    prompt   = null_input_prompt,
                     max_tokens  = 0, # we only want to score, so no new tokens
                     temperature = kwargs['temperature'], 
                     logprobs = 0,
@@ -141,6 +159,7 @@ def retrieve_log_probs(
             print("Log probs of HF answer tokens:", optionTokenConditionalLogProbs)
             if score_prior:
                 optionTokenLogProbs = option_outputs.scores[0].tolist()
+                nullOptionTokenLogProbs = null_option_outputs.scores[0].tolist()
 
         except:
             # retrieve OpenAI log probs
@@ -153,16 +172,20 @@ def retrieve_log_probs(
             print("Log probs of answer tokens:", optionTokenConditionalLogProbs)
 
             if score_prior:
+                optionTokenLogProbs = []
                 # unconditional log probs (see class code)
-                endIndex = len(option_outputs.choices[0]["logprobs"]["tokens"])
-                optionTokenLogProbs = option_outputs.choices[0]["logprobs"]["token_logprobs"][:endIndex] 
-                print("Uncut prior log Ps ", optionTokenLogProbs)
-                optionTokenLogProbs = optionTokenLogProbs[1:endIndex]
+                text_offsets = null_option_outputs.choices[0]['logprobs']['text_offset']
+                cutIndex = text_offsets.index(max(i for i in text_offsets if i <= len(prior_prompt)))
+                endIndex = null_option_outputs.usage.total_tokens
+                nullOptionTokens = null_option_outputs.choices[0]["logprobs"]["tokens"][cutIndex:endIndex]
+                nullOptionTokenLogProbs = null_option_outputs.choices[0]["logprobs"]["token_logprobs"][cutIndex:endIndex]  
+                print("Null prior log Ps ", nullOptionTokenLogProbs)
 
         conditional_log_probs.append(optionTokenConditionalLogProbs)
         log_probs.append(optionTokenLogProbs)
+        null_log_probs.append(nullOptionTokenLogProbs)
 
-    return conditional_log_probs, log_probs
+    return conditional_log_probs, log_probs, null_log_probs
 
 
 def main(
@@ -178,7 +201,7 @@ def main(
     file_path = "../data/data_hu_" + phenomenon + ".csv"
     instructions_path = "../prompt/prompts/" + phenomenon + "_instructions_FC.txt"
     # initialize path for dumping output
-    time = datetime.now().strftime("%Y%m%d_%H%M")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
     
     # Load model and tokenizer
@@ -207,24 +230,17 @@ def main(
 
         # final results output file
         if use_labels_only:
-            out_file = f"../results/log_probs/{out_name}_FC_labels_seed{seed}_{time}.csv"
+            out_file = f"../results/log_probs/{out_name}_FC_labels_seed{seed}_{timestamp}.csv"
         else:
-            out_file = f"../results/log_probs/{out_name}_FC_optionString_seed{seed}_{time}.csv"
+            out_file = f"../results/log_probs/{out_name}_FC_optionString_seed{seed}_{timestamp}.csv"
         
         # Iterate over rows in prompt csv 
         for i, row in tqdm(scenarios.iterrows()):
             # load instructions
-            if not use_labels_only:
-                instructions_path = instructions_path.replace(".txt", "_prob.txt")
-
             with open(instructions_path, "r") as f:
                 instructions = f.read()
-            # Get prompt and generate answer options for labels scoring condition
-            if use_labels_only:
-                prompt = instructions + " The answer options are " + option_instructions + "\n\n" + row.prompt
-            # leave out answer options for sentence prob / surprisal condition
-            else:
-                prompt = instructions + "\n\n" + row.prompt
+            
+            prompt = instructions + "\n\n" + row.prompt
             # construct task question
             try:
                 question = question.format(row.speaker)
@@ -245,15 +261,18 @@ def main(
 
             # add the list of options in a randomized seed dependent order
             if use_labels_only:
-                prompt_randomized = prompt + question + "\n Which of the following options would you choose?\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+                prompt_randomized = prompt + question + "\n Choose one of the following options and return the label of that option.\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
                 options = option_numbering
+                prior_prompt = instructions + "\n\n" + "Choose one of the following options and return the label of that option.\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
             else:
                 prompt_randomized = prompt + question + "\nYour answer:\n"
+                prior_prompt = instructions + "\nYour answer:\n"
 
             print("---- formatted prompt ---- ", prompt_randomized)
             
-            option_conditional_log_probs, log_probs = retrieve_log_probs(
+            option_conditional_log_probs, log_probs, null_log_probs = retrieve_log_probs(
                 prompt_randomized, 
+                prior_prompt,
                 options,
                 model_name,
                 model, 
@@ -272,9 +291,10 @@ def main(
                 )
             # and prior unconditional token probs
             # nested list of prior token probs
+            # we use the NULL CONTEXT priors by default
             token_probs = []
             print("unconditional log probs ", log_probs)
-            for o in log_probs:
+            for o in null_log_probs:
                 token_probs.append(
                     [np.exp(p) for p in o]
                 )
@@ -322,12 +342,11 @@ def main(
                 in option_conditional_log_probs
             ]
             # 6. prior corrected (= empirical MI) sentence surprisal
-            # TODO: what is this metric conceptually?
             sentence_mi_surprisal = [
                 compute_mi(s, p)
                 for s, p
                 in zip(sentence_surprisal, 
-                        [np.sum(np.array(t)) for t in log_probs])
+                        [np.sum(np.array(t)) for t in null_log_probs])
             ]
             
             print(option_conditional_log_probs, token_cond_probs, sentence_cond_probs, sentence_mi, mean_sentence_surprisal)
@@ -346,6 +365,7 @@ def main(
                 "item_id": [row.item_number]  * len(options),
                 "phenomenon": [phenomenon] * len(options),
                 "prompt": [prompt] * len(options),
+                "prior_prompt": [prior_prompt] * len(options),
                 "question": [question] * len(options),
                 "options": options,
                 "option_names": option_names,
@@ -355,6 +375,7 @@ def main(
                 "token_cond_log_probs": option_conditional_log_probs,
                 "token_cond_probs": token_cond_probs,
                 "prior_token_log_probs": log_probs,
+                "null_prior_token_log_probs": null_log_probs,
                 "token_probs": token_probs,
                 "sentence_cond_probs": sentence_cond_probs,
                 "mean_sentence_cond_probs": mean_sentence_cond_probs,
@@ -381,6 +402,8 @@ def main(
                                 mode="a",
                                 header=True,
                                 )
+
+            time.sleep(5)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
