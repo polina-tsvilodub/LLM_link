@@ -166,19 +166,21 @@ def retrieve_log_probs(
 
 
 def main(
-        file_path,
+        phenomenon,
         temperature=0.1,
         model_name="gpt-3.5-turbo-instruct",
         option_numbering=None,
         use_labels_only=False,
-        instructions_path=None,
         question="",
         n_seeds=1,
 ):
+    # construct path to vignettes and instructions
+    file_path = "../data/data_hu_" + phenomenon + ".csv"
+    instructions_path = "../prompt/prompts/" + phenomenon + "_instructions_FC.txt"
     # initialize path for dumping output
     time = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
-    phenomenon = out_name.split("_")[-1]
+    
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
@@ -292,14 +294,14 @@ def main(
             ]
             # 2. length-normalized sentence probability
             mean_sentence_cond_probs = [
-                (1/len(t))* np.prod(
+                (1/len(t))* np.sum(
                     np.array(t)
                 ) for t 
                 in token_cond_probs
             ]
             # 3. prior correction (= empirical MI)
             # NOTE: MI computed without length normalization
-            mean_sentence_mi = [
+            sentence_mi = [
                 compute_mi(s, p)
                 for s, p
                 in zip(sentence_cond_probs, prior_probs)
@@ -321,14 +323,14 @@ def main(
             ]
             # 6. prior corrected (= empirical MI) sentence surprisal
             # TODO: what is this metric conceptually?
-            mean_sentence_mi_surprisal = [
+            sentence_mi_surprisal = [
                 compute_mi(s, p)
                 for s, p
                 in zip(sentence_surprisal, 
                         [np.sum(np.array(t)) for t in log_probs])
             ]
             
-            print(option_conditional_log_probs, token_cond_probs, sentence_cond_probs, mean_sentence_mi, mean_sentence_surprisal)
+            print(option_conditional_log_probs, token_cond_probs, sentence_cond_probs, sentence_mi, mean_sentence_surprisal)
 
             # TODO deal with re-normalization somewhere
 
@@ -357,10 +359,10 @@ def main(
                 "sentence_cond_probs": sentence_cond_probs,
                 "mean_sentence_cond_probs": mean_sentence_cond_probs,
                 "prior_sentence_probs": prior_probs,
-                "mean_sentence_mi": mean_sentence_mi,
+                "sentence_mi": sentence_mi,
                 "sentence_surprisal": sentence_surprisal,
                 "mean_sentence_surprisal": mean_sentence_surprisal,
-                "mean_sentence_mi_surprisal": mean_sentence_mi_surprisal,
+                "sentence_mi_surprisal": sentence_mi_surprisal,
             })
             print(results_df)
         
@@ -417,12 +419,6 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--instructions_path",
-        type=str,
-        help="Path to the text file containing instructions for the task",
-    )
-
-    parser.add_argument(
         "--question",
         type=str,
         default="",
@@ -435,16 +431,21 @@ if __name__ == "__main__":
         default=1,
         help="Number of seeds to run the experiment for",
     )
+    parser.add_argument(
+        "--phenomenon",
+        type=str,
+        choices=["coherence", "deceits", "humour", "indirect_speech", "irony", "maxims", "metaphor"],
+        help="Phenomenon for which the computations should be run",
+    )
 
     args = parser.parse_args()
 
     main(
-        file_path=args.file_path,
+        phenomenon=args.phenomenon,
         temperature=args.temperature,
         model_name=args.model_name,
         option_numbering=args.option_numbering,
         use_labels_only=args.use_labels_only,
-        instructions_path=args.instructions_path,
         question=args.question,
         n_seeds=args.n_seeds,
     )

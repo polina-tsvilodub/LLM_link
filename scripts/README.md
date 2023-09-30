@@ -1,10 +1,11 @@
 # Scripts
 The directory contains scripts to retrieve LLM data for various metrics for mapping onto human psycholinguistic data.
 
-In order to run the scripts, install the necessary requirements, navigate to the `scripts` directory, and run: `python <script_name>.py --file_path=<path_to_phenomenon_file> --instructions_path=<path_to_instructions_file> --option_numbering=<option label strings separated by commas>` . There are additional configurations which might need to be set for the experiments (also inspectable with `--help`).
+In order to run the scripts, install the necessary requirements, navigate to the `scripts` directory, and run: `python <script_name>.py --phenomenon=<name of phenomenon> --option_numbering=<option label strings separated by commas>` . There are additional configurations which might need to be set for the experiments (also inspectable with `--help`).
 These configs are (availability might differ by script):
 * `--temperature`: sampling temperature
-* `--model_name`: string name of the model (OpenAO or HuggingFace LLama 2 and FLAN-T5 should be supported)
+* `--model_name`: string name of the model (OpenAI or HuggingFace LLama 2 and FLAN-T5 should be supported)
+* `--phenomenon`: name of the phenomenon for which the metrics are run. Must be one of: "coherence", "deceits", "humour", "indirect_speech", "irony", "maxims", "metaphor".
 * `--option_numbering`: string representing the option prefixes to be used (e.g., A, B, C etc). Defaults to A,B,C,D. **Important**: for phenomena with a different number of interpretation options than 2, the option numering must be set appropriately (e.g., pass only 'A,B' for the coherence phenomenon). Relevant for FC and embedding metrics.
 * `--use_labels_only`: boolean indicating whether to run the label probability computations (with answer options listed in the prompt), or the option string probability & surprisal computations (no answer options list in the context). Relevant for FC metrics and embeddings (string probability and surprisal vs label probability).
 * `--question`: Task question string. Defaults to "". **IMPORTANT**: for coherent prompts, the following phenomena require passing the respective question:
@@ -17,18 +18,14 @@ These configs are (availability might differ by script):
 * `compare_embeddings.py`: script for eliciting cosine similarities of embeddings. For example, we compute the embedding of the prompt containing: instructions, the context; and the embedding of an answer option. We then compute the cosine similarity of the embeddings. 
   * for this metric, we use the same instructions as for the forced choice task, i.e., set `--instructions_path=../prompt/prompt_fc/<phenomenon prompt>.txt`. 
   * we can set whether to `--use_labels_only`.
-* `free_production.py`: here, explanation of the speaker's behavior is produced freely. The responses need to be categorized into target, competitor etc categories manually.
-  * use the respective instructions, i.e., set `--instructions_path=../prompt/prompt_free/<phenomenon prompt>.txt`. 
-* `rate_completions.py`: here, ratings of the single options are scored. The ratings are on 5-point scales, described by the words appropriate, likely, possible and plausible. All the rating words are used iteratively when the script is run.
-  * use the respective instructions, i.e., set `--instructions_path=../prompt/prompt_rating/<phenomenon prompt>.txt`. 
+* `free_production.py`: here, explanation of the speaker's behavior is produced freely. The responses need to be categorized into target, competitor etc categories manually. 
+* `rate_completions.py`: here, ratings of the single options are scored. The ratings are on 5-point scales, described by the words appropriate, likely, possible and plausible. All the rating words are used iteratively when the script is run. 
 * `score_completions.py`: all token probability metrics are computed here. If `--use_labels_only` is set, the label probability metrics are computed; otherwise, the string option metrics are computed.
-  * use the respective instructions, i.e., set `--instructions_path=../prompt/prompt_fc/<phenomenon prompt>.txt`. 
-
+  
 Please create the following subdirectories within the `results` directory, if you haven't done so yet: `embedding_similarity`, `free`, `log_probs`, `rating`.
 
 ### Check list for running an experiment
-* correct path to data for a given phenomenon?
-* correct instructions file for given phenomenon and metric?
+* correct phenomenon passed?
 * correct number and type of labels provided via `--option_numbering`?
 * correct task question passed for the given phenomenon?
 * correct model name set?

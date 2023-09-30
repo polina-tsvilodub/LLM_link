@@ -67,19 +67,21 @@ def aggregare_ratings(
 
 
 def main(
-    file_path,
+    phenomenon,
     temperature=0.1,
     model_name="gpt-3.5-turbo-instruct",
     option_numbering=None,
     use_labels_only=False,
-    instructions_path=None,
     question="",
     n_seeds=1,
 ):
+    # construct path to vignettes and instructions
+    file_path = "../data/data_hu_" + phenomenon + ".csv"
+    instructions_path = "../prompt/prompt_rating/" + phenomenon + "_instructions_Rating.txt"
     # initialize path for dumping output
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
-    phenomenon = out_name.split("_")[-1]
+    
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
@@ -220,12 +222,6 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--instructions_path",
-        type=str,
-        help="Path to the text file containing instructions for the task",
-    )
-
-    parser.add_argument(
         "--question",
         type=str,
         default="",
@@ -238,14 +234,19 @@ if __name__ == "__main__":
         default=1,
         help="Number of seeds to run the experiment for",
     )
+    parser.add_argument(
+        "--phenomenon",
+        type=str,
+        choices=["coherence", "deceits", "humour", "indirect_speech", "irony", "maxims", "metaphor"],
+        help="Phenomenon for which the computations should be run",
+    )
 
     args = parser.parse_args()
 
     main(
-        file_path=args.file_path,
+        phenomenon=args.phenomenon,
         temperature=args.temperature,
         model_name=args.model_name,
-        instructions_path=args.instructions_path,
         question=args.question,
         n_seeds=args.n_seeds,
     )
