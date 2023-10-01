@@ -57,7 +57,7 @@ def get_completion(
     # Tokenize the prompt
     if ("google/flan-t5" in model_name) or ("meta" in model_name):
         model = model #.to(DEVICE)
-        input_ids = tokenizer(prompt, return_tensors="pt") #.to(DEVICE)
+        input_ids = tokenizer(prompt, return_tensors="pt").to(DEVICE)
         # Generate output from the model with a maximum length of 20 tokens
         # with the respective decoding scheme
         if decoding == "greedy":
@@ -245,12 +245,6 @@ if __name__ == "__main__":
         type=str,
         default="gpt-3.5-turbo-instruct",
         help="Name of backbone model (OpenAI or HuggingFace)",
-    )
-
-    parser.add_argument(
-        "--file_path",
-        type=str,
-        help="Path to the csv file containing the vignettes",
     )
 
     parser.add_argument(

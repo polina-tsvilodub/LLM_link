@@ -75,7 +75,7 @@ def retrieve_log_probs(
             input_ids = tokenizer(
                 input_prompt, 
                 return_tensors="pt",
-            ) #.to(DEVICE)
+            ).to(DEVICE)
             model = model #.to(DEVICE)
             # Generate output from the model with a maximum length of 20 tokens
             outputs = model.generate(
@@ -298,6 +298,7 @@ def main(
                 token_probs.append(
                     [np.exp(p) for p in o]
                 )
+
             # list of prior sentence probs
             prior_probs = [
                 np.prod(
