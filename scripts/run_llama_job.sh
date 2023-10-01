@@ -51,7 +51,7 @@ for i in ${!array[*]}; do
     python3 -u score_completions.py \
         --phenomenon=${array[$i]} \
         --option_numbering=${array2[$i]} \
-        --question='${array3[$i]}' \
+        --question="${array3[$i]}" \
         --model_name=gpt-3.5-turbo-instruct \
         --n_seeds=1
 done
