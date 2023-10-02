@@ -171,15 +171,26 @@ def retrieve_log_probs(
             if "llama" in model_name:
                 # for llama, we manually retrieve the log probs from the output
                 # and transform them into log probs
-                llama_output_scores = logsoftmax(
-                    outputs.loss['logits'][0]
-                ) # access first element in batch; result has shape [n_tokens, 32000]
-                llama_option_output_scores = logsoftmax(
-                    option_outputs.loss['logits'][0]
-                )
-                llama_null_option_output_scores = logsoftmax(
-                    null_option_outputs.loss['logits'][0]
-                )
+                try:
+                    llama_output_scores = logsoftmax(
+                        outputs.loss['logits'][0]
+                    ) # access first element in batch; result has shape [n_tokens, 32000]
+                    llama_option_output_scores = logsoftmax(
+                        option_outputs.loss['logits'][0]
+                    )
+                    llama_null_option_output_scores = logsoftmax(
+                        null_option_outputs.loss['logits'][0]
+                    )
+                except:
+                    llama_output_scores = logsoftmax(
+                        outputs.logits[0]
+                    ) # access first element in batch; result has shape [n_tokens, 32000]
+                    llama_option_output_scores = logsoftmax(
+                        option_outputs.logits[0]
+                    )
+                    llama_null_option_output_scores = logsoftmax(
+                        null_option_outputs.logits[0]
+                    )
                 # retreive log probs at token ids
                 # transform input_ids to a tensor of shape [n_tokens, 1] for this
                 input_ids_probs = input_ids.squeeze().unsqueeze(-1)
