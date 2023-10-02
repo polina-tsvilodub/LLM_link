@@ -31,6 +31,7 @@ def aggregare_ratings(
     # for each rating, collect the "word level" log probs
     # (inner lists)
     rating_log_probs = []
+
     for option in option_conditional_log_probs:
         rating_log_probs.append(
             [sum(rating) for rating in option]

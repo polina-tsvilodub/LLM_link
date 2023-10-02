@@ -86,7 +86,7 @@ def retrieve_log_probs(
             ).input_ids
             # input option is sliced so that the SOS token isn't included again
             input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
-            
+            print("input ids shape: ", input_ids.shape)
             #### retrieve unconditional log prob of the option ####
             option_input_ids = tokenizer(
                 o, 
@@ -114,39 +114,26 @@ def retrieve_log_probs(
                     null_option_input_ids,
                 )
 
-            else:
-                outputs = model.generate(
+            elif "t5" in model_name:
+                outputs = model(
                     input_ids,
-                    max_new_tokens = 0, # we only want to score, not produce new tokens
-                    output_scores=True,
-                    num_return_sequences=1,
-                    return_dict_in_generate=True,
-                    temperature=kwargs['temperature'],
+                    decoder_input_ids=input_ids,
                 )
 
-                option_outputs = model.generate(
+                option_outputs = model(
                     **option_input_ids,
-                    max_new_tokens = 0, # we only want to score, not produce new tokens
-                    output_scores=True,
-                    num_return_sequences=1,
-                    return_dict_in_generate=True,
-                    temperature=kwargs['temperature'],
-                )
-                
-                null_option_outputs = model.generate(
-                    null_option_input_ids,
-                    max_new_tokens = 0, # we only want to score, not produce new tokens
-                    output_scores=True,
-                    num_return_sequences=1,
-                    return_dict_in_generate=True,
-                    temperature=kwargs['temperature'],
+                    decoder_input_ids=option_input_ids['input_ids'],
                 )
 
-                # Convert the generated token IDs back to text
-                optionTokens = tokenizer.decode(
-                    outputs.sequences[0], 
-                    skip_special_tokens=True
-                )  
+                print("raw options outputs shape ", option_outputs.logits.shape)                
+                null_option_outputs = model(
+                    null_option_input_ids,
+                    decoder_input_ids=null_option_input_ids,
+                )
+
+            else:
+                raise ValueError("Model {model_name} is not supported as a backbone for log probability retrieval.")
+
                 
 
         elif ("gpt-3.5" in model_name) or ("davinci" in model_name):
@@ -215,12 +202,45 @@ def retrieve_log_probs(
                     index=null_option_ids_probs
                 ).flatten().tolist()
 
+            elif "t5" in model_name:
+                # for T5, we manually retrieve the log probs from the output
+                # and transform them into log probs
+                llama_output_scores = logsoftmax(
+                    outputs.logits[0]
+                ) # access first element in batch; result has shape [n_tokens, 32000]
+                llama_option_output_scores = logsoftmax(
+                    option_outputs.logits[0]
+                )
+                llama_null_option_output_scores = logsoftmax(
+                    null_option_outputs.logits[0]
+                )
+                # retreive log probs at token ids
+                # transform input_ids to a tensor of shape [n_tokens, 1] for this
+                input_ids_probs = input_ids.squeeze().unsqueeze(-1)
+                option_ids_probs = option_input_ids['input_ids'].squeeze().unsqueeze(-1)
+                null_option_ids_probs = null_option_input_ids.squeeze().unsqueeze(-1)
+                # retreive
+                optionTokenConditionalLogProbs = torch.gather(
+                    llama_output_scores, 
+                    dim=-1, 
+                    index=input_ids_probs
+                ).flatten().tolist()
+                optionTokenLogProbs = torch.gather(
+                    llama_option_output_scores, 
+                    dim=-1, 
+                    index=option_ids_probs
+                ).flatten().tolist()[1:] # exclude SOS token
+                nullOptionTokenLogProbs = torch.gather(
+                    llama_null_option_output_scores, 
+                    dim=-1, 
+                    index=null_option_ids_probs
+                ).flatten().tolist()
             else:
                 optionTokenConditionalLogProbs = outputs.scores[0].tolist()
                 
                 optionTokenLogProbs = option_outputs.scores[0].tolist()[1:] # exclude SOS token
                 nullOptionTokenLogProbs = null_option_outputs.scores[0].tolist()
-                
+
             
             # slice output to only get scores of the continuation
             optionTokenConditionalLogProbs = optionTokenConditionalLogProbs[input_ids_prompt.shape[-1]:]
@@ -249,7 +269,7 @@ def retrieve_log_probs(
         conditional_log_probs.append(optionTokenConditionalLogProbs)
         log_probs.append(optionTokenLogProbs)
         null_log_probs.append(nullOptionTokenLogProbs)
-
+    
     return conditional_log_probs, log_probs, null_log_probs
 
 
@@ -326,9 +346,9 @@ def main(
 
             # add the list of options in a randomized seed dependent order
             if use_labels_only:
-                prompt_randomized = prompt + question + "\n Choose one of the following options and return the label of that option.\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+                prompt_randomized = prompt + question + "\nChoose one of the following options and return the label of that option.\n" + "\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
                 options = option_numbering
-                prior_prompt = instructions + "\n\n" + "Choose one of the following options and return the label of that option.\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
+                prior_prompt = instructions + "\n\n" + "Choose one of the following options and return the label of that option.\n" + "\n".join([". ".join(o) for o in zip(option_numbering, shuffled_options)]) + "\nYour answer:\n"
             else:
                 prompt_randomized = prompt + question + "\nYour answer:\n"
                 prior_prompt = instructions + "\nYour answer:\n"
