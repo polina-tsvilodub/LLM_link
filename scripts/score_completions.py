@@ -59,6 +59,8 @@ def retrieve_log_probs(
     log_probs = []
     null_log_probs = []
 
+    # transformation for LLaMA 2 outputs
+    logsoftmax = torch.nn.LogSoftmax(dim=-1)
 
     # iterate over items here so that the model won't have to be reloaded for each item & option
     for o in options:
@@ -70,35 +72,58 @@ def retrieve_log_probs(
 
         # Tokenize the prompt
         if ("google/flan-t5" in model_name) or ("meta" in model_name):
+            
             print("Using HF code")
             ##### retreiver conditional log prob #####
-            input_ids = tokenizer(
-                input_prompt, 
+            input_ids_prompt = tokenizer(
+                prompt, 
+                return_tensors="pt",
+            ).input_ids
+            
+            input_ids_options = tokenizer(
+                o, 
+                return_tensors="pt",
+            ).input_ids
+            # input option is sliced so that the SOS token isn't included again
+            input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
+            
+            #### retrieve unconditional log prob of the option ####
+            option_input_ids = tokenizer(
+                o, 
                 return_tensors="pt",
             ).to(DEVICE)
-            model = model #.to(DEVICE)
+            # also, compute null prompt prior
+            null_option_input_ids_prompt = tokenizer(
+                prior_prompt, 
+                return_tensors="pt",
+            ).input_ids
+            
+            null_option_input_ids = torch.cat((null_option_input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
+            
             # Generate output from the model with a maximum length of 20 tokens
-            outputs = model.generate(
-                **input_ids,
-                max_new_tokens = 0, # we only want to score, not produce new tokens
-                output_scores=True,
-                num_return_sequences=1,
-                return_dict_in_generate=True,
-                temperature=kwargs['temperature'],
-            )
-            # Convert the generated token IDs back to text
-            optionTokens = tokenizer.decode(
-                outputs.sequences[0], 
-                skip_special_tokens=True
-            ) # TODO check if these need to be ported back to cpu
+            if "llama" in model_name:
+                outputs = model(
+                    input_ids,
+                )
 
-            if score_prior:
-                #### retrieve unconditional log prob of the option ####
-                option_input_ids = tokenizer(
-                    o, 
-                    return_tensors="pt",
-                ).to(DEVICE)
+                option_outputs = model(
+                    **option_input_ids,
+                )
                 
+                null_option_outputs = model(
+                    null_option_input_ids,
+                )
+
+            else:
+                outputs = model.generate(
+                    input_ids,
+                    max_new_tokens = 0, # we only want to score, not produce new tokens
+                    output_scores=True,
+                    num_return_sequences=1,
+                    return_dict_in_generate=True,
+                    temperature=kwargs['temperature'],
+                )
+
                 option_outputs = model.generate(
                     **option_input_ids,
                     max_new_tokens = 0, # we only want to score, not produce new tokens
@@ -107,21 +132,22 @@ def retrieve_log_probs(
                     return_dict_in_generate=True,
                     temperature=kwargs['temperature'],
                 )
-                # also, compute null prompt prior
-                null_option_input_ids = tokenizer(
-                    null_input_prompt, 
-                    return_tensors="pt",
-                ).to(DEVICE)
                 
                 null_option_outputs = model.generate(
-                    **null_option_input_ids,
+                    null_option_input_ids,
                     max_new_tokens = 0, # we only want to score, not produce new tokens
                     output_scores=True,
                     num_return_sequences=1,
                     return_dict_in_generate=True,
                     temperature=kwargs['temperature'],
                 )
-            ####
+
+                # Convert the generated token IDs back to text
+                optionTokens = tokenizer.decode(
+                    outputs.sequences[0], 
+                    skip_special_tokens=True
+                )  
+                
 
         elif ("gpt-3.5" in model_name) or ("davinci" in model_name):
             ##### retreiver conditional log prob #####
@@ -155,11 +181,50 @@ def retrieve_log_probs(
         try: 
             # retrieve HF log probs
             # [0] retrieves first element in batch (assume we always use batch size = 1)
-            optionTokenConditionalLogProbs = outputs.scores[0].tolist()
-            print("Log probs of HF answer tokens:", optionTokenConditionalLogProbs)
-            if score_prior:
-                optionTokenLogProbs = option_outputs.scores[0].tolist()
+            if "llama" in model_name:
+                # for llama, we manually retrieve the log probs from the output
+                # and transform them into log probs
+                llama_output_scores = logsoftmax(
+                    outputs.loss['logits'][0]
+                ) # access first element in batch; result has shape [n_tokens, 32000]
+                llama_option_output_scores = logsoftmax(
+                    option_outputs.loss['logits'][0]
+                )
+                llama_null_option_output_scores = logsoftmax(
+                    null_option_outputs.loss['logits'][0]
+                )
+                # retreive log probs at token ids
+                # transform input_ids to a tensor of shape [n_tokens, 1] for this
+                input_ids_probs = input_ids.squeeze().unsqueeze(-1)
+                option_ids_probs = option_input_ids['input_ids'].squeeze().unsqueeze(-1)
+                null_option_ids_probs = null_option_input_ids.squeeze().unsqueeze(-1)
+                # retreive
+                optionTokenConditionalLogProbs = torch.gather(
+                    llama_output_scores, 
+                    dim=-1, 
+                    index=input_ids_probs
+                ).flatten().tolist()
+                optionTokenLogProbs = torch.gather(
+                    llama_option_output_scores, 
+                    dim=-1, 
+                    index=option_ids_probs
+                ).flatten().tolist()[1:] # exclude SOS token
+                nullOptionTokenLogProbs = torch.gather(
+                    llama_null_option_output_scores, 
+                    dim=-1, 
+                    index=null_option_ids_probs
+                ).flatten().tolist()
+
+            else:
+                optionTokenConditionalLogProbs = outputs.scores[0].tolist()
+                
+                optionTokenLogProbs = option_outputs.scores[0].tolist()[1:] # exclude SOS token
                 nullOptionTokenLogProbs = null_option_outputs.scores[0].tolist()
+                
+            
+            # slice output to only get scores of the continuation
+            optionTokenConditionalLogProbs = optionTokenConditionalLogProbs[input_ids_prompt.shape[-1]:]
+            nullOptionTokenLogProbs = nullOptionTokenLogProbs[null_option_input_ids_prompt.shape[-1]:]
 
         except:
             # retrieve OpenAI log probs
@@ -171,15 +236,15 @@ def retrieve_log_probs(
             print("Answer tokens:", optionTokens)
             print("Log probs of answer tokens:", optionTokenConditionalLogProbs)
 
-            if score_prior:
-                optionTokenLogProbs = []
-                # unconditional log probs (see class code)
-                text_offsets = null_option_outputs.choices[0]['logprobs']['text_offset']
-                cutIndex = text_offsets.index(max(i for i in text_offsets if i <= len(prior_prompt)))
-                endIndex = null_option_outputs.usage.total_tokens
-                nullOptionTokens = null_option_outputs.choices[0]["logprobs"]["tokens"][cutIndex:endIndex]
-                nullOptionTokenLogProbs = null_option_outputs.choices[0]["logprobs"]["token_logprobs"][cutIndex:endIndex]  
-                print("Null prior log Ps ", nullOptionTokenLogProbs)
+            
+            optionTokenLogProbs = []
+            # unconditional log probs (see class code)
+            text_offsets = null_option_outputs.choices[0]['logprobs']['text_offset']
+            cutIndex = text_offsets.index(max(i for i in text_offsets if i <= len(prior_prompt)))
+            endIndex = null_option_outputs.usage.total_tokens
+            nullOptionTokens = null_option_outputs.choices[0]["logprobs"]["tokens"][cutIndex:endIndex]
+            nullOptionTokenLogProbs = null_option_outputs.choices[0]["logprobs"]["token_logprobs"][cutIndex:endIndex]  
+            print("Null prior log Ps ", nullOptionTokenLogProbs)
 
         conditional_log_probs.append(optionTokenConditionalLogProbs)
         log_probs.append(optionTokenLogProbs)
