@@ -68,6 +68,7 @@ def get_completion(
                 num_return_sequences=1,
                 return_dict_in_generate=True,
                 temperature=kwargs["temperature"],
+                do_sample=True,
             )
         elif decoding == "beam_search":
             outputs = model.generate(
@@ -162,7 +163,10 @@ def main(
         # Iterate over anwsers
         for temperature in temperatures_list:
             # final results file
-            out_file = f"../results/free/{out_name}_free_temp{temperature}_seed{seed}_{timestamp}.csv"
+            out_file = f"../results/free/seed{str(seed)}/temperature{str(temperature)}/{out_name}_free_temp{temperature}_seed{seed}_{timestamp}.csv"
+            # check if subdirectories exist
+            if not os.path.exists(f"../results/free/seed{str(seed)}/temperature{str(temperature)}"):
+                os.makedirs(f"../results/free/seed{str(seed)}/temperature{str(temperature)}")
 
             # Load data set
             scenarios = pd.read_csv(file_path).dropna()
