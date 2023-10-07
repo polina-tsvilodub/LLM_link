@@ -1,0 +1,886 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+gpt-3.5-turbo-instruct,0.1,2,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He is unhappy that his shirt is wrinkled.
+2. He got this shirt on sale.
+3. He got his shoes on sale.
+
+4. He wants his wife to iron his shirt.
+Your answer:
+",,1,target,He is unhappy that his shirt is wrinkled.,competitor,1,[-0.9573127],[0.3839232178129148],[],[-0.8113067],[0.4442771498122024],0.3839232178129148,0.3839232178129148,0.4442771498122024,0.8641525182539785,-0.9573127,-0.9573127,1.1799640012833617
+gpt-3.5-turbo-instruct,0.1,2,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He is unhappy that his shirt is wrinkled.
+2. He got this shirt on sale.
+3. He got his shoes on sale.
+
+4. He wants his wife to iron his shirt.
+Your answer:
+",,2,competitor,He got this shirt on sale.,distractor_lexical_overlap,2,[-9.051062],[0.00011726643381386992],[],[-7.9206815],[0.00036315475218007135],0.00011726643381386992,0.00011726643381386992,0.00036315475218007135,0.3229103656496364,-9.051062,-9.051062,1.142712530481121
+gpt-3.5-turbo-instruct,0.1,2,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He is unhappy that his shirt is wrinkled.
+2. He got this shirt on sale.
+3. He got his shoes on sale.
+
+4. He wants his wife to iron his shirt.
+Your answer:
+",,3,distractor_lexical_overlap,"He got his shoes on sale.
+",distractor_associative,3,[-9.285438],[9.276529169864989e-05],[],[-8.217556],[0.0002698738312088015],9.276529169864989e-05,9.276529169864989e-05,0.0002698738312088015,0.3437357793571224,-9.285438,-9.285438,1.1299512896535173
+gpt-3.5-turbo-instruct,0.1,2,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He is unhappy that his shirt is wrinkled.
+2. He got this shirt on sale.
+3. He got his shoes on sale.
+
+4. He wants his wife to iron his shirt.
+Your answer:
+",,4,distractor_associative,He wants his wife to iron his shirt.,target,4,[-4.5198126],[0.010891064462806384],[],[-5.842556],[0.0029014171179027695],0.010891064462806384,0.010891064462806384,0.0029014171179027695,3.753705179308644,-4.5198126,-4.5198126,0.7736019303880014
+gpt-3.5-turbo-instruct,0.1,2,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Cindy to create a sculpture.
+2. He has some doubts whether Cindy should be painting.
+3. He does not want Cindy to start painting.
+4. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,1,target,He wants Cindy to create a sculpture.,distractor_associative,1,[-8.040651],[0.0003220991952751008],[],[-4.1508117],[0.015751625699836104],0.0003220991952751008,0.0003220991952751008,0.015751625699836104,0.02044863186905541,-8.040651,-8.040651,1.9371273816155044
+gpt-3.5-turbo-instruct,0.1,2,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Cindy to create a sculpture.
+2. He has some doubts whether Cindy should be painting.
+3. He does not want Cindy to start painting.
+4. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,2,competitor,He has some doubts whether Cindy should be painting.,competitor,2,[-1.1969025],[0.3021286073814947],[],[-2.4164364],[0.08923906382535547],0.3021286073814947,0.3021286073814947,0.08923906382535547,3.385609333293465,-1.1969025,-1.1969025,0.4953171951887499
+gpt-3.5-turbo-instruct,0.1,2,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Cindy to create a sculpture.
+2. He has some doubts whether Cindy should be painting.
+3. He does not want Cindy to start painting.
+4. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,3,distractor_lexical_overlap,He does not want Cindy to start painting.,target,3,[-2.3844025],[0.09214401918602483],[],[-2.3539367],[0.09499446046276565],0.09214401918602483,0.09214401918602483,0.09499446046276565,0.969993605281246,-2.3844025,-2.3844025,1.0129424890652328
+gpt-3.5-turbo-instruct,0.1,2,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Cindy to create a sculpture.
+2. He has some doubts whether Cindy should be painting.
+3. He does not want Cindy to start painting.
+4. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,4,distractor_associative,He wants Cindy to paint a picture for the meeting.,distractor_lexical_overlap,4,[-9.610965],[6.699014760888273e-05],[],[-1.8851866],[0.1518007307700872],6.699014760888273e-05,6.699014760888273e-05,0.1518007307700872,0.00044130319576882654,-9.610965,-9.610965,5.098150496083518
+gpt-3.5-turbo-instruct,0.1,2,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy's brother creates a lot of mess.
+2. Cindy might help her clean up the house.
+3. Cindy forgot to invite her brother to the movies.
+4. Cindy forgot to purchase a new toy for her brother.
+Your answer:
+",,1,target,Cindy's brother creates a lot of mess.,competitor,1,[-0.8364745],[0.43323520493254153],[],[-1.2149435],[0.2967267788834481],0.43323520493254153,0.43323520493254153,0.2967267788834481,1.460047544622566,-0.8364745,-0.8364745,0.6884883947278208
+gpt-3.5-turbo-instruct,0.1,2,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy's brother creates a lot of mess.
+2. Cindy might help her clean up the house.
+3. Cindy forgot to invite her brother to the movies.
+4. Cindy forgot to purchase a new toy for her brother.
+Your answer:
+",,2,competitor,Cindy might help her clean up the house.,target,2,[-6.8186493],[0.0010931965060403906],[],[-7.3555684],[0.0006390240930461206],0.0010931965060403906,0.0010931965060403906,0.0006390240930461206,1.7107281524070657,-6.8186493,-6.8186493,0.9270050836587964
+gpt-3.5-turbo-instruct,0.1,2,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy's brother creates a lot of mess.
+2. Cindy might help her clean up the house.
+3. Cindy forgot to invite her brother to the movies.
+4. Cindy forgot to purchase a new toy for her brother.
+Your answer:
+",,3,distractor_lexical_overlap,Cindy forgot to invite her brother to the movies.,distractor_associative,3,[-8.483885],[0.0002067738239470223],[],[-8.433693],[0.0002174170846757318],0.0002067738239470223,0.0002067738239470223,0.0002174170846757318,0.9510468059831477,-8.483885,-8.483885,1.0059513667381539
+gpt-3.5-turbo-instruct,0.1,2,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy's brother creates a lot of mess.
+2. Cindy might help her clean up the house.
+3. Cindy forgot to invite her brother to the movies.
+4. Cindy forgot to purchase a new toy for her brother.
+Your answer:
+",,4,distractor_associative,Cindy forgot to purchase a new toy for her brother.,distractor_lexical_overlap,4,[-9.881149],[5.112949631432499e-05],[],[-9.386818],[8.382175315280711e-05],5.112949631432499e-05,5.112949631432499e-05,8.382175315280711e-05,0.609978846673797,-9.881149,-9.881149,1.0526622546639341
+gpt-3.5-turbo-instruct,0.1,2,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wonders whether Matt knows something else interesting that he can share with her.
+2. She wishes to build a kite with Matt.
+3. She wishes to have a date with Matt.
+4. She wishes that he stopped telling her about the movie.
+Your answer:
+",,1,target,She wonders whether Matt knows something else interesting that he can share with her.,competitor,1,[-6.6709247],[0.0012672264047999882],[],[-0.8936493],[0.4091598778221133],0.0012672264047999882,0.0012672264047999882,0.4091598778221133,0.0030971423971118905,-6.6709247,-6.6709247,7.464812762679946
+gpt-3.5-turbo-instruct,0.1,2,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wonders whether Matt knows something else interesting that he can share with her.
+2. She wishes to build a kite with Matt.
+3. She wishes to have a date with Matt.
+4. She wishes that he stopped telling her about the movie.
+Your answer:
+",,2,competitor,She wishes to build a kite with Matt.,distractor_associative,2,[-10.811549],[2.0165264760907392e-05],[],[-6.628024],[0.0013227743073154759],2.0165264760907392e-05,2.0165264760907392e-05,0.0013227743073154759,0.015244675262730262,-10.811549,-10.811549,1.6311873644392356
+gpt-3.5-turbo-instruct,0.1,2,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wonders whether Matt knows something else interesting that he can share with her.
+2. She wishes to build a kite with Matt.
+3. She wishes to have a date with Matt.
+4. She wishes that he stopped telling her about the movie.
+Your answer:
+",,3,distractor_lexical_overlap,She wishes to have a date with Matt.,distractor_lexical_overlap,3,[-8.483424],[0.00020686916865512883],[],[-9.237399],[9.73304176951094e-05],0.00020686916865512883,0.00020686916865512883,9.73304176951094e-05,2.1254318388230184,-8.483424,-8.483424,0.9183779979624134
+gpt-3.5-turbo-instruct,0.1,2,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wonders whether Matt knows something else interesting that he can share with her.
+2. She wishes to build a kite with Matt.
+3. She wishes to have a date with Matt.
+4. She wishes that he stopped telling her about the movie.
+Your answer:
+",,4,distractor_associative,She wishes that he stopped telling her about the movie.,target,4,[-1.3115499],[0.2694021861914528],[],[-8.299899],[0.0002485419285750927],0.2694021861914528,0.2694021861914528,0.0002485419285750927,1083.9305373381196,-1.3115499,-1.3115499,0.15801998313473453
+gpt-3.5-turbo-instruct,0.1,2,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy should stop teasing him if she wants to be his friend.
+2. His friends are very friendly.
+3. Cindy should meet Matt's other friends.
+4. Cindy should meet a new principal.
+Your answer:
+",,1,target,Cindy should stop teasing him if she wants to be his friend.,target,1,[-0.7667945],[0.46449963802841027],[],[-1.076797],[0.3406849939656721],0.46449963802841027,0.46449963802841027,0.3406849939656721,1.3634285226992238,-0.7667945,-0.7667945,0.712106831649791
+gpt-3.5-turbo-instruct,0.1,2,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy should stop teasing him if she wants to be his friend.
+2. His friends are very friendly.
+3. Cindy should meet Matt's other friends.
+4. Cindy should meet a new principal.
+Your answer:
+",,2,competitor,His friends are very friendly.,competitor,2,[-8.251169],[0.0002609533244915191],[],[-6.342422],[0.001760034267414046],0.0002609533244915191,0.0002609533244915191,0.001760034267414046,0.14826604761220263,-8.251169,-8.251169,1.3009492272825744
+gpt-3.5-turbo-instruct,0.1,2,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy should stop teasing him if she wants to be his friend.
+2. His friends are very friendly.
+3. Cindy should meet Matt's other friends.
+4. Cindy should meet a new principal.
+Your answer:
+",,3,distractor_lexical_overlap,Cindy should meet Matt's other friends.,distractor_lexical_overlap,3,[-7.9386697],[0.0003566806551138999],[],[-3.639297],[0.026270805852088575],0.0003566806551138999,0.0003566806551138999,0.026270805852088575,0.01357707323947747,-7.9386697,-7.9386697,2.1813745072193886
+gpt-3.5-turbo-instruct,0.1,2,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy should stop teasing him if she wants to be his friend.
+2. His friends are very friendly.
+3. Cindy should meet Matt's other friends.
+4. Cindy should meet a new principal.
+Your answer:
+",,4,distractor_associative,Cindy should meet a new principal.,distractor_associative,4,[-8.032419],[0.00032476165951810616],[],[-8.189213],[0.00027763229490084456],0.00032476165951810616,0.00032476165951810616,0.00027763229490084456,1.1697546196277118,-8.032419,-8.032419,0.9808535936237097
+gpt-3.5-turbo-instruct,0.1,2,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. It was not his fault.
+2. All of the boys were not very cautious.
+3. He likes to live in the city.
+4. He likes to live in the wilderness.
+Your answer:
+",,1,target,It was not his fault.,target,1,[-6.02735],[0.0024118769914194195],[],[-1.3464005],[0.2601750773912024],0.0024118769914194195,0.0024118769914194195,0.2601750773912024,0.009270207644804088,-6.02735,-6.02735,4.476639751693497
+gpt-3.5-turbo-instruct,0.1,2,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. It was not his fault.
+2. All of the boys were not very cautious.
+3. He likes to live in the city.
+4. He likes to live in the wilderness.
+Your answer:
+",,2,competitor,All of the boys were not very cautious.,competitor,2,[-0.71485025],[0.48926537380042867],[],[-5.0182757],[0.006615924718689404],0.48926537380042867,0.48926537380042867,0.006615924718689404,73.95268153797113,-0.71485025,-0.71485025,0.14244937758202483
+gpt-3.5-turbo-instruct,0.1,2,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. It was not his fault.
+2. All of the boys were not very cautious.
+3. He likes to live in the city.
+4. He likes to live in the wilderness.
+Your answer:
+",,3,distractor_lexical_overlap,He likes to live in the city.,distractor_associative,3,[-7.8867245],[0.0003756981610974011],[],[-6.2214003],[0.0019864616265732977],0.0003756981610974011,0.0003756981610974011,0.0019864616265732977,0.18912933231209253,-7.8867245,-7.8867245,1.2676767479501359
+gpt-3.5-turbo-instruct,0.1,2,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. It was not his fault.
+2. All of the boys were not very cautious.
+3. He likes to live in the city.
+4. He likes to live in the wilderness.
+Your answer:
+",,4,distractor_associative,He likes to live in the wilderness.,distractor_lexical_overlap,4,[-8.042974],[0.00032135182724852694],[],[-5.5651507],[0.003829003470940217],0.00032135182724852694,0.00032135182724852694,0.003829003470940217,0.08392570800402502,-8.042974,-8.042974,1.4452392097845614
+gpt-3.5-turbo-instruct,0.1,2,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She is a great baker who makes good cookies.
+2. He wants to learn how to make a roast beef.
+3. He wants Kate to give him some cookies.
+4. He wants to learn how to make these cookies.
+Your answer:
+",,1,target,She is a great baker who makes good cookies.,competitor,1,[-5.3717365],[0.0046460564243118166],[],[-1.1114105],[0.3290944458369774],0.0046460564243118166,0.0046460564243118166,0.3290944458369774,0.014117699289927612,-5.3717365,-5.3717365,4.833260527950744
+gpt-3.5-turbo-instruct,0.1,2,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She is a great baker who makes good cookies.
+2. He wants to learn how to make a roast beef.
+3. He wants Kate to give him some cookies.
+4. He wants to learn how to make these cookies.
+Your answer:
+",,2,competitor,He wants to learn how to make a roast beef.,distractor_associative,2,[-8.481111],[0.00020734821084094414],[],[-5.9782667],[0.0025332133077502427],0.00020734821084094414,0.00020734821084094414,0.0025332133077502427,0.08185185598329695,-8.481111,-8.481111,1.4186571836950668
+gpt-3.5-turbo-instruct,0.1,2,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She is a great baker who makes good cookies.
+2. He wants to learn how to make a roast beef.
+3. He wants Kate to give him some cookies.
+4. He wants to learn how to make these cookies.
+Your answer:
+",,3,distractor_lexical_overlap,He wants Kate to give him some cookies.,target,3,[-1.3873613],[0.24973340752420126],[],[-7.230058],[0.000724478842158409],0.24973340752420126,0.24973340752420126,0.000724478842158409,344.70766155182827,-1.3873613,-1.3873613,0.19188799038679913
+gpt-3.5-turbo-instruct,0.1,2,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She is a great baker who makes good cookies.
+2. He wants to learn how to make a roast beef.
+3. He wants Kate to give him some cookies.
+4. He wants to learn how to make these cookies.
+Your answer:
+",,4,distractor_associative,He wants to learn how to make these cookies.,distractor_lexical_overlap,4,[-3.168611],[0.042061981438912106],[],[-4.901933],[0.007432202728926453],0.042061981438912106,0.042061981438912106,0.007432202728926453,5.659423319442709,-3.168611,-3.168611,0.6464003077969446
+gpt-3.5-turbo-instruct,0.1,2,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants him to stop talking.
+2. She wants kids to work on a project about dinosaurs.
+3. Matt is unfair to the teacher.
+4. She wants kids to work on a project about fairness.
+Your answer:
+",,1,target,She wants him to stop talking.,target,1,[-1.0523516],[0.34911580232415973],[],[-2.0200558],[0.13264806311168706],0.34911580232415973,0.34911580232415973,0.13264806311168706,2.631895213051178,-1.0523516,-1.0523516,0.520951747966566
+gpt-3.5-turbo-instruct,0.1,2,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants him to stop talking.
+2. She wants kids to work on a project about dinosaurs.
+3. Matt is unfair to the teacher.
+4. She wants kids to work on a project about fairness.
+Your answer:
+",,2,competitor,She wants kids to work on a project about dinosaurs.,distractor_associative,2,[-9.317976],[8.979547263664939e-05],[],[-2.6450555],[0.07100141305185954],8.979547263664939e-05,8.979547263664939e-05,0.07100141305185954,0.0012646997964823972,-9.317976,-9.317976,3.522790353548347
+gpt-3.5-turbo-instruct,0.1,2,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants him to stop talking.
+2. She wants kids to work on a project about dinosaurs.
+3. Matt is unfair to the teacher.
+4. She wants kids to work on a project about fairness.
+Your answer:
+",,3,distractor_lexical_overlap,Matt is unfair to the teacher.,competitor,3,[-3.1929762],[0.04104951738142294],[],[-4.886541],[0.007547484122969505],0.04104951738142294,0.04104951738142294,0.007547484122969505,5.43883454573897,-3.1929762,-3.1929762,0.6534225743731609
+gpt-3.5-turbo-instruct,0.1,2,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants him to stop talking.
+2. She wants kids to work on a project about dinosaurs.
+3. Matt is unfair to the teacher.
+4. She wants kids to work on a project about fairness.
+Your answer:
+",,4,distractor_associative,She wants kids to work on a project about fairness.,distractor_lexical_overlap,4,[-4.583601],[0.010218034823754682],[],[-3.1919305],[0.04109246531316122],0.010218034823754682,0.010218034823754682,0.04109246531316122,0.24865957167291244,-4.583601,-4.583601,1.4359964917782515
+gpt-3.5-turbo-instruct,0.1,2,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants the girls to listen to some music.
+2. He wants the girls to be quiet.
+3. He is too tired and the girls are making a lot of noise.
+4. He wants the girls to go shopping.
+Your answer:
+",,1,target,He wants the girls to listen to some music.,distractor_lexical_overlap,1,[-8.989943],[0.00012465719849538755],[],[-5.8183923],[0.0029723800008117653],0.00012465719849538755,0.00012465719849538755,0.0029723800008117653,0.04193851340048827,-8.989943,-8.989943,1.5450905570598943
+gpt-3.5-turbo-instruct,0.1,2,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants the girls to listen to some music.
+2. He wants the girls to be quiet.
+3. He is too tired and the girls are making a lot of noise.
+4. He wants the girls to go shopping.
+Your answer:
+",,2,competitor,He wants the girls to be quiet.,target,2,[-1.0524427],[0.34908399932321665],[],[-1.0924194],[0.33540403474976993],0.34908399932321665,0.34908399932321665,0.33540403474976993,1.0407865235838702,-1.0524427,-1.0524427,0.9634053551227669
+gpt-3.5-turbo-instruct,0.1,2,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants the girls to listen to some music.
+2. He wants the girls to be quiet.
+3. He is too tired and the girls are making a lot of noise.
+4. He wants the girls to go shopping.
+Your answer:
+",,3,distractor_lexical_overlap,He is too tired and the girls are making a lot of noise.,competitor,3,[-2.5993176],[0.07432427980152137],[],[-2.9830444],[0.05063843530621815],0.07432427980152137,0.07432427980152137,0.05063843530621815,1.4677443991322283,-2.5993176,-2.5993176,0.8713640333345357
+gpt-3.5-turbo-instruct,0.1,2,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants the girls to listen to some music.
+2. He wants the girls to be quiet.
+3. He is too tired and the girls are making a lot of noise.
+4. He wants the girls to go shopping.
+Your answer:
+",,4,distractor_associative,He wants the girls to go shopping.,distractor_associative,4,[-10.673599],[2.314807347771771e-05],[],[-7.451794],[0.0005803994410485111],2.314807347771771e-05,2.314807347771771e-05,0.0005803994410485111,0.03988300442863959,-10.673599,-10.673599,1.4323529340719832
+gpt-3.5-turbo-instruct,0.1,2,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt should get a new pet.
+2. Matt should buy new shoes.
+3. Matt should look around where he is walking.
+4. Walking on shattered glass is something that Matt enjoys.
+Your answer:
+",,1,target,Matt should get a new pet.,distractor_associative,1,[-8.727313],[0.00016209742736740534],[],[-4.8579473],[0.007766409649229814],0.00016209742736740534,0.00016209742736740534,0.007766409649229814,0.02087160408587002,-8.727313,-8.727313,1.7965021975433946
+gpt-3.5-turbo-instruct,0.1,2,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt should get a new pet.
+2. Matt should buy new shoes.
+3. Matt should look around where he is walking.
+4. Walking on shattered glass is something that Matt enjoys.
+Your answer:
+",,2,competitor,Matt should buy new shoes.,distractor_lexical_overlap,2,[-9.102314],[0.00011140771254144785],[],[-6.0923223],[0.0022601540597280844],0.00011140771254144785,0.00011140771254144785,0.0022601540597280844,0.04929208788309375,-9.102314,-9.102314,1.4940631095633268
+gpt-3.5-turbo-instruct,0.1,2,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt should get a new pet.
+2. Matt should buy new shoes.
+3. Matt should look around where he is walking.
+4. Walking on shattered glass is something that Matt enjoys.
+Your answer:
+",,3,distractor_lexical_overlap,Matt should look around where he is walking.,target,3,[-0.711689],[0.49081451127867304],[],[-0.84232223],[0.4307091554536445],0.49081451127867304,0.49081451127867304,0.4307091554536445,1.1395497519938311,-0.711689,-0.711689,0.8449129972504703
+gpt-3.5-turbo-instruct,0.1,2,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt should get a new pet.
+2. Matt should buy new shoes.
+3. Matt should look around where he is walking.
+4. Walking on shattered glass is something that Matt enjoys.
+Your answer:
+",,4,distractor_associative,Walking on shattered glass is something that Matt enjoys.,competitor,4,[-8.899188],[0.00013649971926609755],[],[-6.7641964],[0.0011543747772180784],0.00013649971926609755,0.00013649971926609755,0.0011543747772180784,0.11824558363536623,-8.899188,-8.899188,1.3156312256101848
+gpt-3.5-turbo-instruct,0.1,2,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants her to see an eye doctor.
+2. He wants to know how good her vision is.
+3. He wants her to see a dentist.
+4. He wants her to tell him the house number.
+Your answer:
+",,1,target,He wants her to see an eye doctor.,distractor_lexical_overlap,1,[-7.557448],[0.0005222062151043312],[],[-1.4328753],[0.23862182557752157],0.0005222062151043312,0.0005222062151043312,0.23862182557752157,0.0021884260328679825,-7.557448,-7.557448,5.27432359256943
+gpt-3.5-turbo-instruct,0.1,2,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants her to see an eye doctor.
+2. He wants to know how good her vision is.
+3. He wants her to see a dentist.
+4. He wants her to tell him the house number.
+Your answer:
+",,2,competitor,He wants to know how good her vision is.,competitor,2,[-5.182448],[0.00561424590443769],[],[-1.9172503],[0.14701064203909558],0.00561424590443769,0.00561424590443769,0.14701064203909558,0.03818938429603384,-5.182448,-5.182448,2.7030628186627483
+gpt-3.5-turbo-instruct,0.1,2,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants her to see an eye doctor.
+2. He wants to know how good her vision is.
+3. He wants her to see a dentist.
+4. He wants her to tell him the house number.
+Your answer:
+",,3,distractor_lexical_overlap,He wants her to see a dentist.,distractor_associative,3,[-7.557448],[0.0005222062151043312],[],[-5.432875],[0.004370512499401952],0.0005222062151043312,0.0005222062151043312,0.004370512499401952,0.11948397703376624,-7.557448,-7.557448,1.3910586936014542
+gpt-3.5-turbo-instruct,0.1,2,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants her to see an eye doctor.
+2. He wants to know how good her vision is.
+3. He wants her to see a dentist.
+4. He wants her to tell him the house number.
+Your answer:
+",,4,distractor_associative,He wants her to tell him the house number.,target,4,[-1.1310996],[0.32267824427494063],[],[-4.10475],[0.016494141858427663],0.32267824427494063,0.32267824427494063,0.016494141858427663,19.563202926502573,-1.1310996,-1.1310996,0.2755587063767586
+gpt-3.5-turbo-instruct,0.1,2,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know whether he will water the plants in the office.
+2. She wants to know whether he won the golf tournament.
+3. She wants to know whether he has time and a desire to water the lawn.
+4. She wants to know whether he is allowed to water the lawn.
+Your answer:
+",,1,target,She wants to know whether he will water the plants in the office.,distractor_lexical_overlap,1,[-9.253258],[9.579902983711097e-05],[],[-1.0600505],[0.3464383147534028],9.579902983711097e-05,9.579902983711097e-05,0.3464383147534028,0.00027652550470724167,-9.253258,-9.253258,8.729072813040512
+gpt-3.5-turbo-instruct,0.1,2,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know whether he will water the plants in the office.
+2. She wants to know whether he won the golf tournament.
+3. She wants to know whether he has time and a desire to water the lawn.
+4. She wants to know whether he is allowed to water the lawn.
+Your answer:
+",,2,competitor,She wants to know whether he won the golf tournament.,distractor_associative,2,[-11.214195],[1.3481462018710267e-05],[],[-7.169425],[0.0007697652190005995],1.3481462018710267e-05,1.3481462018710267e-05,0.0007697652190005995,0.017513732351032305,-11.214195,-11.214195,1.5641693720207688
+gpt-3.5-turbo-instruct,0.1,2,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know whether he will water the plants in the office.
+2. She wants to know whether he won the golf tournament.
+3. She wants to know whether he has time and a desire to water the lawn.
+4. She wants to know whether he is allowed to water the lawn.
+Your answer:
+",,3,distractor_lexical_overlap,She wants to know whether he has time and a desire to water the lawn.,target,3,[-0.9095079],[0.40272235495039665],[],[-3.0444252],[0.047623678211960174],0.40272235495039665,0.40272235495039665,0.047623678211960174,8.456347138034737,-0.9095079,-0.9095079,0.2987453592224897
+gpt-3.5-turbo-instruct,0.1,2,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know whether he will water the plants in the office.
+2. She wants to know whether he won the golf tournament.
+3. She wants to know whether he has time and a desire to water the lawn.
+4. She wants to know whether he is allowed to water the lawn.
+Your answer:
+",,4,distractor_associative,She wants to know whether he is allowed to water the lawn.,competitor,4,[-9.550132],[7.119186512045608e-05],[],[-7.169425],[0.0007697652190005995],7.119186512045608e-05,7.119186512045608e-05,0.0007697652190005995,0.09248516737725018,-9.550132,-9.550132,1.3320638684413324
+gpt-3.5-turbo-instruct,0.1,2,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants him to move the ladder.
+2. He wants him to bring brushes from the truck.
+3. He wants him to bring tires from the truck.
+4. He wants to know whether his brother is strong enough to move the ladder.
+Your answer:
+",,1,target,He wants him to move the ladder.,target,1,[-1.1005248],[0.3326964387841885],[],[-0.91673815],[0.3998210727802875],0.3326964387841885,0.3326964387841885,0.3998210727802875,0.8321133162658841,-1.1005248,-1.1005248,1.2004788935641002
+gpt-3.5-turbo-instruct,0.1,2,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants him to move the ladder.
+2. He wants him to bring brushes from the truck.
+3. He wants him to bring tires from the truck.
+4. He wants to know whether his brother is strong enough to move the ladder.
+Your answer:
+",,2,competitor,He wants him to bring brushes from the truck.,distractor_lexical_overlap,2,[-10.116149],[4.0421489342305234e-05],[],[-6.666738],[0.0012725430233664328],4.0421489342305234e-05,4.0421489342305234e-05,0.0012725430233664328,0.03176434006558986,-10.116149,-10.116149,1.517406113754583
+gpt-3.5-turbo-instruct,0.1,2,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants him to move the ladder.
+2. He wants him to bring brushes from the truck.
+3. He wants him to bring tires from the truck.
+4. He wants to know whether his brother is strong enough to move the ladder.
+Your answer:
+",,3,distractor_lexical_overlap,He wants him to bring tires from the truck.,distractor_associative,3,[-11.873961],[6.969542317374582e-06],[],[-8.729238],[0.00016178568996323976],6.969542317374582e-06,6.969542317374582e-06,0.00016178568996323976,0.04307885523718551,-11.873961,-11.873961,1.3602517195659
+gpt-3.5-turbo-instruct,0.1,2,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants him to move the ladder.
+2. He wants him to bring brushes from the truck.
+3. He wants him to bring tires from the truck.
+4. He wants to know whether his brother is strong enough to move the ladder.
+Your answer:
+",,4,distractor_associative,He wants to know whether his brother is strong enough to move the ladder.,competitor,4,[-9.686462],[6.211879237929516e-05],[],[-6.635488],[0.0013129378751172936],6.211879237929516e-05,6.211879237929516e-05,0.0013129378751172936,0.047312819255629794,-9.686462,-9.686462,1.459796476159704
+gpt-3.5-turbo-instruct,0.1,2,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to join their game.
+2. He wants to know their opinion.
+3. He wants to get good grades on his math test.
+4. He wants to get a new uniform.
+Your answer:
+",,1,target,He wants to join their game.,target,1,[-0.91116625],[0.40205505379543],[],[-1.2820637],[0.277464106529828],0.40205505379543,0.40205505379543,0.277464106529828,1.449034467282377,-0.91116625,-0.91116625,0.7107027911327651
+gpt-3.5-turbo-instruct,0.1,2,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to join their game.
+2. He wants to know their opinion.
+3. He wants to get good grades on his math test.
+4. He wants to get a new uniform.
+Your answer:
+",,2,competitor,He wants to know their opinion.,competitor,2,[-6.1299157],[0.002176764454224257],[],[-2.5789385],[0.0758544808336264],0.002176764454224257,0.002176764454224257,0.0758544808336264,0.02869658364676717,-6.1299157,-6.1299157,2.376914261429654
+gpt-3.5-turbo-instruct,0.1,2,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to join their game.
+2. He wants to know their opinion.
+3. He wants to get good grades on his math test.
+4. He wants to get a new uniform.
+Your answer:
+",,3,distractor_lexical_overlap,He wants to get good grades on his math test.,distractor_associative,3,[-11.567416],[9.469674718343363e-06],[],[-6.1258135],[0.002185712317783405],9.469674718343363e-06,9.469674718343363e-06,0.002185712317783405,0.004332534817732481,-11.567416,-11.567416,1.8883069162977293
+gpt-3.5-turbo-instruct,0.1,2,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to join their game.
+2. He wants to know their opinion.
+3. He wants to get good grades on his math test.
+4. He wants to get a new uniform.
+Your answer:
+",,4,distractor_associative,He wants to get a new uniform.,distractor_lexical_overlap,4,[-11.497103],[1.0159483029822536e-05],[],[-6.9226885],[0.00098517772657225],1.0159483029822536e-05,1.0159483029822536e-05,0.00098517772657225,0.010312335283066786,-11.497103,-11.497103,1.6607858348674795
+gpt-3.5-turbo-instruct,0.1,2,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Jane to help her with painting the house.
+2. She wants Jane to open the door.
+3. She suspects that someone is standing at their door.
+4. She wants Jane to help her with cooking.
+Your answer:
+",,1,target,She wants Jane to help her with painting the house.,distractor_associative,1,[-8.405374],[0.00022366212844015154],[],[-1.587723],[0.20439047940312224],0.00022366212844015154,0.00022366212844015154,0.20439047940312224,0.001094288389035086,-8.405374,-8.405374,5.293980121217618
+gpt-3.5-turbo-instruct,0.1,2,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Jane to help her with painting the house.
+2. She wants Jane to open the door.
+3. She suspects that someone is standing at their door.
+4. She wants Jane to help her with cooking.
+Your answer:
+",,2,competitor,She wants Jane to open the door.,target,2,[-6.2491236],[0.0019321467278179975],[],[-3.0408475],[0.04779436659935422],0.0019321467278179975,0.0019321467278179975,0.04779436659935422,0.040426244038645844,-6.2491236,-6.2491236,2.0550598476247166
+gpt-3.5-turbo-instruct,0.1,2,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Jane to help her with painting the house.
+2. She wants Jane to open the door.
+3. She suspects that someone is standing at their door.
+4. She wants Jane to help her with cooking.
+Your answer:
+",,3,distractor_lexical_overlap,She suspects that someone is standing at their door.,competitor,3,[-0.81162405],[0.44413618082814615],[],[-4.353348],[0.01286367282820222],0.44413618082814615,0.44413618082814615,0.01286367282820222,34.52638968354554,-0.81162405,-0.81162405,0.18643674937082907
+gpt-3.5-turbo-instruct,0.1,2,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Jane to help her with painting the house.
+2. She wants Jane to open the door.
+3. She suspects that someone is standing at their door.
+4. She wants Jane to help her with cooking.
+Your answer:
+",,4,distractor_associative,She wants Jane to help her with cooking.,distractor_lexical_overlap,4,[-10.874124],[1.894209242128109e-05],[],[-3.4002228],[0.0333658352240393],1.894209242128109e-05,1.894209242128109e-05,0.0333658352240393,0.0005677092239439508,-10.874124,-10.874124,3.198062197571289
+gpt-3.5-turbo-instruct,0.1,2,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Adam to close the window.
+2. He wants to describe his physical state to Adam.
+3. He wants Adam to get back to the project.
+4. He wants Adam to invite Julie to the movies.
+Your answer:
+",,1,target,He wants Adam to close the window.,target,1,[-2.9470773],[0.05249290297242591],[],[-1.3279715],[0.265014297929622],0.05249290297242591,0.05249290297242591,0.265014297929622,0.1980757392431939,-2.9470773,-2.9470773,2.2192323404530896
+gpt-3.5-turbo-instruct,0.1,2,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Adam to close the window.
+2. He wants to describe his physical state to Adam.
+3. He wants Adam to get back to the project.
+4. He wants Adam to invite Julie to the movies.
+Your answer:
+",,2,competitor,He wants to describe his physical state to Adam.,competitor,2,[-0.9783275],[0.37593933187765266],[],[-4.015471],[0.01803445832017618],0.37593933187765266,0.37593933187765266,0.01803445832017618,20.845612615770545,-0.9783275,-0.9783275,0.24363953817621894
+gpt-3.5-turbo-instruct,0.1,2,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Adam to close the window.
+2. He wants to describe his physical state to Adam.
+3. He wants Adam to get back to the project.
+4. He wants Adam to invite Julie to the movies.
+Your answer:
+",,3,distractor_lexical_overlap,He wants Adam to get back to the project.,distractor_lexical_overlap,3,[-9.181452],[0.00010293096882554769],[],[-3.9842215],[0.018606924176194698],0.00010293096882554769,0.00010293096882554769,0.018606924176194698,0.005531863721852287,-9.181452,-9.181452,2.304453203718719
+gpt-3.5-turbo-instruct,0.1,2,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Adam to close the window.
+2. He wants to describe his physical state to Adam.
+3. He wants Adam to get back to the project.
+4. He wants Adam to invite Julie to the movies.
+Your answer:
+",,4,distractor_associative,He wants Adam to invite Julie to the movies.,distractor_associative,4,[-10.978327],[1.7067627796012673e-05],[],[-6.327971],[0.001785653186276009],1.7067627796012673e-05,1.7067627796012673e-05,0.001785653186276009,0.009558198606083926,-10.978327,-10.978327,1.7348889557174014
+gpt-3.5-turbo-instruct,0.1,2,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Mark to get a bottle opener.
+2. He wants Mark to bring some wine.
+3. He wants Mark to bring some pancakes.
+4. He is upset that they will not be able to drink beer.
+Your answer:
+",,1,target,He wants Mark to get a bottle opener.,target,1,[-1.3540297],[0.2581977021772941],[],[-0.9327215],[0.3934813922675341],0.2581977021772941,0.2581977021772941,0.3934813922675341,0.6561878331510566,-1.3540297,-1.3540297,1.4516977468622734
+gpt-3.5-turbo-instruct,0.1,2,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Mark to get a bottle opener.
+2. He wants Mark to bring some wine.
+3. He wants Mark to bring some pancakes.
+4. He is upset that they will not be able to drink beer.
+Your answer:
+",,2,competitor,He wants Mark to bring some wine.,distractor_lexical_overlap,2,[-9.080592],[0.00011385418582394419],[],[-4.635846],[0.009697899144223912],0.00011385418582394419,0.00011385418582394419,0.009697899144223912,0.011740087634521954,-9.080592,-9.080592,1.9587777505982726
+gpt-3.5-turbo-instruct,0.1,2,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Mark to get a bottle opener.
+2. He wants Mark to bring some wine.
+3. He wants Mark to bring some pancakes.
+4. He is upset that they will not be able to drink beer.
+Your answer:
+",,3,distractor_lexical_overlap,He wants Mark to bring some pancakes.,distractor_associative,3,[-10.29153],[3.3919177349592096e-05],[],[-6.8858466],[0.0010221504363899223],3.3919177349592096e-05,3.3919177349592096e-05,0.0010221504363899223,0.03318413429376345,-10.29153,-10.29153,1.494591819689971
+gpt-3.5-turbo-instruct,0.1,2,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Mark to get a bottle opener.
+2. He wants Mark to bring some wine.
+3. He wants Mark to bring some pancakes.
+4. He is upset that they will not be able to drink beer.
+Your answer:
+",,4,distractor_associative,He is upset that they will not be able to drink beer.,competitor,4,[-6.1509047],[0.002131552481925424],[],[-5.885846],[0.002778494624286483],0.002131552481925424,0.002131552481925424,0.002778494624286483,0.7671609163083433,-6.1509047,-6.1509047,1.0450332373629891
+gpt-3.5-turbo-instruct,0.1,2,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Alex to clean the mess.
+2. She wants Alex to know when her parents will arrive.
+3. She wants Alex to prepare some dinner.
+4. She wants Alex to apply for a job.
+Your answer:
+",,1,target,She wants Alex to clean the mess.,target,1,[-0.87317044],[0.4176253918598999],[],[-1.6441735],[0.19317215361873444],0.4176253918598999,0.4176253918598999,0.19317215361873444,2.1619337157889267,-0.87317044,-0.87317044,0.5310695252052171
+gpt-3.5-turbo-instruct,0.1,2,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Alex to clean the mess.
+2. She wants Alex to know when her parents will arrive.
+3. She wants Alex to prepare some dinner.
+4. She wants Alex to apply for a job.
+Your answer:
+",,2,competitor,She wants Alex to know when her parents will arrive.,competitor,2,[-7.7325454],[0.0004383269784317274],[],[-3.5191734],[0.029623912175955513],0.0004383269784317274,0.0004383269784317274,0.029623912175955513,0.014796390693714622,-7.7325454,-7.7325454,2.1972618342705137
+gpt-3.5-turbo-instruct,0.1,2,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Alex to clean the mess.
+2. She wants Alex to know when her parents will arrive.
+3. She wants Alex to prepare some dinner.
+4. She wants Alex to apply for a job.
+Your answer:
+",,3,distractor_lexical_overlap,She wants Alex to prepare some dinner.,distractor_lexical_overlap,3,[-10.349732],[3.200136499437736e-05],[],[-3.3472984],[0.03517926614134075],3.200136499437736e-05,3.200136499437736e-05,0.03517926614134075,0.0009096655076829787,-10.349732,-10.349732,3.0919657476608595
+gpt-3.5-turbo-instruct,0.1,2,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Alex to clean the mess.
+2. She wants Alex to know when her parents will arrive.
+3. She wants Alex to prepare some dinner.
+4. She wants Alex to apply for a job.
+Your answer:
+",,4,distractor_associative,She wants Alex to apply for a job.,distractor_associative,4,[-10.18567],[3.770680408826501e-05],[],[-5.1285486],[0.00592515400437001],3.770680408826501e-05,3.770680408826501e-05,0.00592515400437001,0.0063638521564933015,-10.18567,-10.18567,1.98607262881354
+gpt-3.5-turbo-instruct,0.1,2,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Nate to take the garbage out.
+2. She wants Nate to spend more time with the family.
+3. She wants to know Nate's plans.
+4. She wants Nate to bring his friends over.
+Your answer:
+",,1,target,She wants Nate to take the garbage out.,target,1,[-0.98631024],[0.3729502523309562],[],[-1.9296217],[0.14520311843456385],0.3729502523309562,0.3729502523309562,0.14520311843456385,2.5684727459832564,-0.98631024,-0.98631024,0.5111417642121251
+gpt-3.5-turbo-instruct,0.1,2,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Nate to take the garbage out.
+2. She wants Nate to spend more time with the family.
+3. She wants to know Nate's plans.
+4. She wants Nate to bring his friends over.
+Your answer:
+",,2,competitor,She wants Nate to spend more time with the family.,distractor_lexical_overlap,2,[-10.056623],[4.290067490940882e-05],[],[-2.3514967],[0.09522652995593907],4.290067490940882e-05,4.290067490940882e-05,0.09522652995593907,0.0004505117946570015,-10.056623,-10.056623,4.276690245833643
+gpt-3.5-turbo-instruct,0.1,2,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Nate to take the garbage out.
+2. She wants Nate to spend more time with the family.
+3. She wants to know Nate's plans.
+4. She wants Nate to bring his friends over.
+Your answer:
+",,3,distractor_lexical_overlap,She wants to know Nate's plans.,competitor,3,[-5.5019355],[0.004078869142259011],[],[-3.5233717],[0.02949980281193174],0.004078869142259011,0.004078869142259011,0.02949980281193174,0.13826767481338,-5.5019355,-5.5019355,1.5615540931999878
+gpt-3.5-turbo-instruct,0.1,2,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Nate to take the garbage out.
+2. She wants Nate to spend more time with the family.
+3. She wants to know Nate's plans.
+4. She wants Nate to bring his friends over.
+Your answer:
+",,4,distractor_associative,She wants Nate to bring his friends over.,distractor_associative,4,[-11.3066225],[1.2291255295711346e-05],[],[-6.320246],[0.0017995007745862837],1.2291255295711346e-05,1.2291255295711346e-05,0.0017995007745862837,0.006830369549875399,-11.3066225,-11.3066225,1.788952914174543
+gpt-3.5-turbo-instruct,0.1,2,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Peter to bring him some sunscreen.
+2. He wants Peter to close the screen door.
+3. He wants Peter to know that he might get bitten.
+4. He wants Peter to bring him some flowers.
+Your answer:
+",,1,target,He wants Peter to bring him some sunscreen.,distractor_lexical_overlap,1,[-9.176917],[0.00010339882082174415],[],[-1.7707944],[0.17019773003099284],0.00010339882082174415,0.00010339882082174415,0.17019773003099284,0.0006075217384092921,-9.176917,-9.176917,5.182372950806712
+gpt-3.5-turbo-instruct,0.1,2,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Peter to bring him some sunscreen.
+2. He wants Peter to close the screen door.
+3. He wants Peter to know that he might get bitten.
+4. He wants Peter to bring him some flowers.
+Your answer:
+",,2,competitor,He wants Peter to close the screen door.,target,2,[-3.2706676],[0.03798106245211218],[],[-2.6457944],[0.07094896948541718],0.03798106245211218,0.03798106245211218,0.07094896948541718,0.5353293039713394,-3.2706676,-3.2706676,1.2361760233523813
+gpt-3.5-turbo-instruct,0.1,2,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Peter to bring him some sunscreen.
+2. He wants Peter to close the screen door.
+3. He wants Peter to know that he might get bitten.
+4. He wants Peter to bring him some flowers.
+Your answer:
+",,3,distractor_lexical_overlap,He wants Peter to know that he might get bitten.,competitor,3,[-0.8800427],[0.41476520082938195],[],[-2.8020446],[0.06068585738945582],0.41476520082938195,0.41476520082938195,0.06068585738945582,6.834627023024437,-0.8800427,-0.8800427,0.3140716246986219
+gpt-3.5-turbo-instruct,0.1,2,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Peter to bring him some sunscreen.
+2. He wants Peter to close the screen door.
+3. He wants Peter to know that he might get bitten.
+4. He wants Peter to bring him some flowers.
+Your answer:
+",,4,distractor_associative,He wants Peter to bring him some flowers.,distractor_associative,4,[-10.918887],[1.8112884900464853e-05],[],[-5.880169],[0.002794312996234044],1.8112884900464853e-05,1.8112884900464853e-05,0.002794312996234044,0.006482052985787913,-10.918887,-10.918887,1.8569002013377505

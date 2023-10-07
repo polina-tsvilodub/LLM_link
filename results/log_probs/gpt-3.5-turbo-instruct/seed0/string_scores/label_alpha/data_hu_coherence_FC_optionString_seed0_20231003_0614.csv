@@ -1,0 +1,401 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+gpt-3.5-turbo-instruct,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-5.5570693, -0.0011807624]","[0.003860072551332651, 0.9988199344256338]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0038555174126002675,0.5013400034884832,9.263179812306926e-05,41.62196449514974,-5.5582500624,-2.7791250312,0.5985057640171457
+gpt-3.5-turbo-instruct,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-12.908631, -0.12069173, -0.0019716513]","[2.4765824314715767e-06, 0.8863071393860034, 0.998030291127618]",[],"[-10.812999, -1.3319999, -0.0073326607]","[2.0136046315496314e-05, 0.26394886177417165, 0.9926941576664418]",2.1906891543201483e-06,0.6281133023653509,5.276056782776532e-06,0.41521333914971537,-13.0312943813,-4.343764793766667,1.0723287392390215
+gpt-3.5-turbo-instruct,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-5.7372365, -0.0012227726]","[0.003223664574235024, 0.9987779746817994]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0032197251745079225,0.5010008196280172,9.263179812306926e-05,34.75831452856224,-5.7384592726,-2.8692296363,0.6179104776991181
+gpt-3.5-turbo-instruct,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-13.221611, -0.20183855, -0.0021741332]","[1.8110369068591524e-06, 0.8172268585681661, 0.9978282285157141]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",1.4768137195325136e-06,0.6050189660402623,4.833268137934669e-06,0.30555178760754187,-13.4256236832,-4.4752078943999996,1.0968657834971616
+gpt-3.5-turbo-instruct,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,incoherent,competitor,A,"[-7.523429, -0.0018684588]","[0.0005402767768459341, 0.9981332856824766]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0005392682344511704,0.4993367812296613,9.263179812306926e-05,5.821631938254145,-7.5252974588,-3.7626487294,0.810315090985781
+gpt-3.5-turbo-instruct,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,coherent,target,B,"[-12.203116, -0.10585894, -0.002468011]","[5.014805103587332e-06, 0.8995515298655439, 0.9975350320352184]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",4.499955946061642e-06,0.6323638589019552,4.833268137934669e-06,0.9310379266449188,-12.311442950999998,-4.103814316999999,1.0058378543208608
+gpt-3.5-turbo-instruct,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-8.811571, -0.0036433158]","[0.00014899899455419568, 0.9963633130222681]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0001484571318510053,0.49825615600841117,9.263179812306926e-05,1.6026584267938673,-8.8152143158,-4.4076071579,0.9492118058421163
+gpt-3.5-turbo-instruct,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-8.170946, -0.0298107, -0.002856658]","[0.0002827504079995087, 0.9706292562768165, 0.9971474183649471]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0002736629391276338,0.656019808349921,4.833268137934669e-06,56.620682179775415,-8.203613358000002,-2.7345377860000006,0.6702305237923752
+gpt-3.5-turbo-instruct,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-6.0924444, -0.0008001068]","[0.0022598781117643585, 0.9992002132000952]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.002258070691081176,0.5007300456559298,9.263179812306926e-05,24.37684182791244,-6.0932445068,-3.0466222534,0.6561133302647665
+gpt-3.5-turbo-instruct,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-9.201819, -0.04808349, -0.0014559034]","[0.0001008557782214606, 0.9530542132594769, 0.9985451559132068]",[],"[-10.857152, -1.3603002, -0.007128954]","[1.9266321236811374e-05, 0.25658373895229697, 0.9928963967154345]",9.598118326161174e-05,0.6505667416503017,4.908308610585583e-06,19.55483871870085,-9.2513583934,-3.0837861311333334,0.7567832612713171
+gpt-3.5-turbo-instruct,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-6.7243514, -0.00043450415]","[0.0012012994897322503, 0.9995655902332578]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0012007776335011282,0.500383444861495,9.263179812306926e-05,12.962909690102231,-6.72478590415,-3.362392952075,0.7241169577169306
+gpt-3.5-turbo-instruct,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-10.114976, -0.05522294, -0.0009777051]","[4.046893156872978e-05, 0.946274162074069, 0.9990227726979034]",[],"[-10.871559, -1.3605387, -0.0071903076]","[1.899074125379676e-05, 0.25652255102750693, 0.992835480815793]",3.825728167965494e-05,0.6484458012345137,4.836651054591043e-06,7.909870124564886,-10.171176645100001,-3.3903922150333337,0.8310268243368567
+gpt-3.5-turbo-instruct,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-7.3754053, -0.0007928895]","[0.0006264727375862218, 0.999207424753818]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0006259762108020031,0.4999169487457021,9.263179812306926e-05,6.757681740889238,-7.376198189499999,-3.6880990947499996,0.7942602587841036
+gpt-3.5-turbo-instruct,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-10.568828, -0.025377683, -0.00127947]","[2.5704923719415387e-05, 0.9749416236073438, 0.9987213481727607]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",2.5028756027913662e-05,0.6578962255679413,4.833268137934669e-06,5.178433166467946,-10.595485153,-3.531828384333333,0.8656450827249632
+gpt-3.5-turbo-instruct,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-6.700751, -0.0008680538]","[0.0012299878348654661, 0.9991323228497079]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0012289206025260162,0.5001811553422867,9.263179812306926e-05,13.26672511412647,-6.7016190538,-3.3508095269,0.721622378791381
+gpt-3.5-turbo-instruct,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-12.567937, -0.031190123, -0.0013093097]","[3.4818841091934673e-06, 0.9692912709922337, 0.9986915470719778]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",3.370543897519165e-06,0.6559954333161069,4.833268137934669e-06,0.6973633163583287,-12.6004364327,-4.200145477566666,1.0294484566444686
+gpt-3.5-turbo-instruct,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-4.890833, -0.0010583155]","[0.007515159738863335, 0.9989422443183432]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.007507210535950994,0.5032287020286033,9.263179812306926e-05,81.04355834674637,-4.8918913155,-2.44594565775,0.5267530457253231
+gpt-3.5-turbo-instruct,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-11.023645, -0.03998003, -0.0014983445]","[1.6311421337042045e-05, 0.9608086263090062, 0.9985027774576907]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",1.564868962524436e-05,0.6531092383960113,4.833268137934669e-06,3.2377035948871002,-11.0651233745,-3.688374458166667,0.9040142570695722
+gpt-3.5-turbo-instruct,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,incoherent,competitor,A,"[-8.055173, -0.0034254026]","[0.00031745547045594825, 0.996580457398625]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0003163699179506846,0.49844895643454046,9.263179812306926e-05,3.4153489877240655,-8.0585984026,-4.0292992013,0.8677403031005204
+gpt-3.5-turbo-instruct,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,coherent,target,B,"[-9.953611, -0.03496258, -0.0035620183]","[4.755560024442122e-05, 0.9656415498882989, 0.9964443181614215]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",4.5758380700894947e-05,0.6540444745499883,4.833268137934669e-06,9.467378882159062,-9.9921355983,-3.3307118661,0.8163517688607584
+gpt-3.5-turbo-instruct,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,incoherent,competitor,A,"[-7.2915325, -0.0010368965]","[0.0006812831858492893, 0.9989636408914201]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0006805771318141121,0.4998224620386347,9.263179812306926e-05,7.347122107139787,-7.292569396499999,-3.6462846982499997,0.785255209697362
+gpt-3.5-turbo-instruct,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,coherent,target,B,"[-9.68997, -0.09383421, -0.0019355828]","[6.190126142799628e-05, 0.9104336905307737, 0.9980662892323685]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",5.624801576448367e-05,0.6361872936748567,4.833268137934669e-06,11.637677480173762,-9.785739792800001,-3.261913264266667,0.7994893494862624
+gpt-3.5-turbo-instruct,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-5.4493117, -0.0005317681]","[0.004299262855206495, 0.9994683732635974]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.004296977252125844,0.501883818059402,9.263179812306926e-05,46.38771285014831,-5.4498434681,-2.72492173405,0.5868326707202236
+gpt-3.5-turbo-instruct,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-8.027437, -0.026866542, -0.0009010445]","[0.0003263836591520352, 0.9734911530375807, 0.9990993613186995]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0003174454433070925,0.657638966005144,4.833268137934669e-06,65.67925350873288,-8.055204586500002,-2.6850681955000004,0.6581056119618063
+gpt-3.5-turbo-instruct,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,incoherent,competitor,A,"[-7.495868, -0.0011350511]","[0.0005553744427970971, 0.9988655928268468]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0005547444220454021,0.49971048363482196,9.263179812306926e-05,5.9887040226551225,-7.4970030511,-3.74850152555,0.8072683827758612
+gpt-3.5-turbo-instruct,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,coherent,target,B,"[-10.761493, -0.022741068, -0.0014294606]","[2.1200347180112472e-05, 0.9775155610662163, 0.9985715605921609]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",2.0694066762707977e-05,0.6587027740018524,4.833268137934669e-06,4.281588807433902,-10.7856635286,-3.5952211762,0.8811825473432916
+gpt-3.5-turbo-instruct,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,incoherent,competitor,A,"[-8.157834, -0.0006457391]","[0.00028648224379867045, 0.9993544693446232]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0002862973107280773,0.49982047579421096,9.263179812306926e-05,3.0907022915360756,-8.158479739099999,-4.079239869549999,0.8784954067647793
+gpt-3.5-turbo-instruct,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,coherent,target,B,"[-9.797822, -0.03948699, -0.0010571234]","[5.5572504633710066e-05, 0.9612824601940523, 0.9989434351581025]",[],"[-10.857152, -1.3603002, -0.007128954]","[1.9266321236811374e-05, 0.25658373895229697, 0.9928963967154345]",5.336443135617441e-05,0.6534271559522629,4.908308610585583e-06,10.87226488592937,-9.838366113400001,-3.2794553711333334,0.8048018978695883
+gpt-3.5-turbo-instruct,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-7.6699386, -0.00096368726]","[0.00046664647491705705, 0.9990367769374419]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.00046619699027035546,0.49975171170617944,9.263179812306926e-05,5.032796509584894,-7.67090228726,-3.83545114363,0.8259936459488891
+gpt-3.5-turbo-instruct,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-12.162126, -0.04046695, -0.0011790916]","[5.224633009481346e-06, 0.96034090325378, 0.9988216032553744]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",5.011516261749969e-06,0.6530559103807212,4.833268137934669e-06,1.036879419624227,-12.2037720416,-4.067924013866667,0.9970412025461903
+gpt-3.5-turbo-instruct,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,incoherent,competitor,A,"[-7.765395, -0.0022982706]","[0.0004241620425149745, 0.9977043684017749]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0004231883227274094,0.4990642652221449,9.263179812306926e-05,4.568499492638236,-7.7676932706,-3.8838466353,0.8364159840559414
+gpt-3.5-turbo-instruct,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,coherent,target,B,"[-8.601563, -0.030991958, -0.0020870424]","[0.000183818261077332, 0.9694833696299345, 0.9979151339586755]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0001778372057835694,0.6558607739498958,4.833268137934669e-06,36.79440095362928,-8.6346420004,-2.878214000133333,0.7054453175860818
+gpt-3.5-turbo-instruct,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-5.8713717, -0.0012803064]","[0.0028190038531532386, 0.9987205128425745]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.002815396973926396,0.5007697583478639,9.263179812306926e-05,30.393418145526017,-5.8726520064,-2.9363260032,0.6323601918657814
+gpt-3.5-turbo-instruct,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-7.871372, -0.13776787, -0.002555196]","[0.0003815105704584078, 0.8713009233562171, 0.997448065734584]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.000331562222534018,0.6230434998870865,4.833268137934669e-06,68.60000584939607,-8.011695066,-2.670565022,0.6545509089983573
+gpt-3.5-turbo-instruct,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,incoherent,competitor,A,"[-5.68905, -0.0011277727]","[0.003382805108221994, 0.9988728629966352]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0033789922234093456,0.5011278340524287,9.263179812306926e-05,36.47767064739546,-5.6901777727,-2.84508888635,0.6127115831439736
+gpt-3.5-turbo-instruct,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,coherent,target,B,"[-11.4078, -0.13942808, -0.0020814266]","[1.1108499743718342e-05, 0.8698555809681776, 0.9979207380662205]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",9.642699025799858e-06,0.6225958091780472,4.833268137934669e-06,1.9950680886329502,-11.5493095066,-3.8497698355333334,0.9435719873975044
+gpt-3.5-turbo-instruct,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,incoherent,competitor,A,"[-7.8543873, -0.0018113712]","[0.00038804575501393294, 0.9981902683427225]",[],"[-9.215959, -0.054382082]","[9.943971269457029e-05, 0.9470701788950968]",0.0003873434963266121,0.4992891570488682,9.417638649092371e-05,4.112957724959457,-7.8561986712,-3.9280993356,0.8474551908833423
+gpt-3.5-turbo-instruct,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,coherent,target,B,"[-6.760637, -0.015787091, -0.0018476772]","[0.0011584909800605146, 0.9843368719258188, 0.9981540287047022]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0011382403426150537,0.6612164638701938,4.833268137934669e-06,235.5011785258497,-6.7782717682,-2.2594239227333333,0.5537809303479065
+gpt-3.5-turbo-instruct,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,target,coherent,target,A,"[-5.7069416, -0.0011277727]","[0.003322819531473667, 0.9988728629966352]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.00331907425862424,0.5010978412640544,9.263179812306926e-05,35.830830512591,-5.708069372700001,-2.8540346863500003,0.614638129378359
+gpt-3.5-turbo-instruct,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,competitor,incoherent,competitor,B,"[-10.074129, -0.061795346, -0.0015743976]","[4.215619117336527e-05, 0.9400752572674246, 0.9984268411137401]",[],"[-10.802133, -1.383576, -0.0074002105]","[2.035603764311719e-05, 0.25068051480340964, 0.9926271036393988]",3.956764798822559e-05,0.6461814181907793,5.065239123097204e-06,7.811605143733365,-10.1374987436,-3.3791662478666664,0.83141211717108
+gpt-3.5-turbo-instruct,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-4.6532454, -0.013787981, -0.002567861]","[0.009530621007574343, 0.9863066378432216, 0.9974354331348276]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.009376007539689804,0.6644242306618745,4.833268137934669e-06,1939.8897954989764,-4.669601242000001,-1.5565337473333334,0.3815037532546747
+gpt-3.5-turbo-instruct,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-4.559496, -0.0019616191]","[0.010467333150122727, 0.9980403036173282]",[],"[-9.224254, -0.05521526]","[9.861827191347767e-05, 0.9462814294875406]",0.010446820355212211,0.5042538183837255,9.332063931987661e-05,111.94544348762423,-4.5614576191000005,-2.2807288095500002,0.4915644948318952
+gpt-3.5-turbo-instruct,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-7.893616, -0.02126138, -0.0015693234]","[0.0003731179382349466, 0.9789630497634634, 0.9984319073440708]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0003646958996096445,0.6592560250152564,4.833268137934669e-06,75.4553418518768,-7.9164467034,-2.6388155678,0.6467691721989859
+gpt-3.5-turbo-instruct,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-7.2217417, -0.0012603713]","[0.0007305289479316091, 0.9987404226343213]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0007296087902038214,0.4997354757911264,9.263179812306926e-05,7.876439894154637,-7.2230020713,-3.61150103565,0.777764282759563
+gpt-3.5-turbo-instruct,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-6.3484936, -0.008283158, -0.0012825159]","[0.0017493804190378069, 0.9917510528301579, 0.9987183061720392]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0017327261978379552,0.6640729131404115,4.833268137934669e-06,358.4999111136375,-6.3580592739,-2.1193530913,0.5194498096736077
+gpt-3.5-turbo-instruct,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-8.317244, -0.00090623525]","[0.0002442681403984659, 0.9990941752571495]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0002440468762730029,0.499669221698774,9.263179812306926e-05,2.6345907260567882,-8.31815023525,-4.159075117625,0.8956885361159963
+gpt-3.5-turbo-instruct,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-7.146634, -0.035155922, -0.0008862496]","[0.0007875103850392579, 0.9654548688669828, 0.9991141430031867]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0007596322133639366,0.6551188407517362,4.833268137934669e-06,157.1674055080543,-7.1826761716,-2.3942253905333333,0.586820539028441
+gpt-3.5-turbo-instruct,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-7.4591346, -0.0006254004]","[0.0005761545599596691, 0.9993747951220682]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0005757943453183396,0.4999754748410139,9.263179812306926e-05,6.215946974853576,-7.459760000399999,-3.7298800001999997,0.803258095317886
+gpt-3.5-turbo-instruct,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-7.645501, -0.0144096585, -0.0012103018]","[0.0004781906765968214, 0.9856936637542154, 0.9987904303198317]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0004707793898996889,0.6616540949168812,4.833268137934669e-06,97.40394624595777,-7.6611209603,-2.5537069867666666,0.625909204881205
+gpt-3.5-turbo-instruct,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-7.2550955, -0.0010470377]","[0.0007065648991313786, 0.9989535102527135]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0007058254862086452,0.4998300375759224,9.263179812306926e-05,7.619688924432792,-7.256142537700001,-3.6280712688500003,0.7813328088136161
+gpt-3.5-turbo-instruct,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-6.024966, -0.008679116, -0.0026771687]","[0.002417633765515155, 0.9913584388012437, 0.9973264117202817]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0023903337350284267,0.6637008280956802,4.833268137934669e-06,494.55847819977424,-6.0363222847,-2.012107428233333,0.49316408149693625
+gpt-3.5-turbo-instruct,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-7.899966, -0.0027869025]","[0.00037075614595375616, 0.9972169773077201]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.00036972432318626463,0.4987938667268369,9.263179812306926e-05,3.991332681408756,-7.9027529025,-3.95137645125,0.8509590447802157
+gpt-3.5-turbo-instruct,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-8.042545, -0.013360939, -0.0018314959]","[0.000321489716757601, 0.9867279221491034, 0.9981701802651631]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0003166424195219841,0.6617398640436747,4.833268137934669e-06,65.51310841555966,-8.0577374349,-2.6859124782999997,0.6583125442288129
+gpt-3.5-turbo-instruct,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-9.55817, -0.0019963782]","[7.062191859237156e-05, 0.9980056132375175]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",7.048107117278982e-05,0.49903811757805494,9.263179812306926e-05,0.7608733998572466,-9.5601663782,-4.7800831891,1.0294273589851757
+gpt-3.5-turbo-instruct,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-7.081463, -0.09146183, -0.0010452494]","[0.0008405425346758918, 0.9125961492822348, 0.9989552966828733]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0007662745137363508,0.6374639961665947,4.833268137934669e-06,158.54169308797998,-7.1739700794,-2.3913233598,0.5861092562703744
+gpt-3.5-turbo-instruct,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-7.9877133, -0.00084502774]","[0.0003396097818186717, 0.9991553291953935]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0003393229233510107,0.4997474694886061,9.263179812306926e-05,3.6631365279144337,-7.98855832774,-3.99427916387,0.8601984710409167
+gpt-3.5-turbo-instruct,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-6.4414387, -0.03298125, -0.0019675905]","[0.0015941115816961338, 0.9675567011071005, 0.9980343439372531]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0015393615283563662,0.6557283855420165,4.833268137934669e-06,318.49288812976124,-6.476387540499999,-2.158795846833333,0.5291171614418894
+gpt-3.5-turbo-instruct,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-6.5404725, -0.0015021657]","[0.0014438061394249058, 0.9984989619861673]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0014416389315250239,0.49997138406279606,9.263179812306926e-05,15.56311073233927,-6.5419746657,-3.27098733285,0.7044320607239741
+gpt-3.5-turbo-instruct,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-8.11815, -0.008399698, -0.0011426316]","[0.0002980795979234368, 0.9916354808969684, 0.9988580209549197]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.00029524875206556576,0.6635971938166039,4.833268137934669e-06,61.08677268456497,-8.1276923296,-2.7092307765333334,0.6640278191534776
+gpt-3.5-turbo-instruct,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-7.6337743, -0.0011850595]","[0.0004838312834169811, 0.9988156424057152]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.00048325825416211364,0.4996497368445661,9.263179812306926e-05,5.2169801726191665,-7.6349593595,-3.81747967975,0.8221233541846638
+gpt-3.5-turbo-instruct,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-8.27511, -0.0141455615, -0.0013261425]","[0.00025478003319341153, 0.9859540168714573, 0.9986747364383897]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.00025086848908742454,0.6616278444476801,4.833268137934669e-06,51.904525453169775,-8.290581704,-2.7635272346666664,0.6773357879667397
+gpt-3.5-turbo-instruct,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-9.52511, -0.0016553525]","[7.299570165411086e-05, 0.9983460168402651]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",7.287496799284192e-05,0.4992095062709596,9.263179812306926e-05,0.7867165430171321,-9.5267653525,-4.76338267625,1.0258307762152197
+gpt-3.5-turbo-instruct,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-8.240177, -0.014071147, -0.0011921605]","[0.00026383754607593567, 0.9860273888765825, 0.9988085498410206]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0002598410896389762,0.6616999254212264,4.833268137934669e-06,53.76095060805179,-8.255440307499999,-2.751813435833333,0.6744647559525331
+gpt-3.5-turbo-instruct,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-8.662052, -0.0010186979]","[0.00017302888709118112, 0.9989818207965591]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.00017285271267675036,0.4995774248418251,9.263179812306926e-05,1.866019187569918,-8.663070697899999,-4.331535348949999,0.9328291617996035
+gpt-3.5-turbo-instruct,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-7.8249693, -0.057336625, -0.0019064386]","[0.00039963085478262613, 0.9442761489009134, 0.9980953774997902]",[],"[-10.873075, -1.3725698, -0.0074056746]","[1.8961973101824902e-05, 0.25345479381479985, 0.9926216798404598]",0.0003766431526001093,0.6475903857518287,4.770542754149677e-06,78.9518451066149,-7.8842123636,-2.6280707878666663,0.6434489419547893
+gpt-3.5-turbo-instruct,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-7.19997, -0.0015499233]","[0.0007466082062868973, 0.9984512772108046]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0007454519171432206,0.49959894270854577,9.263179812306926e-05,8.047473246204548,-7.2015199233,-3.60075996165,0.7754511105817863
+gpt-3.5-turbo-instruct,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-9.091816, -0.025356222, -0.0016460993]","[0.00011258343125746713, 0.9749625470540463, 0.9983552547783683]",[],"[-10.864397, -1.383398, -0.00739997]","[1.9127241165368625e-05, 0.25072513990656103, 0.9926273423662458]",0.00010958409404598529,0.657810128421224,4.760323308851099e-06,23.020304911271527,-9.1188183213,-3.0396061070999996,0.7440777844516006
+gpt-3.5-turbo-instruct,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-6.88869, -0.0015331467]","[0.001019248181929632, 0.9984680279690119]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0010176867222222803,0.4997436380754708,9.263179812306926e-05,10.986364756411145,-6.8902231467,-3.44511157335,0.7419310434701225
+gpt-3.5-turbo-instruct,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-8.884106, -0.034484506, -0.0027869025]","[0.0001385740109464183, 0.9661033083751889, 0.9972169773077201]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.00013350422822875718,0.6544862865646184,4.833268137934669e-06,27.62193704523201,-8.9213774085,-2.9737924694999998,0.7288714365868358
+gpt-3.5-turbo-instruct,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-8.696605, -0.0024974707]","[0.0001671523309394111, 0.9975056453852983]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.00016673539375137425,0.49883639885811887,9.263179812306926e-05,1.7999801054261304,-8.6991024707,-4.34955123535,0.9367090202921963
+gpt-3.5-turbo-instruct,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-5.535942, -0.013436571, -0.0019735633]","[0.0039424930577646265, 0.9866532967649646, 0.9980283828955256]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0038822044312515265,0.6628747242394183,4.833268137934669e-06,803.2255443850572,-5.5513521343,-1.8504507114333333,0.4535422973218831
+gpt-3.5-turbo-instruct,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-6.754834, -0.0023138642]","[0.0011652332469849185, 0.9976888107202362]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0011625401723960626,0.49942702198361055,9.263179812306926e-05,12.55011989351139,-6.757147864199999,-3.3785739320999997,0.7276016551320112
+gpt-3.5-turbo-instruct,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-5.6699142, -0.011928032, -0.0016592939]","[0.0034481611156351503, 0.9881428249658291, 0.9983420819670288]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0034016266819715062,0.6633110226828309,4.833268137934669e-06,703.7943240254563,-5.683501525900001,-1.8945005086333335,0.46433882710525476
+gpt-3.5-turbo-instruct,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-5.7167892, -0.0017673635]","[0.0032902583218748136, 0.9982341973671952]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.003284448375067439,0.5007622278445351,9.263179812306926e-05,35.457029245009025,-5.7185565635,-2.85927828175,0.6157673776258618
+gpt-3.5-turbo-instruct,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,incoherent,target,A,"[-7.2820415, -0.039701927, -0.002065842]","[0.0006877800265547054, 0.961075867228937, 0.997936290382943]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0006596446552962426,0.6532333125461448,4.833268137934669e-06,136.4800454828726,-7.323809269000001,-2.4412697563333334,0.5983510324423705
+gpt-3.5-turbo-instruct,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,coherent,competitor,B,"[-8.24147, -0.0016139206]","[0.00026349662458210256, 0.9983873810694937]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0002630717049371769,0.4993254388470379,9.263179812306926e-05,2.8399719131832426,-8.2430839206,-4.1215419603,0.8876054845265271
+gpt-3.5-turbo-instruct,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-7.7940845, -0.051828183, -0.0014107758]","[0.000412165949361652, 0.9494919916942139, 0.9985902188763688]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.00039079655276670253,0.6494981255066481,4.833268137934669e-06,80.85554982962232,-7.8473234588,-2.6157744862666665,0.6411218426122852
+gpt-3.5-turbo-instruct,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-7.4034586, -0.00067209924]","[0.0006091423339953019, 0.9993281265681029]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.0006087330674448467,0.4999686344510491,9.263179812306926e-05,6.571534610999268,-7.40413069924,-3.70206534962,0.7972679982515929
+gpt-3.5-turbo-instruct,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,incoherent,target,coherent,competitor,A,"[-6.923527, -0.020503704, -0.0012937337]","[0.0009843520012822258, 0.9797050676402267, 0.9987071028126628]",[],"[-10.872607, -1.3602309, -0.007149786]","[1.897084938212413e-05, 0.25660152082154103, 0.9928757129131414]",0.0009631278067332314,0.6597988408180573,4.833268137934669e-06,199.2705099834976,-6.9453244377,-2.3151081459,0.567429037991926
+gpt-3.5-turbo-instruct,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not,coherent,competitor,incoherent,target,B,"[-5.6266522, -0.0009829568]","[0.003600609292227143, 0.9990175261437847]",[],"[-9.231982, -0.054896083]","[9.785908717628594e-05, 0.9465835089612057]",0.003597071787731084,0.5013090677180059,9.263179812306926e-05,38.831933100899825,-5.627635156799999,-2.8138175783999997,0.6059770685588745

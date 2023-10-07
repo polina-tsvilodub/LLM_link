@@ -1,0 +1,721 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+meta-llama/Llama-2-7b-hf,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.904751777648926, -7.433014392852783]","[4.993682868415577e-05, 0.0005914021040234504]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.9532745552068313e-08,0.0003206694663538031,4.5478685475342153e-08,0.6493755314911315,-17.33776617050171,-8.668883085250854,1.0255378880276347
+meta-llama/Llama-2-7b-hf,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.904751777648926, -6.230194568634033]","[4.993682868415577e-05, 0.0019690687403506857]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",9.83290483542186e-08,0.0010095027845174207,1.627432434640692e-07,0.6041974232615555,-16.13494634628296,-8.06747317314148,1.0322341057453917
+meta-llama/Llama-2-7b-hf,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-10.039230346679688, -7.467508792877197]","[4.3653358079970484e-05, 0.0005713498762995126]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.4941340739049465e-08,0.00030750161718974154,4.5478685475342153e-08,0.5484182420481849,-17.506739139556885,-8.753369569778442,1.035532727046368
+meta-llama/Llama-2-7b-hf,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-10.039230346679688, -6.198872089385986]","[4.3653358079970484e-05, 0.002031720944039216]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",8.869144188871958e-08,0.0010376871510595932,1.627432434640692e-07,0.5449777207389938,-16.238102436065674,-8.119051218032837,1.038833522427901
+meta-llama/Llama-2-7b-hf,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,"[-10.192666053771973, -7.322329998016357]","[3.744392588652023e-05, 0.0006606211705816298]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.4736250150324784e-08,0.000349032548234075,4.563000081279643e-08,0.5421049684353233,-17.51499605178833,-8.757498025894165,1.0362247222176144
+meta-llama/Llama-2-7b-hf,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,"[-10.192666053771973, -6.358647346496582]","[3.744392588652023e-05, 0.001731707528598717]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",6.484192835797947e-08,0.0008845757272426186,1.0814808362606703e-07,0.5995661336189462,-16.551313400268555,-8.275656700134277,1.0318925504812677
+meta-llama/Llama-2-7b-hf,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.788361549377441, -7.242063522338867]","[5.610074030374855e-05, 0.0007158330974198357]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",4.015876669917814e-08,0.0003859669188617921,4.5478685475342153e-08,0.8830239106394491,-17.03042507171631,-8.515212535858154,1.0073585021567644
+meta-llama/Llama-2-7b-hf,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.788361549377441, -6.166793346405029]","[5.610074030374855e-05, 0.002097952633155811]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",1.1769669584223959e-07,0.0010770266867297798,1.627432434640692e-07,0.7232048061535956,-15.95515489578247,-7.977577447891235,1.0207319375233825
+meta-llama/Llama-2-7b-hf,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.835061073303223, -7.488145351409912]","[5.3541094720487565e-05, 0.0005596800082407982]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.996588033438384e-08,0.0003066105514806429,4.5478685475342153e-08,0.6588994387410533,-17.323206424713135,-8.661603212356567,1.0246766714903142
+meta-llama/Llama-2-7b-hf,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.835061073303223, -6.2122015953063965]","[5.3541094720487565e-05, 0.002004818802137193]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",1.0734019338264186e-07,0.00102917994842884,1.627432434640692e-07,0.6595677405577863,-16.04726266860962,-8.02363133430481,1.026624537503322
+meta-llama/Llama-2-7b-hf,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.994040489196777, -7.351548671722412]","[4.5671298945000736e-05, 0.0006415979659320442]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.930261250458679e-08,0.0003436346324385225,4.5478685475342153e-08,0.6443152918409266,-17.34558916091919,-8.672794580459595,1.0260006219803197
+meta-llama/Llama-2-7b-hf,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.994040489196777, -5.983367443084717]","[4.5671298945000736e-05, 0.0025203249355699345]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",1.151065135709542e-07,0.0012829981172574677,1.627432434640692e-07,0.7072890469727405,-15.977407932281494,-7.988703966140747,1.022155576792935
+meta-llama/Llama-2-7b-hf,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.754425048828125, -7.6417012214660645]","[5.803727689209729e-05, 0.0004800111517757529]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.785854012690391e-08,0.0002690242143339251,4.5478685475342153e-08,0.6125625627857776,-17.39612627029419,-8.698063135147095,1.02898991828907
+meta-llama/Llama-2-7b-hf,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.754425048828125, -6.320799350738525]","[5.803727689209729e-05, 0.0017985052949537855]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",1.0438034979513596e-07,0.0009282712859229414,1.627432434640692e-07,0.6413805425856667,-16.07522439956665,-8.037612199783325,1.028413390823939
+meta-llama/Llama-2-7b-hf,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.738493919372559, -7.985901832580566]","[5.896928048661103e-05, 0.0003402255314105419]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.006285479045454e-08,0.00019959740594857646,4.5478685475342153e-08,0.44114852003214367,-17.724395751953125,-8.862197875976562,1.0484072288937782
+meta-llama/Llama-2-7b-hf,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.738493919372559, -6.6154046058654785]","[5.896928048661103e-05, 0.0013395726874134849]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",7.899363753628911e-08,0.000699270983950048,1.627432434640692e-07,0.48538812337072224,-16.353898525238037,-8.176949262619019,1.0462415837867902
+meta-llama/Llama-2-7b-hf,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.821635246276855, -7.3529181480407715]","[5.426477533193907e-05, 0.0006407199140846281]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",3.476852218850164e-08,0.0003474923447082836,4.5478685475342153e-08,0.7645014763531941,-17.174553394317627,-8.587276697158813,1.0158837674136578
+meta-llama/Llama-2-7b-hf,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.821635246276855, -6.1420392990112305]","[5.426477533193907e-05, 0.0021505335625331577]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",1.1669822061465633e-07,0.0011023991689325483,1.627432434640692e-07,0.7170695270087892,-15.963674545288086,-7.981837272644043,1.0212769825827186
+meta-llama/Llama-2-7b-hf,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,"[-10.11280632019043, -7.149255752563477]","[4.055683151535659e-05, 0.0007854484318151765]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",3.1855299713129164e-08,0.0004130026316652665,4.563000081279643e-08,0.6981218309379407,-17.262062072753906,-8.631031036376953,1.0212606056748887
+meta-llama/Llama-2-7b-hf,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,"[-10.11280632019043, -6.408850193023682]","[4.055683151535659e-05, 0.0016469170505434842]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",6.679373733866011e-08,0.0008437369410294204,1.0814808362606703e-07,0.6176136931802345,-16.52165651321411,-8.260828256607056,1.0300435902155858
+meta-llama/Llama-2-7b-hf,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,"[-9.91905403137207, -7.311602592468262]","[4.922770262843806e-05, 0.0006677460693051619]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",3.28716049310629e-08,0.00035848688596679996,4.563000081279643e-08,0.7203945725515837,-17.230656623840332,-8.615328311920166,1.0194025919773484
+meta-llama/Llama-2-7b-hf,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,"[-9.91905403137207, -6.482735633850098]","[4.922770262843806e-05, 0.0015296204689642994]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",7.52997015805465e-08,0.0007894240857963688,1.0814808362606703e-07,0.6962647793270462,-16.401789665222168,-8.200894832611084,1.0225704849398105
+meta-llama/Llama-2-7b-hf,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.978299140930176, -7.295599937438965]","[4.63959150218355e-05, 0.0006785177370702201]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",3.1480451269918056e-08,0.0003624568260460278,4.5478685475342153e-08,0.6922023128172048,-17.27389907836914,-8.63694953918457,1.021760116304566
+meta-llama/Llama-2-7b-hf,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.978299140930176, -6.253201484680176]","[4.63959150218355e-05, 0.0019242836994345514]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",8.92789029968687e-08,0.0009853398072281936,1.627432434640692e-07,0.5485874626591173,-16.23150062561035,-8.115750312805176,1.0384111712303576
+meta-llama/Llama-2-7b-hf,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,"[-10.201131820678711, -7.3762335777282715]","[3.712827234775073e-05, 0.0006259540590049212]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.3240592779914746e-08,0.000331541165676336,4.563000081279643e-08,0.509327029715879,-17.577365398406982,-8.788682699203491,1.039914626496423
+meta-llama/Llama-2-7b-hf,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,"[-10.201131820678711, -6.553707122802734]","[3.712827234775073e-05, 0.001424823798898296]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.290124605305275e-08,0.0007309760356230233,1.0814808362606703e-07,0.4891556491741839,-16.754838943481445,-8.377419471740723,1.0445813617432567
+meta-llama/Llama-2-7b-hf,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,"[-10.397052764892578, -7.282390594482422]","[3.052230699191182e-05, 0.0006875399682462686]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.0985305980021915e-08,0.00035903113761909017,4.563000081279643e-08,0.4599015035331057,-17.679443359375,-8.8397216796875,1.0459537775436665
+meta-llama/Llama-2-7b-hf,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,"[-10.397052764892578, -6.502818584442139]","[3.052230699191182e-05, 0.0014992075890265441]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",4.5759274276872155e-08,0.000764864948009228,1.0814808362606703e-07,0.4231168296526593,-16.899871349334717,-8.449935674667358,1.0536234151174582
+meta-llama/Llama-2-7b-hf,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.9847412109375, -7.338603496551514]","[4.6097989946636766e-05, 0.0006499575554258623]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.996173685576201e-08,0.0003480277726862495,4.5478685475342153e-08,0.6588083305971278,-17.323344707489014,-8.661672353744507,1.0246848509884416
+meta-llama/Llama-2-7b-hf,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.9847412109375, -6.156520843505859]","[4.6097989946636766e-05, 0.0021196149301754394]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",9.77099877419686e-08,0.0010828564600610382,1.627432434640692e-07,0.6003935135011685,-16.14126205444336,-8.07063102722168,1.032638153532424
+meta-llama/Llama-2-7b-hf,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,"[-10.229784965515137, -7.367408275604248]","[3.6079527256047224e-05, 0.0006315027410755757]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.2784320358904767e-08,0.0003337911341658115,4.563000081279643e-08,0.4993276342987738,-17.597193241119385,-8.798596620559692,1.0410876841863066
+meta-llama/Llama-2-7b-hf,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,"[-10.229784965515137, -6.568919658660889]","[3.6079527256047224e-05, 0.001403312650169834]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.0630857010558394e-08,0.0007196960887129407,1.0814808362606703e-07,0.4681623133112531,-16.798704624176025,-8.399352312088013,1.0473161700352556
+meta-llama/Llama-2-7b-hf,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.835376739501953, -7.352268218994141]","[5.352419627391579e-05, 0.0006411364719194016]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",3.431631436137995e-08,0.00034733033409665873,4.5478685475342153e-08,0.7545581848443208,-17.187644958496094,-8.593822479248047,1.016658140244998
+meta-llama/Llama-2-7b-hf,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.835376739501953, -6.019235610961914]","[5.352419627391579e-05, 0.002431527517826652]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",1.30145556109581e-07,0.0012425258570502838,1.627432434640692e-07,0.7996986746691872,-15.854612350463867,-7.927306175231934,1.014299722495892
+meta-llama/Llama-2-7b-hf,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,"[-10.081392288208008, -7.278697967529297]","[4.185110790221431e-05, 0.000690083490112885]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.8880758606250992e-08,0.00036596729900754965,4.563000081279643e-08,0.6329335544993394,-17.360090255737305,-8.680045127868652,1.027060163172996
+meta-llama/Llama-2-7b-hf,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,"[-10.081392288208008, -6.6207427978515625]","[4.185110790221431e-05, 0.001332440843740047]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.5764125524682184e-08,0.0006871459758211307,1.0814808362606703e-07,0.515627495698327,-16.70213508605957,-8.351067543029785,1.0412955368337737
+meta-llama/Llama-2-7b-hf,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,"[-10.174787521362305, -7.320861339569092]","[3.81193884768498e-05, 0.0006615921102591035]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.5219486664185614e-08,0.0003498557493679767,4.563000081279643e-08,0.5526952928984628,-17.495648860931396,-8.747824430465698,1.0350801009221178
+meta-llama/Llama-2-7b-hf,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,"[-10.174787521362305, -6.438479900360107]","[3.81193884768498e-05, 0.0015988352231782721]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",6.09466209828034e-08,0.0008184773058275609,1.0814808362606703e-07,0.5635478590035171,-16.613267421722412,-8.306633710861206,1.0357550773795594
+meta-llama/Llama-2-7b-hf,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,"[-9.997417449951172, -7.5355095863342285]","[4.5517328882611376e-05, 0.000533789182470917]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.4296657772508982e-08,0.00028965325567676417,4.5478685475342153e-08,0.534242745113692,-17.5329270362854,-8.7664635181427,1.0370817547607076
+meta-llama/Llama-2-7b-hf,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,"[-9.997417449951172, -6.266146659851074]","[4.5517328882611376e-05, 0.001899534049764923]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",8.646171606686868e-08,0.0009725256893237671,1.627432434640692e-07,0.5312768396800318,-16.263564109802246,-8.131782054901123,1.0404624344463353
+meta-llama/Llama-2-7b-hf,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-10.13636589050293, -7.141709327697754]","[3.961249772007511e-05, 0.0007913981808229372]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",3.134925863352019e-08,0.0004155053392715061,4.563000081279643e-08,0.6870317351545747,-17.278075218200684,-8.639037609100342,1.022207977695034
+meta-llama/Llama-2-7b-hf,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-10.13636589050293, -6.657166481018066]","[3.961249772007511e-05, 0.0012847816708575115]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.0893411007637464e-08,0.0006621970842887933,1.0814808362606703e-07,0.4705900400751121,-16.793532371520996,-8.396766185760498,1.0469937056570604
+meta-llama/Llama-2-7b-hf,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-10.00466251373291, -7.211764812469482]","[4.518874467575748e-05, 0.0007378538320968892]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",3.334268842665556e-08,0.0003915212883863234,4.5478685475342153e-08,0.7331497838637718,-17.216427326202393,-8.608213663101196,1.0183606322673078
+meta-llama/Llama-2-7b-hf,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-10.00466251373291, -6.167689800262451]","[4.518874467575748e-05, 0.0020960727581616186]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",9.471889669037615e-08,0.001070630751418688,1.627432434640692e-07,0.5820143108508734,-16.17235231399536,-8.08617615699768,1.0346271546469796
+meta-llama/Llama-2-7b-hf,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-10.150042533874512, -7.325667858123779]","[3.907441965390005e-05, 0.0006584197855317556]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.5727371008298685e-08,0.0003487471025928278,4.563000081279643e-08,0.56382578457206,-17.47571039199829,-8.737855195999146,1.0339004983478117
+meta-llama/Llama-2-7b-hf,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-10.150042533874512, -6.495598793029785]","[3.907441965390005e-05, 0.0015100707226956738]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.900513712567888e-08,0.0007745725711747869,1.0814808362606703e-07,0.5455957715320702,-16.645641326904297,-8.322820663452148,1.0377734302908534
+meta-llama/Llama-2-7b-hf,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-9.789523124694824, -7.084850788116455]","[5.603561290103935e-05, 0.0008376997727220146]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",4.694102019153946e-08,0.000446867692811527,4.563000081279643e-08,1.0287315221431108,-16.87437391281128,-8.43718695640564,0.9983241428486475
+meta-llama/Llama-2-7b-hf,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-9.789523124694824, -6.330863952636719]","[5.603561290103935e-05, 0.0017804948412040852]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",9.977111969400965e-08,0.0009182652270525623,1.0814808362606703e-07,0.922541725648865,-16.120387077331543,-8.060193538665771,1.005026425014888
+meta-llama/Llama-2-7b-hf,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-9.98005199432373, -7.421799182891846]","[4.6314661018724326e-05, 0.0005980721357812964]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.7699508233455213e-08,0.0003221933984000104,4.563000081279643e-08,0.6070459728260007,-17.401851177215576,-8.700925588607788,1.0295308288317506
+meta-llama/Llama-2-7b-hf,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-9.98005199432373, -6.674394607543945]","[4.6314661018724326e-05, 0.0012628368663885736]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.8487861388734845e-08,0.0006545757637036489,1.0814808362606703e-07,0.5408127396039911,-16.654446601867676,-8.327223300933838,1.0383223956460441
+meta-llama/Llama-2-7b-hf,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-9.907726287841797, -7.485119819641113]","[4.9788511772673e-05, 0.0005613759020827782]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.7950070709743327e-08,0.0003055822069277256,4.5478685475342153e-08,0.6145751667536087,-17.39284610748291,-8.696423053741455,1.0287958949524543
+meta-llama/Llama-2-7b-hf,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-9.907726287841797, -6.200366020202637]","[4.9788511772673e-05, 0.0020286879596086273]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",1.010053543600541e-07,0.0010392382356906502,1.627432434640692e-07,0.6206423825045264,-16.108092308044434,-8.054046154022217,1.0305161171291368
+meta-llama/Llama-2-7b-hf,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-10.250320434570312, -7.354212760925293]","[3.534617289984807e-05, 0.0006398909665273567]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.2617696739926842e-08,0.0003376185697136024,4.563000081279643e-08,0.4956760100162865,-17.604533195495605,-8.802266597747803,1.0415219316255924
+meta-llama/Llama-2-7b-hf,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-10.250320434570312, -6.528994083404541]","[3.534617289984807e-05, 0.0014604742263924122]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.162217452183805e-08,0.0007479101996461301,1.0814808362606703e-07,0.47732861083629513,-16.779314517974854,-8.389657258987427,1.0461072927904016
+meta-llama/Llama-2-7b-hf,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-10.240838050842285, -7.3778276443481445]","[3.5682932995498833e-05, 0.0006249570414012507]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.230030023338602e-08,0.0003303199871983748,4.563000081279643e-08,0.48872013666789477,-17.61866569519043,-8.809332847595215,1.0423580406105564
+meta-llama/Llama-2-7b-hf,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-10.240838050842285, -6.653946399688721]","[3.5682932995498833e-05, 0.0012889254403850344]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",4.599264012545301e-08,0.0006623041866902666,1.0814808362606703e-07,0.4252746658413035,-16.894784450531006,-8.447392225265503,1.05330627212985
+meta-llama/Llama-2-7b-hf,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-9.998757362365723, -7.163084983825684]","[4.545638049043676e-05, 0.0007746610463524894]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",3.5213287274118623e-08,0.00041005871342146306,4.563000081279643e-08,0.7717134921514935,-17.161842346191406,-8.580921173095703,1.0153313917595166
+meta-llama/Llama-2-7b-hf,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-9.998757362365723, -6.481774806976318]","[4.545638049043676e-05, 0.0015310908757075986]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",6.959784941160062e-08,0.0007882736280990177,1.0814808362606703e-07,0.6435421422005243,-16.48053216934204,-8.24026608467102,1.02747969071959
+meta-llama/Llama-2-7b-hf,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-10.053657531738281, -7.573812007904053]","[4.3028084320171046e-05, 0.0005137303670334696]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.210483355054855e-08,0.0002783792256768203,4.5478685475342153e-08,0.48604820740769766,-17.627469539642334,-8.813734769821167,1.0426739930149342
+meta-llama/Llama-2-7b-hf,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-10.053657531738281, -6.290187835693359]","[4.3028084320171046e-05, 0.001854411589452872]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",7.979177823528059e-08,0.0009487198368865216,1.627432434640692e-07,0.4902924172879545,-16.34384536743164,-8.17192268371582,1.0455984324471148
+meta-llama/Llama-2-7b-hf,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-10.014118194580078, -7.447052478790283]","[4.4763468136489275e-05, 0.000583157951909153]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.6104172398825717e-08,0.00031396071002282115,4.5478685475342153e-08,0.5739869595170907,-17.46117067337036,-8.73058533668518,1.032837328566886
+meta-llama/Llama-2-7b-hf,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-10.014118194580078, -6.206030368804932]","[4.4763468136489275e-05, 0.0020172292475076296]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",9.029817714480202e-08,0.0010309963578220595,1.627432434640692e-07,0.5548505438552246,-16.22014856338501,-8.110074281692505,1.037684922406962
+meta-llama/Llama-2-7b-hf,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-9.993114471435547, -7.522226333618164]","[4.571361096682055e-05, 0.0005409269404489206]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.4727723717154466e-08,0.0002933202757078706,4.5478685475342153e-08,0.5437211620938661,-17.51534080505371,-8.757670402526855,1.0360415200350601
+meta-llama/Llama-2-7b-hf,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-9.993114471435547, -6.310116767883301]","[4.571361096682055e-05, 0.0018178209637108808]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",8.309916034241003e-08,0.0009317672873388506,1.627432434640692e-07,0.5106151172460615,-16.303231239318848,-8.151615619659424,1.043000141302329
+meta-llama/Llama-2-7b-hf,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-9.900025367736816, -7.547123432159424]","[5.017340925419018e-05, 0.0005276256973635775]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.6472780046850263e-08,0.0002888995533088838,4.563000081279643e-08,0.5801617263926557,-17.44714879989624,-8.72357439994812,1.0322107333170614
+meta-llama/Llama-2-7b-hf,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-9.900025367736816, -6.761806488037109]","[5.017340925419018e-05, 0.0011571369306448594]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.8057504784382007e-08,0.0006036551699495248,1.0814808362606703e-07,0.5368334124636154,-16.661831855773926,-8.330915927886963,1.0387828297097934
+meta-llama/Llama-2-7b-hf,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-10.184714317321777, -7.698699951171875]","[3.7742857052636054e-05, 0.000453416263168849]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",1.711322520612228e-08,0.0002455795601107425,4.5478685475342153e-08,0.3762911136778746,-17.883414268493652,-8.941707134246826,1.0578132568680003
+meta-llama/Llama-2-7b-hf,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-10.184714317321777, -6.352588176727295]","[3.7742857052636054e-05, 0.0017422320913620393]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",6.57568167767926e-08,0.0008899874742073376,1.627432434640692e-07,0.4040525147288866,-16.537302494049072,-8.268651247024536,1.057974863072186
+meta-llama/Llama-2-7b-hf,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-9.733454704284668, -7.448551177978516]","[5.92671893575831e-05, 0.0005822846281482855]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",3.45103733164743e-08,0.0003207759087529343,4.563000081279643e-08,0.7563088472879502,-17.182005882263184,-8.591002941131592,1.0165243097883374
+meta-llama/Llama-2-7b-hf,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-9.733454704284668, -6.680999755859375]","[5.92671893575831e-05, 0.0012545231285495723]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",7.435205981321507e-08,0.0006568951589535776,1.0814808362606703e-07,0.6875023331000008,-16.414454460144043,-8.207227230072021,1.0233600722805376
+meta-llama/Llama-2-7b-hf,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-10.207138061523438, -7.357237815856934]","[3.690593936299544e-05, 0.0006379581860607909]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.3544446130886114e-08,0.00033743206271189316,4.563000081279643e-08,0.5159860993095432,-17.56437587738037,-8.782187938690186,1.0391461385802543
+meta-llama/Llama-2-7b-hf,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-10.207138061523438, -6.634427547454834]","[3.690593936299544e-05, 0.0013143309219280771]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",4.8506617307587514e-08,0.0006756184306455363,1.0814808362606703e-07,0.4485203591337232,-16.84156560897827,-8.420782804489136,1.0499883405062111
+meta-llama/Llama-2-7b-hf,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-10.167122840881348, -7.299779891967773]","[3.841268398196175e-05, 0.0006756874830696434]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.5954969757721343e-08,0.00035705008352580257,4.5478685475342153e-08,0.5707062437368321,-17.46690273284912,-8.73345136642456,1.033176382866851
+meta-llama/Llama-2-7b-hf,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-10.167122840881348, -5.994540214538574]","[3.841268398196175e-05, 0.0024923226439726048]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",9.573680210400703e-08,0.0012653676639772832,1.627432434640692e-07,0.588268981656028,-16.161663055419922,-8.080831527709961,1.0339433087246013
+meta-llama/Llama-2-7b-hf,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,"[-9.99013900756836, -7.352174282073975]","[4.58498327254494e-05, 0.000641196701133809]","[-13.373932838439941, -2.9205374717712402]","[-10.019225120544434, -6.883475303649902]","[4.453544715751595e-05, 0.0010245771340615306]",2.9398761491095115e-08,0.0003435232669296292,4.563000081279643e-08,0.6442857981026061,-17.342313289642334,-8.671156644821167,1.0260084397413056
+meta-llama/Llama-2-7b-hf,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,"[-9.99013900756836, -6.70400333404541]","[4.58498327254494e-05, 0.0012259940017149127]","[-13.373932838439941, -3.542041301727295]","[-10.019225120544434, -6.020539283752441]","[4.453544715751595e-05, 0.0024283596669314143]",5.621161990103307e-08,0.0006359219172201811,1.0814808362606703e-07,0.5197652886332267,-16.69414234161377,-8.347071170806885,1.040797228738696
+meta-llama/Llama-2-7b-hf,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-9.863080024719238, -7.324834823608398]","[5.206175099875488e-05, 0.0006589685004562172]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",3.430705398677447e-08,0.000355515125727486,4.5478685475342153e-08,0.7543545647416574,-17.187914848327637,-8.593957424163818,1.0166741043689294
+meta-llama/Llama-2-7b-hf,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-9.863080024719238, -6.031187057495117]","[5.206175099875488e-05, 0.002402640213089716]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",1.2508565651347218e-07,0.0012273509820442355,1.627432434640692e-07,0.7686073710401922,-15.894267082214355,-7.947133541107178,1.0168366362040973
+meta-llama/Llama-2-7b-hf,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,"[-10.170319557189941, -7.405497074127197]","[3.829008558916327e-05, 0.0006079018778560914]","[-13.373932838439941, -2.9205374717712402]","[-9.814699172973633, -7.091322898864746]","[5.46424681296857e-05, 0.0008322955941046681]",2.3276614932922816e-08,0.00032309598172262737,4.5478685475342153e-08,0.5118137142627625,-17.57581663131714,-8.78790831565857,1.0396186966178451
+meta-llama/Llama-2-7b-hf,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,"[-10.170319557189941, -6.196619033813477]","[3.829008558916327e-05, 0.0020363036848802646]","[-13.373932838439941, -3.542041301727295]","[-9.814699172973633, -5.81639289855957]","[5.46424681296857e-05, 0.0029783289268307304]",7.797024237959388e-08,0.001037296885234714,1.627432434640692e-07,0.4790997200249872,-16.366938591003418,-8.183469295501709,1.0470758227322012
