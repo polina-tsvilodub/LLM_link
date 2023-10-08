@@ -84,9 +84,14 @@ def retrieve_log_probs(
                 o, 
                 return_tensors="pt",
             ).input_ids
-            # input option is sliced so that the SOS token isn't included again
-            input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
-            print("input ids shape: ", input_ids.shape)
+            if "meta" in model_name:
+                # input option is sliced so that the SOS token isn't included again
+                input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
+                print("input ids shape: ", input_ids.shape)
+            else:
+                # T5 does not prepend SOS tokens
+                input_ids = torch.cat((input_ids_prompt[:, :-1], input_ids_options), -1).to(DEVICE)
+                print("input ids shape: ", input_ids.shape)
             #### retrieve unconditional log prob of the option ####
             option_input_ids = tokenizer(
                 o, 
@@ -98,8 +103,10 @@ def retrieve_log_probs(
                 return_tensors="pt",
             ).input_ids
             
-            null_option_input_ids = torch.cat((null_option_input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
-            
+            if "meta" in model_name:
+                null_option_input_ids = torch.cat((null_option_input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
+            else:
+                null_option_input_ids = torch.cat((null_option_input_ids_prompt[:, :-1], input_ids_options), -1).to(DEVICE)
             # Generate output from the model with a maximum length of 20 tokens
             if "llama" in model_name:
                 outputs = model(
@@ -240,7 +247,7 @@ def retrieve_log_probs(
                     llama_option_output_scores, 
                     dim=-1, 
                     index=option_ids_probs
-                ).flatten().tolist()[1:] # exclude SOS token
+                ).flatten().tolist()[:-1] # exclude EOS token
                 nullOptionTokenLogProbs = torch.gather(
                     llama_null_option_output_scores, 
                     dim=-1, 
@@ -257,6 +264,9 @@ def retrieve_log_probs(
             optionTokenConditionalLogProbs = optionTokenConditionalLogProbs[input_ids_prompt.shape[-1]:]
             nullOptionTokenLogProbs = nullOptionTokenLogProbs[null_option_input_ids_prompt.shape[-1]:]
 
+            print("Answer tokens optionTokenConditionalLogProbs:", len(optionTokenConditionalLogProbs))
+            print("Answer tokens optionTokenLogProbs:", len(optionTokenLogProbs))
+            print("Answer tokens nullOptionTokenLogProbs:", len(nullOptionTokenLogProbs))
         except:
             # retrieve OpenAI log probs
             text_offsets = outputs.choices[0]['logprobs']['text_offset']
