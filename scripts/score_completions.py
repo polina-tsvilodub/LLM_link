@@ -321,6 +321,11 @@ def main(
         option_numbering = list(string.ascii_uppercase[:len(options)])
     else:
         option_numbering = option_numbering.split(",")
+
+    if "A" in option_numbering:
+        label_subdirectory = "label_alpha"
+    else:
+        label_subdirectory = "label_numeric"
     # string about options to append to the instructions
     option_instructions = ", ".join(option_numbering)
      # Load data set
@@ -336,9 +341,13 @@ def main(
 
         # final results output file
         if use_labels_only:
-            out_file = f"../results/log_probs/{out_name}_FC_labels_seed{seed}_{timestamp}.csv"
+            out_file = f"../results/log_probs/seed{str(seed)}/label_scores/{label_subdirectory}/{out_name}_FC_labels_seed{seed}_{timestamp}.csv"
+            if not os.path.exists(f"../results/log_probs/seed{str(seed)}/label_scores/{label_subdirectory}"):
+                os.makedirs(f"../results/log_probs/seed{str(seed)}/label_scores/{label_subdirectory}")
         else:
-            out_file = f"../results/log_probs/{out_name}_FC_optionString_seed{seed}_{timestamp}.csv"
+            out_file = f"../results/log_probs/seed{str(seed)}/string_scores/{label_subdirectory}/{out_name}_FC_optionString_seed{seed}_{timestamp}.csv"
+            if not os.path.exists(f"../results/log_probs/seed{str(seed)}/string_scores/{label_subdirectory}"):
+                os.makedirs(f"../results/log_probs/seed{str(seed)}/string_scores/{label_subdirectory}")
         
         # Iterate over rows in prompt csv 
         for i, row in tqdm(scenarios.iterrows()):
