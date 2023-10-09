@@ -1,0 +1,842 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+google/flan-t5-xl,0.1,1,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He liked the talk that his boss gave but does not want to tell him about it.
+D. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+Your answer:
+",Why has the speaker responded like this?,A,target,He wants to avoid going to Japan next week and wants to discuss it with his boss. ,incorrect_associate,A,[-2.939779758453369],[0.052877373250467076],[-0.24789348244667053],[-1.182248592376709],[0.30658857021647273],0.052877373250467076,0.052877373250467076,0.30658857021647273,0.1724701387697917,-2.939779758453369,-2.939779758453369,2.486600345654414
+google/flan-t5-xl,0.1,1,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He liked the talk that his boss gave but does not want to tell him about it.
+D. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,He disliked the talk that his boss gave but does not want to criticize his boss.,target,B,[-2.201162815093994],[0.11067438965893335],[-0.4621068835258484],[-0.9587240815162659],[0.3833817378868934],0.11067438965893335,0.11067438965893335,0.3833817378868934,0.28867934677573215,-2.201162815093994,-2.201162815093994,2.295929410276995
+google/flan-t5-xl,0.1,1,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He liked the talk that his boss gave but does not want to tell him about it.
+D. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,He liked the talk that his boss gave but does not want to tell him about it.,incorrect_nonliteral,C,[-2.4328572750091553],[0.08778564616597576],[-0.1929108202457428],[-0.7335299253463745],[0.480210886184696],0.08778564616597576,0.08778564616597576,0.480210886184696,0.18280644752441563,-2.4328572750091553,-2.4328572750091553,3.3166435218854287
+google/flan-t5-xl,0.1,1,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He liked the talk that his boss gave but does not want to tell him about it.
+D. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,He is excited about the upcoming trip to Japan and does not want to talk about anything else.,incorrect_literal,D,[-2.437236785888672],[0.08740202861529708],[-0.9673901796340942],[-0.8749596476554871],[0.41687884137773606],0.08740202861529708,0.08740202861529708,0.41687884137773606,0.20965810672099247,-2.437236785888672,-2.437236785888672,2.7855419303271995
+google/flan-t5-xl,0.1,1,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex is afraid that Richard will become a better painter than he is. 
+B.  Alex is proud of the painting job that he did.
+C. Alex thinks that Richard's painting is mediocre.
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has the speaker responded like this?,A,target,Alex is afraid that Richard will become a better painter than he is. ,incorrect_associate,A,[-2.7950997352600098],[0.061108779328654786],[-0.24789348244667053],[-2.546928644180298],[0.07832185123879143],0.061108779328654786,0.061108779328654786,0.07832185123879143,0.7802264420735332,-2.7950997352600098,-2.7950997352600098,1.0974393576540826
+google/flan-t5-xl,0.1,1,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex is afraid that Richard will become a better painter than he is. 
+B.  Alex is proud of the painting job that he did.
+C. Alex thinks that Richard's painting is mediocre.
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal, Alex is proud of the painting job that he did.,incorrect_literal,B,[-2.2735424041748047],[0.10294685403335584],[-0.4621068835258484],[-1.4891473054885864],[0.22556491152200156],0.10294685403335584,0.10294685403335584,0.22556491152200156,0.4563956926576961,-2.2735424041748047,-2.2735424041748047,1.5267411059974754
+google/flan-t5-xl,0.1,1,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex is afraid that Richard will become a better painter than he is. 
+B.  Alex is proud of the painting job that he did.
+C. Alex thinks that Richard's painting is mediocre.
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Alex thinks that Richard's painting is mediocre.,target,C,[-1.9590544700622559],[0.1409916697604653],[-0.1929108202457428],[-1.303450584411621],[0.27159301966713234],0.1409916697604653,0.1409916697604653,0.27159301966713234,0.5191284736745678,-1.9590544700622559,-1.9590544700622559,1.5029756352033667
+google/flan-t5-xl,0.1,1,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex is afraid that Richard will become a better painter than he is. 
+B.  Alex is proud of the painting job that he did.
+C. Alex thinks that Richard's painting is mediocre.
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Alex wants Richards to help him paint the walls.,incorrect_nonliteral,D,[-1.9034210443496704],[0.14905781258721965],[-0.9673901796340942],[-1.2105512619018555],[0.29803293993171465],0.14905781258721965,0.14905781258721965,0.29803293993171465,0.5001387182952723,-1.9034210443496704,-1.9034210443496704,1.572358894871805
+google/flan-t5-xl,0.1,1,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has the speaker responded like this?,A,target,She does not want to discuss the topic that Leslie has raised.,target,A,[-2.530695915222168],[0.07960360364597624],[-0.24789348244667053],[-1.060970664024353],[0.34611968129951215],0.07960360364597624,0.07960360364597624,0.34611968129951215,0.22998866561734707,-2.530695915222168,-2.530695915222168,2.385264740141844
+google/flan-t5-xl,0.1,1,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,The man who Leslie saw makes unbelievable lattes.,incorrect_nonliteral,B,[-1.3053237199783325],[0.27108476528560943],[-0.4621068835258484],[-0.9494656324386597],[0.3869477405386079],0.27108476528560943,0.27108476528560943,0.3869477405386079,0.7005720330819758,-1.3053237199783325,-1.3053237199783325,1.3747982816667808
+google/flan-t5-xl,0.1,1,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,She thinks that it is the best latte in the town.,incorrect_literal,C,[-1.8573678731918335],[0.15608292020224554],[-0.1929108202457428],[-1.068363070487976],[0.34357045798681646],0.15608292020224554,0.15608292020224554,0.34357045798681646,0.45429668521801364,-1.8573678731918335,-1.8573678731918335,1.7385174801516479
+google/flan-t5-xl,0.1,1,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,A coffee break is not a good time to discuss men.,incorrect_associate,D,[-1.3347786664962769],[0.2632164276233761],[-0.9673901796340942],[-0.7648592591285706],[0.46539942708614623],0.2632164276233761,0.2632164276233761,0.46539942708614623,0.5655710177199128,-1.3347786664962769,-1.3347786664962769,1.7451297746163579
+google/flan-t5-xl,0.1,1,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is happy to turn off the TV right away and to spend more time with his wife.
+B. He is excited about seeing his wife. 
+C. He pretends that he did not understand his wife's comment because he wants to watch the game.
+D. He is thankful for her offer of beer and chips.
+Your answer:
+",Why has the speaker responded like this?,A,target,He is happy to turn off the TV right away and to spend more time with his wife.,incorrect_nonliteral,A,[-1.9063911437988281],[0.14861575286579798],[-0.24789348244667053],[-0.7158576250076294],[0.48877274826175143],0.14861575286579798,0.14861575286579798,0.48877274826175143,0.30405899959506355,-1.9063911437988281,-1.9063911437988281,2.663087012279167
+google/flan-t5-xl,0.1,1,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is happy to turn off the TV right away and to spend more time with his wife.
+B. He is excited about seeing his wife. 
+C. He pretends that he did not understand his wife's comment because he wants to watch the game.
+D. He is thankful for her offer of beer and chips.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,He is excited about seeing his wife. ,incorrect_associate,B,[-1.1753047704696655],[0.3087248751234133],[-0.4621068835258484],[-0.5878574252128601],[0.555516245662617],0.3087248751234133,0.3087248751234133,0.555516245662617,0.5557440984559646,-1.1753047704696655,-1.1753047704696655,1.9993024159626696
+google/flan-t5-xl,0.1,1,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is happy to turn off the TV right away and to spend more time with his wife.
+B. He is excited about seeing his wife. 
+C. He pretends that he did not understand his wife's comment because he wants to watch the game.
+D. He is thankful for her offer of beer and chips.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,He pretends that he did not understand his wife's comment because he wants to watch the game.,target,C,[-1.2934248447418213],[0.27432963595705145],[-0.1929108202457428],[-0.6013152599334717],[0.5480902806270106],0.27432963595705145,0.27432963595705145,0.5480902806270106,0.5005190671201479,-1.2934248447418213,-1.2934248447418213,2.1509928833087044
+google/flan-t5-xl,0.1,1,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is happy to turn off the TV right away and to spend more time with his wife.
+B. He is excited about seeing his wife. 
+C. He pretends that he did not understand his wife's comment because he wants to watch the game.
+D. He is thankful for her offer of beer and chips.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,He is thankful for her offer of beer and chips.,incorrect_literal,D,[-1.249362587928772],[0.2866874766911531],[-0.9673901796340942],[-0.40555235743522644],[0.6666085029860331],0.2866874766911531,0.2866874766911531,0.6666085029860331,0.4300687366076994,-1.249362587928772,-1.249362587928772,3.0806443730963053
+google/flan-t5-xl,0.1,1,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark needs to get some new clothes.
+B. Mark is fond of people who have good handwriting.
+C. Mark's opinion of Jane as a financial manager is very high.
+D. Mark's opinion of Jane as a financial manager is very low.
+Your answer:
+",Why has the speaker responded like this?,A,target,Mark needs to get some new clothes.,incorrect_associate,A,[-3.1674275398254395],[0.042111789585974016],[-0.24789348244667053],[-2.5351626873016357],[0.07924882543836073],0.042111789585974016,0.042111789585974016,0.07924882543836073,0.5313869240715539,-3.1674275398254395,-3.1674275398254395,1.2493981375202279
+google/flan-t5-xl,0.1,1,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark needs to get some new clothes.
+B. Mark is fond of people who have good handwriting.
+C. Mark's opinion of Jane as a financial manager is very high.
+D. Mark's opinion of Jane as a financial manager is very low.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Mark is fond of people who have good handwriting.,incorrect_nonliteral,B,[-2.210540294647217],[0.10964139385125268],[-0.4621068835258484],[-2.2796876430511475],[0.10231616088855712],0.10964139385125268,0.10964139385125268,0.10231616088855712,1.0715940951955207,-2.210540294647217,-2.210540294647217,0.9696680601771462
+google/flan-t5-xl,0.1,1,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark needs to get some new clothes.
+B. Mark is fond of people who have good handwriting.
+C. Mark's opinion of Jane as a financial manager is very high.
+D. Mark's opinion of Jane as a financial manager is very low.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Mark's opinion of Jane as a financial manager is very high.,incorrect_literal,C,[-2.4213860034942627],[0.08879845715689291],[-0.1929108202457428],[-1.952620029449463],[0.14190179722691273],0.08879845715689291,0.08879845715689291,0.14190179722691273,0.625774013382627,-2.4213860034942627,-2.4213860034942627,1.240070247654362
+google/flan-t5-xl,0.1,1,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark needs to get some new clothes.
+B. Mark is fond of people who have good handwriting.
+C. Mark's opinion of Jane as a financial manager is very high.
+D. Mark's opinion of Jane as a financial manager is very low.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Mark's opinion of Jane as a financial manager is very low.,target,D,[-2.9425787925720215],[0.052729574621831574],[-0.9673901796340942],[-1.776753544807434],[0.16918651309838437],0.052729574621831574,0.052729574621831574,0.16918651309838437,0.3116653547388176,-2.9425787925720215,-2.9425787925720215,1.656154732980111
+google/flan-t5-xl,0.1,1,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has the speaker responded like this?,A,target,Lucy's mom is afraid that Lucy will go to France.,incorrect_associate,A,[-3.6070075035095215],[0.02713292066919261],[-0.24789348244667053],[-1.9731186628341675],[0.13902261477887198],0.02713292066919261,0.02713292066919261,0.13902261477887198,0.1951691148404162,-3.6070075035095215,-3.6070075035095215,1.8280742924647282
+google/flan-t5-xl,0.1,1,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal, Lucy's mom knows that Vincent lives somewhere in France.,incorrect_literal,B,[-2.6780338287353516],[0.06869809367141916],[-0.4621068835258484],[-1.6231764554977417],[0.1972710800026708],0.06869809367141916,0.06869809367141916,0.1972710800026708,0.34824209240649506,-2.6780338287353516,-2.6780338287353516,1.6498722733839442
+google/flan-t5-xl,0.1,1,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Lucy's mom is jealous that she is not going to Paris.,incorrect_nonliteral,C,[-2.63641357421875],[0.07161766094282664],[-0.1929108202457428],[-1.3449015617370605],[0.2605653561986123],0.07161766094282664,0.07161766094282664,0.2605653561986123,0.274854884730866,-2.63641357421875,-2.63641357421875,1.9603022624299626
+google/flan-t5-xl,0.1,1,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Lucy's mom does not know where exactly Vincent lives.,target,D,[-2.7464184761047363],[0.06415723087047531],[-0.9673901796340942],[-1.6446502208709717],[0.19308008636834736],0.06415723087047531,0.06415723087047531,0.19308008636834736,0.3322830027539958,-2.7464184761047363,-2.7464184761047363,1.6699103804882547
+google/flan-t5-xl,0.1,1,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. There was not a lot of food at the wedding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. The food at the wedding was outstanding.
+Your answer:
+",Why has the speaker responded like this?,A,target,There was not a lot of food at the wedding.,incorrect_literal,A,[-1.7836737632751465],[0.16801974725951413],[-0.24789348244667053],[-1.176981806755066],[0.3082075661997856],0.16801974725951413,0.16801974725951413,0.3082075661997856,0.545151273640702,-1.7836737632751465,-1.7836737632751465,1.5154641754342217
+google/flan-t5-xl,0.1,1,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. There was not a lot of food at the wedding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. The food at the wedding was outstanding.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,The food at the wedding was mediocre.,target,B,[-1.2692376375198364],[0.28104579889999465],[-0.4621068835258484],[-1.100123643875122],[0.33282992877170475],0.28104579889999465,0.28104579889999465,0.33282992877170475,0.8444126402249421,-1.2692376375198364,-1.2692376375198364,1.1537227152477334
+google/flan-t5-xl,0.1,1,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. There was not a lot of food at the wedding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. The food at the wedding was outstanding.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,The wedding is not about food.,incorrect_associate,C,[-1.1550489664077759],[0.3150421100452905],[-0.1929108202457428],[-1.0667728185653687],[0.3441172562264238],0.3150421100452905,0.3150421100452905,0.3441172562264238,0.9155080262467211,-1.1550489664077759,-1.1550489664077759,1.0827506534719584
+google/flan-t5-xl,0.1,1,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. There was not a lot of food at the wedding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. The food at the wedding was outstanding.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,The food at the wedding was outstanding.,incorrect_nonliteral,D,[-1.1983145475387573],[0.3017022884871619],[-0.9673901796340942],[-0.631218433380127],[0.531943268555595],0.3017022884871619,0.3017022884871619,0.531943268555595,0.5671700467352189,-1.1983145475387573,-1.1983145475387573,1.8984150084494105
+google/flan-t5-xl,0.1,1,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary wants Ken to wash a cup that she sees in the sink. 
+B. Mary is proud of the new cups that she got from Ken for her birthday.
+C. Mary wants Ken to serve her tea in a cup.
+D. Mary is irritated with Ken.
+Your answer:
+",Why has the speaker responded like this?,A,target,Mary wants Ken to wash a cup that she sees in the sink. ,incorrect_nonliteral,A,[-4.1302809715271],[0.016078360626337464],[-0.24789348244667053],[-2.3131613731384277],[0.09894794520536379],0.016078360626337464,0.016078360626337464,0.09894794520536379,0.1624931229543702,-4.1302809715271,-4.1302809715271,1.785556779345342
+google/flan-t5-xl,0.1,1,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary wants Ken to wash a cup that she sees in the sink. 
+B. Mary is proud of the new cups that she got from Ken for her birthday.
+C. Mary wants Ken to serve her tea in a cup.
+D. Mary is irritated with Ken.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Mary is proud of the new cups that she got from Ken for her birthday.,incorrect_associate,B,[-2.794018268585205],[0.06117490218542513],[-0.4621068835258484],[-1.703118920326233],[0.18211463631522498],0.06117490218542513,0.06117490218542513,0.18211463631522498,0.3359142539182659,-2.794018268585205,-2.794018268585205,1.6405303442052126
+google/flan-t5-xl,0.1,1,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary wants Ken to wash a cup that she sees in the sink. 
+B. Mary is proud of the new cups that she got from Ken for her birthday.
+C. Mary wants Ken to serve her tea in a cup.
+D. Mary is irritated with Ken.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Mary wants Ken to serve her tea in a cup.,incorrect_literal,C,[-2.8733651638031006],[0.056508446083237206],[-0.1929108202457428],[-1.326219081878662],[0.26547912095091564],0.056508446083237206,0.056508446083237206,0.26547912095091564,0.2128545773423931,-2.8733651638031006,-2.8733651638031006,2.166584090867416
+google/flan-t5-xl,0.1,1,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary wants Ken to wash a cup that she sees in the sink. 
+B. Mary is proud of the new cups that she got from Ken for her birthday.
+C. Mary wants Ken to serve her tea in a cup.
+D. Mary is irritated with Ken.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Mary is irritated with Ken.,target,D,[-2.817063808441162],[0.059781214364434315],[-0.9673901796340942],[-1.395572543144226],[0.24769118187412778],0.059781214364434315,0.059781214364434315,0.24769118187412778,0.2413538258088415,-2.817063808441162,-2.817063808441162,2.0185721066812587
+google/flan-t5-xl,0.1,1,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy has an obsession with shoes and buys them on every occasion.
+C. Cindy is excited about going shopping.
+D. Cindy does not know what type of shoes she wants to buy.
+Your answer:
+",Why has the speaker responded like this?,A,target,Cindy does not plan to buy anything but shoes in this store.,incorrect_literal,A,[-2.5018908977508545],[0.08192993093939353],[-0.24789348244667053],[-1.2748899459838867],[0.27946172241396666],0.08192993093939353,0.08192993093939353,0.27946172241396666,0.29317049301668124,-2.5018908977508545,-2.5018908977508545,1.9624367621944332
+google/flan-t5-xl,0.1,1,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy has an obsession with shoes and buys them on every occasion.
+C. Cindy is excited about going shopping.
+D. Cindy does not know what type of shoes she wants to buy.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Cindy has an obsession with shoes and buys them on every occasion.,incorrect_nonliteral,B,[-1.777268648147583],[0.16909938700177737],[-0.4621068835258484],[-1.1519713401794434],[0.3160131854432678],0.16909938700177737,0.16909938700177737,0.3160131854432678,0.5351023146853311,-1.777268648147583,-1.777268648147583,1.5428063061627355
+google/flan-t5-xl,0.1,1,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy has an obsession with shoes and buys them on every occasion.
+C. Cindy is excited about going shopping.
+D. Cindy does not know what type of shoes she wants to buy.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Cindy is excited about going shopping.,incorrect_associate,C,[-1.7073864936828613],[0.18133910474138476],[-0.1929108202457428],[-1.0070116519927979],[0.3653090205329862],0.18133910474138476,0.18133910474138476,0.3653090205329862,0.49639919779919706,-1.7073864936828613,-1.7073864936828613,1.6954982499994673
+google/flan-t5-xl,0.1,1,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy has an obsession with shoes and buys them on every occasion.
+C. Cindy is excited about going shopping.
+D. Cindy does not know what type of shoes she wants to buy.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Cindy does not know what type of shoes she wants to buy.,target,D,[-1.7802461385726929],[0.16859664402370952],[-0.9673901796340942],[-0.9624021053314209],[0.3819742407154097],0.16859664402370952,0.16859664402370952,0.3819742407154097,0.4413822348542153,-1.7802461385726929,-1.7802461385726929,1.849794518019713
+google/flan-t5-xl,0.1,1,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He has been doing lots of schoolwork at school.
+B. He does not want to talk about school with his mom.
+C. He is upset that his dad is not at home.
+D. He is too excited to talk about this at the moment.
+Your answer:
+",Why has the speaker responded like this?,A,target,He has been doing lots of schoolwork at school.,incorrect_literal,A,[-2.1598896980285645],[0.11533784232784784],[-0.24789348244667053],[-1.6813428401947021],[0.1861238735345684],0.11533784232784784,0.11533784232784784,0.1861238735345684,0.6196832256794096,-2.1598896980285645,-2.1598896980285645,1.2846218191754668
+google/flan-t5-xl,0.1,1,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He has been doing lots of schoolwork at school.
+B. He does not want to talk about school with his mom.
+C. He is upset that his dad is not at home.
+D. He is too excited to talk about this at the moment.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,He does not want to talk about school with his mom.,target,B,[-1.9852039813995361],[0.13735259388491777],[-0.4621068835258484],[-1.3599191904067993],[0.2566815184445765],0.13735259388491777,0.13735259388491777,0.2566815184445765,0.5351090125897607,-1.9852039813995361,-1.9852039813995361,1.4597955491794277
+google/flan-t5-xl,0.1,1,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He has been doing lots of schoolwork at school.
+B. He does not want to talk about school with his mom.
+C. He is upset that his dad is not at home.
+D. He is too excited to talk about this at the moment.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,He is upset that his dad is not at home.,incorrect_nonliteral,C,[-1.7320265769958496],[0.1769254932719115],[-0.1929108202457428],[-1.1754343509674072],[0.30868487299223357],0.1769254932719115,0.1769254932719115,0.30868487299223357,0.5731589357032176,-1.7320265769958496,-1.7320265769958496,1.4735204697483575
+google/flan-t5-xl,0.1,1,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He has been doing lots of schoolwork at school.
+B. He does not want to talk about school with his mom.
+C. He is upset that his dad is not at home.
+D. He is too excited to talk about this at the moment.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,He is too excited to talk about this at the moment.,incorrect_associate,D,[-1.4947439432144165],[0.2243060324595003],[-0.9673901796340942],[-1.1965502500534058],[0.30223505091357306],0.2243060324595003,0.2243060324595003,0.30223505091357306,0.7421575749784319,-1.4947439432144165,-1.4947439432144165,1.2492111744974366
+google/flan-t5-xl,0.1,1,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has been doing some scientific experiments instead of cooking.
+B. Mark's wife has little experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has a lot of experience with cooking.
+Your answer:
+",Why has the speaker responded like this?,A,target,Mark's wife has been doing some scientific experiments instead of cooking.,incorrect_literal,A,[-3.337692975997925],[0.03551880601030401],[-0.24789348244667053],[-2.5274276733398438],[0.07986419308009222],0.03551880601030401,0.03551880601030401,0.07986419308009222,0.4447400598498978,-3.337692975997925,-3.337692975997925,1.3205889178175232
+google/flan-t5-xl,0.1,1,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has been doing some scientific experiments instead of cooking.
+B. Mark's wife has little experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has a lot of experience with cooking.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Mark's wife has little experience with cooking.,target,B,[-3.5362472534179688],[0.029122411300932266],[-0.4621068835258484],[-1.8594104051589966],[0.1557644412106877],0.029122411300932266,0.029122411300932266,0.1557644412106877,0.18696443857517622,-3.5362472534179688,-3.5362472534179688,1.9018110491403792
+google/flan-t5-xl,0.1,1,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has been doing some scientific experiments instead of cooking.
+B. Mark's wife has little experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has a lot of experience with cooking.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Mark's wife has been angry with Mark because he did not help her with dinner.  ,incorrect_nonliteral,C,[-2.9196665287017822],[0.053951675636207896],[-0.1929108202457428],[-1.8206586837768555],[0.16191906234118775],0.053951675636207896,0.053951675636207896,0.16191906234118775,0.33320150732174836,-2.9196665287017822,-2.9196665287017822,1.6036320012738994
+google/flan-t5-xl,0.1,1,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has been doing some scientific experiments instead of cooking.
+B. Mark's wife has little experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has a lot of experience with cooking.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Mark's wife has a lot of experience with cooking.,incorrect_associate,D,[-3.0823919773101807],[0.04584945452439555],[-0.9673901796340942],[-1.2022006511688232],[0.3005321173045537],0.04584945452439555,0.04584945452439555,0.3005321173045537,0.15256091407339523,-3.0823919773101807,-3.0823919773101807,2.5639580001170077
+google/flan-t5-xl,0.1,1,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie is really good at cooking eggs and making toast.
+C. Marcie thinks that breakfast is the main meal of the day.
+D. Marcie wants Lenny to know how his breakfast was made.
+Your answer:
+",Why has the speaker responded like this?,A,target,Marcie thinks that her husband's expectations about breakfast are too high.,target,A,[-2.0558106899261475],[0.12798903408721393],[-0.24789348244667053],[-2.2421109676361084],[0.10623401095446218],0.12798903408721393,0.12798903408721393,0.10623401095446218,1.2047839758406296,-2.0558106899261475,-2.0558106899261475,0.916908538248497
+google/flan-t5-xl,0.1,1,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie is really good at cooking eggs and making toast.
+C. Marcie thinks that breakfast is the main meal of the day.
+D. Marcie wants Lenny to know how his breakfast was made.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Marcie is really good at cooking eggs and making toast.,incorrect_nonliteral,B,[-1.428402304649353],[0.23969157059253896],[-0.4621068835258484],[-1.8527418375015259],[0.15680663804338785],0.23969157059253896,0.23969157059253896,0.15680663804338785,1.5285805089846842,-1.428402304649353,-1.428402304649353,0.770966723877512
+google/flan-t5-xl,0.1,1,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie is really good at cooking eggs and making toast.
+C. Marcie thinks that breakfast is the main meal of the day.
+D. Marcie wants Lenny to know how his breakfast was made.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Marcie thinks that breakfast is the main meal of the day.,incorrect_associate,C,[-2.063673496246338],[0.1269866271313242],[-0.1929108202457428],[-1.5793659687042236],[0.20610573427259735],0.1269866271313242,0.1269866271313242,0.20610573427259735,0.6161236977684983,-2.063673496246338,-2.063673496246338,1.3066468045651636
+google/flan-t5-xl,0.1,1,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie is really good at cooking eggs and making toast.
+C. Marcie thinks that breakfast is the main meal of the day.
+D. Marcie wants Lenny to know how his breakfast was made.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Marcie wants Lenny to know how his breakfast was made.,incorrect_literal,D,[-1.448643684387207],[0.23488865529223205],[-0.9673901796340942],[-1.853088617324829],[0.1567522700925534],0.23488865529223205,0.23488865529223205,0.1567522700925534,1.4984705175468496,-1.448643684387207,-1.448643684387207,0.781745498215034
+google/flan-t5-xl,0.1,1,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that kids attending schools lack subject knowledge. 
+B. Melissa thinks that statistical information is useless in this debate.
+C. Melissa is very knowledgeable about the system of secondary education.
+D. Melissa thinks that statistical information is of great use in this debate.
+Your answer:
+",Why has the speaker responded like this?,A,target,Melissa thinks that kids attending schools lack subject knowledge. ,incorrect_nonliteral,A,[-4.09064245223999],[0.01672848285426201],[-0.24789348244667053],[-2.028000593185425],[0.13159837697477167],0.01672848285426201,0.01672848285426201,0.13159837697477167,0.12711769885633908,-4.09064245223999,-4.09064245223999,2.017081487049631
+google/flan-t5-xl,0.1,1,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that kids attending schools lack subject knowledge. 
+B. Melissa thinks that statistical information is useless in this debate.
+C. Melissa is very knowledgeable about the system of secondary education.
+D. Melissa thinks that statistical information is of great use in this debate.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Melissa thinks that statistical information is useless in this debate.,target,B,[-3.16971492767334],[0.04201557367372723],[-0.4621068835258484],[-1.7587203979492188],[0.1722651536952528],0.04201557367372723,0.04201557367372723,0.1722651536952528,0.2439005961011433,-3.16971492767334,-3.16971492767334,1.8022847357484633
+google/flan-t5-xl,0.1,1,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that kids attending schools lack subject knowledge. 
+B. Melissa thinks that statistical information is useless in this debate.
+C. Melissa is very knowledgeable about the system of secondary education.
+D. Melissa thinks that statistical information is of great use in this debate.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Melissa is very knowledgeable about the system of secondary education.,incorrect_associate,C,[-3.2093605995178223],[0.04038242556133205],[-0.1929108202457428],[-1.9008116722106934],[0.1494472677862769],0.04038242556133205,0.04038242556133205,0.1494472677862769,0.27021186910611555,-3.2093605995178223,-3.2093605995178223,1.6884158733017736
+google/flan-t5-xl,0.1,1,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that kids attending schools lack subject knowledge. 
+B. Melissa thinks that statistical information is useless in this debate.
+C. Melissa is very knowledgeable about the system of secondary education.
+D. Melissa thinks that statistical information is of great use in this debate.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Melissa thinks that statistical information is of great use in this debate.,incorrect_literal,D,[-3.0442721843719482],[0.04763096593654557],[-0.9673901796340942],[-1.9373761415481567],[0.14408150370831635],0.04763096593654557,0.04763096593654557,0.14408150370831635,0.3305834871974363,-3.0442721843719482,-3.0442721843719482,1.571337707265906
+google/flan-t5-xl,0.1,1,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He thinks that Rosy has no reason to believe that the strangers are nice.
+B. He thinks that people who ride subways have many bad habits.
+C. He knows these people and their lifestyle very well.
+D. He thinks that people who ride subways have many good habits.
+Your answer:
+",Why has the speaker responded like this?,A,target,He thinks that Rosy has no reason to believe that the strangers are nice.,target,A,[-3.430565357208252],[0.03236863575741165],[-0.24789348244667053],[-1.8768057823181152],[0.15307829104072546],0.03236863575741165,0.03236863575741165,0.15307829104072546,0.21145150979507726,-3.430565357208252,-3.430565357208252,1.8278744607079314
+google/flan-t5-xl,0.1,1,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He thinks that Rosy has no reason to believe that the strangers are nice.
+B. He thinks that people who ride subways have many bad habits.
+C. He knows these people and their lifestyle very well.
+D. He thinks that people who ride subways have many good habits.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,He thinks that people who ride subways have many bad habits.,incorrect_nonliteral,B,[-2.514274835586548],[0.0809215723795684],[-0.4621068835258484],[-1.9966365098953247],[0.13579124851007146],0.0809215723795684,0.0809215723795684,0.13579124851007146,0.5959262711511674,-2.514274835586548,-2.514274835586548,1.259255163934852
+google/flan-t5-xl,0.1,1,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He thinks that Rosy has no reason to believe that the strangers are nice.
+B. He thinks that people who ride subways have many bad habits.
+C. He knows these people and their lifestyle very well.
+D. He thinks that people who ride subways have many good habits.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,He knows these people and their lifestyle very well.,incorrect_associate,C,[-2.4542784690856934],[0.08592517074693957],[-0.1929108202457428],[-1.5395495891571045],[0.21447768274857698],0.08592517074693957,0.08592517074693957,0.21447768274857698,0.4006252289086225,-2.4542784690856934,-2.4542784690856934,1.5941535669724014
+google/flan-t5-xl,0.1,1,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He thinks that Rosy has no reason to believe that the strangers are nice.
+B. He thinks that people who ride subways have many bad habits.
+C. He knows these people and their lifestyle very well.
+D. He thinks that people who ride subways have many good habits.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,He thinks that people who ride subways have many good habits.,incorrect_literal,D,[-2.66361141204834],[0.06969606548801642],[-0.9673901796340942],[-1.54081392288208],[0.21420668273435245],0.06969606548801642,0.06969606548801642,0.21420668273435245,0.32536830596667105,-2.66361141204834,-2.66361141204834,1.7287041429805334
+google/flan-t5-xl,0.1,1,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie is ready to give money to Berta without any questions.
+B. Freddie considers giving the money to Berta. 
+C. Freddie can give Berta some money that he will get for his space expedition.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has the speaker responded like this?,A,target,Freddie is ready to give money to Berta without any questions.,incorrect_nonliteral,A,[-2.8487536907196045],[0.05791645773184269],[-0.24789348244667053],[-2.26772403717041],[0.10354758254682643],0.05791645773184269,0.05791645773184269,0.10354758254682643,0.5593221619215651,-2.8487536907196045,-2.8487536907196045,1.2562170899216571
+google/flan-t5-xl,0.1,1,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie is ready to give money to Berta without any questions.
+B. Freddie considers giving the money to Berta. 
+C. Freddie can give Berta some money that he will get for his space expedition.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Freddie considers giving the money to Berta. ,incorrect_associate,B,[-1.5664600133895874],[0.20878296461612444],[-0.4621068835258484],[-1.6873793601989746],[0.18500371737274274],0.20878296461612444,0.20878296461612444,0.18500371737274274,1.1285338888378746,-1.5664600133895874,-1.5664600133895874,0.9283389677143328
+google/flan-t5-xl,0.1,1,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie is ready to give money to Berta without any questions.
+B. Freddie considers giving the money to Berta. 
+C. Freddie can give Berta some money that he will get for his space expedition.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Freddie can give Berta some money that he will get for his space expedition.,incorrect_literal,C,[-1.5952564477920532],[0.20285649973003786],[-0.1929108202457428],[-1.4961767196655273],[0.22398488218156737],0.20285649973003786,0.20285649973003786,0.22398488218156737,0.905670497732957,-1.5952564477920532,-1.5952564477920532,1.0662219421170216
+google/flan-t5-xl,0.1,1,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie is ready to give money to Berta without any questions.
+B. Freddie considers giving the money to Berta. 
+C. Freddie can give Berta some money that he will get for his space expedition.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Freddie will never give Berta any money.,target,D,[-1.6607004404067993],[0.1900058457087471],[-0.9673901796340942],[-1.089162826538086],[0.3364980830858539],0.1900058457087471,0.1900058457087471,0.3364980830858539,0.564656547122942,-1.6607004404067993,-1.6607004404067993,1.524749468071134
+google/flan-t5-xl,0.1,1,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy doubts that Mr. Smith is a smart individual.
+B. Katy knows that Mr. Smith's kids are kindergarteners.
+C. Katy thinks that Mr. Smith works at a kindergarten.
+D. Katy agrees that Mr. Smith is a smart individual.
+Your answer:
+",Why has the speaker responded like this?,A,target,Katy doubts that Mr. Smith is a smart individual.,target,A,[-4.916881084442139],[0.0073219317581208],[-0.24789348244667053],[-3.883962631225586],[0.020569155497301997],0.0073219317581208,0.0073219317581208,0.020569155497301997,0.3559665713588095,-4.916881084442139,-4.916881084442139,1.2659444879598687
+google/flan-t5-xl,0.1,1,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy doubts that Mr. Smith is a smart individual.
+B. Katy knows that Mr. Smith's kids are kindergarteners.
+C. Katy thinks that Mr. Smith works at a kindergarten.
+D. Katy agrees that Mr. Smith is a smart individual.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Katy knows that Mr. Smith's kids are kindergarteners.,incorrect_associate,B,[-3.5478711128234863],[0.02878585630980552],[-0.4621068835258484],[-2.329477310180664],[0.09734661587914224],0.02878585630980552,0.02878585630980552,0.09734661587914224,0.29570474586958145,-3.5478711128234863,-3.5478711128234863,1.5230331273535045
+google/flan-t5-xl,0.1,1,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy doubts that Mr. Smith is a smart individual.
+B. Katy knows that Mr. Smith's kids are kindergarteners.
+C. Katy thinks that Mr. Smith works at a kindergarten.
+D. Katy agrees that Mr. Smith is a smart individual.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Katy thinks that Mr. Smith works at a kindergarten.,incorrect_nonliteral,C,[-4.092791557312012],[0.016692570190778654],[-0.1929108202457428],[-2.674862861633301],[0.06891627881255566],0.016692570190778654,0.016692570190778654,0.06891627881255566,0.24221519905595196,-4.092791557312012,-4.092791557312012,1.5300939782807812
+google/flan-t5-xl,0.1,1,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy doubts that Mr. Smith is a smart individual.
+B. Katy knows that Mr. Smith's kids are kindergarteners.
+C. Katy thinks that Mr. Smith works at a kindergarten.
+D. Katy agrees that Mr. Smith is a smart individual.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Katy agrees that Mr. Smith is a smart individual.,incorrect_literal,D,[-3.0698792934417725],[0.04642675853345647],[-0.9673901796340942],[-2.5177440643310547],[0.08064132333971004],0.04642675853345647,0.04642675853345647,0.08064132333971004,0.5757192046300986,-3.0698792934417725,-3.0698792934417725,1.2192975993600113
+google/flan-t5-xl,0.1,1,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad is impressed with John's innocence.
+B. Samantha's dad thinks that Samantha's fiance is a saint.
+C. Samantha's dad thinks that John is too religious. 
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has the speaker responded like this?,A,target,Samantha's dad is impressed with John's innocence.,incorrect_associate,A,[-4.112024307250977],[0.016374593744725784],[-0.24789348244667053],[-1.7617285251617432],[0.1717477368167167],0.016374593744725784,0.016374593744725784,0.1717477368167167,0.09534095789687283,-4.112024307250977,-4.112024307250977,2.3340851036475407
+google/flan-t5-xl,0.1,1,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad is impressed with John's innocence.
+B. Samantha's dad thinks that Samantha's fiance is a saint.
+C. Samantha's dad thinks that John is too religious. 
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Samantha's dad thinks that Samantha's fiance is a saint.,incorrect_literal,B,[-2.917147636413574],[0.05408774539649394],[-0.4621068835258484],[-1.8431646823883057],[0.15831561385257892],0.05408774539649394,0.05408774539649394,0.15831561385257892,0.3416450473852795,-2.917147636413574,-2.917147636413574,1.5826842084634785
+google/flan-t5-xl,0.1,1,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad is impressed with John's innocence.
+B. Samantha's dad thinks that Samantha's fiance is a saint.
+C. Samantha's dad thinks that John is too religious. 
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Samantha's dad thinks that John is too religious. ,incorrect_nonliteral,C,[-3.041175365447998],[0.047778699046502296],[-0.1929108202457428],[-1.6876293420791626],[0.18495747557567863],0.047778699046502296,0.047778699046502296,0.18495747557567863,0.2583226165787108,-3.041175365447998,-3.041175365447998,1.802039873104638
+google/flan-t5-xl,0.1,1,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad is impressed with John's innocence.
+B. Samantha's dad thinks that Samantha's fiance is a saint.
+C. Samantha's dad thinks that John is too religious. 
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Samantha's dad thinks that Samantha has an incorrect view of her fiance.,target,D,[-2.923539638519287],[0.05374311901369428],[-0.9673901796340942],[-1.2538540363311768],[0.2854027220463681],0.05374311901369428,0.05374311901369428,0.2854027220463681,0.18830625940898657,-2.923539638519287,-2.923539638519287,2.331642722205267
+google/flan-t5-xl,0.1,1,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is an alien.
+B. Bianka does not want Lenny to know her address.
+
+C. Bianka is not very well educated.
+D. Bianka tries to make Lenny angry with her.
+Your answer:
+",Why has the speaker responded like this?,A,target,Bianka is an alien.,incorrect_literal,A,[-3.3655846118927],[0.03454181665734359],[-0.24789348244667053],[-2.5544326305389404],[0.07773632477438382],0.03454181665734359,0.03454181665734359,0.07773632477438382,0.44434589308917316,-3.3655846118927,-3.3655846118927,1.317546828855933
+google/flan-t5-xl,0.1,1,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is an alien.
+B. Bianka does not want Lenny to know her address.
+
+C. Bianka is not very well educated.
+D. Bianka tries to make Lenny angry with her.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,"Bianka does not want Lenny to know her address.
+",target,B,[-2.7723281383514404],[0.06251628861520447],[-0.4621068835258484],[-2.035128593444824],[0.13066367893104638],0.06251628861520447,0.06251628861520447,0.13066367893104638,0.4784519242581212,-2.7723281383514404,-2.7723281383514404,1.3622373285310547
+google/flan-t5-xl,0.1,1,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is an alien.
+B. Bianka does not want Lenny to know her address.
+
+C. Bianka is not very well educated.
+D. Bianka tries to make Lenny angry with her.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Bianka is not very well educated.,incorrect_nonliteral,C,[-2.5508036613464355],[0.07801893999293293],[-0.1929108202457428],[-2.1074130535125732],[0.12155200859478396],0.07801893999293293,0.07801893999293293,0.12155200859478396,0.6418564439607366,-2.5508036613464355,-2.5508036613464355,1.2103956825620075
+google/flan-t5-xl,0.1,1,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is an alien.
+B. Bianka does not want Lenny to know her address.
+
+C. Bianka is not very well educated.
+D. Bianka tries to make Lenny angry with her.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Bianka tries to make Lenny angry with her.,incorrect_associate,D,[-2.517242670059204],[0.08068176657546311],[-0.9673901796340942],[-1.9476032257080078],[0.1426154793990077],0.08068176657546311,0.08068176657546311,0.1426154793990077,0.5657293788546804,-2.517242670059204,-2.517242670059204,1.2924822863466539
+google/flan-t5-xl,0.1,1,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly plans to devote a lot of time to reading this summer.
+B. Kelly is a pathological liar.
+C. Kelly has made a list of books to read that contains one million titles.
+D. Kelly cannot count very well.
+Your answer:
+",Why has the speaker responded like this?,A,target,Kelly plans to devote a lot of time to reading this summer.,target,A,[-3.0567855834960938],[0.04703865429402154],[-0.24789348244667053],[-2.39276123046875],[0.09137702219164566],0.04703865429402154,0.04703865429402154,0.09137702219164566,0.5147755219618237,-3.0567855834960938,-3.0567855834960938,1.2775138382266664
+google/flan-t5-xl,0.1,1,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly plans to devote a lot of time to reading this summer.
+B. Kelly is a pathological liar.
+C. Kelly has made a list of books to read that contains one million titles.
+D. Kelly cannot count very well.
+Your answer:
+",Why has the speaker responded like this?,B,incorrect_literal,Kelly is a pathological liar.,incorrect_associate,B,[-2.4383597373962402],[0.08730393546273389],[-0.4621068835258484],[-2.452460765838623],[0.08608149924517776],0.08730393546273389,0.08730393546273389,0.08608149924517776,1.0142009169017188,-2.4383597373962402,-2.4383597373962402,0.9942502531992348
+google/flan-t5-xl,0.1,1,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly plans to devote a lot of time to reading this summer.
+B. Kelly is a pathological liar.
+C. Kelly has made a list of books to read that contains one million titles.
+D. Kelly cannot count very well.
+Your answer:
+",Why has the speaker responded like this?,C,incorrect_nonliteral,Kelly has made a list of books to read that contains one million titles.,incorrect_literal,C,[-2.828244209289551],[0.05911655890542085],[-0.1929108202457428],[-2.0163285732269287],[0.13314339505772022],0.05911655890542085,0.05911655890542085,0.13314339505772022,0.4440066957868446,-2.828244209289551,-2.828244209289551,1.4026703022728253
+google/flan-t5-xl,0.1,1,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly plans to devote a lot of time to reading this summer.
+B. Kelly is a pathological liar.
+C. Kelly has made a list of books to read that contains one million titles.
+D. Kelly cannot count very well.
+Your answer:
+",Why has the speaker responded like this?,D,incorrect_associate,Kelly cannot count very well.,incorrect_nonliteral,D,[-2.2411136627197266],[0.10634001150452305],[-0.9673901796340942],[-1.9786311388015747],[0.13825836434734287],0.10634001150452305,0.10634001150452305,0.13825836434734287,0.7691398058013171,-2.2411136627197266,-2.2411136627197266,1.1326586440346498

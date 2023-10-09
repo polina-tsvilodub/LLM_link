@@ -1,0 +1,881 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+google/flan-t5-xl,0.1,3,1,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Henry is sitting at his desk and watching TV, and reluctantly switches off the TV with the remote control and picks up a textbook. Shortly after, his mother comes in the room and asks, ""What have you been doing up here?"" Henry responds: “Reading."" Why has Henry responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He does not want to offend his mom by not reading the books that she gave him. 
+2. He does not want to get into trouble for not studying. 
+3. He wants his mom to believe that he has been watching TV.
+4. He has been reading for some time.
+Your answer:
+",,1,target,He does not want to offend his mom by not reading the books that she gave him. ,incorrect_social_convention,1,[-1.9458112716674805],[0.14287126889662327],[-0.973268985748291],[-2.4967362880706787],[0.08235333806625368],0.14287126889662327,0.14287126889662327,0.08235333806625368,1.7348570471021176,-1.9458112716674805,-1.9458112716674805,0.7793419276855552
+google/flan-t5-xl,0.1,3,1,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Henry is sitting at his desk and watching TV, and reluctantly switches off the TV with the remote control and picks up a textbook. Shortly after, his mother comes in the room and asks, ""What have you been doing up here?"" Henry responds: “Reading."" Why has Henry responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He does not want to offend his mom by not reading the books that she gave him. 
+2. He does not want to get into trouble for not studying. 
+3. He wants his mom to believe that he has been watching TV.
+4. He has been reading for some time.
+Your answer:
+",,2,incorrect_literal,He does not want to get into trouble for not studying. ,target,2,[-2.1274430751800537],[0.11914154068096942],[-0.5661458373069763],[-2.2135181427001953],[0.10931538408473086],0.11914154068096942,0.11914154068096942,0.10931538408473086,1.0898881404343075,-2.1274430751800537,-2.1274430751800537,0.9611139091838924
+google/flan-t5-xl,0.1,3,1,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Henry is sitting at his desk and watching TV, and reluctantly switches off the TV with the remote control and picks up a textbook. Shortly after, his mother comes in the room and asks, ""What have you been doing up here?"" Henry responds: “Reading."" Why has Henry responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He does not want to offend his mom by not reading the books that she gave him. 
+2. He does not want to get into trouble for not studying. 
+3. He wants his mom to believe that he has been watching TV.
+4. He has been reading for some time.
+Your answer:
+",,3,incorrect_lexical_overlap,He wants his mom to believe that he has been watching TV.,incorrect_lexical_overlap,3,[-2.724989414215088],[0.06554689657970064],[-0.6958259344100952],[-2.299288272857666],[0.10033022606250133],0.06554689657970064,0.06554689657970064,0.10033022606250133,0.6533115607540623,-2.724989414215088,-2.724989414215088,1.185144745172966
+google/flan-t5-xl,0.1,3,1,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Henry is sitting at his desk and watching TV, and reluctantly switches off the TV with the remote control and picks up a textbook. Shortly after, his mother comes in the room and asks, ""What have you been doing up here?"" Henry responds: “Reading."" Why has Henry responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He does not want to offend his mom by not reading the books that she gave him. 
+2. He does not want to get into trouble for not studying. 
+3. He wants his mom to believe that he has been watching TV.
+4. He has been reading for some time.
+Your answer:
+",,4,incorrect_social_convention,He has been reading for some time.,incorrect_literal,4,[-2.396150588989258],[0.09106783696867357],[-0.4122335910797119],[-2.278877019882202],[0.10239913436469844],0.09106783696867357,0.09106783696867357,0.10239913436469844,0.8893418634217354,-2.396150588989258,-2.396150588989258,1.0514611223352095
+google/flan-t5-xl,0.1,3,2,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It's Robert's birthday. Robert dresses very casually. On his birthday, he always receives a tie from Monica. He opens the package and finds a tie.  He says: ""Thanks. Really, I love it.” Why has Robert responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He does not want to hurt Monica by saying that he dislikes the gift.
+2. He likes the gift very much.
+3. He does not like to celebrate his birthday and wants it to be over with. 
+4. He wants Monica to understand that he dislikes her gift.
+Your answer:
+",,1,target,He does not want to hurt Monica by saying that he dislikes the gift.,target,1,[-3.1883544921875],[0.041239675345393904],[-0.973268985748291],[-2.4084153175354004],[0.08995773612711776],0.041239675345393904,0.041239675345393904,0.08995773612711776,0.4584338948583457,-3.1883544921875,-3.1883544921875,1.3238391522315318
+google/flan-t5-xl,0.1,3,2,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It's Robert's birthday. Robert dresses very casually. On his birthday, he always receives a tie from Monica. He opens the package and finds a tie.  He says: ""Thanks. Really, I love it.” Why has Robert responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He does not want to hurt Monica by saying that he dislikes the gift.
+2. He likes the gift very much.
+3. He does not like to celebrate his birthday and wants it to be over with. 
+4. He wants Monica to understand that he dislikes her gift.
+Your answer:
+",,2,incorrect_literal,He likes the gift very much.,incorrect_literal,2,[-3.3857109546661377],[0.03385356543758015],[-0.5661458373069763],[-2.0875790119171143],[0.12398694366845664],0.03385356543758015,0.03385356543758015,0.12398694366845664,0.2730413738409844,-3.3857109546661377,-3.3857109546661377,1.6218360767848938
+google/flan-t5-xl,0.1,3,2,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It's Robert's birthday. Robert dresses very casually. On his birthday, he always receives a tie from Monica. He opens the package and finds a tie.  He says: ""Thanks. Really, I love it.” Why has Robert responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He does not want to hurt Monica by saying that he dislikes the gift.
+2. He likes the gift very much.
+3. He does not like to celebrate his birthday and wants it to be over with. 
+4. He wants Monica to understand that he dislikes her gift.
+Your answer:
+",,3,incorrect_lexical_overlap,He does not like to celebrate his birthday and wants it to be over with. ,incorrect_social_convention,3,[-4.152188301086426],[0.01572995691284452],[-0.6958259344100952],[-2.391601800918579],[0.091483028853134],0.01572995691284452,0.01572995691284452,0.091483028853134,0.17194398906596375,-4.152188301086426,-4.152188301086426,1.736153693935015
+google/flan-t5-xl,0.1,3,2,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It's Robert's birthday. Robert dresses very casually. On his birthday, he always receives a tie from Monica. He opens the package and finds a tie.  He says: ""Thanks. Really, I love it.” Why has Robert responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He does not want to hurt Monica by saying that he dislikes the gift.
+2. He likes the gift very much.
+3. He does not like to celebrate his birthday and wants it to be over with. 
+4. He wants Monica to understand that he dislikes her gift.
+Your answer:
+",,4,incorrect_social_convention,He wants Monica to understand that he dislikes her gift.,incorrect_lexical_overlap,4,[-4.006823539733887],[0.01819108682527121],[-0.4122335910797119],[-2.825545310974121],[0.059276323984538054],0.01819108682527121,0.01819108682527121,0.059276323984538054,0.30688621699983065,-4.006823539733887,-4.006823539733887,1.4180708849975985
+google/flan-t5-xl,0.1,3,3,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Dan is playing in the living room. He brushes against his mother's vase. The vase falls down on the floor and breaks. When Dan's mother comes home, she asks Dan: ""What happened to my vase?"" Dan says, ""The dog knocked it over.” Why has Dan responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Dan thinks that the dog has knocked over the vase.
+2. Dan finds this vase ugly and wants to get rid of it.
+3. Dan wants his mom to know that he knocked it over.
+4. Dan does not want his mom to be angry with him for breaking the vase.
+Your answer:
+",,1,target,Dan thinks that the dog has knocked over the vase.,incorrect_literal,1,[-3.0973079204559326],[0.045170641818752015],[-0.973268985748291],[-3.287033796310425],[0.037364515950375994],0.045170641818752015,0.045170641818752015,0.037364515950375994,1.208918158574391,-3.0973079204559326,-3.0973079204559326,0.9422805217070015
+google/flan-t5-xl,0.1,3,3,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Dan is playing in the living room. He brushes against his mother's vase. The vase falls down on the floor and breaks. When Dan's mother comes home, she asks Dan: ""What happened to my vase?"" Dan says, ""The dog knocked it over.” Why has Dan responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Dan thinks that the dog has knocked over the vase.
+2. Dan finds this vase ugly and wants to get rid of it.
+3. Dan wants his mom to know that he knocked it over.
+4. Dan does not want his mom to be angry with him for breaking the vase.
+Your answer:
+",,2,incorrect_literal,Dan finds this vase ugly and wants to get rid of it.,incorrect_social_convention,2,[-2.547309398651123],[0.0782920355203632],[-0.5661458373069763],[-2.455662488937378],[0.08580633086221616],0.0782920355203632,0.0782920355203632,0.08580633086221616,0.9124272618774592,-2.547309398651123,-2.547309398651123,1.0373206457021718
+google/flan-t5-xl,0.1,3,3,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Dan is playing in the living room. He brushes against his mother's vase. The vase falls down on the floor and breaks. When Dan's mother comes home, she asks Dan: ""What happened to my vase?"" Dan says, ""The dog knocked it over.” Why has Dan responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Dan thinks that the dog has knocked over the vase.
+2. Dan finds this vase ugly and wants to get rid of it.
+3. Dan wants his mom to know that he knocked it over.
+4. Dan does not want his mom to be angry with him for breaking the vase.
+Your answer:
+",,3,incorrect_lexical_overlap,Dan wants his mom to know that he knocked it over.,incorrect_lexical_overlap,3,[-3.180920124053955],[0.04154740875799444],[-0.6958259344100952],[-2.9173407554626465],[0.054077301031071924],0.04154740875799444,0.04154740875799444,0.054077301031071924,0.768296641397136,-3.180920124053955,-3.180920124053955,1.0903491880740235
+google/flan-t5-xl,0.1,3,3,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Dan is playing in the living room. He brushes against his mother's vase. The vase falls down on the floor and breaks. When Dan's mother comes home, she asks Dan: ""What happened to my vase?"" Dan says, ""The dog knocked it over.” Why has Dan responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Dan thinks that the dog has knocked over the vase.
+2. Dan finds this vase ugly and wants to get rid of it.
+3. Dan wants his mom to know that he knocked it over.
+4. Dan does not want his mom to be angry with him for breaking the vase.
+Your answer:
+",,4,incorrect_social_convention,Dan does not want his mom to be angry with him for breaking the vase.,target,4,[-2.9448258876800537],[0.05261121928030702],[-0.4122335910797119],[-3.401381015777588],[0.033327212758142655],0.05261121928030702,0.05261121928030702,0.033327212758142655,1.5786264414642,-2.9448258876800537,-2.9448258876800537,0.8657736001995174
+google/flan-t5-xl,0.1,3,4,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Peter's mother wants them to start eating healthier, and tells him that they will eat boiled sprouts tonight. Peter tells his mother: ""I don't think I can eat, I have a terrible stomach-ache.” Why has Peter responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He wants to have boiled sprouts every night.
+2. He wants to avoid eating boiled sprouts.
+3. He is experiencing some severe stomach pain.
+4. He does not want to get in trouble with mom for eating boiled sprouts.
+Your answer:
+",,1,target,He wants to have boiled sprouts every night.,incorrect_lexical_overlap,1,[-1.852047085762024],[0.1569156175804119],[-0.973268985748291],[-2.8224287033081055],[0.05946135321226681],0.1569156175804119,0.1569156175804119,0.05946135321226681,2.638951337354367,-1.852047085762024,-1.852047085762024,0.6561891478751194
+google/flan-t5-xl,0.1,3,4,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Peter's mother wants them to start eating healthier, and tells him that they will eat boiled sprouts tonight. Peter tells his mother: ""I don't think I can eat, I have a terrible stomach-ache.” Why has Peter responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He wants to have boiled sprouts every night.
+2. He wants to avoid eating boiled sprouts.
+3. He is experiencing some severe stomach pain.
+4. He does not want to get in trouble with mom for eating boiled sprouts.
+Your answer:
+",,2,incorrect_literal,He wants to avoid eating boiled sprouts.,target,2,[-1.74117910861969],[0.17531356496451186],[-0.5661458373069763],[-2.308856725692749],[0.09937479929399508],0.17531356496451186,0.17531356496451186,0.09937479929399508,1.764165223074876,-1.74117910861969,-1.74117910861969,0.7541304270828095
+google/flan-t5-xl,0.1,3,4,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Peter's mother wants them to start eating healthier, and tells him that they will eat boiled sprouts tonight. Peter tells his mother: ""I don't think I can eat, I have a terrible stomach-ache.” Why has Peter responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He wants to have boiled sprouts every night.
+2. He wants to avoid eating boiled sprouts.
+3. He is experiencing some severe stomach pain.
+4. He does not want to get in trouble with mom for eating boiled sprouts.
+Your answer:
+",,3,incorrect_lexical_overlap,He is experiencing some severe stomach pain.,incorrect_literal,3,[-2.5421502590179443],[0.07869699879659023],[-0.6958259344100952],[-2.2230942249298096],[0.10827356720116868],0.07869699879659023,0.07869699879659023,0.10827356720116868,0.726834820638853,-2.5421502590179443,-2.5421502590179443,1.143518898349083
+google/flan-t5-xl,0.1,3,4,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Peter's mother wants them to start eating healthier, and tells him that they will eat boiled sprouts tonight. Peter tells his mother: ""I don't think I can eat, I have a terrible stomach-ache.” Why has Peter responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He wants to have boiled sprouts every night.
+2. He wants to avoid eating boiled sprouts.
+3. He is experiencing some severe stomach pain.
+4. He does not want to get in trouble with mom for eating boiled sprouts.
+Your answer:
+",,4,incorrect_social_convention,He does not want to get in trouble with mom for eating boiled sprouts.,incorrect_social_convention,4,[-2.532074213027954],[0.07949396175068744],[-0.4122335910797119],[-2.427313804626465],[0.08827363462063588],0.07949396175068744,0.07949396175068744,0.08827363462063588,0.9005402586210492,-2.532074213027954,-2.532074213027954,1.0431589884265544
+google/flan-t5-xl,0.1,3,5,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Today is Mandy's birthday. Her aunt has a big box with her and Mandy feels sure it will contain a pet rabbit for her. But when she opens it, she finds a fish bowl with a goldfish. When her aunt asks her whether she likes the gift, Mandy says: ""It's just what I wanted!” Why has Mandy responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She does not want to hurt her aunt by showing that she is upset with the present.
+2. She thinks that she can return a goldfish to the pet store and get a refund.
+3. She wants her aunt to know that this is not the present that she wanted.
+4. She is very much fond of goldfish.
+Your answer:
+",,1,target,She does not want to hurt her aunt by showing that she is upset with the present.,target,1,[-3.8363170623779297],[0.02157290688715792],[-0.973268985748291],[-1.2093216180801392],[0.29839963970381933],0.02157290688715792,0.02157290688715792,0.29839963970381933,0.07229535165850202,-3.8363170623779297,-3.8363170623779297,3.1722885004472854
+google/flan-t5-xl,0.1,3,5,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Today is Mandy's birthday. Her aunt has a big box with her and Mandy feels sure it will contain a pet rabbit for her. But when she opens it, she finds a fish bowl with a goldfish. When her aunt asks her whether she likes the gift, Mandy says: ""It's just what I wanted!” Why has Mandy responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She does not want to hurt her aunt by showing that she is upset with the present.
+2. She thinks that she can return a goldfish to the pet store and get a refund.
+3. She wants her aunt to know that this is not the present that she wanted.
+4. She is very much fond of goldfish.
+Your answer:
+",,2,incorrect_literal,She thinks that she can return a goldfish to the pet store and get a refund.,incorrect_social_convention,2,[-3.48030948638916],[0.03079787803359401],[-0.5661458373069763],[-1.0992622375488281],[0.33311675409676755],0.03079787803359401,0.03079787803359401,0.33311675409676755,0.09245370475916528,-3.48030948638916,-3.48030948638916,3.166041156976038
+google/flan-t5-xl,0.1,3,5,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Today is Mandy's birthday. Her aunt has a big box with her and Mandy feels sure it will contain a pet rabbit for her. But when she opens it, she finds a fish bowl with a goldfish. When her aunt asks her whether she likes the gift, Mandy says: ""It's just what I wanted!” Why has Mandy responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She does not want to hurt her aunt by showing that she is upset with the present.
+2. She thinks that she can return a goldfish to the pet store and get a refund.
+3. She wants her aunt to know that this is not the present that she wanted.
+4. She is very much fond of goldfish.
+Your answer:
+",,3,incorrect_lexical_overlap,She wants her aunt to know that this is not the present that she wanted.,incorrect_lexical_overlap,3,[-3.7723867893218994],[0.022997108477588995],[-0.6958259344100952],[-1.7424466609954834],[0.1750914866164354],0.022997108477588995,0.022997108477588995,0.1750914866164354,0.13134338466134374,-3.7723867893218994,-3.7723867893218994,2.1649941279503406
+google/flan-t5-xl,0.1,3,5,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Today is Mandy's birthday. Her aunt has a big box with her and Mandy feels sure it will contain a pet rabbit for her. But when she opens it, she finds a fish bowl with a goldfish. When her aunt asks her whether she likes the gift, Mandy says: ""It's just what I wanted!” Why has Mandy responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She does not want to hurt her aunt by showing that she is upset with the present.
+2. She thinks that she can return a goldfish to the pet store and get a refund.
+3. She wants her aunt to know that this is not the present that she wanted.
+4. She is very much fond of goldfish.
+Your answer:
+",,4,incorrect_social_convention,She is very much fond of goldfish.,incorrect_literal,4,[-3.232846736907959],[0.039445049129848045],[-0.4122335910797119],[-1.249727725982666],[0.2865828152929308],0.039445049129848045,0.039445049129848045,0.2865828152929308,0.1376392687381805,-3.232846736907959,-3.232846736907959,2.5868408531674034
+google/flan-t5-xl,0.1,3,6,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Marika baked an apple pie today. She spent the whole afternoon in the kitchen trying to follow the recipe, and told her friend Lars about the time it took. Marika gives Lars a piece of her pie. Lars takes a big bite but doesn't finish the slice. Later in the day, Marika asks: ""Do you like my apple pie?"", Lars says: ""Oh, yes, it was really tasty.” Why has Lars responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He dislikes the unusual taste of Marika's pie.
+2. He does not want Marika to feel bad about her mediocre baking skills.
+3. He likes the unusual taste of Marika's pie.
+4. He wants Marika to know what a great baker she is. 
+Your answer:
+",,1,target,He dislikes the unusual taste of Marika's pie.,incorrect_lexical_overlap,1,[-2.900639057159424],[0.05498806830688054],[-0.973268985748291],[-2.4372520446777344],[0.08740069497635368],0.05498806830688054,0.05498806830688054,0.08740069497635368,0.6291490968322118,-2.900639057159424,-2.900639057159424,1.1901268330017796
+google/flan-t5-xl,0.1,3,6,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Marika baked an apple pie today. She spent the whole afternoon in the kitchen trying to follow the recipe, and told her friend Lars about the time it took. Marika gives Lars a piece of her pie. Lars takes a big bite but doesn't finish the slice. Later in the day, Marika asks: ""Do you like my apple pie?"", Lars says: ""Oh, yes, it was really tasty.” Why has Lars responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He dislikes the unusual taste of Marika's pie.
+2. He does not want Marika to feel bad about her mediocre baking skills.
+3. He likes the unusual taste of Marika's pie.
+4. He wants Marika to know what a great baker she is. 
+Your answer:
+",,2,incorrect_literal,He does not want Marika to feel bad about her mediocre baking skills.,target,2,[-2.636606216430664],[0.07160386568702745],[-0.5661458373069763],[-2.1970152854919434],[0.11113436819414912],0.07160386568702745,0.07160386568702745,0.11113436819414912,0.6442999303504131,-2.636606216430664,-2.636606216430664,1.2000855132149388
+google/flan-t5-xl,0.1,3,6,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Marika baked an apple pie today. She spent the whole afternoon in the kitchen trying to follow the recipe, and told her friend Lars about the time it took. Marika gives Lars a piece of her pie. Lars takes a big bite but doesn't finish the slice. Later in the day, Marika asks: ""Do you like my apple pie?"", Lars says: ""Oh, yes, it was really tasty.” Why has Lars responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He dislikes the unusual taste of Marika's pie.
+2. He does not want Marika to feel bad about her mediocre baking skills.
+3. He likes the unusual taste of Marika's pie.
+4. He wants Marika to know what a great baker she is. 
+Your answer:
+",,3,incorrect_lexical_overlap,He likes the unusual taste of Marika's pie.,incorrect_literal,3,[-3.2313356399536133],[0.03950469948083349],[-0.6958259344100952],[-2.3526439666748047],[0.09511734237717481],0.03950469948083349,0.03950469948083349,0.09511734237717481,0.4153259383991513,-3.2313356399536133,-3.2313356399536133,1.3734911383641017
+google/flan-t5-xl,0.1,3,6,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Marika baked an apple pie today. She spent the whole afternoon in the kitchen trying to follow the recipe, and told her friend Lars about the time it took. Marika gives Lars a piece of her pie. Lars takes a big bite but doesn't finish the slice. Later in the day, Marika asks: ""Do you like my apple pie?"", Lars says: ""Oh, yes, it was really tasty.” Why has Lars responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He dislikes the unusual taste of Marika's pie.
+2. He does not want Marika to feel bad about her mediocre baking skills.
+3. He likes the unusual taste of Marika's pie.
+4. He wants Marika to know what a great baker she is. 
+Your answer:
+",,4,incorrect_social_convention,He wants Marika to know what a great baker she is. ,incorrect_social_convention,4,[-3.2099742889404297],[0.0403576508966582],[-0.4122335910797119],[-2.5627171993255615],[0.07709497317350882],0.0403576508966582,0.0403576508966582,0.07709497317350882,0.5234796671610464,-3.2099742889404297,-3.2099742889404297,1.2525667247971055
+google/flan-t5-xl,0.1,3,7,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It was Christmas Eve, and Sally was in her bedroom. She overheard her mother talking about picking up Sally's computer at the Apple store earlier that day. The next morning the family opened their Christmas presents. After Sally opened her present, her mother asked her, ""Sally, are you surprised?"" Sally answered, ""Yes, I had no idea I was going to get a MacBook!” Why has Sally responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Sally wanted to confess that she overheard the conversation and spoiled the surprise.
+2. Sally didn't want to admit that she had overheard her mother and spoiled the surprise.
+3.  Sally thought that the conversation was about someone else's present.
+4. Sally forgot that the computer was the present that she heard about last night.
+Your answer:
+",,1,target,Sally wanted to confess that she overheard the conversation and spoiled the surprise.,incorrect_social_convention,1,[-3.1899092197418213],[0.04117560870179625],[-0.973268985748291],[-2.5373141765594482],[0.079078505727949],0.04117560870179625,0.04117560870179625,0.079078505727949,0.5206928017007713,-3.1899092197418213,-3.1899092197418213,1.2571991475124613
+google/flan-t5-xl,0.1,3,7,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It was Christmas Eve, and Sally was in her bedroom. She overheard her mother talking about picking up Sally's computer at the Apple store earlier that day. The next morning the family opened their Christmas presents. After Sally opened her present, her mother asked her, ""Sally, are you surprised?"" Sally answered, ""Yes, I had no idea I was going to get a MacBook!” Why has Sally responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Sally wanted to confess that she overheard the conversation and spoiled the surprise.
+2. Sally didn't want to admit that she had overheard her mother and spoiled the surprise.
+3.  Sally thought that the conversation was about someone else's present.
+4. Sally forgot that the computer was the present that she heard about last night.
+Your answer:
+",,2,incorrect_literal,Sally didn't want to admit that she had overheard her mother and spoiled the surprise.,target,2,[-3.153142213821411],[0.04271768765071907],[-0.5661458373069763],[-2.728848695755005],[0.06529442015390281],0.04271768765071907,0.04271768765071907,0.06529442015390281,0.6542318248639157,-3.153142213821411,-3.153142213821411,1.1554844424780446
+google/flan-t5-xl,0.1,3,7,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It was Christmas Eve, and Sally was in her bedroom. She overheard her mother talking about picking up Sally's computer at the Apple store earlier that day. The next morning the family opened their Christmas presents. After Sally opened her present, her mother asked her, ""Sally, are you surprised?"" Sally answered, ""Yes, I had no idea I was going to get a MacBook!” Why has Sally responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Sally wanted to confess that she overheard the conversation and spoiled the surprise.
+2. Sally didn't want to admit that she had overheard her mother and spoiled the surprise.
+3.  Sally thought that the conversation was about someone else's present.
+4. Sally forgot that the computer was the present that she heard about last night.
+Your answer:
+",,3,incorrect_lexical_overlap, Sally thought that the conversation was about someone else's present.,incorrect_lexical_overlap,3,[-3.129685640335083],[0.04373154252521265],[-0.6958259344100952],[-3.0171639919281006],[0.04893981544954163],0.04373154252521265,0.04373154252521265,0.04893981544954163,0.8935780023588593,-3.129685640335083,-3.129685640335083,1.0372938457133967
+google/flan-t5-xl,0.1,3,7,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It was Christmas Eve, and Sally was in her bedroom. She overheard her mother talking about picking up Sally's computer at the Apple store earlier that day. The next morning the family opened their Christmas presents. After Sally opened her present, her mother asked her, ""Sally, are you surprised?"" Sally answered, ""Yes, I had no idea I was going to get a MacBook!” Why has Sally responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Sally wanted to confess that she overheard the conversation and spoiled the surprise.
+2. Sally didn't want to admit that she had overheard her mother and spoiled the surprise.
+3.  Sally thought that the conversation was about someone else's present.
+4. Sally forgot that the computer was the present that she heard about last night.
+Your answer:
+",,4,incorrect_social_convention,Sally forgot that the computer was the present that she heard about last night.,incorrect_literal,4,[-2.8832552433013916],[0.055952327620046524],[-0.4122335910797119],[-2.8263769149780273],[0.05922705004721713],0.055952327620046524,0.055952327620046524,0.05922705004721713,0.9447090067028507,-2.8832552433013916,-2.8832552433013916,1.0201241129666552
+google/flan-t5-xl,0.1,3,8,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Oscar had tickets to see a hockey game with his buddies, so he called in sick at work. At the game, Oscar was having so much fun that he didn't notice his boss sitting a few rows behind him. The next day at work, the boss called Oscar into his office. He asked Oscar, ""Did you get a lot of rest yesterday?"" Oscar replied, ""Yes, the day of bed rest cured me.” Why has Oscar responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He did spend some time resting in bed.
+2. He did not want to get in trouble with his boss by admitting that he lied to him.
+3. He realized that the boss was at the game and saw him.
+4. He wanted to be honest with his boss.
+Your answer:
+",,1,target,He did spend some time resting in bed.,incorrect_literal,1,[-1.8611423969268799],[0.1554948919766917],[-0.973268985748291],[-2.1874613761901855],[0.11220122407539364],0.1554948919766917,0.1554948919766917,0.11220122407539364,1.385857358135477,-1.8611423969268799,-1.8611423969268799,0.8508229755207645
+google/flan-t5-xl,0.1,3,8,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Oscar had tickets to see a hockey game with his buddies, so he called in sick at work. At the game, Oscar was having so much fun that he didn't notice his boss sitting a few rows behind him. The next day at work, the boss called Oscar into his office. He asked Oscar, ""Did you get a lot of rest yesterday?"" Oscar replied, ""Yes, the day of bed rest cured me.” Why has Oscar responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He did spend some time resting in bed.
+2. He did not want to get in trouble with his boss by admitting that he lied to him.
+3. He realized that the boss was at the game and saw him.
+4. He wanted to be honest with his boss.
+Your answer:
+",,2,incorrect_literal,He did not want to get in trouble with his boss by admitting that he lied to him.,target,2,[-1.4421075582504272],[0.23642894545315984],[-0.5661458373069763],[-2.0017006397247314],[0.1351053222735811],0.23642894545315984,0.23642894545315984,0.1351053222735811,1.7499602641441747,-1.4421075582504272,-1.4421075582504272,0.7204411736855627
+google/flan-t5-xl,0.1,3,8,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Oscar had tickets to see a hockey game with his buddies, so he called in sick at work. At the game, Oscar was having so much fun that he didn't notice his boss sitting a few rows behind him. The next day at work, the boss called Oscar into his office. He asked Oscar, ""Did you get a lot of rest yesterday?"" Oscar replied, ""Yes, the day of bed rest cured me.” Why has Oscar responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He did spend some time resting in bed.
+2. He did not want to get in trouble with his boss by admitting that he lied to him.
+3. He realized that the boss was at the game and saw him.
+4. He wanted to be honest with his boss.
+Your answer:
+",,3,incorrect_lexical_overlap,He realized that the boss was at the game and saw him.,incorrect_lexical_overlap,3,[-2.2261412143707275],[0.10794416088880858],[-0.6958259344100952],[-1.8217698335647583],[0.16173924592939473],0.10794416088880858,0.10794416088880858,0.16173924592939473,0.6673962170933471,-2.2261412143707275,-2.2261412143707275,1.2219662294081977
+google/flan-t5-xl,0.1,3,8,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Oscar had tickets to see a hockey game with his buddies, so he called in sick at work. At the game, Oscar was having so much fun that he didn't notice his boss sitting a few rows behind him. The next day at work, the boss called Oscar into his office. He asked Oscar, ""Did you get a lot of rest yesterday?"" Oscar replied, ""Yes, the day of bed rest cured me.” Why has Oscar responded in such a way?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He did spend some time resting in bed.
+2. He did not want to get in trouble with his boss by admitting that he lied to him.
+3. He realized that the boss was at the game and saw him.
+4. He wanted to be honest with his boss.
+Your answer:
+",,4,incorrect_social_convention,He wanted to be honest with his boss.,incorrect_social_convention,4,[-2.0717952251434326],[0.12595945303322428],[-0.4122335910797119],[-2.5671868324279785],[0.07675115587036963],0.12595945303322428,0.12595945303322428,0.07675115587036963,1.6411407959245068,-2.0717952251434326,-2.0717952251434326,0.8070293906828677
+google/flan-t5-xl,0.1,3,9,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It's Ed's birthday and he is an avid rollerblader. He mentioned to his aunt that his rollerblades have gotten quite worn out. When he opens his birthday gift from her, he finds a pair of socks. Ed says to his aunt, ""Thank you for such a great gift.” Why has Ed responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He likes the socks that his aunt gave him.
+2. He wants his aunt to realize that he expected to get a different gift.
+3. He realizes that rollerblading is unsafe and is happy that he did not get rollerblades.
+4. He does not want to show that he is disappointed with the gift so that he doesn't offend his aunt.
+Your answer:
+",,1,target,He likes the socks that his aunt gave him.,incorrect_literal,1,[-1.5903749465942383],[0.20384916485326018],[-0.973268985748291],[-1.998795747756958],[0.13549835922761902],0.20384916485326018,0.20384916485326018,0.13549835922761902,1.504440098133004,-1.5903749465942383,-1.5903749465942383,0.7956665649198783
+google/flan-t5-xl,0.1,3,9,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It's Ed's birthday and he is an avid rollerblader. He mentioned to his aunt that his rollerblades have gotten quite worn out. When he opens his birthday gift from her, he finds a pair of socks. Ed says to his aunt, ""Thank you for such a great gift.” Why has Ed responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He likes the socks that his aunt gave him.
+2. He wants his aunt to realize that he expected to get a different gift.
+3. He realizes that rollerblading is unsafe and is happy that he did not get rollerblades.
+4. He does not want to show that he is disappointed with the gift so that he doesn't offend his aunt.
+Your answer:
+",,2,incorrect_literal,He wants his aunt to realize that he expected to get a different gift.,incorrect_lexical_overlap,2,[-1.3096100091934204],[0.2699253042476232],[-0.5661458373069763],[-2.0134048461914062],[0.13353323962329466],0.2699253042476232,0.2699253042476232,0.13353323962329466,2.0214090889212213,-1.3096100091934204,-1.3096100091934204,0.6504454440301477
+google/flan-t5-xl,0.1,3,9,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It's Ed's birthday and he is an avid rollerblader. He mentioned to his aunt that his rollerblades have gotten quite worn out. When he opens his birthday gift from her, he finds a pair of socks. Ed says to his aunt, ""Thank you for such a great gift.” Why has Ed responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He likes the socks that his aunt gave him.
+2. He wants his aunt to realize that he expected to get a different gift.
+3. He realizes that rollerblading is unsafe and is happy that he did not get rollerblades.
+4. He does not want to show that he is disappointed with the gift so that he doesn't offend his aunt.
+Your answer:
+",,3,incorrect_lexical_overlap,He realizes that rollerblading is unsafe and is happy that he did not get rollerblades.,incorrect_social_convention,3,[-2.071571111679077],[0.12598768540612115],[-0.6958259344100952],[-2.0698299407958984],[0.12620724258340266],0.12598768540612115,0.12598768540612115,0.12620724258340266,0.9982603440754486,-2.071571111679077,-2.071571111679077,1.000841214463498
+google/flan-t5-xl,0.1,3,9,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+It's Ed's birthday and he is an avid rollerblader. He mentioned to his aunt that his rollerblades have gotten quite worn out. When he opens his birthday gift from her, he finds a pair of socks. Ed says to his aunt, ""Thank you for such a great gift.” Why has Ed responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He likes the socks that his aunt gave him.
+2. He wants his aunt to realize that he expected to get a different gift.
+3. He realizes that rollerblading is unsafe and is happy that he did not get rollerblades.
+4. He does not want to show that he is disappointed with the gift so that he doesn't offend his aunt.
+Your answer:
+",,4,incorrect_social_convention,He does not want to show that he is disappointed with the gift so that he doesn't offend his aunt.,target,4,[-1.844022274017334],[0.15817990190842568],[-0.4122335910797119],[-2.376410722732544],[0.0928833640686338],0.15817990190842568,0.15817990190842568,0.0928833640686338,1.7029949711074488,-1.844022274017334,-1.844022274017334,0.7759695141827012
+google/flan-t5-xl,0.1,3,10,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Hiroshi and Taro are very close friends and they usually play together. Taro takes very good care of all his toys. One day Hiroshi was careless and broke Taro's remote control car. Taro said to Hirosho, ""Don't worry about it, I don't care.” Why has Taro responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Taro was sad because he liked this toy.
+2.  This was one of Taro's oldest remote control cars that he did not like too much
+3. Friendship was more important for Taro than a broken remote control car.
+4. Taro wanted Hiroshi to feel bad for breaking his toy.
+Your answer:
+",,1,target,Taro was sad because he liked this toy.,incorrect_social_convention,1,[-3.0353362560272217],[0.04805850019799778],[-0.973268985748291],[-1.956133246421814],[0.14140414012504535],0.04805850019799778,0.04805850019799778,0.14140414012504535,0.33986628790005075,-3.0353362560272217,-3.0353362560272217,1.5517021969640876
+google/flan-t5-xl,0.1,3,10,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Hiroshi and Taro are very close friends and they usually play together. Taro takes very good care of all his toys. One day Hiroshi was careless and broke Taro's remote control car. Taro said to Hirosho, ""Don't worry about it, I don't care.” Why has Taro responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Taro was sad because he liked this toy.
+2.  This was one of Taro's oldest remote control cars that he did not like too much
+3. Friendship was more important for Taro than a broken remote control car.
+4. Taro wanted Hiroshi to feel bad for breaking his toy.
+Your answer:
+",,2,incorrect_literal, This was one of Taro's oldest remote control cars that he did not like too much,incorrect_literal,2,[-2.0502257347106934],[0.12870584693125806],[-0.5661458373069763],[-1.5152597427368164],[0.21975109868243406],0.12870584693125806,0.12870584693125806,0.21975109868243406,0.585689207939993,-2.0502257347106934,-2.0502257347106934,1.3530523361015567
+google/flan-t5-xl,0.1,3,10,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Hiroshi and Taro are very close friends and they usually play together. Taro takes very good care of all his toys. One day Hiroshi was careless and broke Taro's remote control car. Taro said to Hirosho, ""Don't worry about it, I don't care.” Why has Taro responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Taro was sad because he liked this toy.
+2.  This was one of Taro's oldest remote control cars that he did not like too much
+3. Friendship was more important for Taro than a broken remote control car.
+4. Taro wanted Hiroshi to feel bad for breaking his toy.
+Your answer:
+",,3,incorrect_lexical_overlap,Friendship was more important for Taro than a broken remote control car.,target,3,[-3.0485057830810547],[0.04742974179233265],[-0.6958259344100952],[-1.8392202854156494],[0.15894130665976602],0.04742974179233265,0.04742974179233265,0.15894130665976602,0.29841041821722286,-3.0485057830810547,-3.0485057830810547,1.657498999578572
+google/flan-t5-xl,0.1,3,10,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Hiroshi and Taro are very close friends and they usually play together. Taro takes very good care of all his toys. One day Hiroshi was careless and broke Taro's remote control car. Taro said to Hirosho, ""Don't worry about it, I don't care.” Why has Taro responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Taro was sad because he liked this toy.
+2.  This was one of Taro's oldest remote control cars that he did not like too much
+3. Friendship was more important for Taro than a broken remote control car.
+4. Taro wanted Hiroshi to feel bad for breaking his toy.
+Your answer:
+",,4,incorrect_social_convention,Taro wanted Hiroshi to feel bad for breaking his toy.,incorrect_lexical_overlap,4,[-3.1634585857391357],[0.04227926146959823],[-0.4122335910797119],[-2.1984987258911133],[0.11096962920308134],0.04227926146959823,0.04227926146959823,0.11096962920308134,0.3809984927698059,-3.1634585857391357,-3.1634585857391357,1.4389176343310808
+google/flan-t5-xl,0.1,3,11,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Katie, John's wife, just got a new haircut that she is really excited about. John has been avoiding the topic. Katie finally asks John if he likes her new style. John responds, ""It looks great!” Why has John responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He sees how excited Katie is about the haircut and does not want to ruin her good mood.
+2. He thinks that a new haircut suits his wife.
+3. He wants to stress out that this haircut does not compliment Katie.
+4. John does not care about Katie or her haircut.
+Your answer:
+",,1,target,He sees how excited Katie is about the haircut and does not want to ruin her good mood.,target,1,[-3.0167250633239746],[0.04896130124944421],[-0.973268985748291],[-1.982686161994934],[0.13769885864421239],0.04896130124944421,0.04896130124944421,0.13769885864421239,0.3555679526433177,-3.0167250633239746,-3.0167250633239746,1.5215343311261194
+google/flan-t5-xl,0.1,3,11,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Katie, John's wife, just got a new haircut that she is really excited about. John has been avoiding the topic. Katie finally asks John if he likes her new style. John responds, ""It looks great!” Why has John responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He sees how excited Katie is about the haircut and does not want to ruin her good mood.
+2. He thinks that a new haircut suits his wife.
+3. He wants to stress out that this haircut does not compliment Katie.
+4. John does not care about Katie or her haircut.
+Your answer:
+",,2,incorrect_literal,He thinks that a new haircut suits his wife.,incorrect_literal,2,[-2.3143715858459473],[0.09882826957578371],[-0.5661458373069763],[-1.5083931684494019],[0.22126522841919355],0.09882826957578371,0.09882826957578371,0.22126522841919355,0.4466507018832196,-2.3143715858459473,-2.3143715858459473,1.5343291353043418
+google/flan-t5-xl,0.1,3,11,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Katie, John's wife, just got a new haircut that she is really excited about. John has been avoiding the topic. Katie finally asks John if he likes her new style. John responds, ""It looks great!” Why has John responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He sees how excited Katie is about the haircut and does not want to ruin her good mood.
+2. He thinks that a new haircut suits his wife.
+3. He wants to stress out that this haircut does not compliment Katie.
+4. John does not care about Katie or her haircut.
+Your answer:
+",,3,incorrect_lexical_overlap,He wants to stress out that this haircut does not compliment Katie.,incorrect_lexical_overlap,3,[-3.029270648956299],[0.04835089004110993],[-0.6958259344100952],[-1.6467454433441162],[0.19267596414309576],0.04835089004110993,0.04835089004110993,0.19267596414309576,0.2509440669267958,-3.029270648956299,-3.029270648956299,1.839550041689886
+google/flan-t5-xl,0.1,3,11,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Katie, John's wife, just got a new haircut that she is really excited about. John has been avoiding the topic. Katie finally asks John if he likes her new style. John responds, ""It looks great!” Why has John responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. He sees how excited Katie is about the haircut and does not want to ruin her good mood.
+2. He thinks that a new haircut suits his wife.
+3. He wants to stress out that this haircut does not compliment Katie.
+4. John does not care about Katie or her haircut.
+Your answer:
+",,4,incorrect_social_convention,John does not care about Katie or her haircut.,incorrect_social_convention,4,[-2.555849075317383],[0.07762629350806462],[-0.4122335910797119],[-2.312098979949951],[0.09905312268839185],0.07762629350806462,0.07762629350806462,0.09905312268839185,0.7836834559195753,-2.555849075317383,-2.555849075317383,1.1054237286038282
+google/flan-t5-xl,0.1,3,12,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+One night at a party Lucy and her best friend Mary are talking with some acquaintances.  Mary tells a long story to a group of people and a few of them smile. Afterwards, Mary asks Lucy whether she thought her joke was funny. Lucy says, ""Of course, you know I think you're funny!” Why has Lucy responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Lucy did not want Mary to feel awkward at this party.
+2.  Lucy wanted Mary to understand that her jokes were not humorous.
+3. Lucy thought that that Mary's jokes were hilarious. 
+4. Lucy was afraid to get in trouble with guests of the party for telling Mary the truth. 
+Your answer:
+",,1,target,Lucy did not want Mary to feel awkward at this party.,target,1,[-2.7931625843048096],[0.06122727098996599],[-0.973268985748291],[-2.8944268226623535],[0.05533073032816225],0.06122727098996599,0.06122727098996599,0.05533073032816225,1.106569001110808,-2.7931625843048096,-2.7931625843048096,0.9650140616564633
+google/flan-t5-xl,0.1,3,12,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+One night at a party Lucy and her best friend Mary are talking with some acquaintances.  Mary tells a long story to a group of people and a few of them smile. Afterwards, Mary asks Lucy whether she thought her joke was funny. Lucy says, ""Of course, you know I think you're funny!” Why has Lucy responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Lucy did not want Mary to feel awkward at this party.
+2.  Lucy wanted Mary to understand that her jokes were not humorous.
+3. Lucy thought that that Mary's jokes were hilarious. 
+4. Lucy was afraid to get in trouble with guests of the party for telling Mary the truth. 
+Your answer:
+",,2,incorrect_literal, Lucy wanted Mary to understand that her jokes were not humorous.,incorrect_lexical_overlap,2,[-2.5562212467193604],[0.07759740859698173],[-0.5661458373069763],[-2.5453810691833496],[0.0784431540158458],0.07759740859698173,0.07759740859698173,0.0784431540158458,0.9892183654587217,-2.5562212467193604,-2.5562212467193604,1.0042587641069747
+google/flan-t5-xl,0.1,3,12,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+One night at a party Lucy and her best friend Mary are talking with some acquaintances.  Mary tells a long story to a group of people and a few of them smile. Afterwards, Mary asks Lucy whether she thought her joke was funny. Lucy says, ""Of course, you know I think you're funny!” Why has Lucy responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Lucy did not want Mary to feel awkward at this party.
+2.  Lucy wanted Mary to understand that her jokes were not humorous.
+3. Lucy thought that that Mary's jokes were hilarious. 
+4. Lucy was afraid to get in trouble with guests of the party for telling Mary the truth. 
+Your answer:
+",,3,incorrect_lexical_overlap,Lucy thought that that Mary's jokes were hilarious. ,incorrect_literal,3,[-3.780393362045288],[0.02281371561000325],[-0.6958259344100952],[-2.305370807647705],[0.09972181618489609],0.02281371561000325,0.02281371561000325,0.09972181618489609,0.22877356713704364,-3.780393362045288,-3.780393362045288,1.639820088596779
+google/flan-t5-xl,0.1,3,12,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+One night at a party Lucy and her best friend Mary are talking with some acquaintances.  Mary tells a long story to a group of people and a few of them smile. Afterwards, Mary asks Lucy whether she thought her joke was funny. Lucy says, ""Of course, you know I think you're funny!” Why has Lucy responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Lucy did not want Mary to feel awkward at this party.
+2.  Lucy wanted Mary to understand that her jokes were not humorous.
+3. Lucy thought that that Mary's jokes were hilarious. 
+4. Lucy was afraid to get in trouble with guests of the party for telling Mary the truth. 
+Your answer:
+",,4,incorrect_social_convention,Lucy was afraid to get in trouble with guests of the party for telling Mary the truth. ,incorrect_social_convention,4,[-2.638986825942993],[0.07143360758269342],[-0.4122335910797119],[-3.0131640434265137],[0.04913596422198628],0.07143360758269342,0.07143360758269342,0.04913596422198628,1.453794765479129,-2.638986825942993,-2.638986825942993,0.8758191681266669
+google/flan-t5-xl,0.1,3,13,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Jim and his roommate Mike are taking a course together. Mike tells him he is stressed about giving his first presentation. Afterwards Jim feels very confused about the content because of how scattered it was. After class Mike asks Jim whether it went badly. Jim answers, ""No, definitely not.” Why has Jim responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Jim wanted Mike to understand that he needs to deal with his nervousness during public speaking.
+2. He wanted to support Mike and not make him even more nervous during public speaking in the future.
+3. Jim missed Mike's presentation and had no idea whether Mike was nervous or not.
+4. Jim thought that Mike did not seem to be that nervous after all.
+Your answer:
+",,1,target,Jim wanted Mike to understand that he needs to deal with his nervousness during public speaking.,incorrect_lexical_overlap,1,[-2.7673189640045166],[0.0628302292396167],[-0.973268985748291],[-1.8173136711120605],[0.16246159053135711],0.0628302292396167,0.0628302292396167,0.16246159053135711,0.38673897648127287,-2.7673189640045166,-2.7673189640045166,1.5227525154263124
+google/flan-t5-xl,0.1,3,13,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Jim and his roommate Mike are taking a course together. Mike tells him he is stressed about giving his first presentation. Afterwards Jim feels very confused about the content because of how scattered it was. After class Mike asks Jim whether it went badly. Jim answers, ""No, definitely not.” Why has Jim responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Jim wanted Mike to understand that he needs to deal with his nervousness during public speaking.
+2. He wanted to support Mike and not make him even more nervous during public speaking in the future.
+3. Jim missed Mike's presentation and had no idea whether Mike was nervous or not.
+4. Jim thought that Mike did not seem to be that nervous after all.
+Your answer:
+",,2,incorrect_literal,He wanted to support Mike and not make him even more nervous during public speaking in the future.,target,2,[-2.8667750358581543],[0.0568820737477391],[-0.5661458373069763],[-1.7581932544708252],[0.17235598608632563],0.0568820737477391,0.0568820737477391,0.17235598608632563,0.3300266793127181,-2.8667750358581543,-2.8667750358581543,1.630523282106998
+google/flan-t5-xl,0.1,3,13,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Jim and his roommate Mike are taking a course together. Mike tells him he is stressed about giving his first presentation. Afterwards Jim feels very confused about the content because of how scattered it was. After class Mike asks Jim whether it went badly. Jim answers, ""No, definitely not.” Why has Jim responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Jim wanted Mike to understand that he needs to deal with his nervousness during public speaking.
+2. He wanted to support Mike and not make him even more nervous during public speaking in the future.
+3. Jim missed Mike's presentation and had no idea whether Mike was nervous or not.
+4. Jim thought that Mike did not seem to be that nervous after all.
+Your answer:
+",,3,incorrect_lexical_overlap,Jim missed Mike's presentation and had no idea whether Mike was nervous or not.,incorrect_social_convention,3,[-2.9878368377685547],[0.050396334346577656],[-0.6958259344100952],[-1.6770517826080322],[0.1869242578135413],0.050396334346577656,0.050396334346577656,0.1869242578135413,0.2696083158818716,-2.9878368377685547,-2.9878368377685547,1.7816008239901109
+google/flan-t5-xl,0.1,3,13,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Jim and his roommate Mike are taking a course together. Mike tells him he is stressed about giving his first presentation. Afterwards Jim feels very confused about the content because of how scattered it was. After class Mike asks Jim whether it went badly. Jim answers, ""No, definitely not.” Why has Jim responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Jim wanted Mike to understand that he needs to deal with his nervousness during public speaking.
+2. He wanted to support Mike and not make him even more nervous during public speaking in the future.
+3. Jim missed Mike's presentation and had no idea whether Mike was nervous or not.
+4. Jim thought that Mike did not seem to be that nervous after all.
+Your answer:
+",,4,incorrect_social_convention,Jim thought that Mike did not seem to be that nervous after all.,incorrect_literal,4,[-3.144146203994751],[0.043103710116205354],[-0.4122335910797119],[-2.172351598739624],[0.1139094324255532],0.043103710116205354,0.043103710116205354,0.1139094324255532,0.3784033437650238,-3.144146203994751,-3.144146203994751,1.447346831801515
+google/flan-t5-xl,0.1,3,14,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+One day Jane comes home and is delighted to find her partner Anthony straightening up her apartment. Jane notices that Anthony threw out lots of things which were creating clutter, including an old photo that she had always kept on the coffee table. Anthony is worried that something is troubling Jane and asks if anything is wrong. Jane answers, ""Everything is fine, dear. You did a great job of cleaning the apartment.” Why has Jane responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She wants to show that she is angry that Anthony has cleaned the apartment.
+2. She is happy that Anthony has cleaned the apartment and does not care about the picture that got thrown away.
+3. She shows him how angry she is with him for throwing out things without her consent.
+4. She wants to show that she appreciates that Anthony has cleaned the apartment.
+Your answer:
+",,1,target,She wants to show that she is angry that Anthony has cleaned the apartment.,incorrect_lexical_overlap,1,[-1.6284897327423096],[0.19622570370864512],[-0.973268985748291],[-2.363694906234741],[0.09407199305995897],0.19622570370864512,0.19622570370864512,0.09407199305995897,2.0859099220272297,-1.6284897327423096,-1.6284897327423096,0.688959361230092
+google/flan-t5-xl,0.1,3,14,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+One day Jane comes home and is delighted to find her partner Anthony straightening up her apartment. Jane notices that Anthony threw out lots of things which were creating clutter, including an old photo that she had always kept on the coffee table. Anthony is worried that something is troubling Jane and asks if anything is wrong. Jane answers, ""Everything is fine, dear. You did a great job of cleaning the apartment.” Why has Jane responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She wants to show that she is angry that Anthony has cleaned the apartment.
+2. She is happy that Anthony has cleaned the apartment and does not care about the picture that got thrown away.
+3. She shows him how angry she is with him for throwing out things without her consent.
+4. She wants to show that she appreciates that Anthony has cleaned the apartment.
+Your answer:
+",,2,incorrect_literal,She is happy that Anthony has cleaned the apartment and does not care about the picture that got thrown away.,incorrect_literal,2,[-1.6960538625717163],[0.18340584259131154],[-0.5661458373069763],[-2.025061845779419],[0.13198568017814621],0.18340584259131154,0.18340584259131154,0.13198568017814621,1.3895889489205309,-1.6960538625717163,-1.6960538625717163,0.8375318838318877
+google/flan-t5-xl,0.1,3,14,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+One day Jane comes home and is delighted to find her partner Anthony straightening up her apartment. Jane notices that Anthony threw out lots of things which were creating clutter, including an old photo that she had always kept on the coffee table. Anthony is worried that something is troubling Jane and asks if anything is wrong. Jane answers, ""Everything is fine, dear. You did a great job of cleaning the apartment.” Why has Jane responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She wants to show that she is angry that Anthony has cleaned the apartment.
+2. She is happy that Anthony has cleaned the apartment and does not care about the picture that got thrown away.
+3. She shows him how angry she is with him for throwing out things without her consent.
+4. She wants to show that she appreciates that Anthony has cleaned the apartment.
+Your answer:
+",,3,incorrect_lexical_overlap,She shows him how angry she is with him for throwing out things without her consent.,incorrect_social_convention,3,[-2.416229724884033],[0.08925750922525726],[-0.6958259344100952],[-2.3682963848114014],[0.09364011719503046],0.08925750922525726,0.08925750922525726,0.09364011719503046,0.9531973250242174,-2.416229724884033,-2.416229724884033,1.0202395867257337
+google/flan-t5-xl,0.1,3,14,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+One day Jane comes home and is delighted to find her partner Anthony straightening up her apartment. Jane notices that Anthony threw out lots of things which were creating clutter, including an old photo that she had always kept on the coffee table. Anthony is worried that something is troubling Jane and asks if anything is wrong. Jane answers, ""Everything is fine, dear. You did a great job of cleaning the apartment.” Why has Jane responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She wants to show that she is angry that Anthony has cleaned the apartment.
+2. She is happy that Anthony has cleaned the apartment and does not care about the picture that got thrown away.
+3. She shows him how angry she is with him for throwing out things without her consent.
+4. She wants to show that she appreciates that Anthony has cleaned the apartment.
+Your answer:
+",,4,incorrect_social_convention,She wants to show that she appreciates that Anthony has cleaned the apartment.,target,4,[-2.595501661300659],[0.0746084385184269],[-0.4122335910797119],[-2.760986089706421],[0.06322938775984854],0.0746084385184269,0.0746084385184269,0.06322938775984854,1.1799645886466135,-2.595501661300659,-2.595501661300659,0.9400632878873512
+google/flan-t5-xl,0.1,3,15,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+After telling her partner Bob that she has been craving donuts for several days, Alice wakes up very early to visit her favorite cafe. There, she finds two different varieties of donuts, has one of each, and leaves feeling satisfied. She returns home where her husband Bob has surprised her by making homemade donuts. He says to her, ""Do you want some? She replies, ""Yes, that's exactly what I'm craving right now!” Why has Alice responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She did not want to disappoint Bob by telling him the truth.
+2. She wanted Bob to understand that she did not want any more donuts.
+3. She did not want to show Bob that she was angry by telling him the truth. 
+4. She is excited to eat the donuts because she is craving them.
+Your answer:
+",,1,target,She did not want to disappoint Bob by telling him the truth.,target,1,[-2.0992298126220703],[0.12255077897757331],[-0.973268985748291],[-1.549560546875],[0.21234126735968203],0.12255077897757331,0.12255077897757331,0.21234126735968203,0.5771406590033494,-2.0992298126220703,-2.0992298126220703,1.3547259039703796
+google/flan-t5-xl,0.1,3,15,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+After telling her partner Bob that she has been craving donuts for several days, Alice wakes up very early to visit her favorite cafe. There, she finds two different varieties of donuts, has one of each, and leaves feeling satisfied. She returns home where her husband Bob has surprised her by making homemade donuts. He says to her, ""Do you want some? She replies, ""Yes, that's exactly what I'm craving right now!” Why has Alice responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She did not want to disappoint Bob by telling him the truth.
+2. She wanted Bob to understand that she did not want any more donuts.
+3. She did not want to show Bob that she was angry by telling him the truth. 
+4. She is excited to eat the donuts because she is craving them.
+Your answer:
+",,2,incorrect_literal,She wanted Bob to understand that she did not want any more donuts.,incorrect_lexical_overlap,2,[-2.083225965499878],[0.12452784101087365],[-0.5661458373069763],[-1.6095154285430908],[0.1999844973790611],0.12452784101087365,0.12452784101087365,0.1999844973790611,0.6226874714935381,-2.083225965499878,-2.083225965499878,1.294318730069946
+google/flan-t5-xl,0.1,3,15,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+After telling her partner Bob that she has been craving donuts for several days, Alice wakes up very early to visit her favorite cafe. There, she finds two different varieties of donuts, has one of each, and leaves feeling satisfied. She returns home where her husband Bob has surprised her by making homemade donuts. He says to her, ""Do you want some? She replies, ""Yes, that's exactly what I'm craving right now!” Why has Alice responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She did not want to disappoint Bob by telling him the truth.
+2. She wanted Bob to understand that she did not want any more donuts.
+3. She did not want to show Bob that she was angry by telling him the truth. 
+4. She is excited to eat the donuts because she is craving them.
+Your answer:
+",,3,incorrect_lexical_overlap,She did not want to show Bob that she was angry by telling him the truth. ,incorrect_social_convention,3,[-2.5147552490234375],[0.0808827059055987],[-0.6958259344100952],[-1.7135226726531982],[0.18022978252095628],0.0808827059055987,0.0808827059055987,0.18022978252095628,0.448775473033676,-2.5147552490234375,-2.5147552490234375,1.467593799111873
+google/flan-t5-xl,0.1,3,15,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+After telling her partner Bob that she has been craving donuts for several days, Alice wakes up very early to visit her favorite cafe. There, she finds two different varieties of donuts, has one of each, and leaves feeling satisfied. She returns home where her husband Bob has surprised her by making homemade donuts. He says to her, ""Do you want some? She replies, ""Yes, that's exactly what I'm craving right now!” Why has Alice responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She did not want to disappoint Bob by telling him the truth.
+2. She wanted Bob to understand that she did not want any more donuts.
+3. She did not want to show Bob that she was angry by telling him the truth. 
+4. She is excited to eat the donuts because she is craving them.
+Your answer:
+",,4,incorrect_social_convention,She is excited to eat the donuts because she is craving them.,incorrect_literal,4,[-2.8628697395324707],[0.05710464943046],[-0.4122335910797119],[-1.6631731986999512],[0.1895365875980737],0.05710464943046,0.05710464943046,0.1895365875980737,0.30128562592650776,-2.8628697395324707,-2.8628697395324707,1.7213298902184593
+google/flan-t5-xl,0.1,3,16,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Brianna was deciding between her favorite takeout restaurants when her partner Derek invites her over to his house for dinner for the third time this week. Derek tells her excitedly that his mom cooked her special spaghetti recipe and is eager to have her taste it again.  Brianna responds: ""I am looking forward to it.” Why has Brianna responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She wants to keep a good relationship with Derek and his family.
+2.  She wants to learn how to cook spaghetti.
+3. She thinks that spending dinner with Derek's parents is a good idea.
+4. She thinks that spending dinner with Derek's parents is a bad idea.
+Your answer:
+",,1,target,She wants to keep a good relationship with Derek and his family.,target,1,[-3.2431414127349854],[0.03904105818191702],[-0.973268985748291],[-2.843947649002075],[0.05819547659491594],0.03904105818191702,0.03904105818191702,0.05819547659491594,0.6708607002855564,-3.2431414127349854,-3.2431414127349854,1.1403660731494072
+google/flan-t5-xl,0.1,3,16,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Brianna was deciding between her favorite takeout restaurants when her partner Derek invites her over to his house for dinner for the third time this week. Derek tells her excitedly that his mom cooked her special spaghetti recipe and is eager to have her taste it again.  Brianna responds: ""I am looking forward to it.” Why has Brianna responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She wants to keep a good relationship with Derek and his family.
+2.  She wants to learn how to cook spaghetti.
+3. She thinks that spending dinner with Derek's parents is a good idea.
+4. She thinks that spending dinner with Derek's parents is a bad idea.
+Your answer:
+",,2,incorrect_literal, She wants to learn how to cook spaghetti.,incorrect_social_convention,2,[-2.77694034576416],[0.06222861444187623],[-0.5661458373069763],[-2.260471820831299],[0.10430126163546127],0.06222861444187623,0.06222861444187623,0.10430126163546127,0.596623794056957,-2.77694034576416,-2.77694034576416,1.2284781965310798
+google/flan-t5-xl,0.1,3,16,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Brianna was deciding between her favorite takeout restaurants when her partner Derek invites her over to his house for dinner for the third time this week. Derek tells her excitedly that his mom cooked her special spaghetti recipe and is eager to have her taste it again.  Brianna responds: ""I am looking forward to it.” Why has Brianna responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She wants to keep a good relationship with Derek and his family.
+2.  She wants to learn how to cook spaghetti.
+3. She thinks that spending dinner with Derek's parents is a good idea.
+4. She thinks that spending dinner with Derek's parents is a bad idea.
+Your answer:
+",,3,incorrect_lexical_overlap,She thinks that spending dinner with Derek's parents is a good idea.,incorrect_literal,3,[-3.586071729660034],[0.027706957344351735],[-0.6958259344100952],[-2.5208017826080322],[0.0803951214912254],0.027706957344351735,0.027706957344351735,0.0803951214912254,0.34463480905835525,-3.586071729660034,-3.586071729660034,1.4225917144305844
+google/flan-t5-xl,0.1,3,16,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Brianna was deciding between her favorite takeout restaurants when her partner Derek invites her over to his house for dinner for the third time this week. Derek tells her excitedly that his mom cooked her special spaghetti recipe and is eager to have her taste it again.  Brianna responds: ""I am looking forward to it.” Why has Brianna responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She wants to keep a good relationship with Derek and his family.
+2.  She wants to learn how to cook spaghetti.
+3. She thinks that spending dinner with Derek's parents is a good idea.
+4. She thinks that spending dinner with Derek's parents is a bad idea.
+Your answer:
+",,4,incorrect_social_convention,She thinks that spending dinner with Derek's parents is a bad idea.,incorrect_lexical_overlap,4,[-3.3709590435028076],[0.034356671995342716],[-0.4122335910797119],[-2.9141006469726562],[0.05425280152003252],0.034356671995342716,0.034356671995342716,0.05425280152003252,0.6332700069443736,-3.3709590435028076,-3.3709590435028076,1.1567750918297086
+google/flan-t5-xl,0.1,3,17,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Samantha and her partner Andy are having a conversation about their relationship. In the past, the two of them had some difficulties, but for the last few months things have been absolutely great. Andy tells Samantha that even when things were not going well, breaking up was never an option for him. He asks if Samantha had ever considered ending the relationship. Although she is currently very happy in the relationship, in the past she had considered ending the relationship several times. Samantha says, ""Of course not, I have never considered breaking up with you.” Why has Samantha responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She values their current relationship and does not want to jeopardize it by discussing her past thoughts.
+2.  She has never thought seriously about breaking up with him
+3. She is disappointed with their current relationship and wants to end it. 
+4. She wants Andy to realize that she has thought about breaking up with him.
+Your answer:
+",,1,target,She values their current relationship and does not want to jeopardize it by discussing her past thoughts.,target,1,[-1.9038912057876587],[0.14898774782387583],[-0.973268985748291],[-2.1044297218322754],[0.12191518001386839],0.14898774782387583,0.14898774782387583,0.12191518001386839,1.2220606802772864,-1.9038912057876587,-1.9038912057876587,0.9047064798771172
+google/flan-t5-xl,0.1,3,17,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Samantha and her partner Andy are having a conversation about their relationship. In the past, the two of them had some difficulties, but for the last few months things have been absolutely great. Andy tells Samantha that even when things were not going well, breaking up was never an option for him. He asks if Samantha had ever considered ending the relationship. Although she is currently very happy in the relationship, in the past she had considered ending the relationship several times. Samantha says, ""Of course not, I have never considered breaking up with you.” Why has Samantha responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She values their current relationship and does not want to jeopardize it by discussing her past thoughts.
+2.  She has never thought seriously about breaking up with him
+3. She is disappointed with their current relationship and wants to end it. 
+4. She wants Andy to realize that she has thought about breaking up with him.
+Your answer:
+",,2,incorrect_literal, She has never thought seriously about breaking up with him,incorrect_literal,2,[-1.4316741228103638],[0.23890862488526443],[-0.5661458373069763],[-1.7109349966049194],[0.18069676274856972],0.23890862488526443,0.23890862488526443,0.18069676274856972,1.322152213748807,-1.4316741228103638,-1.4316741228103638,0.8367787938473964
+google/flan-t5-xl,0.1,3,17,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Samantha and her partner Andy are having a conversation about their relationship. In the past, the two of them had some difficulties, but for the last few months things have been absolutely great. Andy tells Samantha that even when things were not going well, breaking up was never an option for him. He asks if Samantha had ever considered ending the relationship. Although she is currently very happy in the relationship, in the past she had considered ending the relationship several times. Samantha says, ""Of course not, I have never considered breaking up with you.” Why has Samantha responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She values their current relationship and does not want to jeopardize it by discussing her past thoughts.
+2.  She has never thought seriously about breaking up with him
+3. She is disappointed with their current relationship and wants to end it. 
+4. She wants Andy to realize that she has thought about breaking up with him.
+Your answer:
+",,3,incorrect_lexical_overlap,She is disappointed with their current relationship and wants to end it. ,incorrect_social_convention,3,[-2.133355140686035],[0.11843924613922667],[-0.6958259344100952],[-2.118800163269043],[0.12017573330204392],0.11843924613922667,0.11843924613922667,0.12017573330204392,0.9855504342257446,-2.133355140686035,-2.133355140686035,1.0068694432204195
+google/flan-t5-xl,0.1,3,17,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Samantha and her partner Andy are having a conversation about their relationship. In the past, the two of them had some difficulties, but for the last few months things have been absolutely great. Andy tells Samantha that even when things were not going well, breaking up was never an option for him. He asks if Samantha had ever considered ending the relationship. Although she is currently very happy in the relationship, in the past she had considered ending the relationship several times. Samantha says, ""Of course not, I have never considered breaking up with you.” Why has Samantha responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She values their current relationship and does not want to jeopardize it by discussing her past thoughts.
+2.  She has never thought seriously about breaking up with him
+3. She is disappointed with their current relationship and wants to end it. 
+4. She wants Andy to realize that she has thought about breaking up with him.
+Your answer:
+",,4,incorrect_social_convention,She wants Andy to realize that she has thought about breaking up with him.,incorrect_lexical_overlap,4,[-1.8710883855819702],[0.15395600709681054],[-0.4122335910797119],[-1.9324735403060913],[0.1447896122359176],0.15395600709681054,0.15395600709681054,0.1447896122359176,1.0633083735728042,-1.8710883855819702,-1.8710883855819702,0.9682349313230969
+google/flan-t5-xl,0.1,3,18,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Betty's partner needs to have his wisdom teeth removed, which Betty remembers was painful for her. Her partner is often anxious about medical matters. The night before his appointment, he tells Betty that he heard that the procedure can be painful. He asks Betty what her experience was like. She says: ""It wasn't bad at all."" Why has Betty responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Wisdom tooth removal was extremely painful for Betty.
+2. Betty does not want to put additional stress on her partner by telling him the truth.
+3. Betty values her relationship with her partner and does not want to get into an argument with him.
+4. Wisdom tooth removal was not that painful for Betty after all.
+Your answer:
+",,1,target,Wisdom tooth removal was extremely painful for Betty.,incorrect_lexical_overlap,1,[-1.8451611995697021],[0.1579998493289758],[-0.973268985748291],[-1.5973907709121704],[0.2024240001237343],0.1579998493289758,0.1579998493289758,0.2024240001237343,0.7805391121230503,-1.8451611995697021,-1.8451611995697021,1.1551094654916814
+google/flan-t5-xl,0.1,3,18,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Betty's partner needs to have his wisdom teeth removed, which Betty remembers was painful for her. Her partner is often anxious about medical matters. The night before his appointment, he tells Betty that he heard that the procedure can be painful. He asks Betty what her experience was like. She says: ""It wasn't bad at all."" Why has Betty responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Wisdom tooth removal was extremely painful for Betty.
+2. Betty does not want to put additional stress on her partner by telling him the truth.
+3. Betty values her relationship with her partner and does not want to get into an argument with him.
+4. Wisdom tooth removal was not that painful for Betty after all.
+Your answer:
+",,2,incorrect_literal,Betty does not want to put additional stress on her partner by telling him the truth.,target,2,[-1.5423202514648438],[0.2138842599837986],[-0.5661458373069763],[-1.2428863048553467],[0.28855017110149084],0.2138842599837986,0.2138842599837986,0.28855017110149084,0.7412376820548471,-1.5423202514648438,-1.5423202514648438,1.2409182122610536
+google/flan-t5-xl,0.1,3,18,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Betty's partner needs to have his wisdom teeth removed, which Betty remembers was painful for her. Her partner is often anxious about medical matters. The night before his appointment, he tells Betty that he heard that the procedure can be painful. He asks Betty what her experience was like. She says: ""It wasn't bad at all."" Why has Betty responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Wisdom tooth removal was extremely painful for Betty.
+2. Betty does not want to put additional stress on her partner by telling him the truth.
+3. Betty values her relationship with her partner and does not want to get into an argument with him.
+4. Wisdom tooth removal was not that painful for Betty after all.
+Your answer:
+",,3,incorrect_lexical_overlap,Betty values her relationship with her partner and does not want to get into an argument with him.,incorrect_social_convention,3,[-1.960700511932373],[0.14075978246915447],[-0.6958259344100952],[-1.8994309902191162],[0.14965374944755444],0.14075978246915447,0.14075978246915447,0.14965374944755444,0.9405697016531027,-1.960700511932373,-1.960700511932373,1.0322567769130633
+google/flan-t5-xl,0.1,3,18,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Betty's partner needs to have his wisdom teeth removed, which Betty remembers was painful for her. Her partner is often anxious about medical matters. The night before his appointment, he tells Betty that he heard that the procedure can be painful. He asks Betty what her experience was like. She says: ""It wasn't bad at all."" Why has Betty responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. Wisdom tooth removal was extremely painful for Betty.
+2. Betty does not want to put additional stress on her partner by telling him the truth.
+3. Betty values her relationship with her partner and does not want to get into an argument with him.
+4. Wisdom tooth removal was not that painful for Betty after all.
+Your answer:
+",,4,incorrect_social_convention,Wisdom tooth removal was not that painful for Betty after all.,incorrect_literal,4,[-2.0130667686462402],[0.13357839184519066],[-0.4122335910797119],[-1.9145938158035278],[0.14740169266632397],0.13357839184519066,0.13357839184519066,0.14740169266632397,0.9062202029631683,-2.0130667686462402,-2.0130667686462402,1.0514328167310958
+google/flan-t5-xl,0.1,3,19,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Mary sets up a date for her best friend Annie and her brother Mike. They don't talk much during their dinner and Annie is surprised by the way that Mike talks to the waiter. After the date, Mary asks Annie what she thought of her date with Mike. Annie says, ""It was fun!” Why has Annie responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1.  Annie had a great time with Mike.
+2. Annie does not want to upset her friend.
+3. Annie does not want to be friends with Mary any more.
+4. Annie wants Mary to know that the date was a disaster.
+Your answer:
+",,1,target, Annie had a great time with Mike.,incorrect_literal,1,[-3.3314428329467773],[0.03574149883493532],[-0.973268985748291],[-2.810354232788086],[0.060183669586903084],0.03574149883493532,0.03574149883493532,0.060183669586903084,0.5938737049479155,-3.3314428329467773,-3.3314428329467773,1.1854174089796972
+google/flan-t5-xl,0.1,3,19,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Mary sets up a date for her best friend Annie and her brother Mike. They don't talk much during their dinner and Annie is surprised by the way that Mike talks to the waiter. After the date, Mary asks Annie what she thought of her date with Mike. Annie says, ""It was fun!” Why has Annie responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1.  Annie had a great time with Mike.
+2. Annie does not want to upset her friend.
+3. Annie does not want to be friends with Mary any more.
+4. Annie wants Mary to know that the date was a disaster.
+Your answer:
+",,2,incorrect_literal,Annie does not want to upset her friend.,target,2,[-2.657989978790283],[0.0700889605505523],[-0.5661458373069763],[-2.8702516555786133],[0.05668465977390765],0.0700889605505523,0.0700889605505523,0.05668465977390765,1.2364713986131173,-2.657989978790283,-2.657989978790283,0.9260477120966801
+google/flan-t5-xl,0.1,3,19,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Mary sets up a date for her best friend Annie and her brother Mike. They don't talk much during their dinner and Annie is surprised by the way that Mike talks to the waiter. After the date, Mary asks Annie what she thought of her date with Mike. Annie says, ""It was fun!” Why has Annie responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1.  Annie had a great time with Mike.
+2. Annie does not want to upset her friend.
+3. Annie does not want to be friends with Mary any more.
+4. Annie wants Mary to know that the date was a disaster.
+Your answer:
+",,3,incorrect_lexical_overlap,Annie does not want to be friends with Mary any more.,incorrect_social_convention,3,[-3.235297203063965],[0.039348508704764244],[-0.6958259344100952],[-2.952263593673706],[0.052221364110612144],0.039348508704764244,0.039348508704764244,0.052221364110612144,0.7534944629446793,-3.235297203063965,-3.235297203063965,1.0958700334200377
+google/flan-t5-xl,0.1,3,19,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Mary sets up a date for her best friend Annie and her brother Mike. They don't talk much during their dinner and Annie is surprised by the way that Mike talks to the waiter. After the date, Mary asks Annie what she thought of her date with Mike. Annie says, ""It was fun!” Why has Annie responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1.  Annie had a great time with Mike.
+2. Annie does not want to upset her friend.
+3. Annie does not want to be friends with Mary any more.
+4. Annie wants Mary to know that the date was a disaster.
+Your answer:
+",,4,incorrect_social_convention,Annie wants Mary to know that the date was a disaster.,incorrect_lexical_overlap,4,[-2.9772214889526367],[0.05093415856011214],[-0.4122335910797119],[-3.0719878673553467],[0.04632896741765119],0.05093415856011214,0.05093415856011214,0.04632896741765119,1.0994019810747258,-2.9772214889526367,-2.9772214889526367,0.9691514476962132
+google/flan-t5-xl,0.1,3,20,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Lisa is taking a class with Mrs. Smith, who is the mother of her best friend Ellie. Mrs. Smith typically lectures from the textbook to the class, and gives difficult multiple-choice exams. One day Ellie asks Lisa what she thinks about the class that her mom teaches. Lisa responds: ""She is an awesome teacher.”  Why has Lisa responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She is happy with the way Mrs. Smith teaches that class.
+2. She does not want to hurt her friend by criticizing her mother.
+3. She does not want to be friends with Ellie any more.
+4. She is unhappy with the way Mrs. Smith teaches that class.
+Your answer:
+",,1,target,She is happy with the way Mrs. Smith teaches that class.,incorrect_literal,1,[-3.967475175857544],[0.018921145442028182],[-0.973268985748291],[-3.0501248836517334],[0.04735301040500857],0.018921145442028182,0.018921145442028182,0.04735301040500857,0.39957640032167574,-3.967475175857544,-3.967475175857544,1.3007582729227538
+google/flan-t5-xl,0.1,3,20,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Lisa is taking a class with Mrs. Smith, who is the mother of her best friend Ellie. Mrs. Smith typically lectures from the textbook to the class, and gives difficult multiple-choice exams. One day Ellie asks Lisa what she thinks about the class that her mom teaches. Lisa responds: ""She is an awesome teacher.”  Why has Lisa responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She is happy with the way Mrs. Smith teaches that class.
+2. She does not want to hurt her friend by criticizing her mother.
+3. She does not want to be friends with Ellie any more.
+4. She is unhappy with the way Mrs. Smith teaches that class.
+Your answer:
+",,2,incorrect_literal,She does not want to hurt her friend by criticizing her mother.,target,2,[-3.478792667388916],[0.030844628287035564],[-0.5661458373069763],[-2.746212959289551],[0.06417041761523742],0.030844628287035564,0.030844628287035564,0.06417041761523742,0.4806674077139157,-3.478792667388916,-3.478792667388916,1.2667599778164635
+google/flan-t5-xl,0.1,3,20,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Lisa is taking a class with Mrs. Smith, who is the mother of her best friend Ellie. Mrs. Smith typically lectures from the textbook to the class, and gives difficult multiple-choice exams. One day Ellie asks Lisa what she thinks about the class that her mom teaches. Lisa responds: ""She is an awesome teacher.”  Why has Lisa responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She is happy with the way Mrs. Smith teaches that class.
+2. She does not want to hurt her friend by criticizing her mother.
+3. She does not want to be friends with Ellie any more.
+4. She is unhappy with the way Mrs. Smith teaches that class.
+Your answer:
+",,3,incorrect_lexical_overlap,She does not want to be friends with Ellie any more.,incorrect_social_convention,3,[-3.7341291904449463],[0.02389396910847471],[-0.6958259344100952],[-3.0514979362487793],[0.04728803684735781],0.02389396910847471,0.02389396910847471,0.04728803684735781,0.505285706522405,-3.7341291904449463,-3.7341291904449463,1.2237036591397237
+google/flan-t5-xl,0.1,3,20,deceits,"You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Lisa is taking a class with Mrs. Smith, who is the mother of her best friend Ellie. Mrs. Smith typically lectures from the textbook to the class, and gives difficult multiple-choice exams. One day Ellie asks Lisa what she thinks about the class that her mom teaches. Lisa responds: ""She is an awesome teacher.”  Why has Lisa responded like this?","You will read a short story that describes an everyday situation. Your task is to interpret why the character in the story responded in a certain way.
+
+Choose one of the following options and return the label of that option.
+1. She is happy with the way Mrs. Smith teaches that class.
+2. She does not want to hurt her friend by criticizing her mother.
+3. She does not want to be friends with Ellie any more.
+4. She is unhappy with the way Mrs. Smith teaches that class.
+Your answer:
+",,4,incorrect_social_convention,She is unhappy with the way Mrs. Smith teaches that class.,incorrect_lexical_overlap,4,[-3.992863178253174],[0.018446821896726178],[-0.4122335910797119],[-3.300102710723877],[0.03687937929896004],0.018446821896726178,0.018446821896726178,0.03687937929896004,0.500193393906886,-3.992863178253174,-3.992863178253174,1.2099208807283879
