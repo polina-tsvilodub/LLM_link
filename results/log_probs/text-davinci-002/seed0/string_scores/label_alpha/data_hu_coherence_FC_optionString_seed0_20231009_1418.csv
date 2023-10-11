@@ -1,0 +1,401 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+text-davinci-002,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-6.5454154, -6.575884e-05]","[0.0014366871587575053, 0.9999342433220652]",[],"[-9.446908, -0.00018021514]","[7.893324994998263e-05, 0.9998198010977729]",0.0014365926869827138,0.5006854652404114,7.891902626499243e-05,18.203375725379036,-6.54548115884,-3.27274057942,0.692856995698436
+text-davinci-002,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-11.4460125, -0.05327496, -7.3446927e-06]","[1.0692024160607131e-05, 0.9481192817609683, 0.9999926553342722]",[],"[-12.378945, -0.13284406, -2.2245786e-05]","[4.206224945770994e-06, 0.8756016227802543, 0.9999777544614357]",1.0137239812541078e-05,0.649374209706467,3.682895458480346e-06,2.752519023910593,-11.499294804692699,-3.8330982682308994,0.9190751461680796
+text-davinci-002,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-6.945222, -3.4167595e-05]","[0.0009632264723840137, 0.9999658329887057]",[],"[-9.427352, -0.0001831916]","[8.04920609614564e-05, 0.9998168251785565]",0.0009631935618142528,0.5004645297305449,8.047731684256216e-05,11.968509880846911,-6.945256167595001,-3.4726280837975003,0.7366990444950311
+text-davinci-002,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-11.841491, -0.056745168, -3.7684315e-06]","[7.199557443585989e-06, 0.9448348128356752, 0.9999962315756006]",[],"[-12.373164, -0.13325481, -2.2126573e-05]","[4.230611553756294e-06, 0.8752420432673954, 0.9999778736717908]",6.802366875408351e-06,0.6482794146562397,3.702727171010854e-06,1.8371234393570746,-11.8982399364315,-3.9660799788105,0.9513689783347621
+text-davinci-002,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,incoherent,competitor,A,"[-6.9786687, -2.0098154e-05]","[0.0009315425406412947, 0.9999799020479665]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0009315238185439957,0.5004557222943039,7.866308868177045e-05,11.841943078442442,-6.978688798154,-3.489344399077,0.7384592897113544
+text-davinci-002,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,coherent,target,B,"[-13.569154, -0.0063811284, -4.361666e-06]","[1.279355656675397e-06, 0.9936391877635099, 0.999995638343512]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",1.2712123709437243e-06,0.6645453684875595,3.6828917755867324e-06,0.3451669091582806,-13.575539490066,-4.525179830021999,1.0850178342100039
+text-davinci-002,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-8.101521, -1.771398e-05]","[0.0003030778059818472, 0.9999822861768917]",[],"[-9.43768, -0.00018236089]","[7.966501716157967e-05, 0.9998176557367364]",0.00030307243731520395,0.5001426819914367,7.965049070271746e-05,3.8050291296556185,-8.10153871398,-4.05076935699,0.8584082289176357
+text-davinci-002,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-12.562268, -0.004845396, -3.4089344e-06]","[3.50167896571613e-06, 0.9951663239942198, 0.9999965910714104]",[],"[-12.373325, -0.13040943, -2.2245786e-05]","[4.2299304801240365e-06, 0.8777359858970888, 0.9999777544614357]",3.4847411048455272e-06,0.6650554722481986,3.7126796078531115e-06,0.9386053936554488,-12.5671168049344,-4.189038934978133,1.00506728743939
+text-davinci-002,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-4.613133, -6.551948e-05]","[0.0099206880520993, 0.9999344826663542]",[],"[-9.446908, -0.00018021514]","[7.893324994998263e-05, 0.9998198010977729]",0.009920038075070194,0.5049275853592268,7.891902626499243e-05,125.6989416184752,-4.61319851948,-2.30659925974,0.488319619169729
+text-davinci-002,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-14.484159, -0.0106012095, -5.912312e-06]","[5.124006491721827e-07, 0.9894547852759656, 0.9999940877054777]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",5.069942767847198e-07,0.6631497951273642,3.6828917755867324e-06,0.13766200792146518,-14.494766121812,-4.831588707270667,1.1584865379661264
+text-davinci-002,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-8.075641, -2.3317722e-05]","[0.00031102383775266765, 0.9999766825498559]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0003110165854698372,0.5001438531938043,7.866308868177045e-05,3.95378049199221,-8.075664317722,-4.037832158861,0.8545372216038338
+text-davinci-002,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-12.7326565, -0.014181655, -5.675771e-06]","[2.9530958417682248e-06, 0.9859184309823629, 0.9999943242451071]",[],"[-12.378945, -0.1328444, -2.2245786e-05]","[4.206224945770994e-06, 0.8756013250757533, 0.9999777544614357]",2.911495093830352e-06,0.6619719027744373,3.682894206296104e-06,0.7905454055272606,-12.746843830770999,-4.248947943590332,1.0187848244234206
+text-davinci-002,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-7.4529557, -1.8190814e-05]","[0.0005797255825043635, 0.9999818093514519]",[],"[-9.450154, -0.0001815255]","[7.86774480117958e-05, 0.9998184909747567]",0.0005797150369200378,0.5002807674669781,7.866316734489855e-05,7.369586764518114,-7.452973890814,-3.726486945407,0.7886464846357587
+text-davinci-002,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-11.675433, -0.021744132, -8.5358415e-06]","[8.500096853529825e-06, 0.9784905674483313, 0.9999914641949302]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",8.317193599026889e-06,0.6594968439133716,3.6828917755867324e-06,2.258332339321009,-11.6971856678415,-3.8990618892805,0.9348913955840129
+text-davinci-002,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-5.3059316, -8.650302e-05]","[0.0049620734069445414, 0.9999135007212784]",[],"[-9.450154, -0.0001815255]","[7.86774480117958e-05, 0.9998184909747567]",0.004961644191173877,0.5024377870641115,7.866316734489855e-05,63.074553932205085,-5.30601810302,-2.65300905151,0.5614634621916526
+text-davinci-002,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-12.977262, -0.005040312, -3.6482897e-06]","[2.3123135449993717e-06, 0.9949723690580864, 0.999996351716955]",[],"[-12.378945, -0.13284406, -2.2245786e-05]","[4.206224945770994e-06, 0.8756016227802543, 0.9999777544614357]",2.3006796923117914e-06,0.6649903443628621,3.682895458480346e-06,0.6246931845470055,-12.9823059602897,-4.3274353200965665,1.0376040401349502
+text-davinci-002,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-5.5577726, -3.2140102e-05]","[0.0038573587167390973, 0.9999678604144876]",[],"[-9.450154, -0.0001815255]","[7.86774480117958e-05, 0.9998184909747567]",0.0038572347428287687,0.5019126095656133,7.866316734489855e-05,49.03482624741931,-5.557804740102,-2.778902370051,0.5881066047978172
+text-davinci-002,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-13.566166, -0.0032502967, -5.79217e-06]","[1.283184088205849e-06, 0.996754979796045, 0.9999942078467746]",[],"[-12.354996, -0.13560964, -2.2126573e-05]","[4.3081757642563785e-06, 0.8731834218496776, 0.9999778736717908]",1.2790127216336567e-06,0.6655834902756359,3.7617444203298568e-06,0.3400052153254749,-13.56942208887,-4.52314069629,1.0863683028953943
+text-davinci-002,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,incoherent,competitor,A,"[-5.810744, -2.6773841e-05]","[0.002995200813739046, 0.999973226517416]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0029951206217822242,0.5014842136655775,7.866308868177045e-05,38.075298999495296,-5.810770773841,-2.9053853869205,0.6148744817882094
+text-davinci-002,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,coherent,target,B,"[-12.483483, -0.045792624, -5.79217e-06]","[3.788717449376081e-06, 0.9552400355097823, 0.9999942078467746]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",3.6191136282964455e-06,0.6517460106913353,3.6828917755867324e-06,0.9826825898841065,-12.52928141617,-4.176427138723334,1.0013962094344975
+text-davinci-002,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,incoherent,competitor,A,"[-5.6724315, -3.4762696e-05]","[0.003439491975649687, 0.9999652379082156]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0034393724117139377,0.5017023649419327,7.866308868177045e-05,43.72282438117619,-5.672466262696,-2.836233131348,0.6002396049484471
+text-davinci-002,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,coherent,target,B,"[-12.44315, -0.14125724, -4.721163e-06]","[3.944651291876582e-06, 0.8682659302396817, 0.9999952788481447]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",3.424990153437424e-06,0.6227550512463726,3.6828917755867324e-06,0.9299730652258383,-12.584411961163,-4.194803987054333,1.0058024891680502
+text-davinci-002,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-8.320226, -4.29881e-05]","[0.00024354081778078644, 0.9999570128239751]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.00024353034864878323,0.500100276820878,7.866308868177045e-05,3.095865579776293,-8.3202689881,-4.16013449405,0.8804203919775004
+text-davinci-002,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-11.629717, -0.021405263, -6.3900848e-06]","[8.897706598452017e-06, 0.9788222037558904, 0.9999936099356166]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",8.709217128256327e-06,0.6596082371327017,3.6828917755867324e-06,2.364776827271509,-11.6511286530848,-3.8837095510282666,0.9312103129693544
+text-davinci-002,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,incoherent,competitor,A,"[-6.117279, -1.7595703e-05]","[0.0022044461076138203, 0.9999824044518034]",[],"[-9.450154, -0.0001815255]","[7.86774480117958e-05, 0.9998184909747567]",0.002204407319176087,0.5010934252797086,7.866316734489855e-05,28.023373499707507,-6.117296595703,-3.0586482978515,0.6473099901264453
+text-davinci-002,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,coherent,target,B,"[-13.435388, -0.023564387, -3.529076e-06]","[1.4624638150392338e-06, 0.9767110851475923, 0.9999964709302271]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",1.4283995788364907e-06,0.6589030061805448,3.6828917755867324e-06,0.3878472857402735,-13.458955916076,-4.4863186386919995,1.075699953543261
+text-davinci-002,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,incoherent,competitor,A,"[-6.3955455, -6.9810994e-05]","[0.0016689751893351854, 0.9999301914427308]",[],"[-9.446908, -0.00018021514]","[7.893324994998263e-05, 0.9998198010977729]",0.0016688586805850998,0.500799583316033,7.891902626499243e-05,21.146468216440557,-6.395615310994,-3.197807655497,0.6769932878094989
+text-davinci-002,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,coherent,target,B,"[-12.795477, -0.039226726, -3.2906587e-06]","[2.773287828296628e-06, 0.9615326799724601, 0.9999967093467143]",[],"[-12.367678, -0.13005169, -2.200643e-05]","[4.253884467975081e-06, 0.8780500433407892, 0.9999779938121397]",2.6665981029983763e-06,0.6538440542023342,3.7350412456440955e-06,0.7139407378990081,-12.834707016658701,-4.278235672219567,1.0269612749887609
+text-davinci-002,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-7.183847, -3.4167595e-05]","[0.0007587433348586166, 0.9999658329887057]",[],"[-9.431352, -0.00018295787]","[8.01707357963742e-05, 0.9998170588657704]",0.000758717410866525,0.5003622881617822,8.01560692710356e-05,9.465501711430448,-7.1838811675950005,-3.5919405837975003,0.7616873817130392
+text-davinci-002,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-12.980321, -0.008522745, -7.818713e-06]","[2.3052509855571975e-06, 0.9915134706326029, 0.9999921813175661]",[],"[-12.362148, -0.1333362, -2.2365928e-05]","[4.277473612954109e-06, 0.8751708102163622, 0.9999776343221155]",2.285669534305079e-06,0.6638359857337182,3.7434363211646204e-06,0.6105805837760276,-12.988851563713,-4.329617187904333,1.039481792529342
+text-davinci-002,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,incoherent,competitor,A,"[-7.384278, -4.4539687e-05]","[0.0006209388196290398, 0.9999554613048771]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0006209111638242623,0.500288200062253,7.866308868177045e-05,7.8932975329273285,-7.384322539687,-3.6921612698435,0.7813819666380937
+text-davinci-002,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,coherent,target,B,"[-12.436014, -0.009658477, -5.79217e-06]","[3.9729009985701965e-06, 0.9903880162838093, 0.9999942078467746]",[],"[-12.378945, -0.1328444, -2.2245786e-05]","[4.206224945770994e-06, 0.8756013250757533, 0.9999777544614357]",3.934690748402187e-06,0.6634620656771941,3.682894206296104e-06,1.0683692031325862,-12.445678269170001,-4.148559423056667,0.9947143244728853
+text-davinci-002,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-6.3375587, -3.0473995e-05]","[0.0017686146897389254, 0.9999695264693275]",[],"[-9.4525795, -0.00018426635]","[7.848684710633409e-05, 0.9998157506260011]",0.0017685607938049297,0.5008690705795332,7.84723859538876e-05,22.53736486162383,-6.337589173995,-3.1687945869975,0.6704482763607807
+text-davinci-002,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-12.6272, -0.032005455, -5.0778563e-06]","[3.2815325625931463e-06, 0.9685012988902022, 0.9999949221565922]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",3.178152410979739e-06,0.6561665008597857,3.6828917755867324e-06,0.8629502588284497,-12.659210532856301,-4.219736844285434,1.0117807255630056
+text-davinci-002,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,incoherent,competitor,A,"[-4.6529965, -3.488097e-05]","[0.009532993474384374, 0.999965119638334]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.009532660960124228,0.5047490565563592,7.866308868177045e-05,121.18340532862075,-4.653031380970001,-2.3265156904850004,0.49236673936580444
+text-davinci-002,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,coherent,target,B,"[-14.073776, -0.08949699, -5.675771e-06]","[7.723901800716439e-07, 0.9143910174371248, 0.9999943242451071]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",7.06262634017802e-07,0.638128704690804,3.6828917755867324e-06,0.1917685006927159,-14.163278665771001,-4.721092888590333,1.1319925778635036
+text-davinci-002,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,incoherent,competitor,A,"[-8.706449, -1.6045058e-05]","[0.00016551495577656988, 0.9999839550707212]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.00016551230010080988,0.500074735013249,7.866308868177045e-05,2.1040656154551183,-8.706465045058,-4.353232522529,0.9212862443115332
+text-davinci-002,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,coherent,target,B,"[-13.459842, -0.006738409, -3.883893e-06]","[1.4271344575172415e-06, 0.9932842431695067, 0.9999961161145423]",[],"[-12.362148, -0.1333362, -2.2365928e-05]","[4.277473612954109e-06, 0.8751708102163622, 0.9999776343221155]",1.4175446639336487e-06,0.6644272621395021,3.7434363211646204e-06,0.3786747101637985,-13.466584292893,-4.488861430964333,1.0777141544315518
+text-davinci-002,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,target,coherent,target,A,"[-6.6159353, -4.3586017e-05]","[0.001338861972648268, 0.9999564149328566]",[],"[-9.450154, -0.0001815255]","[7.86774480117958e-05, 0.9998184909747567]",0.0013388036182592942,0.5006476384527524,7.866316734489855e-05,17.019447137048417,-6.615978886017,-3.3079894430085,0.7000787292858537
+text-davinci-002,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,competitor,incoherent,competitor,B,"[-12.42521, -0.0059168222, -5.5556293e-06]","[4.016056929512086e-06, 0.9941006477200208, 0.9999944443861325]",[],"[-12.378945, -0.1328444, -2.2245786e-05]","[4.206224945770994e-06, 0.8756013250757533, 0.9999777544614357]",3.992342614871224e-06,0.6646997027210275,3.682894206296104e-06,1.0840231598415457,-12.4311323778293,-4.143710792609767,0.9935517517174363
+text-davinci-002,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-11.797228, -0.01734123, -4.361666e-06]","[7.5253894087285835e-06, 0.9828082637464912, 0.999995638343512]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",7.395982639932404e-06,0.6609371424931373,3.6828917755867324e-06,2.0081998306219924,-11.814573591666,-3.9381911972220003,0.9442735634870765
+text-davinci-002,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-5.977056, -2.1529595e-05]","[0.0025362821264364723, 0.99997847063676]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0025362275218972934,0.5012573763815983,7.866308868177045e-05,32.241646805371936,-5.977077529595,-2.9885387647975,0.6324724535964357
+text-davinci-002,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-11.967908, -0.005759682, -6.1516675e-06]","[6.34459048659862e-06, 0.9942568731689513, 0.9999938483514215]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",6.308113893204437e-06,0.6647523553702864,3.6828917755867324e-06,1.712815438949322,-11.973673833667501,-3.9912246112225,0.9569895664219931
+text-davinci-002,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-8.231425, -1.2231317e-05]","[0.00026615678647117847, 0.9999877687578023]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0002661535310430606,0.5001269627721368,7.866308868177045e-05,3.3834614875062687,-8.231437231316999,-4.1157186156584995,0.8710205408141789
+text-davinci-002,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-11.729228, -0.012308908, -4.361666e-06]","[8.054915755896668e-06, 0.9877665367433528, 0.999995638343512]",[],"[-12.378945, -0.1328444, -2.2245786e-05]","[4.206224945770994e-06, 0.8756013250757533, 0.9999777544614357]",7.956341536981471e-06,0.6625900766675402,3.682894206296104e-06,2.1603502819547953,-11.741541269666001,-3.913847089888667,0.938436543170035
+text-davinci-002,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-6.626567, -3.1185496e-05]","[0.0013247029941884291, 0.9999688149902626]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0013246616833126562,0.5006467589922255,7.866308868177045e-05,16.839685620171128,-6.626598185495999,-3.3132990927479997,0.7012023505845891
+text-davinci-002,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-11.27025, -0.021831853, -5.0778563e-06]","[1.2746548868243234e-05, 0.9784047370418837, 0.9999949221565922]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",1.2471220466398843e-05,0.6594708019157813,3.6828917755867324e-06,3.386257654669208,-11.292086930856302,-3.7640289769521003,0.9025140926733975
+text-davinci-002,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-8.882183, -1.2708151e-05]","[0.00013884074515221008, 0.9999872919297482]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.00013883898075426688,0.5000630663374502,7.866308868177045e-05,1.7649825741770258,-8.882195708151,-4.4410978540755,0.939881419480039
+text-davinci-002,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-12.123195, -0.0137995845, -6.031526e-06]","[5.432044367170384e-06, 0.9862951933005479, 0.9999939684921896]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",5.35756693473375e-06,0.6620981979457016,3.6828917755867324e-06,1.4547174506316358,-12.137000616026,-4.045666872008667,0.9700433733659295
+text-davinci-002,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-9.086448, -3.5357807e-05]","[0.00011318940409243316, 0.9999646428180798]",[],"[-9.450154, -0.0001815255]","[7.86774480117958e-05, 0.9998184909747567]",0.00011318540203408123,0.5000389161110861,7.866316734489855e-05,1.4388614882212916,-9.086483357807001,-4.543241678903501,0.9614984921211305
+text-davinci-002,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-11.474437, -0.0014929116, -5.3162735e-06]","[1.0392387406390318e-05, 0.9985082022381665, 0.9999946837406314]",[],"[-12.367678, -0.13162388, -2.2126573e-05]","[4.253884467975081e-06, 0.8766706664485538, 0.9999778736717908]",1.0376828899910224e-05,0.6661710927887348,3.7291732167985742e-06,2.7826084487484706,-11.4759352278735,-3.8253117426245,0.9181244699184266
+text-davinci-002,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-8.722677, -2.6298881e-05]","[0.00016285065567483493, 0.9999737014648126]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.00016284637294113638,0.5000682760602437,7.866308868177045e-05,2.0701751694486252,-8.722703298881,-4.3613516494405,0.9230045168597312
+text-davinci-002,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-10.209708, -0.019293124, -6.1516675e-06]","[3.681121513926095e-05, 0.9808917971715989, 0.9999938483514215]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",3.610759685140678e-05,0.6603074855793865,3.6828917755867324e-06,9.804142790933456,-10.2290072756675,-3.4096690918891666,0.8175480118845108
+text-davinci-002,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-7.7783947, -2.4152187e-05]","[0.0004186837484494378, 0.9999758481046617]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.00041867363644336534,0.5001972659265556,7.866308868177045e-05,5.322364573518071,-7.7784188521869995,-3.8892094260934997,0.8230837950795045
+text-davinci-002,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-11.435416, -0.010311254, -3.4089344e-06]","[1.0805924601856218e-05, 0.9897417247307839, 0.9999965910714104]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",1.0695037994006912e-05,0.6632497072422654,3.6828917755867324e-06,2.9039783533424774,-11.4457306629344,-3.8152435543114667,0.9147939869303667
+text-davinci-002,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-8.15087, -6.051553e-05]","[0.00028848426910554165, 0.9999394863010278]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0002884668118553228,0.5001139852850667,7.866308868177045e-05,3.6671177891616744,-8.15093051553,-4.075465257765,0.862501614999234
+text-davinci-002,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-11.646534, -0.008603361, -4.0040345e-06]","[8.749325029988805e-06, 0.9914335420044608, 0.9999959959735162]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",8.67433957220564e-06,0.6638127624343356,3.6828917755867324e-06,2.355306672247708,-11.6551413650345,-3.885047121678167,0.9315310268556908
+text-davinci-002,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-9.192559, -5.0500123e-05]","[0.00010179404017617546, 0.9999495011521098]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.00010178889969442448,0.500025647596143,7.866308868177045e-05,1.2939855451927258,-9.192609500123,-4.5963047500615,0.972728270079952
+text-davinci-002,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-11.951033, -0.0074554556, -5.912312e-06]","[6.45256391461092e-06, 0.992572267370527, 0.9999940877054777]",[],"[-12.378945, -0.13284406, -2.2245786e-05]","[4.206224945770994e-06, 0.8756016227802543, 0.9999777544614357]",6.404598128984293e-06,0.6641909358799731,3.682895458480346e-06,1.739011655689784,-11.958494367912001,-3.9861647893040004,0.9557764320168318
+text-davinci-002,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-7.2422476, -2.141132e-05]","[0.0007157013406646111, 0.9999785889092206]",[],"[-9.450154, -0.0001815255]","[7.86774480117958e-05, 0.9998184909747567]",0.0007156860167182352,0.5003471451249426,7.866316734489855e-05,9.098108312627572,-7.2422690113199994,-3.6211345056599997,0.766350463618785
+text-davinci-002,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-11.878933, -0.02301025, -7.224551e-06]","[6.934975756651894e-06, 0.977252466884155, 0.999992775475097]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",6.777173203759562e-06,0.6590840591116696,3.6828917755867324e-06,1.840177126214867,-11.901950474551,-3.967316824850333,0.951257114770418
+text-davinci-002,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-8.031067, -6.623567e-05]","[0.0003252010342321537, 0.9999337665235336]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.000325179495037106,0.5001294837788829,7.866308868177045e-05,4.133825666986094,-8.03113323567,-4.015566617835,0.8498251055927436
+text-davinci-002,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-12.440961, -0.010876364, -3.7684315e-06]","[3.953295591288448e-06, 0.9891825697916257, 0.9999962315756006]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",3.9105163555958295e-06,0.6630609182209392,3.6828917755867324e-06,1.0618059378008287,-12.451841132431499,-4.150613710810499,0.9952068355975282
+text-davinci-002,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-8.1942005, -7.20769e-05]","[0.00027625105116980075, 0.9999279256974773]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.00027623114056796655,0.5001020883743236,7.866308868177045e-05,3.511572520187361,-8.194272576900001,-4.097136288450001,0.8670879131964516
+text-davinci-002,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-12.423855, -0.004413708, -1.0204763e-05]","[4.021502375107802e-06, 0.9955960180945127, 0.9999897952890684]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",4.003750893877499e-06,0.6651966116286521,3.6828917755867324e-06,1.087121516960582,-12.428278912763,-4.142759637587666,0.9933236376168806
+text-davinci-002,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-7.1845813, -6.0276172e-05]","[0.0007581863941336426, 0.999939725644572]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0007581406949374419,0.5003489560193528,7.866308868177045e-05,9.637820070916375,-7.184641576172,-3.592320788086,0.7602524583950594
+text-davinci-002,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-11.232875, -0.04093566, -5.675771e-06]","[1.3231965857288694e-05, 0.9598908873407338, 0.9999943242451071]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",1.2701171358870492e-05,0.6532994811838995,3.6828917755867324e-06,3.4486952462367784,-11.273816335771,-3.7579387785903333,0.9010538249968394
+text-davinci-002,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-7.394904, -5.6102934e-05]","[0.0006143756555770837, 0.9999438986397402]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0006143411882670954,0.5002791371476586,7.866308868177045e-05,7.809777095740509,-7.394960102934,-3.697480051467,0.7825075946216365
+text-davinci-002,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-12.164838, -0.00377631, -5.5556293e-06]","[5.210483000844059e-06, 0.9962308112917194, 0.9999944443861325]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",5.190814868829306e-06,0.6654101553869509,3.6828917755867324e-06,1.40943996867851,-12.1686198656293,-4.0562066218764325,0.9725705252149608
+text-davinci-002,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-6.989819, -5.264588e-05]","[0.0009212132561797241, 0.9999473555057701]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0009211647593737746,0.5004342843809749,7.866308868177045e-05,11.710254133299081,-6.98987164588,-3.49493582294,0.7396426177014027
+text-davinci-002,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-12.682252, -0.012900205, -8.7733215e-06]","[3.105760329283966e-06, 0.9871826459969116, 0.9999912267169855]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",3.0659258012240415e-06,0.6623923261580754,3.6828917755867324e-06,0.8324778429677315,-12.6951609783215,-4.231720326107166,1.0146540459570923
+text-davinci-002,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-7.5947576, -3.869565e-05]","[0.0005030818889609446, 0.999961305098667]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0005030624222568888,0.500232193493814,7.866308868177045e-05,6.3951521696791644,-7.59479629565,-3.797398147825,0.8036535286502057
+text-davinci-002,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-11.565303, -0.0042044907, -6.3900848e-06]","[9.489705295875724e-06, 0.9958043357963828, 0.9999936099356166]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",9.449829293659477e-06,0.6652691451457651,3.6828917755867324e-06,2.565872110687802,-11.5695138807848,-3.856504626928267,0.9246872953356693
+text-davinci-002,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-9.167077, -3.7743856e-05]","[0.00010442128750464399, 0.9999622568562904]",[],"[-9.431352, -0.00018295787]","[8.01707357963742e-05, 0.9998170588657704]",0.00010441734631698335,0.5000333390718975,8.01560692710356e-05,1.3026754837978884,-9.167114743856,-4.583557371928,0.9719642438696197
+text-davinci-002,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,incoherent,target,A,"[-12.24614, -0.02075908, -6.2699432e-06]","[4.803623639341778e-06, 0.9794549064228181, 0.9999937300764561]",[],"[-12.378945, -0.13284406, -2.2245786e-05]","[4.206224945770994e-06, 0.8756016227802543, 0.9999777544614357]",4.7049032425933645e-06,0.6598178133743045,3.682895458480346e-06,1.277501166034923,-12.2669053499432,-4.088968449981066,0.9804260190745087
+text-davinci-002,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,coherent,competitor,B,"[-9.591113, -7.1719274e-05]","[6.83333242787556e-05, 0.9999282832977656]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",6.832842363808562e-05,0.4999983083110222,7.866308868177045e-05,0.8686211637901295,-9.591184719274,-4.795592359637,1.0149040400195217
+text-davinci-002,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-13.343271, -0.0115754055, -3.7684315e-06]","[1.6035814884339836e-06, 0.9884913317544501, 0.9999962315756006]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",1.5851204276498858e-06,0.6628297223038464,3.6828917755867324e-06,0.4304010338173338,-13.3548501739315,-4.4516167246438325,1.0673793570061503
+text-davinci-002,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-6.476168, -1.5094201e-05]","[0.001539699517655794, 0.9999849059129169]",[],"[-9.450155, -0.0001815255]","[7.867736933438704e-05, 0.9998184909747567]",0.0015396762772971926,0.5007623027152863,7.866308868177045e-05,19.573046305439572,-6.476183094201001,-3.2380915471005003,0.6852859765074193
+text-davinci-002,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,incoherent,target,coherent,competitor,A,"[-12.122511, -0.0069108265, -6.5092986e-06]","[5.435761156514582e-06, 0.9931129983467364, 0.9999934907225855]",[],"[-12.378946, -0.13284406, -2.2245786e-05]","[4.206220739548154e-06, 0.8756016227802543, 0.9999777544614357]",5.398289921247527e-06,0.6643706416101594,3.6828917755867324e-06,1.4657747906229228,-12.1294283357986,-4.043142778599533,0.9694381628622603
+text-davinci-002,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+Your answer:
+",Is this story coherent or not?,coherent,competitor,incoherent,target,B,"[-6.1347327, -6.826223e-05]","[0.0021663041936121467, 0.999931740099813]",[],"[-9.431352, -0.00018295787]","[8.01707357963742e-05, 0.9998170588657704]",0.002166156321904116,0.5010490221467125,8.01560692710356e-05,27.024233368774443,-6.13480096223,-3.067400481115,0.6504562607925137
