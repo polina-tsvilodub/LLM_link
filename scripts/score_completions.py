@@ -57,16 +57,21 @@ def retrieve_log_probs(
 
     load_dotenv()
     openai.api_key = os.getenv("OPENAI_API_KEY")
-
-    # TODO open q: do we do the diff random seeds / orders of options, too?
     
     conditional_log_probs = []
     log_probs = []
     null_log_probs = []
 
-    # transformation for LLaMA 2 outputs
+    # transformation for LLaMA 2 and T5 outputs
     logsoftmax = torch.nn.LogSoftmax(dim=-1)
 
+    # tokens to ignore for T5 PLL computations
+    if "t5" in model_name:
+        tokens_to_ignore = tokenizer(
+            "<extra_id_0><extra_id_1></s>",
+            return_tensors='pt',
+        ).input_ids.squeeze().tolist()
+        
     # iterate over items here so that the model won't have to be reloaded for each item & option
     for o in options:
         optionTokenLogProbs = []
@@ -222,10 +227,12 @@ def retrieve_log_probs(
                 token_pll = mask_and_sum(
                     input_ids_options,
                     llama_output_scores_subseq,
+                    tokens_to_ignore,
                 )
                 null_token_pll = mask_and_sum(
                     input_ids_options,
                     llama_null_option_output_scores_seq,
+                    tokens_to_ignore,
                 )
                 
                 optionTokenConditionalLogProbs.append(token_pll)

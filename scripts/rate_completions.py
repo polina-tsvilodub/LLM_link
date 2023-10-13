@@ -75,6 +75,7 @@ def main(
     use_labels_only=False,
     question="",
     n_seeds=1,
+    word_index=0,
 ):
     # construct path to vignettes and instructions
     file_path = "../data/data_hu_" + phenomenon + ".csv"
@@ -86,9 +87,10 @@ def main(
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
-    # TODO: Define scales
+    # Define scales
     scales = ["plausible", "appropriate", "possible", "likely"]
-
+    scales_subset = [scales[word_index]]
+    print('Running with scale ', scales_subset)
     # Generate five random seeds for repeated sampling
     seeds = range(n_seeds)
     # load data
@@ -105,7 +107,7 @@ def main(
         random.seed(seed)
 
         # Iterate over scales
-        for scale in scales:
+        for scale in scales_subset:
             
             # Define answer choices given scales
             if scale == "plausible":
@@ -253,6 +255,12 @@ if __name__ == "__main__":
         choices=["coherence", "deceits", "humour", "indirect_speech", "irony", "maxims", "metaphor"],
         help="Phenomenon for which the computations should be run",
     )
+    parser.add_argument(
+        "--word_index",
+        type=int,
+        default=0,
+        help="Index into array of rating words to be used (for parallelization)",
+    )
 
     args = parser.parse_args()
 
@@ -262,4 +270,5 @@ if __name__ == "__main__":
         model_name=args.model_name,
         question=args.question,
         n_seeds=args.n_seeds,
+        word_index=args.word_index,
     )

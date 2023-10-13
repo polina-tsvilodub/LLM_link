@@ -85,7 +85,7 @@ def get_mlm_pl(
 def mask_and_sum(
     labels,
     sequence_plls,
-    mask_token=["<extra_id_0>", "<extra_id_1>",],    
+    mask_token=[1, 32098, 32099],    
 ):
     """
     Helper for masking irrelevant tokens and
@@ -112,6 +112,6 @@ def mask_and_sum(
         relevant_logprobs[i][tok_id] 
         for i, tok_id in enumerate(relevant_labels)
     ]
+          
     total_logprob = sum(logprobs_to_sum).item()
-
     return total_logprob
