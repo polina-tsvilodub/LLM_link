@@ -4,7 +4,12 @@ import torch
 import numpy as np
 import pandas as pd
 from dotenv import load_dotenv
-from utils import load_model, compute_mi
+from utils import (
+    load_model, 
+    compute_mi, 
+    get_mlm_pl,
+    mask_and_sum
+)
 import argparse
 import random
 import string
@@ -71,7 +76,7 @@ def retrieve_log_probs(
         print("\n---- INPUT PROMPT ----- \n ", input_prompt, "\n----------------------")
 
         # Tokenize the prompt
-        if ("google/flan-t5" in model_name) or ("meta" in model_name):
+        if "meta" in model_name:
             
             print("Using HF code")
             ##### retreiver conditional log prob #####
@@ -84,14 +89,9 @@ def retrieve_log_probs(
                 o, 
                 return_tensors="pt",
             ).input_ids
-            if "meta" in model_name:
-                # input option is sliced so that the SOS token isn't included again
-                input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
-                print("input ids shape: ", input_ids.shape)
-            else:
-                # T5 does not prepend SOS tokens
-                input_ids = torch.cat((input_ids_prompt[:, :-1], input_ids_options), -1).to(DEVICE)
-                print("input ids shape: ", input_ids.shape)
+            # input option is sliced so that the SOS token isn't included again
+            input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
+            print("input ids shape: ", input_ids.shape)
             #### retrieve unconditional log prob of the option ####
             option_input_ids = tokenizer(
                 o, 
@@ -103,45 +103,134 @@ def retrieve_log_probs(
                 return_tensors="pt",
             ).input_ids
             
-            if "meta" in model_name:
-                null_option_input_ids = torch.cat((null_option_input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
-            else:
-                null_option_input_ids = torch.cat((null_option_input_ids_prompt[:, :-1], input_ids_options), -1).to(DEVICE)
+            null_option_input_ids = torch.cat((null_option_input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
             # Generate output from the model with a maximum length of 20 tokens
-            if "llama" in model_name:
-                outputs = model(
-                    input_ids,
-                )
+            outputs = model(
+                input_ids,
+            )
 
-                option_outputs = model(
-                    **option_input_ids,
+            option_outputs = model(
+                **option_input_ids,
+            )
+            
+            null_option_outputs = model(
+                null_option_input_ids,
+            )
+
+            # Retrieve logits from the output 
+            # [0] retrieves first element in batch (assume we always use batch size = 1)
+            # for llama, we manually retrieve the log probs from the output
+            # and transform them into log probs
+            try:
+                llama_output_scores = logsoftmax(
+                    outputs.loss['logits'][0]
+                ) # access first element in batch; result has shape [n_tokens, 32000]
+                llama_option_output_scores = logsoftmax(
+                    option_outputs.loss['logits'][0]
+                )
+                llama_null_option_output_scores = logsoftmax(
+                    null_option_outputs.loss['logits'][0]
+                )
+            except:
+                llama_output_scores = logsoftmax(
+                    outputs.logits[0]
+                ) # access first element in batch; result has shape [n_tokens, 32000]
+                llama_option_output_scores = logsoftmax(
+                    option_outputs.logits[0]
+                )
+                llama_null_option_output_scores = logsoftmax(
+                    null_option_outputs.logits[0]
+                )
+            # retreive log probs at token ids
+            # transform input_ids to a tensor of shape [n_tokens, 1] for this
+            input_ids_probs = input_ids.squeeze().unsqueeze(-1)
+            option_ids_probs = option_input_ids['input_ids'].squeeze().unsqueeze(-1)
+            null_option_ids_probs = null_option_input_ids.squeeze().unsqueeze(-1)
+            # retreive
+            optionTokenConditionalLogProbs = torch.gather(
+                llama_output_scores, 
+                dim=-1, 
+                index=input_ids_probs
+            ).flatten().tolist()
+            optionTokenLogProbs = torch.gather(
+                llama_option_output_scores, 
+                dim=-1, 
+                index=option_ids_probs
+            ).flatten().tolist()[1:] # exclude SOS token
+            nullOptionTokenLogProbs = torch.gather(
+                llama_null_option_output_scores, 
+                dim=-1, 
+                index=null_option_ids_probs
+            ).flatten().tolist()
+
+            # slice output to only get scores of the continuation
+            optionTokenConditionalLogProbs = optionTokenConditionalLogProbs[input_ids_prompt.shape[-1]:]
+            nullOptionTokenLogProbs = nullOptionTokenLogProbs[null_option_input_ids_prompt.shape[-1]:]
+
+
+        elif "t5" in model_name:
+            prompt_completion_pairs = get_mlm_pl(
+                prompt,
+                o,
+            )
+            null_context_prompt_completion_pairs = get_mlm_pl(
+                prior_prompt,
+                o,
+            )
+            # NOTE: PLL is not computed for the option string alone 
+            # (only in null context) due to runtime considerations
+            optionTokenConditionalLogProbs = [] 
+            optionTokenLogProbs = [] 
+            nullOptionTokenLogProbs = []
+            # each pair corresponds to one "token" (=word) in the option
+            for i, p in enumerate(prompt_completion_pairs):
+                # get PLL for the option in context
+                # tokenize input and output
+                input_ids_prompt = tokenizer(
+                    p[0], 
+                    return_tensors="pt",
+                ).input_ids.to(DEVICE)
+                input_ids_options = tokenizer(
+                    p[1], 
+                    return_tensors="pt",
+                ).input_ids.to(DEVICE)
+                # tokenize null input
+                # output will be the same as for the option in context
+                null_option_input_ids_prompt = tokenizer(
+                    null_context_prompt_completion_pairs[i][0], 
+                    return_tensors="pt",
+                ).input_ids.to(DEVICE)
+                # score
+                with torch.no_grad():
+                    outputs = model(
+                        input_ids=input_ids_prompt, 
+                        labels=input_ids_options,
+                    )
+                    outputs_null = model(
+                        input_ids=null_option_input_ids_prompt,
+                        labels=input_ids_options,
+                    )
+                # retrieve logits (batch 0) 
+                # transform to log probs
+                llama_output_scores_subseq = logsoftmax(
+                    outputs.logits[0]
+                ) # access first element in batch; result has shape [n_tokens, 32000]
+                llama_null_option_output_scores_seq = logsoftmax(
+                    outputs_null.logits[0]
+                )
+                # get the log probs of the token in the option
+                token_pll = mask_and_sum(
+                    input_ids_options,
+                    llama_output_scores_subseq,
+                )
+                null_token_pll = mask_and_sum(
+                    input_ids_options,
+                    llama_null_option_output_scores_seq,
                 )
                 
-                null_option_outputs = model(
-                    null_option_input_ids,
-                )
+                optionTokenConditionalLogProbs.append(token_pll)
+                nullOptionTokenLogProbs.append(null_token_pll)
 
-            elif "t5" in model_name:
-                outputs = model(
-                    input_ids,
-                    decoder_input_ids=input_ids,
-                )
-
-                option_outputs = model(
-                    **option_input_ids,
-                    decoder_input_ids=option_input_ids['input_ids'],
-                )
-
-                print("raw options outputs shape ", option_outputs.logits.shape)                
-                null_option_outputs = model(
-                    null_option_input_ids,
-                    decoder_input_ids=null_option_input_ids,
-                )
-
-            else:
-                raise ValueError("Model {model_name} is not supported as a backbone for log probability retrieval.")
-
-                
 
         elif ("gpt-3.5" in model_name) or ("davinci" in model_name):
             ##### retreiver conditional log prob #####
@@ -165,109 +254,7 @@ def retrieve_log_probs(
                     logprobs = 0,
                     echo = True,
                 )
-
-        else:
-            raise ValueError(f"Model {model_name} is not supported as a backbone.")
-
-        
-        
-        # Retrieve logits from the output
-        try: 
-            # retrieve HF log probs
-            # [0] retrieves first element in batch (assume we always use batch size = 1)
-            if "llama" in model_name:
-                # for llama, we manually retrieve the log probs from the output
-                # and transform them into log probs
-                try:
-                    llama_output_scores = logsoftmax(
-                        outputs.loss['logits'][0]
-                    ) # access first element in batch; result has shape [n_tokens, 32000]
-                    llama_option_output_scores = logsoftmax(
-                        option_outputs.loss['logits'][0]
-                    )
-                    llama_null_option_output_scores = logsoftmax(
-                        null_option_outputs.loss['logits'][0]
-                    )
-                except:
-                    llama_output_scores = logsoftmax(
-                        outputs.logits[0]
-                    ) # access first element in batch; result has shape [n_tokens, 32000]
-                    llama_option_output_scores = logsoftmax(
-                        option_outputs.logits[0]
-                    )
-                    llama_null_option_output_scores = logsoftmax(
-                        null_option_outputs.logits[0]
-                    )
-                # retreive log probs at token ids
-                # transform input_ids to a tensor of shape [n_tokens, 1] for this
-                input_ids_probs = input_ids.squeeze().unsqueeze(-1)
-                option_ids_probs = option_input_ids['input_ids'].squeeze().unsqueeze(-1)
-                null_option_ids_probs = null_option_input_ids.squeeze().unsqueeze(-1)
-                # retreive
-                optionTokenConditionalLogProbs = torch.gather(
-                    llama_output_scores, 
-                    dim=-1, 
-                    index=input_ids_probs
-                ).flatten().tolist()
-                optionTokenLogProbs = torch.gather(
-                    llama_option_output_scores, 
-                    dim=-1, 
-                    index=option_ids_probs
-                ).flatten().tolist()[1:] # exclude SOS token
-                nullOptionTokenLogProbs = torch.gather(
-                    llama_null_option_output_scores, 
-                    dim=-1, 
-                    index=null_option_ids_probs
-                ).flatten().tolist()
-
-            elif "t5" in model_name:
-                # for T5, we manually retrieve the log probs from the output
-                # and transform them into log probs
-                llama_output_scores = logsoftmax(
-                    outputs.logits[0]
-                ) # access first element in batch; result has shape [n_tokens, 32000]
-                llama_option_output_scores = logsoftmax(
-                    option_outputs.logits[0]
-                )
-                llama_null_option_output_scores = logsoftmax(
-                    null_option_outputs.logits[0]
-                )
-                # retreive log probs at token ids
-                # transform input_ids to a tensor of shape [n_tokens, 1] for this
-                input_ids_probs = input_ids.squeeze().unsqueeze(-1)
-                option_ids_probs = option_input_ids['input_ids'].squeeze().unsqueeze(-1)
-                null_option_ids_probs = null_option_input_ids.squeeze().unsqueeze(-1)
-                # retreive
-                optionTokenConditionalLogProbs = torch.gather(
-                    llama_output_scores, 
-                    dim=-1, 
-                    index=input_ids_probs
-                ).flatten().tolist()
-                optionTokenLogProbs = torch.gather(
-                    llama_option_output_scores, 
-                    dim=-1, 
-                    index=option_ids_probs
-                ).flatten().tolist()[:-1] # exclude EOS token
-                nullOptionTokenLogProbs = torch.gather(
-                    llama_null_option_output_scores, 
-                    dim=-1, 
-                    index=null_option_ids_probs
-                ).flatten().tolist()
-            else:
-                optionTokenConditionalLogProbs = outputs.scores[0].tolist()
-                
-                optionTokenLogProbs = option_outputs.scores[0].tolist()[1:] # exclude SOS token
-                nullOptionTokenLogProbs = null_option_outputs.scores[0].tolist()
-
             
-            # slice output to only get scores of the continuation
-            optionTokenConditionalLogProbs = optionTokenConditionalLogProbs[input_ids_prompt.shape[-1]:]
-            nullOptionTokenLogProbs = nullOptionTokenLogProbs[null_option_input_ids_prompt.shape[-1]:]
-
-            print("Answer tokens optionTokenConditionalLogProbs:", len(optionTokenConditionalLogProbs))
-            print("Answer tokens optionTokenLogProbs:", len(optionTokenLogProbs))
-            print("Answer tokens nullOptionTokenLogProbs:", len(nullOptionTokenLogProbs))
-        except:
             # retrieve OpenAI log probs
             text_offsets = outputs.choices[0]['logprobs']['text_offset']
             cutIndex = text_offsets.index(max(i for i in text_offsets if i <= len(prompt)))
@@ -277,7 +264,6 @@ def retrieve_log_probs(
             print("Answer tokens:", optionTokens)
             print("Log probs of answer tokens:", optionTokenConditionalLogProbs)
 
-            
             optionTokenLogProbs = []
             # unconditional log probs (see class code)
             text_offsets = null_option_outputs.choices[0]['logprobs']['text_offset']
@@ -287,10 +273,15 @@ def retrieve_log_probs(
             nullOptionTokenLogProbs = null_option_outputs.choices[0]["logprobs"]["token_logprobs"][cutIndex:endIndex]  
             print("Null prior log Ps ", nullOptionTokenLogProbs)
 
+        else:
+            raise ValueError(f"Model {model_name} is not supported as a backbone.")
+
+            
         conditional_log_probs.append(optionTokenConditionalLogProbs)
         log_probs.append(optionTokenLogProbs)
         null_log_probs.append(nullOptionTokenLogProbs)
-    
+        
+        
     return conditional_log_probs, log_probs, null_log_probs
 
 

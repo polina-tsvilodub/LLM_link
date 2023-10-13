@@ -52,6 +52,6 @@ for i in ${!array[*]}; do
         --phenomenon=${array[$i]} \
         --option_numbering=${array2[$i]} \
         --question="${array3[$i]}" \
-        --model_name=gpt-3.5-turbo-instruct \
+        --model_name="google/flan-t5-xl" \
         --n_seeds=1
 done
