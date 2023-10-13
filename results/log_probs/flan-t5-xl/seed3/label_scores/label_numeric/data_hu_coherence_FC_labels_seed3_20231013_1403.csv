@@ -1,0 +1,721 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+google/flan-t5-xl,0.1,3,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.517094612121582],[9.958395316773374e-06],[],[-10.6736421585083],[2.314707446295451e-05],9.958395316773374e-06,9.958395316773374e-06,2.314707446295451e-05,0.4302226327871879,-11.517094612121582,-11.517094612121582,1.0790219909087864
+google/flan-t5-xl,0.1,3,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.770366668701172],[7.730270760852851e-06],[],[-11.564200401306152],[9.500174403091299e-06],7.730270760852851e-06,7.730270760852851e-06,9.500174403091299e-06,0.8136977736258683,-11.770366668701172,-11.770366668701172,1.017827974286206
+google/flan-t5-xl,0.1,3,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-12.37664794921875],[4.215897963522021e-06],[],[-10.6736421585083],[2.314707446295451e-05],4.215897963522021e-06,4.215897963522021e-06,2.314707446295451e-05,0.18213524003948364,-12.37664794921875,-12.37664794921875,1.1595524531757821
+google/flan-t5-xl,0.1,3,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.512283325195312],[1.0006423459907986e-05],[],[-11.564200401306152],[9.500174403091299e-06],1.0006423459907986e-05,1.0006423459907986e-05,9.500174403091299e-06,1.05328839612165,-11.512283325195312,-11.512283325195312,0.9955105347270724
+google/flan-t5-xl,0.1,3,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,[-11.58722972869873],[9.28389175711354e-06],[],[-10.920162200927734],[1.808980205359769e-05],9.28389175711354e-06,9.28389175711354e-06,1.808980205359769e-05,0.5132113513241658,-11.58722972869873,-11.58722972869873,1.0610858625995798
+google/flan-t5-xl,0.1,3,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,[-13.76513385772705],[1.0516671850460791e-06],[],[-12.837846755981445],[2.6582388099441227e-06],1.0516671850460791e-06,1.0516671850460791e-06,2.6582388099441227e-06,0.3956255476791363,-13.76513385772705,-13.76513385772705,1.0722307345905622
+google/flan-t5-xl,0.1,3,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,[-11.723221778869629],[8.103440941733859e-06],[],[-10.920162200927734],[1.808980205359769e-05],8.103440941733859e-06,8.103440941733859e-06,1.808980205359769e-05,0.44795630807481673,-11.723221778869629,-11.723221778869629,1.0735391620715735
+google/flan-t5-xl,0.1,3,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,[-13.420693397521973],[1.4841128115821866e-06],[],[-12.837846755981445],[2.6582388099441227e-06],1.4841128115821866e-06,1.4841128115821866e-06,2.6582388099441227e-06,0.5583068029968997,-13.420693397521973,-13.420693397521973,1.045400654223339
+google/flan-t5-xl,0.1,3,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.632179260253906],[8.87582507919644e-06],[],[-10.6736421585083],[2.314707446295451e-05],8.87582507919644e-06,8.87582507919644e-06,2.314707446295451e-05,0.3834534292185243,-11.632179260253906,-11.632179260253906,1.0898041256687179
+google/flan-t5-xl,0.1,3,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.76933479309082],[7.738251555597973e-06],[],[-11.564200401306152],[9.500174403091299e-06],7.738251555597973e-06,7.738251555597973e-06,9.500174403091299e-06,0.8145378418610918,-11.76933479309082,-11.76933479309082,1.0177387441125196
+google/flan-t5-xl,0.1,3,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.09958267211914],[1.511863193011322e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.511863193011322e-05,1.511863193011322e-05,2.314707446295451e-05,0.6531551948091615,-11.09958267211914,-11.09958267211914,1.0399058266415002
+google/flan-t5-xl,0.1,3,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.621849060058594],[8.967989347240375e-06],[],[-11.564200401306152],[9.500174403091299e-06],8.967989347240375e-06,8.967989347240375e-06,9.500174403091299e-06,0.9439815488358031,-11.621849060058594,-11.621849060058594,1.0049850968291703
+google/flan-t5-xl,0.1,3,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,[-11.712564468383789],[8.190263654393724e-06],[],[-10.920162200927734],[1.808980205359769e-05],8.190263654393724e-06,8.190263654393724e-06,1.808980205359769e-05,0.4527558471965064,-11.712564468383789,-11.712564468383789,1.0725632323839234
+google/flan-t5-xl,0.1,3,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,[-14.620744705200195],[4.4698325441196405e-07],[],[-12.837846755981445],[2.6582388099441227e-06],4.4698325441196405e-07,4.4698325441196405e-07,2.6582388099441227e-06,0.1681501499187576,-14.620744705200195,-14.620744705200195,1.1388782700952602
+google/flan-t5-xl,0.1,3,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,[-11.026544570922852],[1.6264193717028545e-05],[],[-10.920162200927734],[1.808980205359769e-05],1.6264193717028545e-05,1.6264193717028545e-05,1.808980205359769e-05,0.8990808008202572,-11.026544570922852,-11.026544570922852,1.0097418305733663
+google/flan-t5-xl,0.1,3,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,[-14.28156566619873],[6.274727041816348e-07],[],[-12.837846755981445],[2.6582388099441227e-06],6.274727041816348e-07,6.274727041816348e-07,2.6582388099441227e-06,0.23604828198066394,-14.28156566619873,-14.28156566619873,1.1124580264634039
+google/flan-t5-xl,0.1,3,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.426346778869629],[1.0904371665907336e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.0904371665907336e-05,1.0904371665907336e-05,2.314707446295451e-05,0.47109070666183417,-11.426346778869629,-11.426346778869629,1.070519941476708
+google/flan-t5-xl,0.1,3,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.616533279418945],[9.015788142788748e-06],[],[-11.564200401306152],[9.500174403091299e-06],9.015788142788748e-06,9.015788142788748e-06,9.500174403091299e-06,0.949012908631979,-11.616533279418945,-11.616533279418945,1.004525421239404
+google/flan-t5-xl,0.1,3,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.297651290893555],[1.240201881562217e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.240201881562217e-05,1.240201881562217e-05,2.314707446295451e-05,0.5357920645855635,-11.297651290893555,-11.297651290893555,1.0584626243899171
+google/flan-t5-xl,0.1,3,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.566122055053711],[9.481935887016049e-06],[],[-11.564200401306152],[9.500174403091299e-06],9.481935887016049e-06,9.481935887016049e-06,9.500174403091299e-06,0.9980801914468733,-11.566122055053711,-11.566122055053711,1.0001661726432327
+google/flan-t5-xl,0.1,3,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,[-11.596552848815918],[9.197739148700564e-06],[],[-10.920162200927734],[1.808980205359769e-05],9.197739148700564e-06,9.197739148700564e-06,1.808980205359769e-05,0.5084488554075318,-11.596552848815918,-11.596552848815918,1.0619396154968028
+google/flan-t5-xl,0.1,3,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,[-14.11727237701416],[7.39514182105333e-07],[],[-12.837846755981445],[2.6582388099441227e-06],7.39514182105333e-07,7.39514182105333e-07,2.6582388099441227e-06,0.27819704510328697,-14.11727237701416,-14.11727237701416,1.0996604528276208
+google/flan-t5-xl,0.1,3,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,[-11.528045654296875],[9.849935467772898e-06],[],[-10.920162200927734],[1.808980205359769e-05],9.849935467772898e-06,9.849935467772898e-06,1.808980205359769e-05,0.5445021144282752,-11.528045654296875,-11.528045654296875,1.055666156068405
+google/flan-t5-xl,0.1,3,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,[-13.295385360717773],[1.6822382481120623e-06],[],[-12.837846755981445],[2.6582388099441227e-06],1.6822382481120623e-06,1.6822382481120623e-06,2.6582388099441227e-06,0.6328393979574106,-13.295385360717773,-13.295385360717773,1.0356398244528935
+google/flan-t5-xl,0.1,3,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,[-11.398331642150879],[1.1214178507127753e-05],[],[-10.920162200927734],[1.808980205359769e-05],1.1214178507127753e-05,1.1214178507127753e-05,1.808980205359769e-05,0.6199171485625783,-11.398331642150879,-11.398331642150879,1.0437877599640892
+google/flan-t5-xl,0.1,3,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,[-13.855563163757324],[9.607388973913287e-07],[],[-12.837846755981445],[2.6582388099441227e-06],9.607388973913287e-07,9.607388973913287e-07,2.6582388099441227e-06,0.36141933290467754,-13.855563163757324,-13.855563163757324,1.07927469669333
+google/flan-t5-xl,0.1,3,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.267821311950684],[1.2777543882524555e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.2777543882524555e-05,1.2777543882524555e-05,2.314707446295451e-05,0.5520154999706006,-11.267821311950684,-11.267821311950684,1.0556678914862012
+google/flan-t5-xl,0.1,3,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.642241477966309],[8.786962422336538e-06],[],[-11.564200401306152],[9.500174403091299e-06],8.786962422336538e-06,8.786962422336538e-06,9.500174403091299e-06,0.9249264328744654,-11.642241477966309,-11.642241477966309,1.0067485060749501
+google/flan-t5-xl,0.1,3,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.196829795837402],[1.3717614845803366e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.3717614845803366e-05,1.3717614845803366e-05,2.314707446295451e-05,0.5926284493428133,-11.196829795837402,-11.196829795837402,1.0490167863564783
+google/flan-t5-xl,0.1,3,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-12.001116752624512],[6.137354617966766e-06],[],[-11.564200401306152],[9.500174403091299e-06],6.137354617966766e-06,6.137354617966766e-06,9.500174403091299e-06,0.6460254683292664,-12.001116752624512,-12.001116752624512,1.0377818038564093
+google/flan-t5-xl,0.1,3,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.228727340698242],[1.3286961516344444e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.3286961516344444e-05,1.3286961516344444e-05,2.314707446295451e-05,0.5740233625467193,-11.228727340698242,-11.228727340698242,1.0520052268894424
+google/flan-t5-xl,0.1,3,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-12.195430755615234],[5.053493581131555e-06],[],[-11.564200401306152],[9.500174403091299e-06],5.053493581131555e-06,5.053493581131555e-06,9.500174403091299e-06,0.531936927335479,-12.195430755615234,-12.195430755615234,1.0545848681624184
+google/flan-t5-xl,0.1,3,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,target,1,[-11.539506912231445],[9.737687298095222e-06],[],[-10.920162200927734],[1.808980205359769e-05],9.737687298095222e-06,9.737687298095222e-06,1.808980205359769e-05,0.5382970620266458,-11.539506912231445,-11.539506912231445,1.0567157062237678
+google/flan-t5-xl,0.1,3,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,competitor,2,[-13.629451751708984],[1.2044930900231428e-06],[],[-12.837846755981445],[2.6582388099441227e-06],1.2044930900231428e-06,1.2044930900231428e-06,2.6582388099441227e-06,0.45311696056700856,-13.629451751708984,-13.629451751708984,1.0616618199900782
+google/flan-t5-xl,0.1,3,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.98944091796875],[6.209433326407911e-06],[],[-10.6736421585083],[2.314707446295451e-05],6.209433326407911e-06,6.209433326407911e-06,2.314707446295451e-05,0.2682599624564103,-11.98944091796875,-11.98944091796875,1.1232755173838749
+google/flan-t5-xl,0.1,3,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.242058753967285],[1.3111003034931016e-05],[],[-11.564200401306152],[9.500174403091299e-06],1.3111003034931016e-05,1.3111003034931016e-05,9.500174403091299e-06,1.38008024680734,-11.242058753967285,-11.242058753967285,0.972143197440397
+google/flan-t5-xl,0.1,3,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.09180736541748],[1.5236642118454726e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.5236642118454726e-05,1.5236642118454726e-05,2.314707446295451e-05,0.6582534714199001,-11.09180736541748,-11.09180736541748,1.0391773680154572
+google/flan-t5-xl,0.1,3,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-11.956816673278809],[6.41535210731651e-06],[],[-11.564200401306152],[9.500174403091299e-06],6.41535210731651e-06,6.41535210731651e-06,9.500174403091299e-06,0.6752878247402483,-11.956816673278809,-11.956816673278809,1.0339510090060624
+google/flan-t5-xl,0.1,3,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,competitor,1,[-11.223068237304688],[1.3362366967733517e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.3362366967733517e-05,1.3362366967733517e-05,2.314707446295451e-05,0.5772810291477299,-11.223068237304688,-11.223068237304688,1.051475032668059
+google/flan-t5-xl,0.1,3,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,target,2,[-12.023517608642578],[6.001401044113437e-06],[],[-11.564200401306152],[9.500174403091299e-06],6.001401044113437e-06,6.001401044113437e-06,9.500174403091299e-06,0.6317148285362654,-12.023517608642578,-12.023517608642578,1.0397188903164067
+google/flan-t5-xl,0.1,3,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,[-11.378283500671387],[1.1441270726713089e-05],[],[-10.920162200927734],[1.808980205359769e-05],1.1441270726713089e-05,1.1441270726713089e-05,1.808980205359769e-05,0.6324707530139975,-11.378283500671387,-11.378283500671387,1.0419518768416034
+google/flan-t5-xl,0.1,3,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,[-13.242583274841309],[1.7734508532564271e-06],[],[-12.837846755981445],[2.6582388099441227e-06],1.7734508532564271e-06,1.7734508532564271e-06,2.6582388099441227e-06,0.6671525698226134,-13.242583274841309,-13.242583274841309,1.0315268227260375
+google/flan-t5-xl,0.1,3,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.26803207397461],[1.2774851145288415e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.2774851145288415e-05,1.2774851145288415e-05,2.314707446295451e-05,0.5518991683261654,-11.26803207397461,-11.26803207397461,1.0556876375129836
+google/flan-t5-xl,0.1,3,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-12.610145568847656],[3.3379771810993372e-06],[],[-11.564200401306152],[9.500174403091299e-06],3.3379771810993372e-06,3.3379771810993372e-06,9.500174403091299e-06,0.3513595687267783,-12.610145568847656,-12.610145568847656,1.0904468213317513
+google/flan-t5-xl,0.1,3,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,[-11.595666885375977],[9.205891620179008e-06],[],[-10.920162200927734],[1.808980205359769e-05],9.205891620179008e-06,9.205891620179008e-06,1.808980205359769e-05,0.5088995221121364,-11.595666885375977,-11.595666885375977,1.0618584845187422
+google/flan-t5-xl,0.1,3,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,[-12.709820747375488],[3.0213078803121172e-06],[],[-12.837846755981445],[2.6582388099441227e-06],3.0213078803121172e-06,3.0213078803121172e-06,2.6582388099441227e-06,1.1365825632406692,-12.709820747375488,-12.709820747375488,0.9900274546783863
+google/flan-t5-xl,0.1,3,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.69552993774414],[8.330976033641619e-06],[],[-10.6736421585083],[2.314707446295451e-05],8.330976033641619e-06,8.330976033641619e-06,2.314707446295451e-05,0.3599148586563214,-11.69552993774414,-11.69552993774414,1.0957393703161822
+google/flan-t5-xl,0.1,3,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-11.986175537109375],[6.229742631902222e-06],[],[-11.564200401306152],[9.500174403091299e-06],6.229742631902222e-06,6.229742631902222e-06,9.500174403091299e-06,0.6557503438963291,-11.986175537109375,-11.986175537109375,1.0364897806298445
+google/flan-t5-xl,0.1,3,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.312113761901855],[1.2223945770034308e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.2223945770034308e-05,1.2223945770034308e-05,2.314707446295451e-05,0.5280989521849939,-11.312113761901855,-11.312113761901855,1.0598175949607425
+google/flan-t5-xl,0.1,3,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-12.386907577514648],[4.172865543266385e-06],[],[-11.564200401306152],[9.500174403091299e-06],4.172865543266385e-06,4.172865543266385e-06,9.500174403091299e-06,0.4392409408724707,-12.386907577514648,-12.386907577514648,1.0711425907246965
+google/flan-t5-xl,0.1,3,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.125232696533203],[1.4735769853742641e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.4735769853742641e-05,1.4735769853742641e-05,2.314707446295451e-05,0.6366147859128525,-11.125232696533203,-11.125232696533203,1.0423089449054581
+google/flan-t5-xl,0.1,3,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-14.108771324157715],[7.458276287055474e-07],[],[-11.564200401306152],[9.500174403091299e-06],7.458276287055474e-07,7.458276287055474e-07,9.500174403091299e-06,0.078506730198854,-14.108771324157715,-14.108771324157715,1.2200386394691118
+google/flan-t5-xl,0.1,3,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.075235366821289],[1.5491247563939754e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.5491247563939754e-05,1.5491247563939754e-05,2.314707446295451e-05,0.6692529368552625,-11.075235366821289,-11.075235366821289,1.0376247584797347
+google/flan-t5-xl,0.1,3,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-12.391833305358887],[4.152361682944236e-06],[],[-11.564200401306152],[9.500174403091299e-06],4.152361682944236e-06,4.152361682944236e-06,9.500174403091299e-06,0.4370826794077678,-12.391833305358887,-12.391833305358887,1.0715685369789385
+google/flan-t5-xl,0.1,3,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.128284454345703],[1.469086840199447e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.469086840199447e-05,1.469086840199447e-05,2.314707446295451e-05,0.6346749532216831,-11.128284454345703,-11.128284454345703,1.0425948602253816
+google/flan-t5-xl,0.1,3,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-11.975652694702148],[6.295643355219336e-06],[],[-11.564200401306152],[9.500174403091299e-06],6.295643355219336e-06,6.295643355219336e-06,9.500174403091299e-06,0.6626871347931015,-11.975652694702148,-11.975652694702148,1.0355798307809958
+google/flan-t5-xl,0.1,3,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-10.883938789367676],[1.8757089143199346e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.8757089143199346e-05,1.8757089143199346e-05,2.314707446295451e-05,0.8103438373267832,-10.883938789367676,-10.883938789367676,1.0197024246959359
+google/flan-t5-xl,0.1,3,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-14.270066261291504],[6.347299136985748e-07],[],[-11.564200401306152],[9.500174403091299e-06],6.347299136985748e-07,6.347299136985748e-07,9.500174403091299e-06,0.06681244856852707,-14.270066261291504,-14.270066261291504,1.2339864206849727
+google/flan-t5-xl,0.1,3,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,[-11.48762321472168],[1.0256250691131075e-05],[],[-10.920162200927734],[1.808980205359769e-05],1.0256250691131075e-05,1.0256250691131075e-05,1.808980205359769e-05,0.5669631243472516,-11.48762321472168,-11.48762321472168,1.0519645224450729
+google/flan-t5-xl,0.1,3,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,[-13.971109390258789],[8.559024819424683e-07],[],[-12.837846755981445],[2.6582388099441227e-06],8.559024819424683e-07,8.559024819424683e-07,2.6582388099441227e-06,0.3219810344881917,-13.971109390258789,-13.971109390258789,1.0882751333473684
+google/flan-t5-xl,0.1,3,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.346054077148438],[1.1816022870915267e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.1816022870915267e-05,1.1816022870915267e-05,2.314707446295451e-05,0.5104758655278919,-11.346054077148438,-11.346054077148438,1.0629974200609804
+google/flan-t5-xl,0.1,3,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-13.143892288208008],[1.957402364044787e-06],[],[-11.564200401306152],[9.500174403091299e-06],1.957402364044787e-06,1.957402364044787e-06,9.500174403091299e-06,0.20603857160852335,-13.143892288208008,-13.143892288208008,1.1366019121152062
+google/flan-t5-xl,0.1,3,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,[-11.54543685913086],[9.680114200908557e-06],[],[-10.920162200927734],[1.808980205359769e-05],9.680114200908557e-06,9.680114200908557e-06,1.808980205359769e-05,0.5351144347642754,-11.54543685913086,-11.54543685913086,1.0572587335882249
+google/flan-t5-xl,0.1,3,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,[-12.666500091552734],[3.1550693174314e-06],[],[-12.837846755981445],[2.6582388099441227e-06],3.1550693174314e-06,3.1550693174314e-06,2.6582388099441227e-06,1.1869021344616215,-12.666500091552734,-12.666500091552734,0.9866530059373955
+google/flan-t5-xl,0.1,3,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,[-11.76869010925293],[7.743241889730441e-06],[],[-10.920162200927734],[1.808980205359769e-05],7.743241889730441e-06,7.743241889730441e-06,1.808980205359769e-05,0.42804458925466626,-11.76869010925293,-11.76869010925293,1.0777028667443336
+google/flan-t5-xl,0.1,3,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,[-12.40980052947998],[4.078421508904451e-06],[],[-12.837846755981445],[2.6582388099441227e-06],4.078421508904451e-06,4.078421508904451e-06,2.6582388099441227e-06,1.5342570026619171,-12.40980052947998,-12.40980052947998,0.9666574749926791
+google/flan-t5-xl,0.1,3,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,[-11.742542266845703],[7.948381246321136e-06],[],[-10.920162200927734],[1.808980205359769e-05],7.948381246321136e-06,7.948381246321136e-06,1.808980205359769e-05,0.43938464460645477,-11.742542266845703,-11.742542266845703,1.0753084112476006
+google/flan-t5-xl,0.1,3,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,[-13.789941787719727],[1.0258984551322259e-06],[],[-12.837846755981445],[2.6582388099441227e-06],1.0258984551322259e-06,1.0258984551322259e-06,2.6582388099441227e-06,0.3859316368771964,-13.789941787719727,-13.789941787719727,1.0741631404265422
+google/flan-t5-xl,0.1,3,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-10.979704856872559],[1.7044127241673786e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.7044127241673786e-05,1.7044127241673786e-05,2.314707446295451e-05,0.7363404506669678,-10.979704856872559,-10.979704856872559,1.0286746261322135
+google/flan-t5-xl,0.1,3,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-12.885903358459473],[2.533513816659738e-06],[],[-11.564200401306152],[9.500174403091299e-06],2.533513816659738e-06,2.533513816659738e-06,9.500174403091299e-06,0.2666807691272855,-12.885903358459473,-12.885903358459473,1.1142926368695614
+google/flan-t5-xl,0.1,3,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,1,target,coherent,competitor,1,[-11.511241912841797],[1.0016849700979464e-05],[],[-10.920162200927734],[1.808980205359769e-05],1.0016849700979464e-05,1.0016849700979464e-05,1.808980205359769e-05,0.5537290939558578,-11.511241912841797,-11.511241912841797,1.05412737476224
+google/flan-t5-xl,0.1,3,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. coherent
+2. incoherent
+Your answer:
+",Is this story coherent or not?,2,competitor,incoherent,target,2,[-12.795611381530762],[2.772915174672462e-06],[],[-12.837846755981445],[2.6582388099441227e-06],2.772915174672462e-06,2.772915174672462e-06,2.6582388099441227e-06,1.0431399783568542,-12.795611381530762,-12.795611381530762,0.99671008890716
+google/flan-t5-xl,0.1,3,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.17136001586914],[1.4071486869089584e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.4071486869089584e-05,1.4071486869089584e-05,2.314707446295451e-05,0.6079164298542412,-11.17136001586914,-11.17136001586914,1.0466305549661035
+google/flan-t5-xl,0.1,3,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-13.237272262573242],[1.782894728565208e-06],[],[-11.564200401306152],[9.500174403091299e-06],1.782894728565208e-06,1.782894728565208e-06,9.500174403091299e-06,0.18766968404128084,-13.237272262573242,-13.237272262573242,1.1446768304947499
+google/flan-t5-xl,0.1,3,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.141124725341797],[1.4503439564228547e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.4503439564228547e-05,1.4503439564228547e-05,2.314707446295451e-05,0.6265776518514434,-11.141124725341797,-11.141124725341797,1.0437978489339603
+google/flan-t5-xl,0.1,3,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-13.936911582946777],[8.856787090766596e-07],[],[-11.564200401306152],[9.500174403091299e-06],8.856787090766596e-07,8.856787090766596e-07,9.500174403091299e-06,0.0932276263042566,-13.936911582946777,-13.936911582946777,1.2051772798206293
+google/flan-t5-xl,0.1,3,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.209527015686035],[1.3544540381807506e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.3544540381807506e-05,1.3544540381807506e-05,2.314707446295451e-05,0.585151285683412,-11.209527015686035,-11.209527015686035,1.0502063727844355
+google/flan-t5-xl,0.1,3,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-12.773457527160645],[2.835031450598247e-06],[],[-11.564200401306152],[9.500174403091299e-06],2.835031450598247e-06,2.835031450598247e-06,9.500174403091299e-06,0.29841888478128836,-12.773457527160645,-12.773457527160645,1.104569021972147
+google/flan-t5-xl,0.1,3,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,1,target,incoherent,target,1,[-11.137613296508789],[1.4554456879507247e-05],[],[-10.6736421585083],[2.314707446295451e-05],1.4554456879507247e-05,1.4554456879507247e-05,2.314707446295451e-05,0.6287817021023877,-11.137613296508789,-11.137613296508789,1.0434688676189732
+google/flan-t5-xl,0.1,3,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+1. incoherent
+2. coherent
+Your answer:
+",Is this story coherent or not?,2,competitor,coherent,competitor,2,[-12.923184394836426],[2.4408007534934446e-06],[],[-11.564200401306152],[9.500174403091299e-06],2.4408007534934446e-06,2.4408007534934446e-06,9.500174403091299e-06,0.2569216784798417,-12.923184394836426,-12.923184394836426,1.1175164686160903
