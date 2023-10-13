@@ -8,7 +8,8 @@ from utils import (
     load_model, 
     compute_mi, 
     get_mlm_pl,
-    mask_and_sum
+    mask_and_sum,
+    get_mlm_token_pl,
 )
 import argparse
 import random
@@ -35,6 +36,7 @@ def retrieve_log_probs(
         tokenizer=None, # only to be used with HF models
         phenomenon=None,
         score_prior=True,
+        use_tokenwise_pll=True,
         **kwargs
     ):
     '''
@@ -174,14 +176,28 @@ def retrieve_log_probs(
 
 
         elif "t5" in model_name:
-            prompt_completion_pairs = get_mlm_pl(
-                prompt,
-                o,
-            )
-            null_context_prompt_completion_pairs = get_mlm_pl(
-                prior_prompt,
-                o,
-            )
+            if use_tokenwise_pll:
+                prompt_completion_pairs = get_mlm_token_pl(
+                    prompt,
+                    o,
+                    tokenizer,
+                    DEVICE,
+                )
+                null_context_prompt_completion_pairs = get_mlm_token_pl(
+                    prior_prompt,
+                    o,
+                    tokenizer,
+                    DEVICE,
+                )
+            else:
+                prompt_completion_pairs = get_mlm_pl(
+                    prompt,
+                    o,
+                )
+                null_context_prompt_completion_pairs = get_mlm_pl(
+                    prior_prompt,
+                    o,
+                )
             # NOTE: PLL is not computed for the option string alone 
             # (only in null context) due to runtime considerations
             optionTokenConditionalLogProbs = [] 
@@ -190,21 +206,26 @@ def retrieve_log_probs(
             # each pair corresponds to one "token" (=word) in the option
             for i, p in enumerate(prompt_completion_pairs):
                 # get PLL for the option in context
-                # tokenize input and output
-                input_ids_prompt = tokenizer(
-                    p[0], 
-                    return_tensors="pt",
-                ).input_ids.to(DEVICE)
-                input_ids_options = tokenizer(
-                    p[1], 
-                    return_tensors="pt",
-                ).input_ids.to(DEVICE)
-                # tokenize null input
-                # output will be the same as for the option in context
-                null_option_input_ids_prompt = tokenizer(
-                    null_context_prompt_completion_pairs[i][0], 
-                    return_tensors="pt",
-                ).input_ids.to(DEVICE)
+                if not use_tokenwise_pll:
+                    # tokenize input and output
+                    input_ids_prompt = tokenizer(
+                        p[0], 
+                        return_tensors="pt",
+                    ).input_ids.to(DEVICE)
+                    input_ids_options = tokenizer(
+                        p[1], 
+                        return_tensors="pt",
+                    ).input_ids.to(DEVICE)
+                    # tokenize null input
+                    # output will be the same as for the option in context
+                    null_option_input_ids_prompt = tokenizer(
+                        null_context_prompt_completion_pairs[i][0], 
+                        return_tensors="pt",
+                    ).input_ids.to(DEVICE)
+                else:
+                    input_ids_prompt = p[0]
+                    input_ids_options = p[1]
+                    null_option_input_ids_prompt = null_context_prompt_completion_pairs[i][0]
                 # score
                 with torch.no_grad():
                     outputs = model(

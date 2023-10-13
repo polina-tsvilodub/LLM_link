@@ -106,7 +106,6 @@ def mask_and_sum(
     mask = torch.BoolTensor([tok_id not in mask_token for tok_id in labels[0]])
     relevant_labels = labels[0][mask]
     relevant_logprobs = sequence_plls[mask]
-    
     # Index into logprob tensor using the relevant token IDs.
     logprobs_to_sum = [
         relevant_logprobs[i][tok_id] 
@@ -115,3 +114,58 @@ def mask_and_sum(
           
     total_logprob = sum(logprobs_to_sum).item()
     return total_logprob
+
+def get_mlm_token_pl(
+        prompt,
+        option,
+        tokenizer,
+        DEVICE,
+        mask_token=["<extra_id_0><extra_id_1>"],
+):
+    """
+    Same as helper above, but masking is done by-token.
+    """
+    # tokenize mask tokens and remove EOS token
+    mask_token_ids = tokenizer(mask_token, return_tensors="pt").input_ids[0, :-1].tolist()
+    eos_token_id = tokenizer.eos_token_id
+    # prompt stays the same, remove eos token
+    prompt_ids = tokenizer(prompt, return_tensors="pt").input_ids[0, :-1]
+    # tokenize option ans remove EOS token
+    option_ids = tokenizer(option, return_tensors="pt").input_ids[0, :-1]
+    # iteratively mask option tokens and append rest to prompt
+    prompt_option_pairs = []
+    for i, o in enumerate(option_ids):
+        if i == 0:
+            prompt_option_pairs.append(
+                (
+                    torch.tensor(
+                        prompt_ids.tolist() +[ mask_token_ids[0]] + option_ids[i+1:].tolist() + [eos_token_id]
+                    ).unsqueeze(0).to(DEVICE),
+                    torch.tensor(
+                        [o.item()] + [mask_token_ids[0]] + [eos_token_id]
+                    ).unsqueeze(0).to(DEVICE)
+                )
+            )
+        elif i == len(option_ids) - 1:
+            prompt_option_pairs.append(
+                (
+                    torch.tensor(
+                        prompt_ids.tolist() + option_ids[:i].tolist() + [mask_token_ids[0]]
+                    ).unsqueeze(0).to(DEVICE),
+                    torch.tensor(
+                        [mask_token_ids[0]] + [o.item()] + [eos_token_id]
+                    ).unsqueeze(0).to(DEVICE)
+                )
+            )
+        else:
+            prompt_option_pairs.append(
+                (
+                    torch.tensor(
+                        prompt_ids.tolist() + option_ids.tolist()[:i] + [mask_token_ids[0]] + option_ids.tolist()[i+1:] + [eos_token_id]
+                    ).unsqueeze(0).to(DEVICE),
+                    torch.tensor(
+                        [mask_token_ids[0]] + [o.item() ]+ [mask_token_ids[1]] + [eos_token_id]
+                    ).unsqueeze(0).to(DEVICE)
+                )
+            )
+    return prompt_option_pairs
