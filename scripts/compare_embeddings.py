@@ -21,6 +21,12 @@ import os
 def softmax(x):
     return np.exp(x)/sum(np.exp(x))
 
+def compute_cosine_similarity(t1, t2):
+    cos_sim = np.dot(t1, t2) / (np.linalg.norm(t1) * np.linalg.norm(t2))
+    if np.isnan(cos_sim):
+        cos_sim = 0
+    return cos_sim
+
 def compute_embedding_similarity(
         prompt_randomized, 
         options,
@@ -34,24 +40,96 @@ def compute_embedding_similarity(
 ):
     load_dotenv()
     openai.api_key = os.getenv("OPENAI_API_KEY")
-
-    interpretation_embedding = openai.Embedding.create(
-        input=prompt_randomized, 
-        model=model_name
-    )["data"][0]["embedding"]
-
-    options_embeddings = [
-        openai.Embedding.create(
-            input=o, 
+    # get OpenAI embeddings:
+    if "ada" in model_name:
+        interpretation_embedding = openai.Embedding.create(
+            input=prompt_randomized, 
             model=model_name
-        )["data"][0]["embedding"] for o
-        in options
-    ]
+        )["data"][0]["embedding"]
+
+        options_embeddings = [
+            openai.Embedding.create(
+                input=o, 
+                model=model_name
+            )["data"][0]["embedding"] for o
+            in options
+        ]
+        
+        cosine_sims = [
+            cosine_similarity(interpretation_embedding, oe) for oe 
+            in options_embeddings
+        ]
+    # llama
+    elif "llama" in model_name:
+        # prompt embedding
+        input_ids = tokenizer(
+            prompt_randomized,
+            return_tensors="pt",
+        ).input_ids.to(DEVICE)
+        prompt_output = model(
+            input_ids,
+            return_dict=True,
+            output_hidden_states=True,
+        )
+        # first slicing gets the hidden states of the last decoder layer
+        # second slicing gets the last token of the sequence
+        prompt_embedding = prompt_output.hidden_states[-1][:, -1, :].squeeze().detach().numpy()
+        
+        # option embeddings
+        option_embeddings = []
+        for o in options:
+            option_input_ids = tokenizer(
+                o,
+                return_tensors="pt",
+            ).input_ids.to(DEVICE)
+            option_output = model(
+                option_input_ids,
+                return_dict=True,
+                output_hidden_states=True,
+            )
+            # first slicing gets the hidden states of the last decoder layer
+            # second slicing gets the last token of the sequence
+            option_embeddings.append(option_output.hidden_states[-1][:,-1,:].squeeze().detach().numpy())
+            
+        # compute cosine similarities 
+        cosine_sims = [
+            compute_cosine_similarity(prompt_embedding, oe) for oe
+            in option_embeddings
+        ]
+
+    elif "t5" in model_name:
+        # prompt embedding
+        input_ids = tokenizer(
+            prompt_randomized,
+            return_tensors="pt",
+        ).input_ids.to(DEVICE)
+        
+        # option embeddings
+        option_embeddings = []
+        for o in options:
+            option_input_ids = tokenizer(
+                o,
+                return_tensors="pt",
+            ).input_ids.to(DEVICE)
+            prompt_output = model(
+                input_ids,
+                labels=option_input_ids,
+                return_dict=True,
+                output_hidden_states=True,
+            ) 
+        
+            prompt_embedding = prompt_output.encoder_last_hidden_state[:, -1, :].squeeze().detach().numpy()
+
+            option_embeddings.append(prompt_output.decoder_hidden_states[-1][:,-1,:].squeeze().detach().numpy())
+        # compute cosine similarities 
+        cosine_sims = [
+            compute_cosine_similarity(prompt_embedding, oe) for oe
+            in option_embeddings
+        ]
+        
+    else:
+        raise ValueError(f"Model {model_name} not supported for comparing embeddings.")
     
-    cosine_sims = [
-        cosine_similarity(interpretation_embedding, oe) for oe 
-        in options_embeddings
-    ]
     choice_probs = softmax(cosine_sims)
     best_choice = choice_probs.tolist().index(max(choice_probs))
     chosen_option = kwargs["option_names"][best_choice]
