@@ -73,7 +73,7 @@ def compute_embedding_similarity(
         )
         # first slicing gets the hidden states of the last decoder layer
         # second slicing gets the last token of the sequence
-        prompt_embedding = prompt_output.hidden_states[-1][:, -1, :].squeeze().detach().numpy()
+        prompt_embedding = prompt_output.hidden_states[-1][:, -1, :].squeeze().detach().cpu().numpy()
         
         # option embeddings
         option_embeddings = []
@@ -89,7 +89,7 @@ def compute_embedding_similarity(
             )
             # first slicing gets the hidden states of the last decoder layer
             # second slicing gets the last token of the sequence
-            option_embeddings.append(option_output.hidden_states[-1][:,-1,:].squeeze().detach().numpy())
+            option_embeddings.append(option_output.hidden_states[-1][:,-1,:].squeeze().detach().cpu().numpy())
             
         # compute cosine similarities 
         cosine_sims = [
@@ -118,9 +118,9 @@ def compute_embedding_similarity(
                 output_hidden_states=True,
             ) 
         
-            prompt_embedding = prompt_output.encoder_last_hidden_state[:, -1, :].squeeze().detach().numpy()
+            prompt_embedding = prompt_output.encoder_last_hidden_state[:, -1, :].squeeze().detach().cpu().numpy()
 
-            option_embeddings.append(prompt_output.decoder_hidden_states[-1][:,-1,:].squeeze().detach().numpy())
+            option_embeddings.append(prompt_output.decoder_hidden_states[-1][:,-1,:].squeeze().detach().cpu().numpy())
         # compute cosine similarities 
         cosine_sims = [
             compute_cosine_similarity(prompt_embedding, oe) for oe
