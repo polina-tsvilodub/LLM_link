@@ -1,0 +1,886 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+meta-llama/Llama-2-7b-hf,0.1,3,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He got his shoes on sale.
+
+2. He wants his wife to iron his shirt.
+3. He got this shirt on sale.
+4. He is unhappy that his shirt is wrinkled.
+Your answer:
+",,1,target,"He got his shoes on sale.
+",distractor_associative,1,"[-9.684825897216797, -7.436428070068359]","[6.222050829455251e-05, 0.0005893866900791992]","[-13.373932838439941, -2.9205374717712402]","[-9.798254013061523, -6.959813117980957]","[5.5548501770995146e-05, 0.0009492739601995684]",3.6671939438771666e-08,0.00032580359918687584,5.27307462593053e-08,0.6954564848833376,-17.121253967285156,-8.560626983642578,1.021672358357481
+meta-llama/Llama-2-7b-hf,0.1,3,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He got his shoes on sale.
+
+2. He wants his wife to iron his shirt.
+3. He got this shirt on sale.
+4. He is unhappy that his shirt is wrinkled.
+Your answer:
+",,2,competitor,He wants his wife to iron his shirt.,target,2,"[-9.684825897216797, -6.881284236907959]","[6.222050829455251e-05, 0.001026824512123096]","[-13.373932838439941, -3.542041301727295]","[-9.798254013061523, -6.066871643066406]","[5.5548501770995146e-05, 0.0023184147064262773]",6.388954307360493e-08,0.0005445225102088243,1.2878446342582126e-07,0.49609666705180444,-16.566110134124756,-8.283055067062378,1.0441839852510761
+meta-llama/Llama-2-7b-hf,0.1,3,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He got his shoes on sale.
+
+2. He wants his wife to iron his shirt.
+3. He got this shirt on sale.
+4. He is unhappy that his shirt is wrinkled.
+Your answer:
+",,3,distractor_lexical_overlap,He got this shirt on sale.,distractor_lexical_overlap,3,"[-9.684825897216797, -7.279727935791016]","[6.222050829455251e-05, 0.0006893730919267264]","[-13.373932838439941, -3.5838358402252197]","[-9.798254013061523, -5.9709272384643555]","[5.5548501770995146e-05, 0.0025518741257943237]",4.289314418426819e-08,0.00037579680011063944,1.417527843960427e-07,0.3025911933019189,-16.964553833007812,-8.482276916503906,1.0758043529600667
+meta-llama/Llama-2-7b-hf,0.1,3,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He got his shoes on sale.
+
+2. He wants his wife to iron his shirt.
+3. He got this shirt on sale.
+4. He is unhappy that his shirt is wrinkled.
+Your answer:
+",,4,distractor_associative,He is unhappy that his shirt is wrinkled.,competitor,4,"[-9.684825897216797, -9.044498443603516]","[6.222050829455251e-05, 0.00011803865013604012]","[-13.373932838439941, -3.538752555847168]","[-9.798254013061523, -7.680949687957764]","[5.5548501770995146e-05, 0.0004615363750468032]",7.344424809867266e-09,9.012957921529632e-05,2.5637654146666028e-08,0.2864702350633102,-18.729324340820312,-9.364662170410156,1.0715204571778132
+meta-llama/Llama-2-7b-hf,0.1,3,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He does not want Cindy to start painting.
+2. He has some doubts whether Cindy should be painting.
+3. He wants Cindy to create a sculpture.
+4. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,1,target,He does not want Cindy to start painting.,target,1,"[-8.842000007629395, -6.931550979614258]","[0.00014453338953911323, 0.0009764851846868895]","[-13.373932838439941, -2.9205374717712402]","[-9.140654563903809, -7.1146159172058105]","[0.00010721712607729731, 0.0008131329617456622]",1.4113471357752312e-07,0.0005605092871130014,8.718177927709084e-08,1.618855622674929,-15.773550987243652,-7.886775493621826,0.9703653350815801
+meta-llama/Llama-2-7b-hf,0.1,3,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He does not want Cindy to start painting.
+2. He has some doubts whether Cindy should be painting.
+3. He wants Cindy to create a sculpture.
+4. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,2,competitor,He has some doubts whether Cindy should be painting.,competitor,2,"[-8.842000007629395, -6.512557029724121]","[0.00014453338953911323, 0.0014846784981575065]","[-13.373932838439941, -3.542041301727295]","[-9.140654563903809, -6.0999627113342285]","[0.00010721712607729731, 0.0022429513545898752]",2.145856157145445e-07,0.0008146059438483099,2.4048279817030744e-07,0.8923117052329754,-15.354557037353516,-7.677278518676758,1.0074760595360268
+meta-llama/Llama-2-7b-hf,0.1,3,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He does not want Cindy to start painting.
+2. He has some doubts whether Cindy should be painting.
+3. He wants Cindy to create a sculpture.
+4. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,3,distractor_lexical_overlap,He wants Cindy to create a sculpture.,distractor_associative,3,"[-8.842000007629395, -5.9711198806762695]","[0.00014453338953911323, 0.002551382574466492]","[-13.373932838439941, -3.5838358402252197]","[-9.140654563903809, -5.902345657348633]","[0.00010721712607729731, 0.002733026550370102]",3.687599714986711e-07,0.0013479579820028027,2.9302725222363216e-07,1.2584494059864484,-14.813119888305664,-7.406559944152832,0.9847184518004588
+meta-llama/Llama-2-7b-hf,0.1,3,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He does not want Cindy to start painting.
+2. He has some doubts whether Cindy should be painting.
+3. He wants Cindy to create a sculpture.
+4. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,4,distractor_associative,He wants Cindy to paint a picture for the meeting.,distractor_lexical_overlap,4,"[-8.842000007629395, -7.936872482299805]","[0.00014453338953911323, 0.00035732226428356674]","[-13.373932838439941, -3.538752555847168]","[-9.140654563903809, -7.0061445236206055]","[0.00010721712607729731, 0.0009062960642040679]",5.1644998014694714e-08,0.00025092782691134,9.717045937912589e-08,0.5314886679005355,-16.7788724899292,-8.3894362449646,1.0391454305573882
+meta-llama/Llama-2-7b-hf,0.1,3,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy's brother creates a lot of mess.
+2. Cindy forgot to invite her brother to the movies.
+3. Cindy forgot to purchase a new toy for her brother.
+4. Cindy might help her clean up the house.
+Your answer:
+",,1,target,Cindy's brother creates a lot of mess.,competitor,1,"[-8.387102127075195, -7.063984394073486]","[0.00022778641894060836, 0.0008553631913029915]","[-13.373932838439941, -2.9205374717712402]","[-8.78132152557373, -7.189436912536621]","[0.00015357499774867536, 0.0007545138581945689]",1.9484011824051897e-07,0.0005415748051217999,1.1587446407357528e-07,1.6814758954725686,-15.451086521148682,-7.725543260574341,0.9674610370587287
+meta-llama/Llama-2-7b-hf,0.1,3,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy's brother creates a lot of mess.
+2. Cindy forgot to invite her brother to the movies.
+3. Cindy forgot to purchase a new toy for her brother.
+4. Cindy might help her clean up the house.
+Your answer:
+",,2,competitor,Cindy forgot to invite her brother to the movies.,distractor_associative,2,"[-8.387102127075195, -6.034294605255127]","[0.00022778641894060836, 0.0023951854828416635]","[-13.373932838439941, -3.542041301727295]","[-8.78132152557373, -5.628874778747559]","[0.00015357499774867536, 0.0035926155411972168]",5.455907238350345e-07,0.001311485950891136,5.517359236512186e-07,0.9888620632575145,-14.421396732330322,-7.210698366165161,1.000777257142963
+meta-llama/Llama-2-7b-hf,0.1,3,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy's brother creates a lot of mess.
+2. Cindy forgot to invite her brother to the movies.
+3. Cindy forgot to purchase a new toy for her brother.
+4. Cindy might help her clean up the house.
+Your answer:
+",,3,distractor_lexical_overlap,Cindy forgot to purchase a new toy for her brother.,distractor_lexical_overlap,3,"[-8.387102127075195, -6.277491569519043]","[0.00022778641894060836, 0.0018781057882348768]","[-13.373932838439941, -3.5838358402252197]","[-8.78132152557373, -5.747707843780518]","[0.00015357499774867536, 0.0031900845948331785]",4.2780699189365116e-07,0.0010529461035877427,4.899172344695894e-07,0.8732229890969603,-14.664593696594238,-7.332296848297119,1.0093305838809805
+meta-llama/Llama-2-7b-hf,0.1,3,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy's brother creates a lot of mess.
+2. Cindy forgot to invite her brother to the movies.
+3. Cindy forgot to purchase a new toy for her brother.
+4. Cindy might help her clean up the house.
+Your answer:
+",,4,distractor_associative,Cindy might help her clean up the house.,target,4,"[-8.387102127075195, -8.023979187011719]","[0.00022778641894060836, 0.00032751418625704185]","[-13.373932838439941, -3.538752555847168]","[-8.78132152557373, -7.020537853240967]","[0.00015357499774867536, 0.0008933448751731792]",7.460328363973898e-08,0.0002776503025988251,1.3719543719351167e-07,0.5437737957313581,-16.411081314086914,-8.205540657043457,1.038553813235991
+meta-llama/Llama-2-7b-hf,0.1,3,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wishes to have a date with Matt.
+2. She wishes that he stopped telling her about the movie.
+3. She wonders whether Matt knows something else interesting that he can share with her.
+4. She wishes to build a kite with Matt.
+Your answer:
+",,1,target,She wishes to have a date with Matt.,distractor_lexical_overlap,1,"[-8.548321723937988, -7.1848273277282715]","[0.0001938701943887326, 0.0007579998822019815]","[-13.373932838439941, -2.9205374717712402]","[-8.829941749572754, -7.114169120788574]","[0.00014628676050255798, 0.0008134963478134583]",1.4695358450913457e-07,0.00047593503829535704,1.1900374540229298e-07,1.2348652053963258,-15.73314905166626,-7.86657452583313,0.9867686683559616
+meta-llama/Llama-2-7b-hf,0.1,3,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wishes to have a date with Matt.
+2. She wishes that he stopped telling her about the movie.
+3. She wonders whether Matt knows something else interesting that he can share with her.
+4. She wishes to build a kite with Matt.
+Your answer:
+",,2,competitor,She wishes that he stopped telling her about the movie.,target,2,"[-8.548321723937988, -6.036814212799072]","[0.0001938701943887326, 0.0023891581518729068]","[-13.373932838439941, -3.542041301727295]","[-8.829941749572754, -5.621703624725342]","[0.00014628676050255798, 0.0036184713377316736]",4.6318655532902556e-07,0.0012915141731308197,5.293344499681239e-07,0.8750357271417311,-14.58513593673706,-7.29256796836853,1.0092370494142053
+meta-llama/Llama-2-7b-hf,0.1,3,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wishes to have a date with Matt.
+2. She wishes that he stopped telling her about the movie.
+3. She wonders whether Matt knows something else interesting that he can share with her.
+4. She wishes to build a kite with Matt.
+Your answer:
+",,3,distractor_lexical_overlap,She wonders whether Matt knows something else interesting that he can share with her.,competitor,3,"[-8.548321723937988, -6.542388439178467]","[0.0001938701943887326, 0.0014410425429630274]","[-13.373932838439941, -3.5838358402252197]","[-8.829941749572754, -6.151966094970703]","[0.00014628676050255798, 0.0021292912630767585]",2.793751979266757e-07,0.00081745636867588,3.1148712104189894e-07,0.8969077019691489,-15.090710163116455,-7.5453550815582275,1.007262247218576
+meta-llama/Llama-2-7b-hf,0.1,3,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wishes to have a date with Matt.
+2. She wishes that he stopped telling her about the movie.
+3. She wonders whether Matt knows something else interesting that he can share with her.
+4. She wishes to build a kite with Matt.
+Your answer:
+",,4,distractor_associative,She wishes to build a kite with Matt.,distractor_associative,4,"[-8.548321723937988, -7.453057289123535]","[0.0001938701943887326, 0.0005796666916819304]","[-13.373932838439941, -3.538752555847168]","[-8.829941749572754, -6.773717403411865]","[0.00014628676050255798, 0.001143436127119878]",1.1238009419704938e-07,0.0003867684430353315,1.6726956687795804e-07,0.6718502133687193,-16.001379013061523,-8.000689506530762,1.025488884125031
+meta-llama/Llama-2-7b-hf,0.1,3,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy should stop teasing him if she wants to be his friend.
+2. Cindy should meet a new principal.
+3. Cindy should meet Matt's other friends.
+4. His friends are very friendly.
+Your answer:
+",,1,target,Cindy should stop teasing him if she wants to be his friend.,target,1,"[-8.408212661743164, -7.146996974945068]","[0.00022302812759545688, 0.000787224590371797]","[-13.373932838439941, -2.9205374717712402]","[-8.799466133117676, -7.0178728103637695]","[0.00015081356797667093, 0.0008957288528600097]",1.7557322638772243e-07,0.000505126358983627,1.3508806423946854e-07,1.2996945909039488,-15.555209636688232,-7.777604818344116,0.9834277239850613
+meta-llama/Llama-2-7b-hf,0.1,3,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy should stop teasing him if she wants to be his friend.
+2. Cindy should meet a new principal.
+3. Cindy should meet Matt's other friends.
+4. His friends are very friendly.
+Your answer:
+",,2,competitor,Cindy should meet a new principal.,distractor_associative,2,"[-8.408212661743164, -5.795058250427246]","[0.00022302812759545688, 0.003042553191504703]","[-13.373932838439941, -3.542041301727295]","[-8.799466133117676, -5.465482234954834]","[0.00015081356797667093, 0.004230300556276644]",6.785749414108755e-07,0.00163279065955008,6.379867205057765e-07,1.0636192252919023,-14.20327091217041,-7.101635456085205,0.9956762930849337
+meta-llama/Llama-2-7b-hf,0.1,3,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy should stop teasing him if she wants to be his friend.
+2. Cindy should meet a new principal.
+3. Cindy should meet Matt's other friends.
+4. His friends are very friendly.
+Your answer:
+",,3,distractor_lexical_overlap,Cindy should meet Matt's other friends.,distractor_lexical_overlap,3,"[-8.408212661743164, -6.546054840087891]","[0.00022302812759545688, 0.001435768777050771]","[-13.373932838439941, -3.5838358402252197]","[-8.799466133117676, -5.908005237579346]","[0.00015081356797667093, 0.002717602455457484]",3.202168220056524e-07,0.0008293984523231139,4.098513226497051e-07,0.7812999600329161,-14.954267501831055,-7.477133750915527,1.016780323749312
+meta-llama/Llama-2-7b-hf,0.1,3,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Cindy should stop teasing him if she wants to be his friend.
+2. Cindy should meet a new principal.
+3. Cindy should meet Matt's other friends.
+4. His friends are very friendly.
+Your answer:
+",,4,distractor_associative,His friends are very friendly.,competitor,4,"[-8.408212661743164, -7.766103744506836]","[0.00022302812759545688, 0.0004238615265044491]","[-13.373932838439941, -3.538752555847168]","[-8.799466133117676, -7.033119201660156]","[0.00015081356797667093, 0.0008821758003801941]",9.45330426160394e-08,0.000323444827049953,1.330440800380125e-07,0.7105392632955185,-16.17431640625,-8.087158203125,1.0215840347136182
+meta-llama/Llama-2-7b-hf,0.1,3,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He likes to live in the wilderness.
+2. It was not his fault.
+3. All of the boys were not very cautious.
+4. He likes to live in the city.
+Your answer:
+",,1,target,He likes to live in the wilderness.,distractor_lexical_overlap,1,"[-8.701019287109375, -7.2723307609558105]","[0.00016641609872534305, 0.0006944914124314618]","[-13.373932838439941, -2.9205374717712402]","[-9.110152244567871, -7.1135663986206055]","[0.00011053788505744944, 0.0008139868078865788]",1.1557455145509708e-07,0.00043045375557840244,8.997638020844681e-08,1.2844987894305973,-15.973350048065186,-7.986675024032593,0.9845677430292217
+meta-llama/Llama-2-7b-hf,0.1,3,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He likes to live in the wilderness.
+2. It was not his fault.
+3. All of the boys were not very cautious.
+4. He likes to live in the city.
+Your answer:
+",,2,competitor,It was not his fault.,target,2,"[-8.701019287109375, -6.287479877471924]","[0.00016641609872534305, 0.0018594400639390368]","[-13.373932838439941, -3.542041301727295]","[-9.110152244567871, -5.500219821929932]","[0.00011053788505744944, 0.004085873175211872]",3.0944076125433695e-07,0.0010129280813321899,4.516437794008859e-07,0.6851434147168284,-14.988499164581299,-7.494249582290649,1.025880730234828
+meta-llama/Llama-2-7b-hf,0.1,3,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He likes to live in the wilderness.
+2. It was not his fault.
+3. All of the boys were not very cautious.
+4. He likes to live in the city.
+Your answer:
+",,3,distractor_lexical_overlap,All of the boys were not very cautious.,competitor,3,"[-8.701019287109375, -6.401157379150391]","[0.00016641609872534305, 0.001659635333849575]","[-13.373932838439941, -3.5838358402252197]","[-9.110152244567871, -5.338079452514648]","[0.00011053788505744944, 0.004805090258185048]",2.7619003756597854e-07,0.000913025716287459,5.311445146499288e-07,0.5199903791682988,-15.102176666259766,-7.551088333129883,1.0452612460048862
+meta-llama/Llama-2-7b-hf,0.1,3,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He likes to live in the wilderness.
+2. It was not his fault.
+3. All of the boys were not very cautious.
+4. He likes to live in the city.
+Your answer:
+",,4,distractor_associative,He likes to live in the city.,distractor_associative,4,"[-8.701019287109375, -7.723041534423828]","[0.00016641609872534305, 0.00044251263757887234]","[-13.373932838439941, -3.538752555847168]","[-9.110152244567871, -6.488265037536621]","[0.00011053788505744944, 0.0015211859204061996]",7.364122678253757e-08,0.0003044643681521077,1.681486744208709e-07,0.4379530616947706,-16.424060821533203,-8.212030410766602,1.0529312381183662
+meta-llama/Llama-2-7b-hf,0.1,3,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to learn how to make a roast beef.
+2. He wants Kate to give him some cookies.
+3. He wants to learn how to make these cookies.
+4. She is a great baker who makes good cookies.
+Your answer:
+",,1,target,He wants to learn how to make a roast beef.,distractor_associative,1,"[-8.784612655639648, -7.47835111618042]","[0.00015307039327116517, 0.0005651885779736263]","[-13.373932838439941, -2.9205374717712402]","[-9.256911277770996, -7.042685031890869]","[9.544968788106453e-05, 0.0008737772898452183]",8.651363790279359e-08,0.0003591294856223957,8.340176959328855e-08,1.0373117779716206,-16.26296377182007,-8.131481885910034,0.9977525493793927
+meta-llama/Llama-2-7b-hf,0.1,3,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to learn how to make a roast beef.
+2. He wants Kate to give him some cookies.
+3. He wants to learn how to make these cookies.
+4. She is a great baker who makes good cookies.
+Your answer:
+",,2,competitor,He wants Kate to give him some cookies.,target,2,"[-8.784612655639648, -6.349686145782471]","[0.00015307039327116517, 0.0017472954462569932]","[-13.373932838439941, -3.542041301727295]","[-9.256911277770996, -5.522047996520996]","[9.544968788106453e-05, 0.003997652374552829]",2.67459201119474e-07,0.0009501829197640792,3.81574671408064e-07,0.7009354162122765,-15.13429880142212,-7.56714940071106,1.024043609603028
+meta-llama/Llama-2-7b-hf,0.1,3,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to learn how to make a roast beef.
+2. He wants Kate to give him some cookies.
+3. He wants to learn how to make these cookies.
+4. She is a great baker who makes good cookies.
+Your answer:
+",,3,distractor_lexical_overlap,He wants to learn how to make these cookies.,distractor_lexical_overlap,3,"[-8.784612655639648, -7.156097412109375]","[0.00015307039327116517, 0.0007800930019576076]","[-13.373932838439941, -3.5838358402252197]","[-9.256911277770996, -6.1825737953186035]","[9.544968788106453e-05, 0.0020651058489350995]",1.194091425977348e-07,0.0004665816976143864,1.9711370872221605e-07,0.605788117791508,-15.940710067749023,-7.970355033874512,1.0324638413966951
+meta-llama/Llama-2-7b-hf,0.1,3,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to learn how to make a roast beef.
+2. He wants Kate to give him some cookies.
+3. He wants to learn how to make these cookies.
+4. She is a great baker who makes good cookies.
+Your answer:
+",,4,distractor_associative,She is a great baker who makes good cookies.,competitor,4,"[-8.784612655639648, -8.723862648010254]","[0.00015307039327116517, 0.00016265768653830748]","[-13.373932838439941, -3.538752555847168]","[-9.256911277770996, -6.865067481994629]","[9.544968788106453e-05, 0.0010436120251663813]",2.4898076046996634e-08,0.00015786403990473633,9.961244207105675e-08,0.24994945941829272,-17.508475303649902,-8.754237651824951,1.086000395146559
+meta-llama/Llama-2-7b-hf,0.1,3,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt is unfair to the teacher.
+2. She wants him to stop talking.
+3. She wants kids to work on a project about fairness.
+4. She wants kids to work on a project about dinosaurs.
+Your answer:
+",,1,target,Matt is unfair to the teacher.,competitor,1,"[-8.555212020874023, -6.887350559234619]","[0.0001925389627398364, 0.0010206143192202893]","[-13.373932838439941, -2.9205374717712402]","[-8.782779693603516, -7.070687770843506]","[0.00015335122278718147, 0.0008496485446703028]",1.9650802238009878e-07,0.0006065766409800628,1.302946432645401e-07,1.5081818980165147,-15.442562580108643,-7.721281290054321,0.9740810718374466
+meta-llama/Llama-2-7b-hf,0.1,3,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt is unfair to the teacher.
+2. She wants him to stop talking.
+3. She wants kids to work on a project about fairness.
+4. She wants kids to work on a project about dinosaurs.
+Your answer:
+",,2,competitor,She wants him to stop talking.,target,2,"[-8.555212020874023, -6.61500358581543]","[0.0001925389627398364, 0.0013401099906471196]","[-13.373932838439941, -3.542041301727295]","[-8.782779693603516, -6.421681880950928]","[0.00015335122278718147, 0.0016259193311096232]",2.580233875564883e-07,0.000766324476693478,2.493367175789769e-07,1.0348391125938357,-15.170215606689453,-7.585107803344727,0.9977476369224213
+meta-llama/Llama-2-7b-hf,0.1,3,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt is unfair to the teacher.
+2. She wants him to stop talking.
+3. She wants kids to work on a project about fairness.
+4. She wants kids to work on a project about dinosaurs.
+Your answer:
+",,3,distractor_lexical_overlap,She wants kids to work on a project about fairness.,distractor_lexical_overlap,3,"[-8.555212020874023, -6.785550117492676]","[0.0001925389627398364, 0.0011299859075925647]","[-13.373932838439941, -3.5838358402252197]","[-8.782779693603516, -6.774153709411621]","[0.00015335122278718147, 0.0011429373478953747]",2.1756631455850505e-07,0.0006612624351662005,1.7527083986889395e-07,1.2413149541660722,-15.3407621383667,-7.67038106918335,0.9861045066499712
+meta-llama/Llama-2-7b-hf,0.1,3,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt is unfair to the teacher.
+2. She wants him to stop talking.
+3. She wants kids to work on a project about fairness.
+4. She wants kids to work on a project about dinosaurs.
+Your answer:
+",,4,distractor_associative,She wants kids to work on a project about dinosaurs.,distractor_associative,4,"[-8.555212020874023, -7.779857635498047]","[0.0001925389627398364, 0.0004180716889423254]","[-13.373932838439941, -3.538752555847168]","[-8.782779693603516, -7.362911224365234]","[0.00015335122278718147, 0.0006343490364309684]",8.049508933984686e-08,0.0003053053258410809,9.727820041055932e-08,0.8274730515174015,-16.33506965637207,-8.167534828186035,1.0117293672575236
+meta-llama/Llama-2-7b-hf,0.1,3,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He is too tired and the girls are making a lot of noise.
+2. He wants the girls to listen to some music.
+3. He wants the girls to go shopping.
+4. He wants the girls to be quiet.
+Your answer:
+",,1,target,He is too tired and the girls are making a lot of noise.,competitor,1,"[-8.826918601989746, -7.395321846008301]","[0.00014672967613132095, 0.0006141189947878814]","[-13.373932838439941, -2.9205374717712402]","[-9.120027542114258, -7.0619611740112305]","[0.00010945166276402147, 0.0008570955311335681]",9.010948121131822e-08,0.00038042433545960115,9.381053103018116e-08,0.9605476082672187,-16.222240447998047,-8.111120223999023,1.002487440362163
+meta-llama/Llama-2-7b-hf,0.1,3,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He is too tired and the girls are making a lot of noise.
+2. He wants the girls to listen to some music.
+3. He wants the girls to go shopping.
+4. He wants the girls to be quiet.
+Your answer:
+",,2,competitor,He wants the girls to listen to some music.,distractor_lexical_overlap,2,"[-8.826918601989746, -6.418201923370361]","[0.00014672967613132095, 0.0016315873178680592]","[-13.373932838439941, -3.542041301727295]","[-9.120027542114258, -5.627619743347168]","[0.00010945166276402147, 0.003597127231454705]",2.3940227873075093e-07,0.0008891584969996901,3.937115566564586e-07,0.6080651550181608,-15.245120525360107,-7.622560262680054,1.033732379834518
+meta-llama/Llama-2-7b-hf,0.1,3,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He is too tired and the girls are making a lot of noise.
+2. He wants the girls to listen to some music.
+3. He wants the girls to go shopping.
+4. He wants the girls to be quiet.
+Your answer:
+",,3,distractor_lexical_overlap,He wants the girls to go shopping.,distractor_associative,3,"[-8.826918601989746, -6.273563385009766]","[0.00014672967613132095, 0.0018854978434721034]","[-13.373932838439941, -3.5838358402252197]","[-9.120027542114258, -5.681041240692139]","[0.00010945166276402147, 0.0034100059572566973]",2.766584879189658e-07,0.0010161137598017121,3.7323082205696427e-07,0.7412530572749452,-15.100481986999512,-7.550240993499756,1.0202291610549725
+meta-llama/Llama-2-7b-hf,0.1,3,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He is too tired and the girls are making a lot of noise.
+2. He wants the girls to listen to some music.
+3. He wants the girls to go shopping.
+4. He wants the girls to be quiet.
+Your answer:
+",,4,distractor_associative,He wants the girls to be quiet.,target,4,"[-8.826918601989746, -8.488932609558105]","[0.00014672967613132095, 0.00020573274011966532]","[-13.373932838439941, -3.538752555847168]","[-9.120027542114258, -6.8660054206848145]","[0.00010945166276402147, 0.0010426336399748234]",3.018709832736771e-08,0.00017623120812549313,1.1411798554894856e-07,0.2645253347415564,-17.31585121154785,-8.657925605773926,1.0831862571435569
+meta-llama/Llama-2-7b-hf,0.1,3,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt should get a new pet.
+2. Walking on shattered glass is something that Matt enjoys.
+3. Matt should look around where he is walking.
+4. Matt should buy new shoes.
+Your answer:
+",,1,target,Matt should get a new pet.,distractor_associative,1,"[-8.511068344116211, -7.040976524353027]","[0.00020122872850605915, 0.0008752714209349814]","[-13.373932838439941, -2.9205374717712402]","[-9.007999420166016, -6.856724739074707]","[0.00012242653524482036, 0.0010523550316176996]",1.7612975513243798e-07,0.0005382500747205202,1.2883618036840835e-07,1.367083024572703,-15.552044868469238,-7.776022434234619,0.9802909090865373
+meta-llama/Llama-2-7b-hf,0.1,3,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt should get a new pet.
+2. Walking on shattered glass is something that Matt enjoys.
+3. Matt should look around where he is walking.
+4. Matt should buy new shoes.
+Your answer:
+",,2,competitor,Walking on shattered glass is something that Matt enjoys.,competitor,2,"[-8.511068344116211, -6.26498556137085]","[0.00020122872850605915, 0.001901740876787063]","[-13.373932838439941, -3.542041301727295]","[-9.007999420166016, -4.997726917266846]","[0.00012242653524482036, 0.006753280330429202]",3.8268489858385877e-07,0.001051484802646561,8.267807123914427e-07,0.46286142485950377,-14.77605390548706,-7.38802695274353,1.0550009010239874
+meta-llama/Llama-2-7b-hf,0.1,3,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt should get a new pet.
+2. Walking on shattered glass is something that Matt enjoys.
+3. Matt should look around where he is walking.
+4. Matt should buy new shoes.
+Your answer:
+",,3,distractor_lexical_overlap,Matt should look around where he is walking.,target,3,"[-8.511068344116211, -6.405409336090088]","[0.00020122872850605915, 0.001652593617021824]","[-13.373932838439941, -3.5838358402252197]","[-9.007999420166016, -5.5128679275512695]","[0.00012242653524482036, 0.004034520064120457]",3.325493122905309e-07,0.0009269111727639416,4.93932312825978e-07,0.6732689958830341,-14.916477680206299,-7.458238840103149,1.027244263239634
+meta-llama/Llama-2-7b-hf,0.1,3,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. Matt should get a new pet.
+2. Walking on shattered glass is something that Matt enjoys.
+3. Matt should look around where he is walking.
+4. Matt should buy new shoes.
+Your answer:
+",,4,distractor_associative,Matt should buy new shoes.,distractor_lexical_overlap,4,"[-8.511068344116211, -7.4321770668029785]","[0.00020122872850605915, 0.0005918975077893531]","[-13.373932838439941, -3.538752555847168]","[-9.007999420166016, -6.395260334014893]","[0.00012242653524482036, 0.0016694511921558526]",1.1910678289835676e-07,0.0003965631181477061,2.0438512521597584e-07,0.5827566109446342,-15.94324541091919,-7.971622705459595,1.035056583174981
+meta-llama/Llama-2-7b-hf,0.1,3,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants her to tell him the house number.
+2. He wants to know how good her vision is.
+3. He wants her to see an eye doctor.
+4. He wants her to see a dentist.
+Your answer:
+",,1,target,He wants her to tell him the house number.,target,1,"[-8.345464706420898, -7.341130256652832]","[0.00023747108092711286, 0.0006483173416932346]","[-13.373932838439941, -2.9205374717712402]","[-9.115254402160645, -7.020260810852051]","[0.0001099753396658834, 0.0008935924038579089]",1.539566199156848e-07,0.0004428942113101737,9.827312813712678e-08,1.5666197141995855,-15.68659496307373,-7.843297481536865,0.9721781273165094
+meta-llama/Llama-2-7b-hf,0.1,3,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants her to tell him the house number.
+2. He wants to know how good her vision is.
+3. He wants her to see an eye doctor.
+4. He wants her to see a dentist.
+Your answer:
+",,2,competitor,He wants to know how good her vision is.,competitor,2,"[-8.345464706420898, -5.172142505645752]","[0.00023747108092711286, 0.005672402636142615]","[-13.373932838439941, -3.542041301727295]","[-9.115254402160645, -5.3087158203125]","[0.0001099753396658834, 0.004948277116241485]",1.3470315854585914e-06,0.002954936858534864,5.441884566195753e-07,2.4753034892106465,-13.51760721206665,-6.758803606033325,0.9371627231319195
+meta-llama/Llama-2-7b-hf,0.1,3,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants her to tell him the house number.
+2. He wants to know how good her vision is.
+3. He wants her to see an eye doctor.
+4. He wants her to see a dentist.
+Your answer:
+",,3,distractor_lexical_overlap,He wants her to see an eye doctor.,distractor_lexical_overlap,3,"[-8.345464706420898, -5.787094593048096]","[0.00023747108092711286, 0.00306687977841582]","[-13.373932838439941, -3.5838358402252197]","[-9.115254402160645, -5.4584431648254395]","[0.0001099753396658834, 0.004260182987439264]",7.282952560539091e-07,0.0016521754296714665,4.6851507108245096e-07,1.554475620968319,-14.132559299468994,-7.066279649734497,0.9697305185942376
+meta-llama/Llama-2-7b-hf,0.1,3,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants her to tell him the house number.
+2. He wants to know how good her vision is.
+3. He wants her to see an eye doctor.
+4. He wants her to see a dentist.
+Your answer:
+",,4,distractor_associative,He wants her to see a dentist.,distractor_associative,4,"[-8.345464706420898, -6.866225719451904]","[0.00023747108092711286, 0.0010424039743678645]","[-13.373932838439941, -3.538752555847168]","[-9.115254402160645, -6.303511142730713]","[0.0001099753396658834, 0.0018298685547194664]",2.4754079855585525e-07,0.0006399375276474887,2.0124041584919245e-07,1.2300749703347853,-15.211690425872803,-7.605845212936401,0.9865699288042443
+meta-llama/Llama-2-7b-hf,0.1,3,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know whether he has time and a desire to water the lawn.
+2. She wants to know whether he will water the plants in the office.
+3. She wants to know whether he is allowed to water the lawn.
+4. She wants to know whether he won the golf tournament.
+Your answer:
+",,1,target,She wants to know whether he has time and a desire to water the lawn.,target,1,"[-8.327899932861328, -7.422133922576904]","[0.00024167905455561755, 0.000597871970806372]","[-13.373932838439941, -2.9205374717712402]","[-8.825584411621094, -7.034970760345459]","[0.00014692557210421205, 0.0008805439113504025]",1.4449313264978774e-07,0.00041977551268099477,1.2937441793803847e-07,1.1168601563795255,-15.750033855438232,-7.875016927719116,0.9930316867644289
+meta-llama/Llama-2-7b-hf,0.1,3,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know whether he has time and a desire to water the lawn.
+2. She wants to know whether he will water the plants in the office.
+3. She wants to know whether he is allowed to water the lawn.
+4. She wants to know whether he won the golf tournament.
+Your answer:
+",,2,competitor,She wants to know whether he will water the plants in the office.,distractor_lexical_overlap,2,"[-8.327899932861328, -6.343908786773682]","[0.00024167905455561755, 0.0017574194160888958]","[-13.373932838439941, -3.542041301727295]","[-8.825584411621094, -5.54555082321167]","[0.00014692557210421205, 0.0039047917615822525]",4.247314629380498e-07,0.0009995492353222567,5.737137635182864e-07,0.7403194588419736,-14.67180871963501,-7.335904359817505,1.0209220412924285
+meta-llama/Llama-2-7b-hf,0.1,3,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know whether he has time and a desire to water the lawn.
+2. She wants to know whether he will water the plants in the office.
+3. She wants to know whether he is allowed to water the lawn.
+4. She wants to know whether he won the golf tournament.
+Your answer:
+",,3,distractor_lexical_overlap,She wants to know whether he is allowed to water the lawn.,competitor,3,"[-8.327899932861328, -7.17294454574585]","[0.00024167905455561755, 0.0007670607571291263]","[-13.373932838439941, -3.5838358402252197]","[-8.825584411621094, -6.256204605102539]","[0.00014692557210421205, 0.0019185135123783005]",1.8538251856968343e-07,0.0005043699058423719,2.818786953958431e-07,0.657667718765869,-15.500844478607178,-7.750422239303589,1.0277855273945862
+meta-llama/Llama-2-7b-hf,0.1,3,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know whether he has time and a desire to water the lawn.
+2. She wants to know whether he will water the plants in the office.
+3. She wants to know whether he is allowed to water the lawn.
+4. She wants to know whether he won the golf tournament.
+Your answer:
+",,4,distractor_associative,She wants to know whether he won the golf tournament.,distractor_associative,4,"[-8.327899932861328, -8.087653160095215]","[0.00024167905455561755, 0.00030731011916613896]","[-13.373932838439941, -3.538752555847168]","[-8.825584411621094, -6.807463645935059]","[0.00014692557210421205, 0.0011054932694398991]",7.427041905544663e-08,0.00027449458686087827,1.6242523106981303e-07,0.4572591251141517,-16.415553092956543,-8.207776546478271,1.0500545403890171
+meta-llama/Llama-2-7b-hf,0.1,3,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants him to bring brushes from the truck.
+2. He wants him to move the ladder.
+3. He wants him to bring tires from the truck.
+4. He wants to know whether his brother is strong enough to move the ladder.
+Your answer:
+",,1,target,He wants him to bring brushes from the truck.,distractor_lexical_overlap,1,"[-8.84875202178955, -7.571871757507324]","[0.00014356078526031932, 0.0005147281001949959]","[-13.373932838439941, -2.9205374717712402]","[-9.067632675170898, -6.920525074005127]","[0.00011533926120423477, 0.000987311392857836]",7.389477025954593e-08,0.00032914444272765756,1.138757666307468e-07,0.6489068960488923,-16.420623779296875,-8.210311889648438,1.0270491470565541
+meta-llama/Llama-2-7b-hf,0.1,3,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants him to bring brushes from the truck.
+2. He wants him to move the ladder.
+3. He wants him to bring tires from the truck.
+4. He wants to know whether his brother is strong enough to move the ladder.
+Your answer:
+",,2,competitor,He wants him to move the ladder.,target,2,"[-8.84875202178955, -7.724295139312744]","[0.00014356078526031932, 0.00044195824913762947]","[-13.373932838439941, -3.542041301727295]","[-9.067632675170898, -5.48814582824707]","[0.00011533926120423477, 0.004135505006378302]",6.344787329847393e-08,0.00029275951719897437,4.769860921420876e-07,0.13301828783631217,-16.573047161102295,-8.286523580551147,1.1385888537126774
+meta-llama/Llama-2-7b-hf,0.1,3,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants him to bring brushes from the truck.
+2. He wants him to move the ladder.
+3. He wants him to bring tires from the truck.
+4. He wants to know whether his brother is strong enough to move the ladder.
+Your answer:
+",,3,distractor_lexical_overlap,He wants him to bring tires from the truck.,distractor_associative,3,"[-8.84875202178955, -7.015225887298584]","[0.00014356078526031932, 0.0008981029188196718]","[-13.373932838439941, -3.5838358402252197]","[-9.067632675170898, -5.689491271972656]","[0.00011533926120423477, 0.0033813127004418565]",1.289323602703369e-07,0.0005208318520399956,3.899981087694597e-07,0.3305973987339332,-15.863977909088135,-7.931988954544067,1.0750047208323967
+meta-llama/Llama-2-7b-hf,0.1,3,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants him to bring brushes from the truck.
+2. He wants him to move the ladder.
+3. He wants him to bring tires from the truck.
+4. He wants to know whether his brother is strong enough to move the ladder.
+Your answer:
+",,4,distractor_associative,He wants to know whether his brother is strong enough to move the ladder.,competitor,4,"[-8.84875202178955, -8.881927490234375]","[0.00014356078526031932, 0.00013887622485097477]","[-13.373932838439941, -3.538752555847168]","[-9.067632675170898, -7.235564231872559]","[0.00011533926120423477, 0.0007205006561251647]",1.9937179893594612e-08,0.00014121850505564705,8.31020133746429e-08,0.23991211625298703,-17.730679512023926,-8.865339756011963,1.0875584471634367
+meta-llama/Llama-2-7b-hf,0.1,3,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to get a new uniform.
+2. He wants to know their opinion.
+3. He wants to get good grades on his math test.
+4. He wants to join their game.
+Your answer:
+",,1,target,He wants to get a new uniform.,distractor_lexical_overlap,1,"[-8.701087951660156, -7.523833274841309]","[0.00016640467223098335, 0.0005400584006826807]","[-13.373932838439941, -2.9205374717712402]","[-9.27401065826416, -7.153801918029785]","[9.383143236324172e-05, 0.0007818857576679776]",8.986824115119055e-08,0.000353231536456832,7.336546058640484e-08,1.224939371100245,-16.224921226501465,-8.112460613250732,0.9876495212706978
+meta-llama/Llama-2-7b-hf,0.1,3,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to get a new uniform.
+2. He wants to know their opinion.
+3. He wants to get good grades on his math test.
+4. He wants to join their game.
+Your answer:
+",,2,competitor,He wants to know their opinion.,competitor,2,"[-8.701087951660156, -6.7349443435668945]","[0.00016640467223098335, 0.0011886413538544608]","[-13.373932838439941, -3.542041301727295]","[-9.27401065826416, -5.650852203369141]","[9.383143236324172e-05, 0.0035145204122020816]",1.9779547488834383e-07,0.000677523013042722,3.2977248434677204e-07,0.5997937495608401,-15.43603229522705,-7.718016147613525,1.0342495229827398
+meta-llama/Llama-2-7b-hf,0.1,3,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to get a new uniform.
+2. He wants to know their opinion.
+3. He wants to get good grades on his math test.
+4. He wants to join their game.
+Your answer:
+",,3,distractor_lexical_overlap,He wants to get good grades on his math test.,distractor_associative,3,"[-8.701087951660156, -6.264492034912109]","[0.00016640467223098335, 0.0019026796678674887]","[-13.373932838439941, -3.5838358402252197]","[-9.27401065826416, -5.759391784667969]","[9.383143236324172e-05, 0.0031530287357886193]",3.1661478649204575e-07,0.001034542170049236,2.9585320256150737e-07,1.0701752887945233,-14.965579986572266,-7.482789993286133,0.9954885491413323
+meta-llama/Llama-2-7b-hf,0.1,3,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants to get a new uniform.
+2. He wants to know their opinion.
+3. He wants to get good grades on his math test.
+4. He wants to join their game.
+Your answer:
+",,4,distractor_associative,He wants to join their game.,target,4,"[-8.701087951660156, -8.279051780700684]","[0.00016640467223098335, 0.0002537777229170957]","[-13.373932838439941, -3.538752555847168]","[-9.27401065826416, -6.120993137359619]","[9.383143236324172e-05, 0.002196273678125866]",4.222979880154462e-08,0.00021009119757403952,2.060795050802353e-07,0.20491993507604167,-16.98013973236084,-8.49006986618042,1.1029643095760493
+meta-llama/Llama-2-7b-hf,0.1,3,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Jane to open the door.
+2. She wants Jane to help her with cooking.
+3. She wants Jane to help her with painting the house.
+4. She suspects that someone is standing at their door.
+Your answer:
+",,1,target,She wants Jane to open the door.,target,1,"[-8.755620002746582, -6.845539093017578]","[0.00015757326980740194, 0.0010641923833184445]","[-13.373932838439941, -2.9205374717712402]","[-9.150484085083008, -6.877190589904785]","[0.00010616839576810877, 0.0010310365846969301]",1.6768827354361936e-07,0.0006108828265629232,1.0946350017550288e-07,1.5319103927315012,-15.60115909576416,-7.80057954788208,0.9733888048096435
+meta-llama/Llama-2-7b-hf,0.1,3,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Jane to open the door.
+2. She wants Jane to help her with cooking.
+3. She wants Jane to help her with painting the house.
+4. She suspects that someone is standing at their door.
+Your answer:
+",,2,competitor,She wants Jane to help her with cooking.,distractor_lexical_overlap,2,"[-8.755620002746582, -5.619508743286133]","[0.00015757326980740194, 0.0036264221756905687]","[-13.373932838439941, -3.542041301727295]","[-9.150484085083008, -5.251624584197998]","[0.00010616839576810877, 0.0052390002847818645]",5.714271999256355e-07,0.0018919977227489853,5.562162556639555e-07,1.0273471767622517,-14.375128746032715,-7.187564373016357,0.998126668540848
+meta-llama/Llama-2-7b-hf,0.1,3,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Jane to open the door.
+2. She wants Jane to help her with cooking.
+3. She wants Jane to help her with painting the house.
+4. She suspects that someone is standing at their door.
+Your answer:
+",,3,distractor_lexical_overlap,She wants Jane to help her with painting the house.,distractor_associative,3,"[-8.755620002746582, -5.850593090057373]","[0.00015757326980740194, 0.0028781916249418617]","[-13.373932838439941, -3.5838358402252197]","[-9.150484085083008, -5.822917938232422]","[0.00010616839576810877, 0.002958958477625666]",4.535260654743686e-07,0.0015178824473746318,3.1414787471396233e-07,1.4436706467847755,-14.606213092803955,-7.3031065464019775,0.9754772542712927
+meta-llama/Llama-2-7b-hf,0.1,3,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Jane to open the door.
+2. She wants Jane to help her with cooking.
+3. She wants Jane to help her with painting the house.
+4. She suspects that someone is standing at their door.
+Your answer:
+",,4,distractor_associative,She suspects that someone is standing at their door.,competitor,4,"[-8.755620002746582, -7.257111072540283]","[0.00015757326980740194, 0.0007051422005804744]","[-13.373932838439941, -3.538752555847168]","[-9.150484085083008, -6.5975260734558105]","[0.00010616839576810877, 0.001363737654519693]",1.1111156222465223e-07,0.00043135773519393817,1.4478583902891917e-07,0.7674200941879342,-16.012731075286865,-8.006365537643433,1.0168098009896513
+meta-llama/Llama-2-7b-hf,0.1,3,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Adam to close the window.
+2. He wants Adam to invite Julie to the movies.
+3. He wants to describe his physical state to Adam.
+4. He wants Adam to get back to the project.
+Your answer:
+",,1,target,He wants Adam to close the window.,target,1,"[-8.505996704101562, -7.189548492431641]","[0.00020225188051389378, 0.0007544296743141823]","[-13.373932838439941, -2.9205374717712402]","[-9.102824211120605, -7.035867214202881]","[0.0001113508855856931, 0.00087975489807428]",1.5258482034552782e-07,0.00047834077741403804,9.796148699892225e-08,1.5576000836655994,-15.695545196533203,-7.847772598266602,0.9725413779152543
+meta-llama/Llama-2-7b-hf,0.1,3,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Adam to close the window.
+2. He wants Adam to invite Julie to the movies.
+3. He wants to describe his physical state to Adam.
+4. He wants Adam to get back to the project.
+Your answer:
+",,2,competitor,He wants Adam to invite Julie to the movies.,distractor_associative,2,"[-8.505996704101562, -6.6432318687438965]","[0.00020225188051389378, 0.0013028099219258619]","[-13.373932838439941, -3.542041301727295]","[-9.102824211120605, -5.821619987487793]","[0.0001113508855856931, 0.002962801553507099]",2.634957566616647e-07,0.0007525309012198779,3.2991057679768274e-07,0.798688417992895,-15.149228572845459,-7.5746142864227295,1.0150614904813688
+meta-llama/Llama-2-7b-hf,0.1,3,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Adam to close the window.
+2. He wants Adam to invite Julie to the movies.
+3. He wants to describe his physical state to Adam.
+4. He wants Adam to get back to the project.
+Your answer:
+",,3,distractor_lexical_overlap,He wants to describe his physical state to Adam.,competitor,3,"[-8.505996704101562, -7.35054349899292]","[0.00020225188051389378, 0.0006422432069457044]","[-13.373932838439941, -3.5838358402252197]","[-9.102824211120605, -6.008275985717773]","[0.0001113508855856931, 0.0024583227126349755]",1.2989489635204257e-07,0.0004222475437297991,2.7373641110732783e-07,0.4745254598267995,-15.856540203094482,-7.928270101547241,1.0493306242792346
+meta-llama/Llama-2-7b-hf,0.1,3,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Adam to close the window.
+2. He wants Adam to invite Julie to the movies.
+3. He wants to describe his physical state to Adam.
+4. He wants Adam to get back to the project.
+Your answer:
+",,4,distractor_associative,He wants Adam to get back to the project.,distractor_lexical_overlap,4,"[-8.505996704101562, -8.069570541381836]","[0.00020225188051389378, 0.00031291763738955765]","[-13.373932838439941, -3.538752555847168]","[-9.102824211120605, -6.606750965118408]","[0.0001113508855856931, 0.0013512151704835568]",6.328818060800276e-08,0.00025758475895172573,1.5045900585016732e-07,0.42063404746291816,-16.5755672454834,-8.2877836227417,1.055125110611152
+meta-llama/Llama-2-7b-hf,0.1,3,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Mark to get a bottle opener.
+2. He is upset that they will not be able to drink beer.
+3. He wants Mark to bring some pancakes.
+4. He wants Mark to bring some wine.
+Your answer:
+",,1,target,He wants Mark to get a bottle opener.,target,1,"[-8.559393882751465, -6.7069196701049805]","[0.00019173547260496507, 0.0012224237996837414]","[-13.373932838439941, -2.9205374717712402]","[-9.197234153747559, -6.861844062805176]","[0.00010131924811550382, 0.0010469814518144216]",2.343820049559193e-07,0.0007070796361443532,1.0607937348871579e-07,2.2094965048115762,-15.266313552856445,-7.633156776428223,0.9506344851799056
+meta-llama/Llama-2-7b-hf,0.1,3,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Mark to get a bottle opener.
+2. He is upset that they will not be able to drink beer.
+3. He wants Mark to bring some pancakes.
+4. He wants Mark to bring some wine.
+Your answer:
+",,2,competitor,He is upset that they will not be able to drink beer.,competitor,2,"[-8.559393882751465, -6.183262825012207]","[0.00019173547260496507, 0.0020636834197889846]","[-13.373932838439941, -3.542041301727295]","[-9.197234153747559, -5.866741180419922]","[0.00010131924811550382, 0.0028320875745274756]",3.956813158002715e-07,0.0011277094461969747,2.8694498364838474e-07,1.3789448791519199,-14.742656707763672,-7.371328353881836,0.9786697323066503
+meta-llama/Llama-2-7b-hf,0.1,3,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Mark to get a bottle opener.
+2. He is upset that they will not be able to drink beer.
+3. He wants Mark to bring some pancakes.
+4. He wants Mark to bring some wine.
+Your answer:
+",,3,distractor_lexical_overlap,He wants Mark to bring some pancakes.,distractor_associative,3,"[-8.559393882751465, -6.232863426208496]","[0.00019173547260496507, 0.001963820582736095]","[-13.373932838439941, -3.5838358402252197]","[-9.197234153747559, -5.878927707672119]","[0.00010131924811550382, 0.0027977837091569886]",3.7653406754226306e-07,0.0010777780276705299,2.834693418015915e-07,1.3283061411480974,-14.792257308959961,-7.3961286544799805,0.9811686452381334
+meta-llama/Llama-2-7b-hf,0.1,3,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Mark to get a bottle opener.
+2. He is upset that they will not be able to drink beer.
+3. He wants Mark to bring some pancakes.
+4. He wants Mark to bring some wine.
+Your answer:
+",,4,distractor_associative,He wants Mark to bring some wine.,distractor_lexical_overlap,4,"[-8.559393882751465, -7.679676055908203]","[0.00019173547260496507, 0.0004621245770630585]","[-13.373932838439941, -3.538752555847168]","[-9.197234153747559, -6.735122203826904]","[0.00010131924811550382, 0.0011884299605939932]",8.860567418555512e-08,0.00032693002483401176,1.2041083004532124e-07,0.7358613353317552,-16.239069938659668,-8.119534969329834,1.0192509867468154
+meta-llama/Llama-2-7b-hf,0.1,3,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Alex to prepare some dinner.
+2. She wants Alex to clean the mess.
+3. She wants Alex to apply for a job.
+4. She wants Alex to know when her parents will arrive.
+Your answer:
+",,1,target,She wants Alex to prepare some dinner.,distractor_lexical_overlap,1,"[-8.729204177856445, -7.20811653137207]","[0.00016179116199460826, 0.0007405506466627773]","[-13.373932838439941, -2.9205374717712402]","[-9.279788970947266, -7.1106953620910645]","[9.329080845876078e-05, 0.0008163271517453489]",1.1981454963942932e-07,0.0004511709043286928,7.615581995316108e-08,1.573281591782744,-15.937320709228516,-7.968660354614258,0.9723520297141939
+meta-llama/Llama-2-7b-hf,0.1,3,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Alex to prepare some dinner.
+2. She wants Alex to clean the mess.
+3. She wants Alex to apply for a job.
+4. She wants Alex to know when her parents will arrive.
+Your answer:
+",,2,competitor,She wants Alex to clean the mess.,target,2,"[-8.729204177856445, -5.862534046173096]","[0.00016179116199460826, 0.002844027646283098]","[-13.373932838439941, -3.542041301727295]","[-9.279788970947266, -5.464712142944336]","[9.329080845876078e-05, 0.00423355953163142]",4.601385376369332e-07,0.0015029094041388532,3.949521913641878e-07,1.1650487013316422,-14.591738224029541,-7.2958691120147705,0.989639331389915
+meta-llama/Llama-2-7b-hf,0.1,3,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Alex to prepare some dinner.
+2. She wants Alex to clean the mess.
+3. She wants Alex to apply for a job.
+4. She wants Alex to know when her parents will arrive.
+Your answer:
+",,3,distractor_lexical_overlap,She wants Alex to apply for a job.,distractor_associative,3,"[-8.729204177856445, -6.332672595977783]","[0.00016179116199460826, 0.001777277471479958]","[-13.373932838439941, -3.5838358402252197]","[-9.279788970947266, -5.901434421539307]","[9.329080845876078e-05, 0.002735518117060627]",2.8754778729758165e-07,0.0009695343167372831,2.5519869669417287e-07,1.126760406782859,-15.061876773834229,-7.530938386917114,0.9921385374836517
+meta-llama/Llama-2-7b-hf,0.1,3,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants Alex to prepare some dinner.
+2. She wants Alex to clean the mess.
+3. She wants Alex to apply for a job.
+4. She wants Alex to know when her parents will arrive.
+Your answer:
+",,4,distractor_associative,She wants Alex to know when her parents will arrive.,competitor,4,"[-8.729204177856445, -7.888254165649414]","[0.00016179116199460826, 0.00037512390784553247]","[-13.373932838439941, -3.538752555847168]","[-9.279788970947266, -6.360568523406982]","[9.329080845876078e-05, 0.001728383805831225]",6.069173294228705e-08,0.00026845753492007036,1.612423225730248e-07,0.37640076112647447,-16.61745834350586,-8.30872917175293,1.062473050856051
+meta-llama/Llama-2-7b-hf,0.1,3,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know Nate's plans.
+2. She wants Nate to take the garbage out.
+3. She wants Nate to bring his friends over.
+4. She wants Nate to spend more time with the family.
+Your answer:
+",,1,target,She wants to know Nate's plans.,competitor,1,"[-8.335952758789062, -7.392305374145508]","[0.00023974067040897622, 0.0006159742642333321]","[-13.373932838439941, -2.9205374717712402]","[-8.73876953125, -6.919458866119385]","[0.00016025095043170599, 0.000988364633437513]",1.476740830619749e-07,0.0004278574673211541,1.5838637188144614e-07,0.9323660950609469,-15.72825813293457,-7.864129066467285,1.0044723920093637
+meta-llama/Llama-2-7b-hf,0.1,3,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know Nate's plans.
+2. She wants Nate to take the garbage out.
+3. She wants Nate to bring his friends over.
+4. She wants Nate to spend more time with the family.
+Your answer:
+",,2,competitor,She wants Nate to take the garbage out.,target,2,"[-8.335952758789062, -6.4641289710998535]","[0.00023974067040897622, 0.0015583480344228595]","[-13.373932838439941, -3.542041301727295]","[-8.73876953125, -5.60615348815918]","[0.00016025095043170599, 0.003675178823081794]",3.735994025030467e-07,0.0008990443524159178,5.889508994053362e-07,0.6343472823970047,-14.800081729888916,-7.400040864944458,1.031729602861158
+meta-llama/Llama-2-7b-hf,0.1,3,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know Nate's plans.
+2. She wants Nate to take the garbage out.
+3. She wants Nate to bring his friends over.
+4. She wants Nate to spend more time with the family.
+Your answer:
+",,3,distractor_lexical_overlap,She wants Nate to bring his friends over.,distractor_associative,3,"[-8.335952758789062, -6.29525089263916]","[0.00023974067040897622, 0.0018450463264107464]","[-13.373932838439941, -3.5838358402252197]","[-8.73876953125, -5.603466987609863]","[0.00016025095043170599, 0.003685065467300174]",4.423326432293311e-07,0.0010423934984098613,5.905352435379117e-07,0.7490368239146997,-14.631203651428223,-7.315601825714111,1.0201479826516855
+meta-llama/Llama-2-7b-hf,0.1,3,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. She wants to know Nate's plans.
+2. She wants Nate to take the garbage out.
+3. She wants Nate to bring his friends over.
+4. She wants Nate to spend more time with the family.
+Your answer:
+",,4,distractor_associative,She wants Nate to spend more time with the family.,distractor_lexical_overlap,4,"[-8.335952758789062, -7.889519214630127]","[0.00023974067040897622, 0.00037464965776630823]","[-13.373932838439941, -3.538752555847168]","[-8.73876953125, -6.7117486000061035]","[0.00016025095043170599, 0.001216535030515495]",8.981876012138823e-08,0.00030719516408764225,1.9495089487357252e-07,0.4607250465797376,-16.22547197341919,-8.112735986709595,1.0501571426653562
+meta-llama/Llama-2-7b-hf,0.1,3,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Peter to know that he might get bitten.
+2. He wants Peter to close the screen door.
+3. He wants Peter to bring him some flowers.
+4. He wants Peter to bring him some sunscreen.
+Your answer:
+",,1,target,He wants Peter to know that he might get bitten.,competitor,1,"[-9.051496505737305, -7.230175018310547]","[0.00011721549194365342, 0.0007243940698283266]","[-13.373932838439941, -2.9205374717712402]","[-9.410282135009766, -6.88146448135376]","[8.187784348617613e-05, 0.00102663944938674]",8.491020725599253e-08,0.00042080478088599,8.405902415362154e-08,1.010126016937996,-16.28167152404785,-8.140835762023926,0.9993815830461324
+meta-llama/Llama-2-7b-hf,0.1,3,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Peter to know that he might get bitten.
+2. He wants Peter to close the screen door.
+3. He wants Peter to bring him some flowers.
+4. He wants Peter to bring him some sunscreen.
+Your answer:
+",,2,competitor,He wants Peter to close the screen door.,target,2,"[-9.051496505737305, -6.64301061630249]","[0.00011721549194365342, 0.0013030982036921226]","[-13.373932838439941, -3.542041301727295]","[-9.410282135009766, -5.47855281829834]","[8.187784348617613e-05, 0.004175367843644297]",1.5274329699666324e-07,0.000710156847817888,3.418701147991205e-07,0.44678750901175934,-15.694507122039795,-7.8472535610198975,1.0541125058648515
+meta-llama/Llama-2-7b-hf,0.1,3,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Peter to know that he might get bitten.
+2. He wants Peter to close the screen door.
+3. He wants Peter to bring him some flowers.
+4. He wants Peter to bring him some sunscreen.
+Your answer:
+",,3,distractor_lexical_overlap,He wants Peter to bring him some flowers.,distractor_associative,3,"[-9.051496505737305, -6.854087829589844]","[0.00011721549194365342, 0.0010551336584657112]","[-13.373932838439941, -3.5838358402252197]","[-9.410282135009766, -5.922023773193359]","[8.187784348617613e-05, 0.0026797714359400216]",1.2367801084336512e-07,0.0005861745752046823,2.1941390621062256e-07,0.5636744406010554,-15.905584335327148,-7.952792167663574,1.0373902288772694
+meta-llama/Llama-2-7b-hf,0.1,3,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+1. He wants Peter to know that he might get bitten.
+2. He wants Peter to close the screen door.
+3. He wants Peter to bring him some flowers.
+4. He wants Peter to bring him some sunscreen.
+Your answer:
+",,4,distractor_associative,He wants Peter to bring him some sunscreen.,distractor_lexical_overlap,4,"[-9.051496505737305, -8.124090194702148]","[0.00011721549194365342, 0.0002963141956827017]","[-13.373932838439941, -3.538752555847168]","[-9.410282135009766, -6.800885200500488]","[8.187784348617613e-05, 0.001112789669763695]",3.473261421683587e-08,0.00020676484381317755,9.111281841394543e-08,0.3812044761807062,-17.175586700439453,-8.587793350219727,1.0594910499021657

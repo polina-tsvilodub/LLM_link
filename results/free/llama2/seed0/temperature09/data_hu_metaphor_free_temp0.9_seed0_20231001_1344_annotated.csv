@@ -1,0 +1,356 @@
+model_name,temperature,phenomenon,decoding_scheme,question,seed,item_id,prompt,response,response_option,target,competitor,distractor_plausibleliteral,distractor_literal,distractor_nonsequitut
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,1,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary was asked about the town that she has just moved to. Mary responded: ""This town is a chimney."" What does Mary mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary was asked about the town that she has just moved to. Mary responded: ""This town is a chimney."" What does Mary mean?
+
+
+Your answer:
+
+> Mary has lived in the town for a while and she doesn't like it anymore.
+
+
+## Solution:
+
+This is a riddle with two possible interpretations:
+
+1. A chimney is a narrow hole",distractor_nonsequitut,The town is not one of the cleanest ones.,The people living in this town are very welcoming.,All houses in this town have chimneys.,The town is a chimney.,Mary found a job at a company installing chimneys.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,2,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike said to his expectant wife: ""Our baby is a lovebird's egg."" What did Mike mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike said to his expectant wife: ""Our baby is a lovebird's egg."" What did Mike mean?
+
+
+Your answer:
+
+
+{% if page.step == 1 %}
+
+{% if page.correct %}
+You are correct.
+{% else %}
+You are incorrect.
+{% endif %}
+
+{% if page.correct %}
+This is the",error,Mike and his wife are very much in love with each other.,Mike is worried that the bird flu virus affected their baby.,The baby in his wife's womb is the size of an egg.,Their baby is an egg.,Their baby is growing bigger every day.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,3,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Andrew and Bob were discussing the investment company where Andrew works. Bob said: ""The investors are squirrels collecting nuts."" What does Bob mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Andrew and Bob were discussing the investment company where Andrew works. Bob said: ""The investors are squirrels collecting nuts."" What does Bob mean?
+
+
+Your answer:
+
+(please put the number of the exercise followed by your answer and its explanation)
+
+",error,They buy stocks hoping for future profit.,The investors dress and eat well.,The investors enjoy picking nuts as much as squirrels do.,Squirrels were hired to work in the company.,Bob is allergic to nuts.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,4,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark asked his mom what she thought about his new girlfriend. She replied: ""This young lady is 100% polyester."" What does she mean?
+
+
+Your answer:","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark asked his mom what she thought about his new girlfriend. She replied: ""This young lady is 100% polyester."" What does she mean?
+
+
+Your answer:
+
+Answer
+
+What the character in the story is trying to convey is that his girlfriend is not genuine.
+
+Answer",target,His girlfriend's behavior was not very natural.,The girl made a good impression on Mark's mom.,His girlfriend wore clothes made of polyester.,His girlfriend is made of polyester.,His girlfriend has a beautiful smile.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,5,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary said to her husband: ""Our kids are pieces of taffy."" What did she mean? 
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary said to her husband: ""Our kids are pieces of taffy."" What did she mean? 
+
+
+Your answer:
+",error, Their kids always stick together.,Their kids need to stick to a diet.,Their kids eat too many candies.,Their kids are sweet candy.,Their kids argue too much.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,6,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark saw a lady at the party and said to his friend: ""This lady's jewels are bursting stars."" What did Mark mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark saw a lady at the party and said to his friend: ""This lady's jewels are bursting stars."" What did Mark mean?
+
+
+Your answer:
+
+
+Your Answer
+",error,The lady's jewelry is shining very brightly.,The lady's jewelry broke into many pieces.,The lady wears some jewelry designed to look like stars.,The lady wears bursting stars.,Mark did not like the lady's jewelry.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,7,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Ben was telling his friend about the fashion show that he attended. He said: ""This model was the blue canary at the show."" What did Ben mean? 
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Ben was telling his friend about the fashion show that he attended. He said: ""This model was the blue canary at the show."" What did Ben mean? 
+
+
+Your answer:
+
+	I read the story. Ben meant that this model was the main model.
+",target,The model stood out at the fashion show.,The model's skin turned blue.,The model wore a costume made of blue feathers.,The blue canary worked as a model at the show.,The model came to the show with her pet bird.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,8,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary said to her granddaughter: ""The queen is our nation's aunt."" What did Mary mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary said to her granddaughter: ""The queen is our nation's aunt."" What did Mary mean?
+
+
+Your answer:
+
+A. She is our nation's aunt.
+
+B. She is our nation's mother.
+
+C. She is our nation's grandmother.
+
+D. She is our nation's queen.",distractor_literal,The queen cares about you from afar.,People of the country love the pies that the queen bakes.,Mary and her family are related to the queen.,The queen is an aunt of everyone living in the country.,The queen has a lot of relatives.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,9,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Abby and Kyle were walking along the promenade one night, and they saw a couple smiling at each other. Abby noted: ""This sunset sings to the lovers."" What did Abby mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Abby and Kyle were walking along the promenade one night, and they saw a couple smiling at each other. Abby noted: ""This sunset sings to the lovers."" What did Abby mean?
+
+
+Your answer:
+
+I have no idea!
+",error,It was a very romantic night.,It was too dark to see any singers performing on the promenade.,There were a lot of musicians and singers performing on the promenade.,He could hear the sun singing songs.,Abby wants to attend a concert with Kyle.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,10,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jessica was giving a talk that her mom attended. After the talk, Jessica's mom called her husband and said: ""Jessica sailed towards the finish."" What did she mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jessica was giving a talk that her mom attended. After the talk, Jessica's mom called her husband and said: ""Jessica sailed towards the finish."" What did she mean?
+
+
+Your answer:
+
+Her husband should call the doctor and take her to a hospital as soon as possible.
+
+
+Explanation:
+
+She is referring to the phrase ""Sailed to the finish line"", which is an idiom to mean that a",competitor,Jessica finished her talk successfully.,Jessica's talk was a disaster.,Jessica got interested in sailing.,Jessica finished the sailing race.,Jessica was giving a talk about sailing.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,11,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jody and Mark were discussing their daughter's behavior. Mark said: ""She is walking all over her brothers."" What did Mark mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jody and Mark were discussing their daughter's behavior. Mark said: ""She is walking all over her brothers."" What did Mark mean?
+
+
+Your answer:
+
+  
+  I think it's important for a parent to be involved in his child's life, and if this is what Mark means, then he is right.
+
+  Your answer is correct.
+
+  Your answer is",distractor_nonsequitut,She can make her brothers do whatever she wishes.,Their daughter should be less aggressive towards her brothers.,Their daughter finally started to walk.,She is not paying attention when walking and often steps on her little brothers by accident.,She enjoys long walks with her brothers.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,12,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+During a business meeting, the general manager of the company said to the financial manager: ""The new accountant that you hired is a juggler."" What did the general manager mean? 
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+During a business meeting, the general manager of the company said to the financial manager: ""The new accountant that you hired is a juggler."" What did the general manager mean? 
+
+
+Your answer:
+
+
+",error,The newly hired person is good at manipulating many things at once.,The newly hired person dressed up as a clown.,The newly hired person used to work in a circus show.,The newly hired person can toss and catch objects in the air.,The newly hired person has too many excuses for being late.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,13,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Ken was telling his friend about his shopping experience on Black Friday. Ken said: ""The store that I went to was a jungle."" What did Ken mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Ken was telling his friend about his shopping experience on Black Friday. Ken said: ""The store that I went to was a jungle."" What did Ken mean?
+
+
+Your answer:
+
+The line “The store that I went to was a jungle” means that there was too much chaos. The store was extremely busy.
+
+
+### Hints
+
+
+
+* There were a lot of people in",target,The store was complete chaos.,The store that he went to sold some exotic pets.,There were a lot of tropical trees in that store.,The store was in a jungle.,There were a lot of mosquitoes in that store.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,14,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Janet was telling her friend about the show that she saw last night. Janet said: ""The dancers were butterflies."" What did Janet mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Janet was telling her friend about the show that she saw last night. Janet said: ""The dancers were butterflies."" What did Janet mean?
+
+
+Your answer:
+
+  
+
+Your answer is...
+",error,The dancers flitted around the stage.,There were too many dancers in this show.,The dancers portrayed butterflies in the show.,Butterflies were dancing on the stage.,She did not see any dancers in the show.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,15,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Caitlyn was telling her husband about her new co-worker. Caitlyn said: ""Sally is a block of ice."" What did she mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Caitlyn was telling her husband about her new co-worker. Caitlyn said: ""Sally is a block of ice."" What did she mean?
+
+
+Your answer:
+
+```
+- What did she mean?
+```
+
+
+```
+- ""Sally is a block of ice.""
+- She means she is cold.
+```
+
+
+```
+- Sally is cold.
+```
+",distractor_literal,Sally does not show any emotions.,Sally is very emotional and cries often.,Sally is coming down with a cold.,Sally is an ice sculpture.,Sally's hands are always cold.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,16,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Robert and his wife are discussing their neighbor. Robert said: ""Our neighbor is a sheep."" What did Robert mean?  
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Robert and his wife are discussing their neighbor. Robert said: ""Our neighbor is a sheep."" What did Robert mean?  
+
+
+Your answer:
+",error,Their neigbor is a follower.,Their neighbor always wears wool sweaters.,Their neighbor has a unique haircut.,There is a sheep living next to them.,Their neigbor is charismatic.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,17,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy told her teacher: ""The book that you gave me has more holes in it than Swiss cheese."" What did Lucy mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy told her teacher: ""The book that you gave me has more holes in it than Swiss cheese."" What did Lucy mean?
+
+
+Your answer:
+
+I think that Lucy means that she likes the book so much that she can't put it down. She can't stop reading it. She wants to keep reading it for as long as she can. She is trying to say that",distractor_nonsequitut,The plot of the book lacks important components.,The book is about cheese making in Switzerland.,The book is in bad shape.,Many pages of the book are missing some parts.,The book smells funny.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,18,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher told Sam: ""You have too much on your plate."" What did the teacher mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher told Sam: ""You have too much on your plate."" What did the teacher mean?
+
+
+Your answer:
+
+1. The teacher was warning Sam about the risks of overcommitting himself.
+
+2. The teacher was trying to motivate Sam to take on new responsibilities.
+
+3. The teacher was telling Sam that he was",target,Sam has too many things to take care of.,Sam should share food with his classmates.,Sam should think about his dietary habits.,Sam has too much food on his plate.,Sam should finish all the food that is on his plate.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,19,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Melissa was discussing a new sales manager, who was hired a couple of days ago: ""She is a babe in the woods."" What did Melissa mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Melissa was discussing a new sales manager, who was hired a couple of days ago: ""She is a babe in the woods."" What did Melissa mean?
+
+
+Your answer:
+
+Melissa thought that the sales manager was a total newcomer to the business.
+
+
+Your explanation:
+
+Melissa referred to the new sales manager as ""a babe in the woods"" because she was a new",target,The new sales manager is very inexperienced. ,The new sales manager lives off of the grid.,The new sales manager is too young.,"The new sales manager is a baby, who lives in the woods.",The new sales manager used to work as a babysitter.
+meta-llama/Llama-2-7b-hf,0.9,metaphor,greedy,,0,20,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John told his fiance: ""You are the tomato sauce to my pasta."" What did John mean?
+
+
+Your answer:
+","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John told his fiance: ""You are the tomato sauce to my pasta."" What did John mean?
+
+
+Your answer:
+
+If your answer is incorrect, click on the button ""Hint"" for some hints.
+",error,They are meant to be together.,He would love some pasta for dinner.,They enjoy Italian cuisine.,The tomato sauce that she makes goes well with his pasta.,His fiance has bright red lips.
