@@ -52,6 +52,6 @@ for i in ${!array[*]}; do
         --phenomenon=${array[$i]} \
         --option_numbering=${array2[$i]} \
         --question="${array3[$i]}" \
-        --model_name="google/flan-t5-xl" \
+        --model_name="meta-llama/Llama-2-7b-hf" \
         --n_seeds=1
 done
