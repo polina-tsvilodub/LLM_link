@@ -177,13 +177,17 @@ def retrieve_log_probs(
             # option_ids_probs = option_input_ids['input_ids'].squeeze().unsqueeze(-1)
             # null_option_ids_probs = null_option_input_ids.squeeze().unsqueeze(-1)
             # retreive
-            print("option_input_ids.shape[-1] -1  ", option_input_ids.shape[-1] -1 )
-            optionTokenConditionalLogProbs = [outputs.loss.item()] * (option_input_ids.shape[-1] -1 )
+            print("option_input_ids.shape[-1] -1  ", option_input_ids.input_ids.shape[-1] -1 )
+            print("over all conditional log prob ", outputs.loss.item())
+            optionTokenConditionalLogProbs = [outputs.loss.item()] * (option_input_ids.input_ids.shape[-1] -1 )
+            print("optionTokenConditionalLogProbs ", optionTokenConditionalLogProbs)
             print(" option_input_ids ", option_input_ids)
             print("optionTokenConditionalLogProbs ", optionTokenConditionalLogProbs)
+            
             optionTokenLogProbs = [option_outputs.loss.item()]
             print("optionTokenLogProbs ", optionTokenLogProbs)
-            nullOptionTokenLogProbs = [null_option_outputs.loss.item()] * (option_input_ids.shape[-1] -1 )
+            nullOptionTokenLogProbs = [null_option_outputs.loss.item()] * (option_input_ids.input_ids.shape[-1] -1 )
+            print("null_option_outputs.loss.item ", null_option_outputs.loss.item())
             print("nullOptionTokenLogProbs ", nullOptionTokenLogProbs)
             # optionTokenConditionalLogProbs = torch.gather(
             #     llama_output_scores, 
