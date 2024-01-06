@@ -128,8 +128,8 @@ def retrieve_log_probs(
                 labels[0, i] = -100
             for i in range(input_ids_prior_prompt.shape[-1]):
                 null_prompt_labels[0, i] = -100
-            print("labels ", labels.shape, labels)
-            print("null_prompt_labels ", null_prompt_labels.shape, null_prompt_labels)
+            # print("labels ", labels.shape, labels)
+            # print("null_prompt_labels ", null_prompt_labels.shape, null_prompt_labels)
             # null_option_input_ids = torch.cat((null_option_input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
             # Generate output from the model with a maximum length of 20 tokens
 
@@ -205,11 +205,11 @@ def retrieve_log_probs(
             llama_null_option_output_scores = logsoftmax(
                 null_option_outputs.logits[0][:-1]
             )
-            print("output log probs shape ", llama_output_scores.shape)
+            print("output log probs shape ", llama_output_scores.shape, llama_option_output_scores.shape)
             input_ids_probs = input_ids[:, 1:].squeeze().unsqueeze(-1)
             null_option_input_ids_probs = null_option_input_ids[:, 1:].squeeze().unsqueeze(-1)
-            option_input_ids_probs = option_input_ids.input_ids[:, 1:].squeeze().unsqueeze(-1)
-            print("shape of input ids for porb retrieval ", input_ids_probs.shape)
+            option_input_ids_probs = option_input_ids.input_ids[:, 1:].squeeze(0).unsqueeze(-1)
+            print("shape of input ids for porb retrieval ", input_ids_probs.shape, option_input_ids_probs.shape)
             conditionalLogProbs = torch.gather(
                 llama_output_scores, 
                 dim=-1, 
@@ -233,9 +233,9 @@ def retrieve_log_probs(
             continuationConditionalNullLogProbs = conditionalNullLogProbs[
                 (input_ids_prior_prompt.shape[-1]-1):
             ]
-            optionTokenConditionalLogProbs = continuationConditionalLogProbs
-            optionTokenLogProbs = priorLogProbs
-            nullOptionTokenLogProbs = continuationConditionalNullLogProbs
+            optionTokenConditionalLogProbs = continuationConditionalLogProbs.cpu()
+            optionTokenLogProbs = priorLogProbs.cpu()
+            nullOptionTokenLogProbs = continuationConditionalNullLogProbs.cpu()
             ################
 
             ###### loss based NLL computation ######

@@ -1,0 +1,721 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+meta-llama/Llama-2-7b-hf,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.4205, -4.3419])","[tensor(0.6567), tensor(0.0130)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.008545648,0.3348759710788727,0.006950731,1.2294604,-4.762333,-2.381166458129883,0.9584264
+meta-llama/Llama-2-7b-hf,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.4205, -5.5411])","[tensor(0.6567), tensor(0.0039)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0025759118,0.3303309977054596,0.0025075735,1.0272528,-5.9615517,-2.980775833129883,0.99551004
+meta-llama/Llama-2-7b-hf,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3921, -3.9627])","[tensor(0.6757), tensor(0.0190)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.012845833,0.3473387062549591,0.006950731,1.8481269,-4.354736,-2.177367925643921,0.8763969
+meta-llama/Llama-2-7b-hf,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3921, -5.2049])","[tensor(0.6757), tensor(0.0055)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0037092578,0.34057751297950745,0.0025075735,1.4792219,-5.5969234,-2.798461675643921,0.93462133
+meta-llama/Llama-2-7b-hf,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-0.3902, -4.0848])","[tensor(0.6769), tensor(0.0168)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.01139035,0.346885085105896,0.0070211464,1.622292,-4.474989,-2.237494468688965,0.90242857
+meta-llama/Llama-2-7b-hf,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-0.3902, -5.2879])","[tensor(0.6769), tensor(0.0051)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.003420003,0.3409980833530426,0.0026441882,1.2934037,-5.678114,-2.839056968688965,0.95665365
+meta-llama/Llama-2-7b-hf,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3179, -4.1351])","[tensor(0.7277), tensor(0.0160)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.011643248,0.37184032797813416,0.006950731,1.6751113,-4.4530287,-2.2265143394470215,0.8961785
+meta-llama/Llama-2-7b-hf,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3179, -5.4437])","[tensor(0.7277), tensor(0.0043)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.003146003,0.3660017251968384,0.0025075735,1.2546005,-5.7616224,-2.8808112144470215,0.96212417
+meta-llama/Llama-2-7b-hf,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3446, -3.9486])","[tensor(0.7085), tensor(0.0193)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.013660485,0.36388644576072693,0.006950731,1.9653307,-4.2932477,-2.1466238498687744,0.8640223
+meta-llama/Llama-2-7b-hf,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3446, -5.2299])","[tensor(0.7085), tensor(0.0054)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.003793379,0.35692298412323,0.0025075735,1.5127689,-5.574498,-2.7872490882873535,0.9308766
+meta-llama/Llama-2-7b-hf,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3591, -4.1376])","[tensor(0.6983), tensor(0.0160)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.011146248,0.3571401834487915,0.006950731,1.6036081,-4.496652,-2.248326063156128,0.9049578
+meta-llama/Llama-2-7b-hf,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3591, -5.3563])","[tensor(0.6983), tensor(0.0047)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0032948249,0.35151854157447815,0.0025075735,1.3139495,-5.715402,-2.857701063156128,0.9544059
+meta-llama/Llama-2-7b-hf,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3573, -3.8169])","[tensor(0.6996), tensor(0.0220)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.01538743,0.3607879877090454,0.006950731,2.213786,-4.1742043,-2.087102174758911,0.8400647
+meta-llama/Llama-2-7b-hf,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3573, -5.2857])","[tensor(0.6996), tensor(0.0051)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0035423874,0.35232216119766235,0.0025075735,1.4126754,-5.6429543,-2.821477174758911,0.94230795
+meta-llama/Llama-2-7b-hf,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3772, -4.0449])","[tensor(0.6858), tensor(0.0175)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.012009358,0.35165685415267944,0.006950731,1.7277834,-4.422069,-2.2110345363616943,0.88994783
+meta-llama/Llama-2-7b-hf,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3772, -5.4238])","[tensor(0.6858), tensor(0.0044)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.003024603,0.345106303691864,0.0025075735,1.2061872,-5.8009753,-2.9004876613616943,0.96869564
+meta-llama/Llama-2-7b-hf,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.4166, -4.1003])","[tensor(0.6593), tensor(0.0166)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.010922795,0.3379400074481964,0.006950731,1.5714599,-4.5169034,-2.2584517002105713,0.90903336
+meta-llama/Llama-2-7b-hf,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.4166, -5.5066])","[tensor(0.6593), tensor(0.0041)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.002676746,0.33168649673461914,0.0025075735,1.0674647,-5.9231534,-2.9615767002105713,0.98909795
+meta-llama/Llama-2-7b-hf,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-0.3760, -4.0027])","[tensor(0.6866), tensor(0.0183)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.012541879,0.35243040323257446,0.0070211464,1.7863008,-4.378682,-2.1893410682678223,0.8830073
+meta-llama/Llama-2-7b-hf,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-0.3760, -5.3191])","[tensor(0.6866), tensor(0.0049)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0033624407,0.34574565291404724,0.0026441882,1.2716345,-5.6950884,-2.8475441932678223,0.95951355
+meta-llama/Llama-2-7b-hf,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-0.4197, -3.7811])","[tensor(0.6572), tensor(0.0228)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.014982986,0.3400179445743561,0.0070211464,2.13398,-4.20084,-2.1004199981689453,0.8471436
+meta-llama/Llama-2-7b-hf,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-0.4197, -5.1327])","[tensor(0.6572), tensor(0.0059)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0038781296,0.3315698206424713,0.0026441882,1.4666617,-5.5524025,-2.7762012481689453,0.9354737
+meta-llama/Llama-2-7b-hf,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.4051, -4.1880])","[tensor(0.6669), tensor(0.0152)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.010121601,0.3410579562187195,0.006950731,1.4561923,-4.5930834,-2.296541690826416,0.9243647
+meta-llama/Llama-2-7b-hf,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.4051, -5.5005])","[tensor(0.6669), tensor(0.0041)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0027241919,0.3355121612548828,0.0025075735,1.0863857,-5.9055834,-2.952791690826416,0.986164
+meta-llama/Llama-2-7b-hf,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-0.3434, -3.8479])","[tensor(0.7094), tensor(0.0213)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.015127652,0.3653471767902374,0.0070211464,2.1545844,-4.191231,-2.0956153869628906,0.8452058
+meta-llama/Llama-2-7b-hf,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-0.3434, -5.1564])","[tensor(0.7094), tensor(0.0058)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.004087488,0.3575654923915863,0.0026441882,1.5458386,-5.4998245,-2.7499122619628906,0.9266153
+meta-llama/Llama-2-7b-hf,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-0.4072, -3.9668])","[tensor(0.6655), tensor(0.0189)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.012600407,0.34221309423446655,0.0070211464,1.7946367,-4.3740263,-2.1870131492614746,0.8820684
+meta-llama/Llama-2-7b-hf,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-0.4072, -5.1621])","[tensor(0.6655), tensor(0.0057)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.003813001,0.33561092615127563,0.0026441882,1.4420309,-5.569339,-2.7846693992614746,0.93832713
+meta-llama/Llama-2-7b-hf,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3650, -4.0427])","[tensor(0.6942), tensor(0.0176)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.012183457,0.35587233304977417,0.006950731,1.752831,-4.407676,-2.2038381099700928,0.8870512
+meta-llama/Llama-2-7b-hf,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3650, -5.4645])","[tensor(0.6942), tensor(0.0042)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0029393956,0.34921419620513916,0.0025075735,1.1722072,-5.829551,-2.9147756099700928,0.97346747
+meta-llama/Llama-2-7b-hf,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-0.3850, -3.8798])","[tensor(0.6805), tensor(0.0207)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.014055335,0.35056036710739136,0.0070211464,2.0018575,-4.2647533,-2.1323766708374023,0.8600324
+meta-llama/Llama-2-7b-hf,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-0.3850, -5.0360])","[tensor(0.6805), tensor(0.0065)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.004422706,0.3434824049472809,0.0026441882,1.672614,-5.4210033,-2.7105016708374023,0.91333544
+meta-llama/Llama-2-7b-hf,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3957, -4.1476])","[tensor(0.6732), tensor(0.0158)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.010638502,0.34451496601104736,0.006950731,1.5305588,-4.543276,-2.2716379165649414,0.91434085
+meta-llama/Llama-2-7b-hf,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3957, -5.3898])","[tensor(0.6732), tensor(0.0046)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0030718874,0.338895320892334,0.0025075735,1.2250439,-5.7854633,-2.8927316665649414,0.96610534
+meta-llama/Llama-2-7b-hf,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-0.3734, -3.8146])","[tensor(0.6884), tensor(0.0220)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.015176606,0.35521557927131653,0.0070211464,2.1615567,-4.188,-2.0940001010894775,0.8445543
+meta-llama/Llama-2-7b-hf,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-0.3734, -5.0880])","[tensor(0.6884), tensor(0.0062)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.004247445,0.34727731347084045,0.0026441882,1.6063324,-5.4614377,-2.7307188510894775,0.92014784
+meta-llama/Llama-2-7b-hf,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-0.3892, -3.8114])","[tensor(0.6776), tensor(0.0221)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.014986386,0.3498493731021881,0.0070211464,2.1344643,-4.200613,-2.100306510925293,0.8470978
+meta-llama/Llama-2-7b-hf,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-0.3892, -5.1590])","[tensor(0.6776), tensor(0.0057)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0038941917,0.34166422486305237,0.0026441882,1.4727362,-5.5482693,-2.774134635925293,0.9347773
+meta-llama/Llama-2-7b-hf,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-0.3528, -3.8363])","[tensor(0.7027), tensor(0.0216)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.015160951,0.3621535003185272,0.006950731,2.1812024,-4.189032,-2.0945160388946533,0.84304875
+meta-llama/Llama-2-7b-hf,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-0.3528, -5.2503])","[tensor(0.7027), tensor(0.0052)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0036864372,0.35398930311203003,0.0025075735,1.4701213,-5.6030946,-2.8015472888946533,0.93565184
+meta-llama/Llama-2-7b-hf,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.3755, -3.9500])","[tensor(0.6870), tensor(0.0193)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.013226918,0.35310429334640503,0.0070211464,1.8838687,-4.3255014,-2.162750720977783,0.87228286
+meta-llama/Llama-2-7b-hf,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.3755, -4.9656])","[tensor(0.6870), tensor(0.0070)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.004790472,0.3469638228416443,0.0026441882,1.8116986,-5.3411264,-2.670563220977783,0.8998777
+meta-llama/Llama-2-7b-hf,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.3416, -3.9817])","[tensor(0.7107), tensor(0.0187)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.013256268,0.36465373635292053,0.006950731,1.907176,-4.3232846,-2.16164231300354,0.8700673
+meta-llama/Llama-2-7b-hf,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.3416, -5.3919])","[tensor(0.7107), tensor(0.0046)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.003235924,0.35760363936424255,0.0025075735,1.2904603,-5.733441,-2.86672043800354,0.9574182
+meta-llama/Llama-2-7b-hf,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.3788, -3.8478])","[tensor(0.6847), tensor(0.0213)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.0146026565,0.3530168831348419,0.0070211464,2.0798109,-4.226552,-2.1132760047912598,0.85232866
+meta-llama/Llama-2-7b-hf,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.3788, -5.1642])","[tensor(0.6847), tensor(0.0057)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.003914929,0.34521228075027466,0.0026441882,1.4805788,-5.5429583,-2.7714791297912598,0.93388253
+meta-llama/Llama-2-7b-hf,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.3830, -3.8413])","[tensor(0.6818), tensor(0.0215)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.014635152,0.35162627696990967,0.0070211464,2.084439,-4.224329,-2.1121644973754883,0.8518804
+meta-llama/Llama-2-7b-hf,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.3830, -5.2202])","[tensor(0.6818), tensor(0.0054)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0036859198,0.3435964584350586,0.0026441882,1.3939703,-5.6032352,-2.8016176223754883,0.94403803
+meta-llama/Llama-2-7b-hf,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.3804, -3.6355])","[tensor(0.6836), tensor(0.0264)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.018026516,0.35499128699302673,0.0070211464,2.5674605,-4.0159116,-2.00795578956604,0.8098508
+meta-llama/Llama-2-7b-hf,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.3804, -5.2020])","[tensor(0.6836), tensor(0.0055)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0037638326,0.3445594608783722,0.0026441882,1.4234359,-5.5823174,-2.791158676147461,0.9405138
+meta-llama/Llama-2-7b-hf,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.4118, -4.1168])","[tensor(0.6625), tensor(0.0163)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.010795311,0.33937638998031616,0.006950731,1.5531188,-4.528643,-2.2643215656280518,0.91139597
+meta-llama/Llama-2-7b-hf,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.4118, -5.5426])","[tensor(0.6625), tensor(0.0039)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0025943362,0.3331865668296814,0.0025075735,1.0346003,-5.9544244,-2.9772121906280518,0.99431986
+meta-llama/Llama-2-7b-hf,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.4072, -4.0972])","[tensor(0.6655), tensor(0.0166)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.01106026,0.3410567045211792,0.0070211464,1.5752784,-4.504397,-2.2521984577178955,0.908359
+meta-llama/Llama-2-7b-hf,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.4072, -5.3901])","[tensor(0.6655), tensor(0.0046)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0030355412,0.3350275754928589,0.0026441882,1.1480049,-5.7973657,-2.8986828327178955,0.9767453
+meta-llama/Llama-2-7b-hf,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.4416, -4.0111])","[tensor(0.6430), tensor(0.0181)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.0116478205,0.33056867122650146,0.0070211464,1.6589627,-4.4526362,-2.226318120956421,0.8979209
+meta-llama/Llama-2-7b-hf,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.4416, -4.9407])","[tensor(0.6430), tensor(0.0071)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0045971274,0.32508620619773865,0.0026441882,1.738578,-5.3823237,-2.691161870956421,0.9068187
+meta-llama/Llama-2-7b-hf,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.4014, -3.8718])","[tensor(0.6694), tensor(0.0208)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.01393818,0.3451155126094818,0.0070211464,1.9851716,-4.2731233,-2.136561632156372,0.86172026
+meta-llama/Llama-2-7b-hf,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.4014, -5.1921])","[tensor(0.6694), tensor(0.0056)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0037222176,0.3374849259853363,0.0026441882,1.4076977,-5.593436,-2.796717882156372,0.942387
+meta-llama/Llama-2-7b-hf,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.3919, -4.2388])","[tensor(0.6758), tensor(0.0144)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.009747714,0.34510645270347595,0.006950731,1.4024012,-4.6307225,-2.315361261367798,0.9319396
+meta-llama/Llama-2-7b-hf,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.3919, -5.5318])","[tensor(0.6758), tensor(0.0040)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0026753063,0.339873731136322,0.0025075735,1.0668905,-5.9236913,-2.961845636367798,0.9891878
+meta-llama/Llama-2-7b-hf,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.3723, -4.0440])","[tensor(0.6891), tensor(0.0175)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.012078619,0.3533379137516022,0.006950731,1.737748,-4.4163184,-2.2081592082977295,0.8887905
+meta-llama/Llama-2-7b-hf,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.3723, -5.4893])","[tensor(0.6891), tensor(0.0041)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0028465972,0.3466397821903229,0.0025075735,1.1351999,-5.861631,-2.9308154582977295,0.97882444
+meta-llama/Llama-2-7b-hf,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.3256, -4.1015])","[tensor(0.7221), tensor(0.0165)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.011948959,0.36931705474853516,0.006950731,1.7190939,-4.427111,-2.2135555744171143,0.89096254
+meta-llama/Llama-2-7b-hf,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.3256, -5.4374])","[tensor(0.7221), tensor(0.0044)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0031415196,0.3632184565067291,0.0025075735,1.2528126,-5.7630486,-2.8815243244171143,0.96236235
+meta-llama/Llama-2-7b-hf,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.3854, -3.9906])","[tensor(0.6802), tensor(0.0185)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.012575959,0.34933799505233765,0.0070211464,1.7911546,-4.3759685,-2.1879842281341553,0.88246006
+meta-llama/Llama-2-7b-hf,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.3854, -4.6078])","[tensor(0.6802), tensor(0.0100)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0067842193,0.34508052468299866,0.0026441882,2.5657096,-4.993156,-2.4965779781341553,0.8412513
+meta-llama/Llama-2-7b-hf,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.3152, -3.9520])","[tensor(0.7296), tensor(0.0192)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.014021145,0.3744169771671295,0.006950731,2.0172188,-4.2671885,-2.133594274520874,0.8587779
+meta-llama/Llama-2-7b-hf,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.3152, -5.2918])","[tensor(0.7296), tensor(0.0050)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.00367195,0.3673247694969177,0.0025075735,1.4643439,-5.6070323,-2.803516149520874,0.9363094
+meta-llama/Llama-2-7b-hf,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.3847, -3.5931])","[tensor(0.6806), tensor(0.0275)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.018726578,0.35407987236976624,0.0070211464,2.6671681,-3.9778116,-1.9889057874679565,0.80216753
+meta-llama/Llama-2-7b-hf,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.3847, -5.0970])","[tensor(0.6806), tensor(0.0061)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0041621746,0.3433809280395508,0.0026441882,1.574084,-5.4817176,-2.740858793258667,0.9235646
+meta-llama/Llama-2-7b-hf,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.3747, -3.8670])","[tensor(0.6875), tensor(0.0209)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.014383468,0.35420677065849304,0.0070211464,2.0485926,-4.241676,-2.120837926864624,0.85537857
+meta-llama/Llama-2-7b-hf,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.3747, -5.0037])","[tensor(0.6875), tensor(0.0067)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.0046152254,0.3471025228500366,0.0026441882,1.7454224,-5.3783946,-2.689197301864624,0.90615666
+meta-llama/Llama-2-7b-hf,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.3108, -4.0661])","[tensor(0.7329), tensor(0.0171)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.012564378,0.37500524520874023,0.006950731,1.807634,-4.3768897,-2.1884448528289795,0.8808554
+meta-llama/Llama-2-7b-hf,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.3108, -5.4958])","[tensor(0.7329), tensor(0.0041)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0030077074,0.3684851825237274,0.0025075735,1.1994494,-5.806577,-2.9032886028289795,0.9696311
+meta-llama/Llama-2-7b-hf,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-0.3536, -3.9863])","[tensor(0.7022), tensor(0.0186)]",tensor([-4.5454]),"tensor([-0.4847, -4.4741])","[tensor(0.6159), tensor(0.0114)]",0.013039002,0.36037755012512207,0.0070211464,1.8571044,-4.3398104,-2.169905185699463,0.8751684
+meta-llama/Llama-2-7b-hf,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-0.3536, -5.0956])","[tensor(0.7022), tensor(0.0061)]",tensor([-5.7212]),"tensor([-0.4847, -5.4507])","[tensor(0.6159), tensor(0.0043)]",0.004299806,0.35415470600128174,0.0026441882,1.6261346,-5.4491854,-2.724592685699463,0.91808355
+meta-llama/Llama-2-7b-hf,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.4110, -3.9305])","[tensor(0.6630), tensor(0.0196)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.013017522,0.3413243889808655,0.006950731,1.8728278,-4.341459,-2.170729398727417,0.8737249
+meta-llama/Llama-2-7b-hf,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.4110, -5.3875])","[tensor(0.6630), tensor(0.0046)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0030321302,0.33379408717155457,0.0025075735,1.2091889,-5.79849,-2.899245023727417,0.9682806
+meta-llama/Llama-2-7b-hf,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-0.3624, -3.9819])","[tensor(0.6960), tensor(0.0186)]",tensor([-4.5454]),"tensor([-0.4206, -4.5483])","[tensor(0.6566), tensor(0.0106)]",0.012980213,0.357333242893219,0.006950731,1.8674603,-4.344329,-2.1721644401550293,0.8743025
+meta-llama/Llama-2-7b-hf,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-0.3624, -5.2593])","[tensor(0.6960), tensor(0.0052)]",tensor([-5.7212]),"tensor([-0.4206, -5.5678])","[tensor(0.6566), tensor(0.0038)]",0.0036185838,0.35060811042785645,0.0025075735,1.443062,-5.6216726,-2.8108363151550293,0.9387542
