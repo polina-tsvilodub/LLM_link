@@ -48,10 +48,11 @@ array3=("Is this story coherent or not?" "" "" "" "" "Why has {} responded like 
 for i in ${!array[*]}; do
     echo "phenomenon: ${array[$i]}"
     echo "options: ${array2[$i]}"
-    python3 -u rate_completions.py \
+    python3 -u score_completions.py \
         --phenomenon=${array[$i]} \
         --question="${array3[$i]}" \
         --model_name="meta-llama/Llama-2-7b-hf" \
-        --word_index=1 \
+        --option_numbering="${array2[$i]}" \
+        --use_labels_only=True \
         --n_seeds=1
 done

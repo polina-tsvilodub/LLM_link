@@ -94,7 +94,7 @@ def retrieve_log_probs(
             ).input_ids.to(DEVICE)
 
             input_ids_prompt = tokenizer(
-                prompt, 
+                prompt.strip(), 
                 return_tensors="pt",
             ).input_ids
             print("Prompt input ids ", input_ids_prompt)
@@ -117,7 +117,7 @@ def retrieve_log_probs(
                 return_tensors="pt",
             ).input_ids.to(DEVICE)
             input_ids_prior_prompt = tokenizer(
-                prior_prompt, 
+                prior_prompt.strip(), 
                 return_tensors="pt",
             ).input_ids
 
@@ -132,20 +132,37 @@ def retrieve_log_probs(
             print("null_prompt_labels ", null_prompt_labels.shape, null_prompt_labels)
             # null_option_input_ids = torch.cat((null_option_input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
             # Generate output from the model with a maximum length of 20 tokens
-            outputs = model(
-                input_ids,
-                labels = labels
-            )
 
-            option_outputs = model(
-                **option_input_ids,
-                labels = option_input_ids.input_ids
-            )
+            #### masked labels based NLL computation #####
+            # outputs = model(
+            #     input_ids,
+            #     labels = labels
+            # )
+
+            # option_outputs = model(
+            #     **option_input_ids,
+            #     labels = option_input_ids.input_ids
+            # )
             
-            null_option_outputs = model(
-                null_option_input_ids,
-                labels = null_prompt_labels
-            )
+            # null_option_outputs = model(
+            #     null_option_input_ids,
+            #     labels = null_prompt_labels
+            # )
+            ##########
+            ##### manual token-wise LL retrieval ######
+            with torch.no_grad():
+                outputs = model(
+                    input_ids,
+                )
+                option_outputs = model(
+                    **option_input_ids,
+                )
+                
+                null_option_outputs = model(
+                    null_option_input_ids,
+                )
+
+            ########
 
             # Retrieve logits from the output 
             # [0] retrieves first element in batch (assume we always use batch size = 1)
@@ -177,18 +194,64 @@ def retrieve_log_probs(
             # option_ids_probs = option_input_ids['input_ids'].squeeze().unsqueeze(-1)
             # null_option_ids_probs = null_option_input_ids.squeeze().unsqueeze(-1)
             # retreive
+                
+            ###### manual token based LL computation ########
+            llama_output_scores = logsoftmax(
+                outputs.logits[0][:-1]
+            )
+            llama_option_output_scores = logsoftmax(
+                option_outputs.logits[0][:-1]
+            )
+            llama_null_option_output_scores = logsoftmax(
+                null_option_outputs.logits[0][:-1]
+            )
+            print("output log probs shape ", llama_output_scores.shape)
+            input_ids_probs = input_ids[:, 1:].squeeze().unsqueeze(-1)
+            null_option_input_ids_probs = null_option_input_ids[:, 1:].squeeze().unsqueeze(-1)
+            option_input_ids_probs = option_input_ids.input_ids[:, 1:].squeeze().unsqueeze(-1)
+            print("shape of input ids for porb retrieval ", input_ids_probs.shape)
+            conditionalLogProbs = torch.gather(
+                llama_output_scores, 
+                dim=-1, 
+                index=input_ids_probs
+            ).flatten()
+            conditionalNullLogProbs = torch.gather(
+                llama_null_option_output_scores, 
+                dim=-1, 
+                index=null_option_input_ids_probs
+            ).flatten()
+            priorLogProbs = torch.gather(
+                llama_option_output_scores, 
+                dim=-1, 
+                index=option_input_ids_probs
+            ).flatten()
+
+            print(len(conditionalLogProbs))
+            continuationConditionalLogProbs = conditionalLogProbs[
+                (input_ids_prompt.shape[-1]-1):
+            ]
+            continuationConditionalNullLogProbs = conditionalNullLogProbs[
+                (input_ids_prior_prompt.shape[-1]-1):
+            ]
+            optionTokenConditionalLogProbs = continuationConditionalLogProbs
+            optionTokenLogProbs = priorLogProbs
+            nullOptionTokenLogProbs = continuationConditionalNullLogProbs
+            ################
+
+            ###### loss based NLL computation ######
             print("option_input_ids.shape[-1] -1  ", option_input_ids.input_ids.shape[-1] -1 )
-            print("over all conditional log prob ", outputs.loss.item())
-            optionTokenConditionalLogProbs = [outputs.loss.item()] * (option_input_ids.input_ids.shape[-1] -1 )
+            # print("over all conditional log prob ", outputs.loss.item())
+            # optionTokenConditionalLogProbs = [outputs.loss.item()] * (option_input_ids.input_ids.shape[-1] -1 )
             print("optionTokenConditionalLogProbs ", optionTokenConditionalLogProbs)
             print(" option_input_ids ", option_input_ids)
-            print("optionTokenConditionalLogProbs ", optionTokenConditionalLogProbs)
             
-            optionTokenLogProbs = [option_outputs.loss.item()]
+            # optionTokenLogProbs = [option_outputs.loss.item()]
             print("optionTokenLogProbs ", optionTokenLogProbs)
-            nullOptionTokenLogProbs = [null_option_outputs.loss.item()] * (option_input_ids.input_ids.shape[-1] -1 )
-            print("null_option_outputs.loss.item ", null_option_outputs.loss.item())
+            # nullOptionTokenLogProbs = [null_option_outputs.loss.item()] * (option_input_ids.input_ids.shape[-1] -1 )
+            # print("null_option_outputs.loss.item ", null_option_outputs.loss.item())
             print("nullOptionTokenLogProbs ", nullOptionTokenLogProbs)
+            ########
+
             # optionTokenConditionalLogProbs = torch.gather(
             #     llama_output_scores, 
             #     dim=-1, 
