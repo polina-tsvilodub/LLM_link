@@ -426,7 +426,7 @@ def main(
     # initialize path for dumping output
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     out_name = file_path.split("/")[-1].replace(".csv", "")
-    
+    model_name_out = model_name.split("/")[-1]
     # Load model and tokenizer
     tokenizer, model = load_model(model_name)
 
@@ -458,7 +458,7 @@ def main(
 
         # final results output file
         if use_labels_only:
-            out_file = f"../results/log_probs/seed{str(seed)}/label_scores/{label_subdirectory}/{out_name}_FC_labels_seed{seed}_{timestamp}.csv"
+            out_file = f"../results/log_probs/seed{str(seed)}/label_scores/{label_subdirectory}/{model_name_out}_{out_name}_FC_labels_seed{seed}_{timestamp}.csv"
             if not os.path.exists(f"../results/log_probs/seed{str(seed)}/label_scores/{label_subdirectory}"):
                 os.makedirs(f"../results/log_probs/seed{str(seed)}/label_scores/{label_subdirectory}")
         else:
