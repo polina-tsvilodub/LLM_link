@@ -35,7 +35,7 @@ def sample_continuation(
     input_ids = tokenizer(
         prompt,
         return_tensors="pt"
-    )
+    ).to(DEVICE)
     outputs = model.generate(
         **input_ids,
         temperature=temperature,
@@ -47,6 +47,7 @@ def sample_continuation(
         outputs[0, input_ids.input_ids.shape[-1]:],
         skip_special_tokens=True
     )
+    print("Prediction ", prediction)
 
     return prediction
 
