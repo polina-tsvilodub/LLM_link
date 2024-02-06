@@ -1,0 +1,842 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+microsoft/phi-2,0.1,0,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked the talk that his boss gave but does not want to tell him about it.
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+D. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+Your answer:
+",Why has Bob responded like this?,A,target,He liked the talk that his boss gave but does not want to tell him about it.,incorrect_nonliteral,A,"tensor([-1.6461, -2.8471])","[tensor(0.1928), tensor(0.0580)]",tensor([-6.1659]),"tensor([-1.6894, -2.4580])","[tensor(0.1846), tensor(0.0856)]",0.011184746,0.12540625035762787,0.015805194,0.7076627,-4.493204,-2.2466020584106445,1.0833741
+microsoft/phi-2,0.1,0,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked the talk that his boss gave but does not want to tell him about it.
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+D. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,He disliked the talk that his boss gave but does not want to criticize his boss.,target,B,"tensor([-1.6461, -5.6440])","[tensor(0.1928), tensor(0.0035)]",tensor([-7.4080]),"tensor([-1.6894, -6.6767])","[tensor(0.1846), tensor(0.0013)]",0.0006822739,0.09816962480545044,0.00023260551,2.93318,-7.290079,-3.6450395584106445,0.8713762
+microsoft/phi-2,0.1,0,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked the talk that his boss gave but does not want to tell him about it.
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+D. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,He is excited about the upcoming trip to Japan and does not want to talk about anything else.,incorrect_literal,C,"tensor([-1.6461, -6.1205])","[tensor(0.1928), tensor(0.0022)]",tensor([-7.0955]),"tensor([-1.6894, -7.7236])","[tensor(0.1846), tensor(0.0004)]",0.00042363352,0.09749887883663177,8.165221e-05,5.1882677,-7.7666416,-3.8833208084106445,0.8250937
+microsoft/phi-2,0.1,0,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked the talk that his boss gave but does not want to tell him about it.
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+D. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,He wants to avoid going to Japan next week and wants to discuss it with his boss. ,incorrect_associate,D,"tensor([-1.6461, -6.1674])","[tensor(0.1928), tensor(0.0021)]",tensor([-7.2284]),"tensor([-1.6894, -7.0830])","[tensor(0.1846), tensor(0.0008)]",0.00040423393,0.09744856506586075,0.00015494868,2.6088247,-7.8135166,-3.9067583084106445,0.8906914
+microsoft/phi-2,0.1,0,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex thinks that Richard's painting is mediocre.
+B.  Alex is proud of the painting job that he did.
+C. Alex is afraid that Richard will become a better painter than he is. 
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has Bob responded like this?,A,target,Alex thinks that Richard's painting is mediocre.,target,A,"tensor([-1.3582, -2.6879])","[tensor(0.2571), tensor(0.0680)]",tensor([-6.1659]),"tensor([-1.7604, -2.5091])","[tensor(0.1720), tensor(0.0813)]",0.01748998,0.16257070004940033,0.013987947,1.2503608,-4.0461273,-2.0230636596679688,0.9476686
+microsoft/phi-2,0.1,0,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex thinks that Richard's painting is mediocre.
+B.  Alex is proud of the painting job that he did.
+C. Alex is afraid that Richard will become a better painter than he is. 
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal, Alex is proud of the painting job that he did.,incorrect_literal,B,"tensor([-1.3582, -6.2270])","[tensor(0.2571), tensor(0.0020)]",tensor([-7.4080]),"tensor([-1.7604, -6.9388])","[tensor(0.1720), tensor(0.0010)]",0.0005079184,0.1295468658208847,0.00016671138,3.046693,-7.58519,-3.7925949096679688,0.87193644
+microsoft/phi-2,0.1,0,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex thinks that Richard's painting is mediocre.
+B.  Alex is proud of the painting job that he did.
+C. Alex is afraid that Richard will become a better painter than he is. 
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Alex is afraid that Richard will become a better painter than he is. ,incorrect_associate,C,"tensor([-1.3582, -6.8988])","[tensor(0.2571), tensor(0.0010)]",tensor([-7.0955]),"tensor([-1.7604, -6.9388])","[tensor(0.1720), tensor(0.0010)]",0.00025941935,0.12906363606452942,0.00016671138,1.5560986,-8.257065,-4.128532409667969,0.9491701
+microsoft/phi-2,0.1,0,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex thinks that Richard's painting is mediocre.
+B.  Alex is proud of the painting job that he did.
+C. Alex is afraid that Richard will become a better painter than he is. 
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Alex wants Richards to help him paint the walls.,incorrect_nonliteral,D,"tensor([-1.3582, -6.2270])","[tensor(0.2571), tensor(0.0020)]",tensor([-7.2284]),"tensor([-1.7604, -7.1966])","[tensor(0.1720), tensor(0.0007)]",0.0005079184,0.1295468658208847,0.00012882457,3.942714,-7.58519,-3.7925949096679688,0.8468393
+microsoft/phi-2,0.1,0,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has Bob responded like this?,A,target,She does not want to discuss the topic that Leslie has raised.,target,A,"tensor([-1.1922, -2.4892])","[tensor(0.3035), tensor(0.0830)]",tensor([-6.1659]),"tensor([-1.5718, -2.2543])","[tensor(0.2077), tensor(0.1049)]",0.025188323,0.19326436519622803,0.021793775,1.1557577,-3.6813748,-1.8406873941421509,0.9621665
+microsoft/phi-2,0.1,0,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,The man who Leslie saw makes unbelievable lattes.,incorrect_nonliteral,B,"tensor([-1.1922, -5.6454])","[tensor(0.3035), tensor(0.0035)]",tensor([-7.4080]),"tensor([-1.5718, -6.1137])","[tensor(0.2077), tensor(0.0022)]",0.0010726482,0.15354155004024506,0.0004594383,2.3346949,-6.8376245,-3.4188122749328613,0.8896779
+microsoft/phi-2,0.1,0,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,She thinks that it is the best latte in the town.,incorrect_literal,C,"tensor([-1.1922, -5.7626])","[tensor(0.3035), tensor(0.0031)]",tensor([-7.0955]),"tensor([-1.5718, -6.1762])","[tensor(0.2077), tensor(0.0021)]",0.000954033,0.15334616601467133,0.00043160236,2.2104445,-6.954812,-3.4774060249328613,0.89762604
+microsoft/phi-2,0.1,0,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,A coffee break is not a good time to discuss men.,incorrect_associate,D,"tensor([-1.1922, -5.3329])","[tensor(0.3035), tensor(0.0048)]",tensor([-7.2284]),"tensor([-1.5718, -6.4184])","[tensor(0.2077), tensor(0.0016)]",0.0014661363,0.15418969094753265,0.00033876856,4.327841,-6.5251245,-3.2625622749328613,0.8166416
+microsoft/phi-2,0.1,0,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is thankful for her offer of beer and chips.
+B. He pretends that he did not understand his wife's comment because he wants to watch the game.
+C. He is excited about seeing his wife. 
+D. He is happy to turn off the TV right away and to spend more time with his wife.
+Your answer:
+",Why has Bob responded like this?,A,target,He is thankful for her offer of beer and chips.,incorrect_literal,A,"tensor([-1.2390, -2.1980])","[tensor(0.2897), tensor(0.1110)]",tensor([-6.1659]),"tensor([-1.4942, -2.1635])","[tensor(0.2244), tensor(0.1149)]",0.0321602,0.2003500908613205,0.025793565,1.2468303,-3.4370255,-1.718512773513794,0.93968654
+microsoft/phi-2,0.1,0,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is thankful for her offer of beer and chips.
+B. He pretends that he did not understand his wife's comment because he wants to watch the game.
+C. He is excited about seeing his wife. 
+D. He is happy to turn off the TV right away and to spend more time with his wife.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,He pretends that he did not understand his wife's comment because he wants to watch the game.,target,B,"tensor([-1.2390, -5.1590])","[tensor(0.2897), tensor(0.0057)]",tensor([-7.4080]),"tensor([-1.4942, -5.6322])","[tensor(0.2244), tensor(0.0036)]",0.001664945,0.14771410822868347,0.00080362306,2.0717986,-6.397963,-3.198981523513794,0.89778584
+microsoft/phi-2,0.1,0,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is thankful for her offer of beer and chips.
+B. He pretends that he did not understand his wife's comment because he wants to watch the game.
+C. He is excited about seeing his wife. 
+D. He is happy to turn off the TV right away and to spend more time with his wife.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,He is excited about seeing his wife. ,incorrect_associate,C,"tensor([-1.2390, -6.0809])","[tensor(0.2897), tensor(0.0023)]",tensor([-7.0955]),"tensor([-1.4942, -6.6244])","[tensor(0.2244), tensor(0.0013)]",0.0006622695,0.14598344266414642,0.00029795512,2.2227156,-7.319838,-3.659919023513794,0.90161693
+microsoft/phi-2,0.1,0,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is thankful for her offer of beer and chips.
+B. He pretends that he did not understand his wife's comment because he wants to watch the game.
+C. He is excited about seeing his wife. 
+D. He is happy to turn off the TV right away and to spend more time with his wife.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,He is happy to turn off the TV right away and to spend more time with his wife.,incorrect_nonliteral,D,"tensor([-1.2390, -4.9949])","[tensor(0.2897), tensor(0.0068)]",tensor([-7.2284]),"tensor([-1.4942, -5.9994])","[tensor(0.2244), tensor(0.0025)]",0.001961785,0.14822645485401154,0.0005566535,3.524248,-6.2339005,-3.116950273513794,0.83190024
+microsoft/phi-2,0.1,0,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark is fond of people who have good handwriting.
+B. Mark's opinion of Jane as a financial manager is very low.
+C. Mark needs to get some new clothes.
+D. Mark's opinion of Jane as a financial manager is very high.
+Your answer:
+",Why has Bob responded like this?,A,target,Mark is fond of people who have good handwriting.,incorrect_nonliteral,A,"tensor([-1.0448, -2.2603])","[tensor(0.3518), tensor(0.1043)]",tensor([-6.1659]),"tensor([-1.6509, -2.0451])","[tensor(0.1919), tensor(0.1294)]",0.036694925,0.2280360460281372,0.024821328,1.4783627,-3.305117,-1.652558445930481,0.894229
+microsoft/phi-2,0.1,0,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark is fond of people who have good handwriting.
+B. Mark's opinion of Jane as a financial manager is very low.
+C. Mark needs to get some new clothes.
+D. Mark's opinion of Jane as a financial manager is very high.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Mark's opinion of Jane as a financial manager is very low.,target,B,"tensor([-1.0448, -6.0259])","[tensor(0.3518), tensor(0.0024)]",tensor([-7.4080]),"tensor([-1.6509, -5.7092])","[tensor(0.1919), tensor(0.0033)]",0.00084960274,0.17708343267440796,0.0006361256,1.3355895,-7.0707417,-3.5353708267211914,0.96068364
+microsoft/phi-2,0.1,0,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark is fond of people who have good handwriting.
+B. Mark's opinion of Jane as a financial manager is very low.
+C. Mark needs to get some new clothes.
+D. Mark's opinion of Jane as a financial manager is very high.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Mark needs to get some new clothes.,incorrect_associate,C,"tensor([-1.0448, -6.5103])","[tensor(0.3518), tensor(0.0015)]",tensor([-7.0955]),"tensor([-1.6509, -6.4045])","[tensor(0.1919), tensor(0.0017)]",0.00052342506,0.1766197830438614,0.00031737486,1.6492329,-7.5551167,-3.7775583267211914,0.93789154
+microsoft/phi-2,0.1,0,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark is fond of people who have good handwriting.
+B. Mark's opinion of Jane as a financial manager is very low.
+C. Mark needs to get some new clothes.
+D. Mark's opinion of Jane as a financial manager is very high.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Mark's opinion of Jane as a financial manager is very high.,incorrect_literal,D,"tensor([-1.0448, -5.6431])","[tensor(0.3518), tensor(0.0035)]",tensor([-7.2284]),"tensor([-1.6509, -6.6701])","[tensor(0.1919), tensor(0.0013)]",0.0012458601,0.1776466965675354,0.00024333975,5.119838,-6.687929,-3.3439645767211914,0.80373603
+microsoft/phi-2,0.1,0,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has Bob responded like this?,A,target,Lucy's mom is afraid that Lucy will go to France.,incorrect_associate,A,"tensor([-1.1129, -2.2823])","[tensor(0.3286), tensor(0.1020)]",tensor([-6.1659]),"tensor([-1.5064, -2.1266])","[tensor(0.2217), tensor(0.1192)]",0.033532944,0.2153242826461792,0.026438266,1.2683488,-3.395227,-1.6976134777069092,0.93456656
+microsoft/phi-2,0.1,0,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal, Lucy's mom knows that Vincent lives somewhere in France.,incorrect_literal,B,"tensor([-1.1129, -4.2198])","[tensor(0.3286), tensor(0.0147)]",tensor([-7.4080]),"tensor([-1.5064, -5.8766])","[tensor(0.2217), tensor(0.0028)]",0.0048308787,0.17165115475654602,0.0006217683,7.7695804,-5.332727,-2.666363477706909,0.7223037
+microsoft/phi-2,0.1,0,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Lucy's mom is jealous that she is not going to Paris.,incorrect_nonliteral,C,"tensor([-1.1129, -5.9151])","[tensor(0.3286), tensor(0.0027)]",tensor([-7.0955]),"tensor([-1.5064, -6.6656])","[tensor(0.2217), tensor(0.0013)]",0.0008866684,0.1656496226787567,0.00028245102,3.1391935,-7.0280395,-3.514019727706909,0.860014
+microsoft/phi-2,0.1,0,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Lucy's mom does not know where exactly Vincent lives.,target,D,"tensor([-1.1129, -4.5479])","[tensor(0.3286), tensor(0.0106)]",tensor([-7.2284]),"tensor([-1.5064, -6.1266])","[tensor(0.2217), tensor(0.0022)]",0.0034795513,0.16959495842456818,0.00048423366,7.1856866,-5.660852,-2.830425977706909,0.74163425
+microsoft/phi-2,0.1,0,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The food at the wedding was outstanding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. There was not a lot of food at the wedding.
+Your answer:
+",Why has Bob responded like this?,A,target,The food at the wedding was outstanding.,incorrect_nonliteral,A,"tensor([-1.1550, -2.3719])","[tensor(0.3151), tensor(0.0933)]",tensor([-6.1659]),"tensor([-1.5854, -2.0532])","[tensor(0.2049), tensor(0.1283)]",0.029395066,0.20417922735214233,0.026291149,1.1180594,-3.5269284,-1.7634642124176025,0.96932966
+microsoft/phi-2,0.1,0,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The food at the wedding was outstanding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. There was not a lot of food at the wedding.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,The food at the wedding was mediocre.,target,B,"tensor([-1.1550, -6.0985])","[tensor(0.3151), tensor(0.0022)]",tensor([-7.4080]),"tensor([-1.5854, -6.1469])","[tensor(0.2049), tensor(0.0021)]",0.00070769957,0.15865209698677063,0.00043844644,1.6141073,-7.253491,-3.6267454624176025,0.93808
+microsoft/phi-2,0.1,0,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The food at the wedding was outstanding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. There was not a lot of food at the wedding.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,The wedding is not about food.,incorrect_associate,C,"tensor([-1.1550, -5.9188])","[tensor(0.3151), tensor(0.0027)]",tensor([-7.0955]),"tensor([-1.5854, -6.4204])","[tensor(0.2049), tensor(0.0016)]",0.0008470056,0.15887317061424255,0.00033355242,2.5393476,-7.0738034,-3.5369017124176025,0.8835947
+microsoft/phi-2,0.1,0,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The food at the wedding was outstanding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. There was not a lot of food at the wedding.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,There was not a lot of food at the wedding.,incorrect_literal,D,"tensor([-1.1550, -6.4344])","[tensor(0.3151), tensor(0.0016)]",tensor([-7.2284]),"tensor([-1.5854, -7.7407])","[tensor(0.2049), tensor(0.0004)]",0.00050577003,0.15833163261413574,8.907579e-05,5.677974,-7.5894284,-3.7947142124176025,0.81379044
+microsoft/phi-2,0.1,0,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary is proud of the new cups that she got from Ken for her birthday.
+B. Mary wants Ken to serve her tea in a cup.
+C. Mary wants Ken to wash a cup that she sees in the sink. 
+D. Mary is irritated with Ken.
+Your answer:
+",Why has Bob responded like this?,A,target,Mary is proud of the new cups that she got from Ken for her birthday.,incorrect_associate,A,"tensor([-1.3527, -2.2904])","[tensor(0.2585), tensor(0.1012)]",tensor([-6.1659]),"tensor([-1.6694, -1.9349])","[tensor(0.1884), tensor(0.1444)]",0.026170962,0.1798819750547409,0.027206602,0.9619342,-3.6431048,-1.8215523958206177,1.0107675
+microsoft/phi-2,0.1,0,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary is proud of the new cups that she got from Ken for her birthday.
+B. Mary wants Ken to serve her tea in a cup.
+C. Mary wants Ken to wash a cup that she sees in the sink. 
+D. Mary is irritated with Ken.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Mary wants Ken to serve her tea in a cup.,incorrect_literal,B,"tensor([-1.3527, -5.3060])","[tensor(0.2585), tensor(0.0050)]",tensor([-7.4080]),"tensor([-1.6694, -6.2553])","[tensor(0.1884), tensor(0.0019)]",0.0012827747,0.13174918293952942,0.00036173154,3.5462065,-6.6587296,-3.329364776611328,0.8402598
+microsoft/phi-2,0.1,0,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary is proud of the new cups that she got from Ken for her birthday.
+B. Mary wants Ken to serve her tea in a cup.
+C. Mary wants Ken to wash a cup that she sees in the sink. 
+D. Mary is irritated with Ken.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Mary wants Ken to wash a cup that she sees in the sink. ,incorrect_nonliteral,C,"tensor([-1.3527, -5.6966])","[tensor(0.2585), tensor(0.0034)]",tensor([-7.0955]),"tensor([-1.6694, -6.6928])","[tensor(0.1884), tensor(0.0012)]",0.00086796883,0.13094696402549744,0.00023355143,3.7163928,-7.0493546,-3.524677276611328,0.8430116
+microsoft/phi-2,0.1,0,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary is proud of the new cups that she got from Ken for her birthday.
+B. Mary wants Ken to serve her tea in a cup.
+C. Mary wants Ken to wash a cup that she sees in the sink. 
+D. Mary is irritated with Ken.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Mary is irritated with Ken.,target,D,"tensor([-1.3527, -6.0091])","[tensor(0.2585), tensor(0.0025)]",tensor([-7.2284]),"tensor([-1.6694, -7.0443])","[tensor(0.1884), tensor(0.0009)]",0.00063501956,0.13049645721912384,0.00016432395,3.864437,-7.3618546,-3.680927276611328,0.8448626
+microsoft/phi-2,0.1,0,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy does not know what type of shoes she wants to buy.
+C. Cindy has an obsession with shoes and buys them on every occasion.
+D. Cindy is excited about going shopping.
+Your answer:
+",Why has Bob responded like this?,A,target,Cindy does not plan to buy anything but shoes in this store.,incorrect_literal,A,"tensor([-1.2273, -2.3024])","[tensor(0.2931), tensor(0.1000)]",tensor([-6.1659]),"tensor([-1.6138, -1.9708])","[tensor(0.1991), tensor(0.1393)]",0.02931298,0.1965489238500595,0.02774616,1.0564698,-3.5297248,-1.7648624181747437,0.9846756
+microsoft/phi-2,0.1,0,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy does not know what type of shoes she wants to buy.
+C. Cindy has an obsession with shoes and buys them on every occasion.
+D. Cindy is excited about going shopping.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Cindy does not know what type of shoes she wants to buy.,target,B,"tensor([-1.2273, -4.9352])","[tensor(0.2931), tensor(0.0072)]",tensor([-7.4080]),"tensor([-1.6138, -6.3458])","[tensor(0.1991), tensor(0.0018)]",0.0021069003,0.15013505518436432,0.00034927254,6.0322533,-6.1625376,-3.081268787384033,0.77422136
+microsoft/phi-2,0.1,0,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy does not know what type of shoes she wants to buy.
+C. Cindy has an obsession with shoes and buys them on every occasion.
+D. Cindy is excited about going shopping.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Cindy has an obsession with shoes and buys them on every occasion.,incorrect_nonliteral,C,"tensor([-1.2273, -4.4743])","[tensor(0.2931), tensor(0.0114)]",tensor([-7.0955]),"tensor([-1.6138, -2.6271])","[tensor(0.1991), tensor(0.0723)]",0.0033406164,0.15223978459835052,0.01439452,0.23207557,-5.7016,-2.850800037384033,1.3444291
+microsoft/phi-2,0.1,0,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy does not know what type of shoes she wants to buy.
+C. Cindy has an obsession with shoes and buys them on every occasion.
+D. Cindy is excited about going shopping.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Cindy is excited about going shopping.,incorrect_associate,D,"tensor([-1.2273, -4.2868])","[tensor(0.2931), tensor(0.0137)]",tensor([-7.2284]),"tensor([-1.6138, -7.6114])","[tensor(0.1991), tensor(0.0005)]",0.004029553,0.15341511368751526,9.8516844e-05,40.902172,-5.5141,-2.757050037384033,0.5977161
+microsoft/phi-2,0.1,0,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want to talk about school with his mom.
+B. He is too excited to talk about this at the moment.
+C. He has been doing lots of schoolwork at school.
+D. He is upset that his dad is not at home.
+Your answer:
+",Why has Bob responded like this?,A,target,He does not want to talk about school with his mom.,target,A,"tensor([-1.1854, -2.4733])","[tensor(0.3056), tensor(0.0843)]",tensor([-6.1659]),"tensor([-1.5019, -2.2517])","[tensor(0.2227), tensor(0.1052)]",0.025765097,0.19496235251426697,0.02343492,1.0994318,-3.6587346,-1.8293672800064087,0.97474545
+microsoft/phi-2,0.1,0,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want to talk about school with his mom.
+B. He is too excited to talk about this at the moment.
+C. He has been doing lots of schoolwork at school.
+D. He is upset that his dad is not at home.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,He is too excited to talk about this at the moment.,incorrect_associate,B,"tensor([-1.1854, -5.3483])","[tensor(0.3056), tensor(0.0048)]",tensor([-7.4080]),"tensor([-1.5019, -6.7673])","[tensor(0.2227), tensor(0.0012)]",0.0014535673,0.15518830716609955,0.00025630233,5.6712995,-6.5337343,-3.266867160797119,0.7901335
+microsoft/phi-2,0.1,0,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want to talk about school with his mom.
+B. He is too excited to talk about this at the moment.
+C. He has been doing lots of schoolwork at school.
+D. He is upset that his dad is not at home.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,He has been doing lots of schoolwork at school.,incorrect_literal,C,"tensor([-1.1854, -5.6530])","[tensor(0.3056), tensor(0.0035)]",tensor([-7.0955]),"tensor([-1.5019, -7.8376])","[tensor(0.2227), tensor(0.0004)]",0.0010717934,0.15456371009349823,8.788641e-05,12.195212,-6.838422,-3.419210910797119,0.732207
+microsoft/phi-2,0.1,0,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want to talk about school with his mom.
+B. He is too excited to talk about this at the moment.
+C. He has been doing lots of schoolwork at school.
+D. He is upset that his dad is not at home.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,He is upset that his dad is not at home.,incorrect_nonliteral,D,"tensor([-1.1854, -6.2233])","[tensor(0.3056), tensor(0.0020)]",tensor([-7.2284]),"tensor([-1.5019, -7.7595])","[tensor(0.2227), tensor(0.0004)]",0.000605937,0.1538015753030777,9.502787e-05,6.3764133,-7.4087343,-3.704367160797119,0.79996353
+microsoft/phi-2,0.1,0,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has little experience with cooking.
+B. Mark's wife has a lot of experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has been doing some scientific experiments instead of cooking.
+Your answer:
+",Why has Bob responded like this?,A,target,Mark's wife has little experience with cooking.,target,A,"tensor([-1.2572, -2.6143])","[tensor(0.2844), tensor(0.0732)]",tensor([-6.1659]),"tensor([-1.6706, -2.1395])","[tensor(0.1881), tensor(0.1177)]",0.02082569,0.17882807552814484,0.022144675,0.9404378,-3.871568,-1.9357839822769165,1.0161173
+microsoft/phi-2,0.1,0,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has little experience with cooking.
+B. Mark's wife has a lot of experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has been doing some scientific experiments instead of cooking.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Mark's wife has a lot of experience with cooking.,incorrect_associate,B,"tensor([-1.2572, -5.8253])","[tensor(0.2844), tensor(0.0030)]",tensor([-7.4080]),"tensor([-1.6706, -5.7489])","[tensor(0.1881), tensor(0.0032)]",0.0008396667,0.14369580149650574,0.000599429,1.4007776,-7.082505,-3.541252613067627,0.95457566
+microsoft/phi-2,0.1,0,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has little experience with cooking.
+B. Mark's wife has a lot of experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has been doing some scientific experiments instead of cooking.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Mark's wife has been angry with Mark because he did not help her with dinner.  ,incorrect_nonliteral,C,"tensor([-1.2572, -6.4893])","[tensor(0.2844), tensor(0.0015)]",tensor([-7.0955]),"tensor([-1.6706, -6.4989])","[tensor(0.1881), tensor(0.0015)]",0.0004322234,0.14297957718372345,0.00028315024,1.5264808,-7.7465677,-3.873283863067627,0.9482265
+microsoft/phi-2,0.1,0,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has little experience with cooking.
+B. Mark's wife has a lot of experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has been doing some scientific experiments instead of cooking.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Mark's wife has been doing some scientific experiments instead of cooking.,incorrect_literal,D,"tensor([-1.2572, -5.5596])","[tensor(0.2844), tensor(0.0039)]",tensor([-7.2284]),"tensor([-1.6706, -6.3427])","[tensor(0.1881), tensor(0.0018)]",0.0010951319,0.14414486289024353,0.00033103616,3.308194,-6.81688,-3.408440113067627,0.8506976
+microsoft/phi-2,0.1,0,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie wants Lenny to know how his breakfast was made.
+C. Marcie is really good at cooking eggs and making toast.
+D. Marcie thinks that breakfast is the main meal of the day.
+Your answer:
+",Why has Bob responded like this?,A,target,Marcie thinks that her husband's expectations about breakfast are too high.,target,A,"tensor([-1.0592, -2.2408])","[tensor(0.3467), tensor(0.1064)]",tensor([-6.1659]),"tensor([-1.6807, -2.1416])","[tensor(0.1862), tensor(0.1175)]",0.03688548,0.22656133770942688,0.02187694,1.6860439,-3.2999372,-1.6499686241149902,0.8633331
+microsoft/phi-2,0.1,0,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie wants Lenny to know how his breakfast was made.
+C. Marcie is really good at cooking eggs and making toast.
+D. Marcie thinks that breakfast is the main meal of the day.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Marcie wants Lenny to know how his breakfast was made.,incorrect_literal,B,"tensor([-1.0592, -5.6392])","[tensor(0.3467), tensor(0.0036)]",tensor([-7.4080]),"tensor([-1.6807, -5.8838])","[tensor(0.1862), tensor(0.0028)]",0.001232914,0.1751512587070465,0.00051853154,2.3777032,-6.6983747,-3.3491873741149902,0.8855002
+microsoft/phi-2,0.1,0,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie wants Lenny to know how his breakfast was made.
+C. Marcie is really good at cooking eggs and making toast.
+D. Marcie thinks that breakfast is the main meal of the day.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Marcie is really good at cooking eggs and making toast.,incorrect_nonliteral,C,"tensor([-1.0592, -6.3111])","[tensor(0.3467), tensor(0.0018)]",tensor([-7.0955]),"tensor([-1.6807, -7.5088])","[tensor(0.1862), tensor(0.0005)]",0.0006297109,0.17428146302700043,0.000102104925,6.167292,-7.3702497,-3.6851248741149902,0.80202866
+microsoft/phi-2,0.1,0,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie wants Lenny to know how his breakfast was made.
+C. Marcie is really good at cooking eggs and making toast.
+D. Marcie thinks that breakfast is the main meal of the day.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Marcie thinks that breakfast is the main meal of the day.,incorrect_associate,D,"tensor([-1.0592, -5.5923])","[tensor(0.3467), tensor(0.0037)]",tensor([-7.2284]),"tensor([-1.6807, -7.8135])","[tensor(0.1862), tensor(0.0004)]",0.0012920828,0.17523658275604248,7.528745e-05,17.161995,-6.6514997,-3.3257498741149902,0.70058584
+microsoft/phi-2,0.1,0,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that statistical information is of great use in this debate.
+B. Melissa is very knowledgeable about the system of secondary education.
+C. Melissa thinks that kids attending schools lack subject knowledge. 
+D. Melissa thinks that statistical information is useless in this debate.
+Your answer:
+",Why has Bob responded like this?,A,target,Melissa thinks that statistical information is of great use in this debate.,incorrect_literal,A,"tensor([-1.3921, -2.2064])","[tensor(0.2486), tensor(0.1101)]",tensor([-6.1659]),"tensor([-1.7827, -2.4205])","[tensor(0.1682), tensor(0.0889)]",0.02736419,0.17932307720184326,0.01494801,1.8306242,-3.59852,-1.7992600202560425,0.8561429
+microsoft/phi-2,0.1,0,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that statistical information is of great use in this debate.
+B. Melissa is very knowledgeable about the system of secondary education.
+C. Melissa thinks that kids attending schools lack subject knowledge. 
+D. Melissa thinks that statistical information is useless in this debate.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Melissa is very knowledgeable about the system of secondary education.,incorrect_associate,B,"tensor([-1.3921, -5.5267])","[tensor(0.2486), tensor(0.0040)]",tensor([-7.4080]),"tensor([-1.7827, -7.0767])","[tensor(0.1682), tensor(0.0008)]",0.0009889835,0.1262652575969696,0.00014203647,6.9628844,-6.918833,-3.459416389465332,0.78095716
+microsoft/phi-2,0.1,0,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that statistical information is of great use in this debate.
+B. Melissa is very knowledgeable about the system of secondary education.
+C. Melissa thinks that kids attending schools lack subject knowledge. 
+D. Melissa thinks that statistical information is useless in this debate.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Melissa thinks that kids attending schools lack subject knowledge. ,incorrect_nonliteral,C,"tensor([-1.3921, -5.4330])","[tensor(0.2486), tensor(0.0044)]",tensor([-7.0955]),"tensor([-1.7827, -7.3111])","[tensor(0.1682), tensor(0.0007)]",0.001086186,0.12646079063415527,0.000112360096,9.667008,-6.825083,-3.412541389465332,0.7505203
+microsoft/phi-2,0.1,0,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that statistical information is of great use in this debate.
+B. Melissa is very knowledgeable about the system of secondary education.
+C. Melissa thinks that kids attending schools lack subject knowledge. 
+D. Melissa thinks that statistical information is useless in this debate.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Melissa thinks that statistical information is useless in this debate.,target,D,"tensor([-1.3921, -5.3392])","[tensor(0.2486), tensor(0.0048)]",tensor([-7.2284]),"tensor([-1.7827, -7.9127])","[tensor(0.1682), tensor(0.0004)]",0.001192942,0.1266755610704422,6.156825e-05,19.375929,-6.731333,-3.365666389465332,0.69428366
+microsoft/phi-2,0.1,0,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He knows these people and their lifestyle very well.
+B. He thinks that people who ride subways have many good habits.
+C. He thinks that people who ride subways have many bad habits.
+D. He thinks that Rosy has no reason to believe that the strangers are nice.
+Your answer:
+",Why has Bob responded like this?,A,target,He knows these people and their lifestyle very well.,incorrect_associate,A,"tensor([-1.2450, -2.4344])","[tensor(0.2879), tensor(0.0876)]",tensor([-6.1659]),"tensor([-1.5838, -2.0115])","[tensor(0.2052), tensor(0.1338)]",0.02523782,0.18779528141021729,0.027453262,0.9193013,-3.6794116,-1.8397058248519897,1.0234034
+microsoft/phi-2,0.1,0,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He knows these people and their lifestyle very well.
+B. He thinks that people who ride subways have many good habits.
+C. He thinks that people who ride subways have many bad habits.
+D. He thinks that Rosy has no reason to believe that the strangers are nice.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,He thinks that people who ride subways have many good habits.,incorrect_literal,B,"tensor([-1.2450, -5.5750])","[tensor(0.2879), tensor(0.0038)]",tensor([-7.4080]),"tensor([-1.5838, -5.4646])","[tensor(0.2052), tensor(0.0042)]",0.0010916808,0.14586637914180756,0.00086880196,1.2565359,-6.820037,-3.4100184440612793,0.96760136
+microsoft/phi-2,0.1,0,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He knows these people and their lifestyle very well.
+B. He thinks that people who ride subways have many good habits.
+C. He thinks that people who ride subways have many bad habits.
+D. He thinks that Rosy has no reason to believe that the strangers are nice.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,He thinks that people who ride subways have many bad habits.,incorrect_nonliteral,C,"tensor([-1.2450, -6.3797])","[tensor(0.2879), tensor(0.0017)]",tensor([-7.0955]),"tensor([-1.5838, -6.5115])","[tensor(0.2052), tensor(0.0015)]",0.00048822994,0.1448184996843338,0.0003049782,1.6008683,-7.6247244,-3.8123621940612793,0.94187397
+microsoft/phi-2,0.1,0,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He knows these people and their lifestyle very well.
+B. He thinks that people who ride subways have many good habits.
+C. He thinks that people who ride subways have many bad habits.
+D. He thinks that Rosy has no reason to believe that the strangers are nice.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,He thinks that Rosy has no reason to believe that the strangers are nice.,target,D,"tensor([-1.2450, -5.3329])","[tensor(0.2879), tensor(0.0048)]",tensor([-7.2284]),"tensor([-1.5838, -6.1130])","[tensor(0.2052), tensor(0.0022)]",0.0013908375,0.14638584852218628,0.00045426365,3.0617406,-6.5778494,-3.2889246940612793,0.8546177
+microsoft/phi-2,0.1,0,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie considers giving the money to Berta. 
+B. Freddie can give Berta some money that he will get for his space expedition.
+C. Freddie is ready to give money to Berta without any questions.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has Bob responded like this?,A,target,Freddie considers giving the money to Berta. ,incorrect_associate,A,"tensor([-1.1846, -2.4681])","[tensor(0.3059), tensor(0.0847)]",tensor([-6.1659]),"tensor([-1.5200, -2.0891])","[tensor(0.2187), tensor(0.1238)]",0.025921332,0.19530752301216125,0.027076961,0.9573206,-3.652689,-1.8263444900512695,1.0120854
+microsoft/phi-2,0.1,0,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie considers giving the money to Berta. 
+B. Freddie can give Berta some money that he will get for his space expedition.
+C. Freddie is ready to give money to Berta without any questions.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Freddie can give Berta some money that he will get for his space expedition.,incorrect_literal,B,"tensor([-1.1846, -3.8197])","[tensor(0.3059), tensor(0.0219)]",tensor([-7.4080]),"tensor([-1.5200, -6.5188])","[tensor(0.2187), tensor(0.0015)]",0.0067093614,0.1639018952846527,0.000322709,20.790747,-5.0042515,-2.5021257400512695,0.6225154
+microsoft/phi-2,0.1,0,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie considers giving the money to Berta. 
+B. Freddie can give Berta some money that he will get for his space expedition.
+C. Freddie is ready to give money to Berta without any questions.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Freddie is ready to give money to Berta without any questions.,incorrect_nonliteral,C,"tensor([-1.1846, -6.2415])","[tensor(0.3059), tensor(0.0019)]",tensor([-7.0955]),"tensor([-1.5200, -7.2376])","[tensor(0.2187), tensor(0.0007)]",0.0005954898,0.15390761196613312,0.0001572758,3.7862773,-7.4261265,-3.7130632400512695,0.84797245
+microsoft/phi-2,0.1,0,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie considers giving the money to Berta. 
+B. Freddie can give Berta some money that he will get for his space expedition.
+C. Freddie is ready to give money to Berta without any questions.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Freddie will never give Berta any money.,target,D,"tensor([-1.1846, -5.8118])","[tensor(0.3059), tensor(0.0030)]",tensor([-7.2284]),"tensor([-1.5200, -7.4797])","[tensor(0.2187), tensor(0.0006)]",0.00091513514,0.15443012118339539,0.00012344721,7.4131694,-6.996439,-3.4982194900512695,0.7774083
+microsoft/phi-2,0.1,0,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy knows that Mr. Smith's kids are kindergarteners.
+B. Katy agrees that Mr. Smith is a smart individual.
+C. Katy doubts that Mr. Smith is a smart individual.
+D. Katy thinks that Mr. Smith works at a kindergarten.
+Your answer:
+",Why has Bob responded like this?,A,target,Katy knows that Mr. Smith's kids are kindergarteners.,incorrect_associate,A,"tensor([-1.1899, -2.1145])","[tensor(0.3043), tensor(0.1207)]",tensor([-6.1659]),"tensor([-1.6977, -1.9832])","[tensor(0.1831), tensor(0.1376)]",0.036721595,0.21247498691082,0.025200384,1.457184,-3.3043904,-1.6521952152252197,0.8977136
+microsoft/phi-2,0.1,0,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy knows that Mr. Smith's kids are kindergarteners.
+B. Katy agrees that Mr. Smith is a smart individual.
+C. Katy doubts that Mr. Smith is a smart individual.
+D. Katy thinks that Mr. Smith works at a kindergarten.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Katy agrees that Mr. Smith is a smart individual.,incorrect_literal,B,"tensor([-1.1899, -4.9036])","[tensor(0.3043), tensor(0.0074)]",tensor([-7.4080]),"tensor([-1.6977, -6.2645])","[tensor(0.1831), tensor(0.0019)]",0.0022575997,0.1558387577533722,0.00034840457,6.479822,-6.093453,-3.0467264652252197,0.76530284
+microsoft/phi-2,0.1,0,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy knows that Mr. Smith's kids are kindergarteners.
+B. Katy agrees that Mr. Smith is a smart individual.
+C. Katy doubts that Mr. Smith is a smart individual.
+D. Katy thinks that Mr. Smith works at a kindergarten.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Katy doubts that Mr. Smith is a smart individual.,target,C,"tensor([-1.1899, -5.0754])","[tensor(0.3043), tensor(0.0062)]",tensor([-7.0955]),"tensor([-1.6977, -5.6238])","[tensor(0.1831), tensor(0.0036)]",0.0019010896,0.15525288879871368,0.00066115573,2.8754036,-6.265328,-3.1326639652252197,0.8557413
+microsoft/phi-2,0.1,0,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy knows that Mr. Smith's kids are kindergarteners.
+B. Katy agrees that Mr. Smith is a smart individual.
+C. Katy doubts that Mr. Smith is a smart individual.
+D. Katy thinks that Mr. Smith works at a kindergarten.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Katy thinks that Mr. Smith works at a kindergarten.,incorrect_nonliteral,D,"tensor([-1.1899, -5.0442])","[tensor(0.3043), tensor(0.0064)]",tensor([-7.2284]),"tensor([-1.6977, -6.5301])","[tensor(0.1831), tensor(0.0015)]",0.0019614368,0.15535205602645874,0.00026713105,7.3426013,-6.234078,-3.1170389652252197,0.75768733
+microsoft/phi-2,0.1,0,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad thinks that Samantha's fiance is a saint.
+B. Samantha's dad thinks that John is too religious. 
+C. Samantha's dad is impressed with John's innocence.
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has Bob responded like this?,A,target,Samantha's dad thinks that Samantha's fiance is a saint.,incorrect_literal,A,"tensor([-1.3764, -2.2322])","[tensor(0.2525), tensor(0.1073)]",tensor([-6.1659]),"tensor([-1.8959, -2.3886])","[tensor(0.1502), tensor(0.0918)]",0.027088335,0.17988327145576477,0.013780322,1.9657258,-3.608652,-1.804326057434082,0.8422548
+microsoft/phi-2,0.1,0,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad thinks that Samantha's fiance is a saint.
+B. Samantha's dad thinks that John is too religious. 
+C. Samantha's dad is impressed with John's innocence.
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Samantha's dad thinks that John is too religious. ,incorrect_nonliteral,B,"tensor([-1.3764, -5.7166])","[tensor(0.2525), tensor(0.0033)]",tensor([-7.4080]),"tensor([-1.8959, -6.7948])","[tensor(0.1502), tensor(0.0011)]",0.0008308784,0.12788328528404236,0.0001681316,4.9418335,-7.093027,-3.546513557434082,0.816157
+microsoft/phi-2,0.1,0,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad thinks that Samantha's fiance is a saint.
+B. Samantha's dad thinks that John is too religious. 
+C. Samantha's dad is impressed with John's innocence.
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Samantha's dad is impressed with John's innocence.,incorrect_associate,C,"tensor([-1.3764, -5.7400])","[tensor(0.2525), tensor(0.0032)]",tensor([-7.0955]),"tensor([-1.8959, -7.1777])","[tensor(0.1502), tensor(0.0008)]",0.00081163115,0.1278451681137085,0.00011465578,7.0788507,-7.1164646,-3.558232307434082,0.7843065
+microsoft/phi-2,0.1,0,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad thinks that Samantha's fiance is a saint.
+B. Samantha's dad thinks that John is too religious. 
+C. Samantha's dad is impressed with John's innocence.
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Samantha's dad thinks that Samantha has an incorrect view of her fiance.,target,D,"tensor([-1.3764, -5.2869])","[tensor(0.2525), tensor(0.0051)]",tensor([-7.2284]),"tensor([-1.8959, -6.1698])","[tensor(0.1502), tensor(0.0021)]",0.0012768749,0.12876653671264648,0.00031411115,4.0650415,-6.6633396,-3.331669807434082,0.82612634
+microsoft/phi-2,0.1,0,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is not very well educated.
+B. Bianka tries to make Lenny angry with her.
+C. Bianka does not want Lenny to know her address.
+
+D. Bianka is an alien.
+Your answer:
+",Why has Bob responded like this?,A,target,Bianka is not very well educated.,incorrect_nonliteral,A,"tensor([-1.4760, -2.4000])","[tensor(0.2285), tensor(0.0907)]",tensor([-6.1659]),"tensor([-1.5629, -2.1348])","[tensor(0.2095), tensor(0.1183)]",0.020732371,0.15962934494018555,0.024781534,0.8366056,-3.876059,-1.9380295276641846,1.0482475
+microsoft/phi-2,0.1,0,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is not very well educated.
+B. Bianka tries to make Lenny angry with her.
+C. Bianka does not want Lenny to know her address.
+
+D. Bianka is an alien.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Bianka tries to make Lenny angry with her.,incorrect_associate,B,"tensor([-1.4760, -4.0563])","[tensor(0.2285), tensor(0.0173)]",tensor([-7.4080]),"tensor([-1.5629, -2.6660])","[tensor(0.2095), tensor(0.0695)]",0.003956842,0.12292838096618652,0.014568313,0.27160603,-5.532309,-2.7661545276641846,1.3082126
+microsoft/phi-2,0.1,0,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is not very well educated.
+B. Bianka tries to make Lenny angry with her.
+C. Bianka does not want Lenny to know her address.
+
+D. Bianka is an alien.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,"Bianka does not want Lenny to know her address.
+",target,C,"tensor([-1.4760, -5.2750])","[tensor(0.2285), tensor(0.0051)]",tensor([-7.0955]),"tensor([-1.5629, -5.7832])","[tensor(0.2095), tensor(0.0031)]",0.0011696402,0.11683063209056854,0.0006451073,1.813094,-6.751059,-3.3755295276641846,0.9189998
+microsoft/phi-2,0.1,0,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is not very well educated.
+B. Bianka tries to make Lenny angry with her.
+C. Bianka does not want Lenny to know her address.
+
+D. Bianka is an alien.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Bianka is an alien.,incorrect_literal,D,"tensor([-1.4760, -3.7438])","[tensor(0.2285), tensor(0.0237)]",tensor([-7.2284]),"tensor([-1.5629, -5.9473])","[tensor(0.2095), tensor(0.0026)]",0.0054083616,0.1261039674282074,0.0005474955,9.878367,-5.219809,-2.6099045276641846,0.6950333
+microsoft/phi-2,0.1,0,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly cannot count very well.
+B. Kelly has made a list of books to read that contains one million titles.
+C. Kelly is a pathological liar.
+D. Kelly plans to devote a lot of time to reading this summer.
+Your answer:
+",Why has Bob responded like this?,A,target,Kelly cannot count very well.,incorrect_nonliteral,A,"tensor([-1.2596, -2.3166])","[tensor(0.2838), tensor(0.0986)]",tensor([-6.1659]),"tensor([-1.6451, -2.3761])","[tensor(0.1930), tensor(0.0929)]",0.027981073,0.191188246011734,0.017931134,1.5604743,-3.576227,-1.7881134748458862,0.8893395
+microsoft/phi-2,0.1,0,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly cannot count very well.
+B. Kelly has made a list of books to read that contains one million titles.
+C. Kelly is a pathological liar.
+D. Kelly plans to devote a lot of time to reading this summer.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Kelly has made a list of books to read that contains one million titles.,incorrect_literal,B,"tensor([-1.2596, -5.0666])","[tensor(0.2838), tensor(0.0063)]",tensor([-7.4080]),"tensor([-1.6451, -5.7199])","[tensor(0.1930), tensor(0.0033)]",0.0017887702,0.14503809809684753,0.0006330463,2.8256545,-6.326227,-3.163113594055176,0.85896206
+microsoft/phi-2,0.1,0,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly cannot count very well.
+B. Kelly has made a list of books to read that contains one million titles.
+C. Kelly is a pathological liar.
+D. Kelly plans to devote a lot of time to reading this summer.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Kelly is a pathological liar.,incorrect_associate,C,"tensor([-1.2596, -5.5979])","[tensor(0.2838), tensor(0.0037)]",tensor([-7.0955]),"tensor([-1.6451, -6.7511])","[tensor(0.1930), tensor(0.0012)]",0.0010515638,0.14373916387557983,0.00022571962,4.6587167,-6.857477,-3.428738594055176,0.81673414
+microsoft/phi-2,0.1,0,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly cannot count very well.
+B. Kelly has made a list of books to read that contains one million titles.
+C. Kelly is a pathological liar.
+D. Kelly plans to devote a lot of time to reading this summer.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Kelly plans to devote a lot of time to reading this summer.,target,D,"tensor([-1.2596, -4.8088])","[tensor(0.2838), tensor(0.0082)]",tensor([-7.2284]),"tensor([-1.6451, -6.7746])","[tensor(0.1930), tensor(0.0011)]",0.0023148404,0.14596502482891083,0.00022049082,10.49858,-6.0684147,-3.034207344055176,0.7207439

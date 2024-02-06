@@ -119,7 +119,7 @@ def retrieve_log_probs(
                     [tokenizer.bos_token_id] + option_input_ids_raw
                 ).unsqueeze(0).to(DEVICE)
 
-                print("Option input ids ", option_input_ids.input_ids)
+                print("Option input ids ", option_input_ids)
                 # also, compute null prompt prior
                 null_option_input_ids_raw = tokenizer.encode(
                     prior_prompt + o, 
@@ -162,7 +162,7 @@ def retrieve_log_probs(
                 option_input_ids = tokenizer(
                     o, 
                     return_tensors="pt",
-                ).to(DEVICE)
+                ).input_ids.to(DEVICE)
                 print("Option input ids ", option_input_ids.input_ids)
                 # also, compute null prompt prior
                 null_option_input_ids = tokenizer(
@@ -208,7 +208,7 @@ def retrieve_log_probs(
                     input_ids,
                 )
                 option_outputs = model(
-                    **option_input_ids,
+                    option_input_ids,
                 )
                 
                 null_option_outputs = model(
@@ -261,7 +261,7 @@ def retrieve_log_probs(
             print("output log probs shape ", llama_output_scores.shape, llama_option_output_scores.shape)
             input_ids_probs = input_ids[:, 1:].squeeze().unsqueeze(-1)
             null_option_input_ids_probs = null_option_input_ids[:, 1:].squeeze().unsqueeze(-1)
-            option_input_ids_probs = option_input_ids.input_ids[:, 1:].squeeze(0).unsqueeze(-1)
+            option_input_ids_probs = option_input_ids[:, 1:].squeeze(0).unsqueeze(-1)
             print("shape of input ids for porb retrieval ", input_ids_probs.shape, option_input_ids_probs.shape)
             conditionalLogProbs = torch.gather(
                 llama_output_scores, 
@@ -292,7 +292,7 @@ def retrieve_log_probs(
             ################
 
             ###### loss based NLL computation ######
-            print("option_input_ids.shape[-1] -1  ", option_input_ids.input_ids.shape[-1] -1 )
+            print("option_input_ids.shape[-1] -1  ", option_input_ids.shape[-1] -1 )
             # print("over all conditional log prob ", outputs.loss.item())
             # optionTokenConditionalLogProbs = [outputs.loss.item()] * (option_input_ids.input_ids.shape[-1] -1 )
             print("optionTokenConditionalLogProbs ", optionTokenConditionalLogProbs)

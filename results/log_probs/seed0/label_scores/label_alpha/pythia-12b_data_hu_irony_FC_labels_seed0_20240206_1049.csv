@@ -1,0 +1,1106 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+EleutherAI/pythia-12b,0.1,0,1,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+In a shop, Lara tries on a dress. The dress is far too long for her. Lara asks Simon: ""Does this dress fit me?"" Simon answers: ""Wow! That must be custom made! It's clearly the perfect size and length for you."" What did Simon want to convey? ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Simon does not like the color of this dress.
+B. Lara needs to get a dress of a shorter length.
+C. The dress is fitting well.
+D. Simon has to get back to work.
+
+Your answer:
+",,A,target,Simon does not like the color of this dress.,distractor_associate,A,"tensor([-1.2061, -1.4365], dtype=torch.float16)","[tensor(0.2993, dtype=torch.float16), tensor(0.2378, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.7876, -1.9355], dtype=torch.float16)","[tensor(0.4548, dtype=torch.float16), tensor(0.1443, dtype=torch.float16)]",0.07117,0.2685546875,0.0656,1.085,-2.643,-1.3212890625,0.9707
+EleutherAI/pythia-12b,0.1,0,1,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+In a shop, Lara tries on a dress. The dress is far too long for her. Lara asks Simon: ""Does this dress fit me?"" Simon answers: ""Wow! That must be custom made! It's clearly the perfect size and length for you."" What did Simon want to convey? ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Simon does not like the color of this dress.
+B. Lara needs to get a dress of a shorter length.
+C. The dress is fitting well.
+D. Simon has to get back to work.
+
+Your answer:
+",,B,competitor,Lara needs to get a dress of a shorter length.,target,B,"tensor([-1.2061, -2.9746], dtype=torch.float16)","[tensor(0.2993, dtype=torch.float16), tensor(0.0511, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.7876, -3.4746], dtype=torch.float16)","[tensor(0.4548, dtype=torch.float16), tensor(0.0310, dtype=torch.float16)]",0.01528,0.1751708984375,0.01409,1.084,-4.18,-2.08984375,0.981
+EleutherAI/pythia-12b,0.1,0,1,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+In a shop, Lara tries on a dress. The dress is far too long for her. Lara asks Simon: ""Does this dress fit me?"" Simon answers: ""Wow! That must be custom made! It's clearly the perfect size and length for you."" What did Simon want to convey? ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Simon does not like the color of this dress.
+B. Lara needs to get a dress of a shorter length.
+C. The dress is fitting well.
+D. Simon has to get back to work.
+
+Your answer:
+",,C,distractor_associate,The dress is fitting well.,competitor,C,"tensor([-1.2061, -2.7090], dtype=torch.float16)","[tensor(0.2993, dtype=torch.float16), tensor(0.0666, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.7876, -3.5527], dtype=torch.float16)","[tensor(0.4548, dtype=torch.float16), tensor(0.0286, dtype=torch.float16)]",0.01993,0.1829833984375,0.01302,1.53,-3.914,-1.95703125,0.902
+EleutherAI/pythia-12b,0.1,0,1,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+In a shop, Lara tries on a dress. The dress is far too long for her. Lara asks Simon: ""Does this dress fit me?"" Simon answers: ""Wow! That must be custom made! It's clearly the perfect size and length for you."" What did Simon want to convey? ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Simon does not like the color of this dress.
+B. Lara needs to get a dress of a shorter length.
+C. The dress is fitting well.
+D. Simon has to get back to work.
+
+Your answer:
+",,D,distractor_nonsequitur,"Simon has to get back to work.
+",distractor_nonsequitur,D,"tensor([-1.2061, -2.5762], dtype=torch.float16)","[tensor(0.2993, dtype=torch.float16), tensor(0.0760, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.7876, -3.0293], dtype=torch.float16)","[tensor(0.4548, dtype=torch.float16), tensor(0.0483, dtype=torch.float16)]",0.02277,0.187744140625,0.02199,1.035,-3.781,-1.890625,0.9907
+EleutherAI/pythia-12b,0.1,0,2,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Christian is Shane's big brother. One day, Christian is helping Shane with his homework. Christian explains the homework to Shane. When Shane starts the assignment, he does not follow Christian's instructions. Christian says, ""You are such a wonderful listener."" What did Christian want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Shane was not paying attention when Christian was talking.
+B. Shane was paying attention when Christian was talking.
+C. Shane needs to see an eye doctor.
+D. Shane's hearing improved greatly.
+Your answer:
+",,A,target,Shane was not paying attention when Christian was talking.,target,A,"tensor([-0.8101, -1.0791], dtype=torch.float16)","[tensor(0.4448, dtype=torch.float16), tensor(0.3398, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0762, -1.3096], dtype=torch.float16)","[tensor(0.3408, dtype=torch.float16), tensor(0.2700, dtype=torch.float16)]",0.1511,0.392333984375,0.09204,1.642,-1.889,-0.9443359375,0.7915
+EleutherAI/pythia-12b,0.1,0,2,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Christian is Shane's big brother. One day, Christian is helping Shane with his homework. Christian explains the homework to Shane. When Shane starts the assignment, he does not follow Christian's instructions. Christian says, ""You are such a wonderful listener."" What did Christian want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Shane was not paying attention when Christian was talking.
+B. Shane was paying attention when Christian was talking.
+C. Shane needs to see an eye doctor.
+D. Shane's hearing improved greatly.
+Your answer:
+",,B,competitor,Shane was paying attention when Christian was talking.,competitor,B,"tensor([-0.8101, -5.1641], dtype=torch.float16)","[tensor(0.4448, dtype=torch.float16), tensor(0.0057, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0762, -5.2773], dtype=torch.float16)","[tensor(0.3408, dtype=torch.float16), tensor(0.0051, dtype=torch.float16)]",0.002544,0.2252197265625,0.00174,1.462,-5.973,-2.986328125,0.9404
+EleutherAI/pythia-12b,0.1,0,2,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Christian is Shane's big brother. One day, Christian is helping Shane with his homework. Christian explains the homework to Shane. When Shane starts the assignment, he does not follow Christian's instructions. Christian says, ""You are such a wonderful listener."" What did Christian want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Shane was not paying attention when Christian was talking.
+B. Shane was paying attention when Christian was talking.
+C. Shane needs to see an eye doctor.
+D. Shane's hearing improved greatly.
+Your answer:
+",,C,distractor_associate,Shane needs to see an eye doctor.,distractor_nonsequitur,C,"tensor([-0.8101, -4.3047], dtype=torch.float16)","[tensor(0.4448, dtype=torch.float16), tensor(0.0135, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0762, -4.7305], dtype=torch.float16)","[tensor(0.3408, dtype=torch.float16), tensor(0.0088, dtype=torch.float16)]",0.00601,0.2291259765625,0.003006,1.999,-5.113,-2.556640625,0.881
+EleutherAI/pythia-12b,0.1,0,2,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Christian is Shane's big brother. One day, Christian is helping Shane with his homework. Christian explains the homework to Shane. When Shane starts the assignment, he does not follow Christian's instructions. Christian says, ""You are such a wonderful listener."" What did Christian want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Shane was not paying attention when Christian was talking.
+B. Shane was paying attention when Christian was talking.
+C. Shane needs to see an eye doctor.
+D. Shane's hearing improved greatly.
+Your answer:
+",,D,distractor_nonsequitur,Shane's hearing improved greatly.,distractor_associate,D,"tensor([-0.8101, -4.0703], dtype=torch.float16)","[tensor(0.4448, dtype=torch.float16), tensor(0.0171, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0762, -4.6758], dtype=torch.float16)","[tensor(0.3408, dtype=torch.float16), tensor(0.0093, dtype=torch.float16)]",0.007595,0.23095703125,0.003176,2.39,-4.88,-2.439453125,0.8486
+EleutherAI/pythia-12b,0.1,0,3,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Andrew and Phil are good friends, but they play on different basketball teams. During one game, Phil tries to score a basket but Andrew blocks his shot. Andrew says, ""You are so good at this."" What did Andrew want to convey? ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Phil's basketball skills could be better.
+B. Phil's blocking is impressive.
+C. Phil is a great basketball player.
+D. Phil is a great student.
+Your answer:
+",,A,target,Phil's basketball skills could be better.,target,A,"tensor([-1.2803, -1.4043], dtype=torch.float16)","[tensor(0.2781, dtype=torch.float16), tensor(0.2455, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1289, -1.4287], dtype=torch.float16)","[tensor(0.3235, dtype=torch.float16), tensor(0.2396, dtype=torch.float16)]",0.06824,0.26171875,0.0775,0.8804,-2.684,-1.341796875,1.049
+EleutherAI/pythia-12b,0.1,0,3,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Andrew and Phil are good friends, but they play on different basketball teams. During one game, Phil tries to score a basket but Andrew blocks his shot. Andrew says, ""You are so good at this."" What did Andrew want to convey? ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Phil's basketball skills could be better.
+B. Phil's blocking is impressive.
+C. Phil is a great basketball player.
+D. Phil is a great student.
+Your answer:
+",,B,competitor,Phil's blocking is impressive.,distractor_associate,B,"tensor([-1.2803, -4.2305], dtype=torch.float16)","[tensor(0.2781, dtype=torch.float16), tensor(0.0145, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1289, -5.2031], dtype=torch.float16)","[tensor(0.3235, dtype=torch.float16), tensor(0.0055, dtype=torch.float16)]",0.004047,0.1463623046875,0.00178,2.273,-5.51,-2.755859375,0.8706
+EleutherAI/pythia-12b,0.1,0,3,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Andrew and Phil are good friends, but they play on different basketball teams. During one game, Phil tries to score a basket but Andrew blocks his shot. Andrew says, ""You are so good at this."" What did Andrew want to convey? ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Phil's basketball skills could be better.
+B. Phil's blocking is impressive.
+C. Phil is a great basketball player.
+D. Phil is a great student.
+Your answer:
+",,C,distractor_associate,Phil is a great basketball player.,competitor,C,"tensor([-1.2803, -3.9746], dtype=torch.float16)","[tensor(0.2781, dtype=torch.float16), tensor(0.0188, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1289, -4.2344], dtype=torch.float16)","[tensor(0.3235, dtype=torch.float16), tensor(0.0145, dtype=torch.float16)]",0.005222,0.1484375,0.00469,1.114,-5.254,-2.626953125,0.9795
+EleutherAI/pythia-12b,0.1,0,3,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Andrew and Phil are good friends, but they play on different basketball teams. During one game, Phil tries to score a basket but Andrew blocks his shot. Andrew says, ""You are so good at this."" What did Andrew want to convey? ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Phil's basketball skills could be better.
+B. Phil's blocking is impressive.
+C. Phil is a great basketball player.
+D. Phil is a great student.
+Your answer:
+",,D,distractor_nonsequitur,Phil is a great student.,distractor_nonsequitur,D,"tensor([-1.2803, -3.2637], dtype=torch.float16)","[tensor(0.2781, dtype=torch.float16), tensor(0.0382, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1289, -4.4062], dtype=torch.float16)","[tensor(0.3235, dtype=torch.float16), tensor(0.0122, dtype=torch.float16)]",0.010635,0.158203125,0.00395,2.693,-4.543,-2.271484375,0.821
+EleutherAI/pythia-12b,0.1,0,4,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Patrick and Jon like to eat at restaurants. One afternoon, they are at a restaurant eating lunch. Patrick orders a bowl of noodles and Jon orders a rice dish. While eating his meal, Patrick spills some noodles on his shirt. Jon says, ""You are so graceful."" What did Jon want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Patrick is very cautious.
+B. Patrick is careless.
+C. Patrick pays a lot of attention to fashion.
+D. Patrick is allergic to noodles.
+Your answer:
+",,A,target,Patrick is very cautious.,competitor,A,"tensor([-0.8145, -1.1396], dtype=torch.float16)","[tensor(0.4429, dtype=torch.float16), tensor(0.3198, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0615, -1.4531], dtype=torch.float16)","[tensor(0.3459, dtype=torch.float16), tensor(0.2339, dtype=torch.float16)]",0.1416,0.38134765625,0.08093,1.75,-1.954,-0.97705078125,0.777
+EleutherAI/pythia-12b,0.1,0,4,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Patrick and Jon like to eat at restaurants. One afternoon, they are at a restaurant eating lunch. Patrick orders a bowl of noodles and Jon orders a rice dish. While eating his meal, Patrick spills some noodles on his shirt. Jon says, ""You are so graceful."" What did Jon want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Patrick is very cautious.
+B. Patrick is careless.
+C. Patrick pays a lot of attention to fashion.
+D. Patrick is allergic to noodles.
+Your answer:
+",,B,competitor,Patrick is careless.,target,B,"tensor([-0.8145, -4.3281], dtype=torch.float16)","[tensor(0.4429, dtype=torch.float16), tensor(0.0132, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0615, -5.1094], dtype=torch.float16)","[tensor(0.3459, dtype=torch.float16), tensor(0.0060, dtype=torch.float16)]",0.00584,0.22802734375,0.002089,2.797,-5.14,-2.5703125,0.833
+EleutherAI/pythia-12b,0.1,0,4,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Patrick and Jon like to eat at restaurants. One afternoon, they are at a restaurant eating lunch. Patrick orders a bowl of noodles and Jon orders a rice dish. While eating his meal, Patrick spills some noodles on his shirt. Jon says, ""You are so graceful."" What did Jon want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Patrick is very cautious.
+B. Patrick is careless.
+C. Patrick pays a lot of attention to fashion.
+D. Patrick is allergic to noodles.
+Your answer:
+",,C,distractor_associate,Patrick pays a lot of attention to fashion.,distractor_nonsequitur,C,"tensor([-0.8145, -4.0547], dtype=torch.float16)","[tensor(0.4429, dtype=torch.float16), tensor(0.0173, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0615, -4.6641], dtype=torch.float16)","[tensor(0.3459, dtype=torch.float16), tensor(0.0094, dtype=torch.float16)]",0.007675,0.2301025390625,0.003262,2.354,-4.867,-2.43359375,0.85
+EleutherAI/pythia-12b,0.1,0,4,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Patrick and Jon like to eat at restaurants. One afternoon, they are at a restaurant eating lunch. Patrick orders a bowl of noodles and Jon orders a rice dish. While eating his meal, Patrick spills some noodles on his shirt. Jon says, ""You are so graceful."" What did Jon want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Patrick is very cautious.
+B. Patrick is careless.
+C. Patrick pays a lot of attention to fashion.
+D. Patrick is allergic to noodles.
+Your answer:
+",,D,distractor_nonsequitur,Patrick is allergic to noodles.,distractor_associate,D,"tensor([-0.8145, -3.5840], dtype=torch.float16)","[tensor(0.4429, dtype=torch.float16), tensor(0.0278, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0615, -4.3906], dtype=torch.float16)","[tensor(0.3459, dtype=torch.float16), tensor(0.0124, dtype=torch.float16)]",0.0123,0.2353515625,0.004288,2.87,-4.4,-2.19921875,0.8066
+EleutherAI/pythia-12b,0.1,0,5,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Today Sarah and Tom are going to the beach to go swimming and sunbathing. It was Tom's idea, as he said it was going to be a lovely sunny day to go to the beach. But just as they arrive at the beach, it starts to rain and thunder. Sarah becomes angry. She says ""Oh yes, a lovely day for going to the beach."" What did Sarah want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tom forgot his sunscreen.
+B. Tom's idea to go to the beach was awful.
+C. Tom forgot his passport.
+D. Tom's idea to go to the beach was genius.
+Your answer:
+",,A,target,Tom forgot his sunscreen.,distractor_associate,A,"tensor([-0.8516, -1.2021], dtype=torch.float16)","[tensor(0.4268, dtype=torch.float16), tensor(0.3005, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0283, -1.3438], dtype=torch.float16)","[tensor(0.3577, dtype=torch.float16), tensor(0.2610, dtype=torch.float16)]",0.1283,0.36376953125,0.0933,1.375,-2.055,-1.02734375,0.8667
+EleutherAI/pythia-12b,0.1,0,5,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Today Sarah and Tom are going to the beach to go swimming and sunbathing. It was Tom's idea, as he said it was going to be a lovely sunny day to go to the beach. But just as they arrive at the beach, it starts to rain and thunder. Sarah becomes angry. She says ""Oh yes, a lovely day for going to the beach."" What did Sarah want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tom forgot his sunscreen.
+B. Tom's idea to go to the beach was awful.
+C. Tom forgot his passport.
+D. Tom's idea to go to the beach was genius.
+Your answer:
+",,B,competitor,Tom's idea to go to the beach was awful.,target,B,"tensor([-0.8516, -4.7266], dtype=torch.float16)","[tensor(0.4268, dtype=torch.float16), tensor(0.0089, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0283, -5.4219], dtype=torch.float16)","[tensor(0.3577, dtype=torch.float16), tensor(0.0044, dtype=torch.float16)]",0.00378,0.2177734375,0.00158,2.393,-5.58,-2.7890625,0.8647
+EleutherAI/pythia-12b,0.1,0,5,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Today Sarah and Tom are going to the beach to go swimming and sunbathing. It was Tom's idea, as he said it was going to be a lovely sunny day to go to the beach. But just as they arrive at the beach, it starts to rain and thunder. Sarah becomes angry. She says ""Oh yes, a lovely day for going to the beach."" What did Sarah want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tom forgot his sunscreen.
+B. Tom's idea to go to the beach was awful.
+C. Tom forgot his passport.
+D. Tom's idea to go to the beach was genius.
+Your answer:
+",,C,distractor_associate,Tom forgot his passport.,distractor_nonsequitur,C,"tensor([-0.8516, -4.9219], dtype=torch.float16)","[tensor(0.4268, dtype=torch.float16), tensor(0.0073, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0283, -5.0469], dtype=torch.float16)","[tensor(0.3577, dtype=torch.float16), tensor(0.0064, dtype=torch.float16)]",0.003109,0.217041015625,0.002298,1.353,-5.773,-2.88671875,0.9507
+EleutherAI/pythia-12b,0.1,0,5,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Today Sarah and Tom are going to the beach to go swimming and sunbathing. It was Tom's idea, as he said it was going to be a lovely sunny day to go to the beach. But just as they arrive at the beach, it starts to rain and thunder. Sarah becomes angry. She says ""Oh yes, a lovely day for going to the beach."" What did Sarah want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tom forgot his sunscreen.
+B. Tom's idea to go to the beach was awful.
+C. Tom forgot his passport.
+D. Tom's idea to go to the beach was genius.
+Your answer:
+",,D,distractor_nonsequitur,Tom's idea to go to the beach was genius.,competitor,D,"tensor([-0.8516, -3.9453], dtype=torch.float16)","[tensor(0.4268, dtype=torch.float16), tensor(0.0193, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0283, -4.4766], dtype=torch.float16)","[tensor(0.3577, dtype=torch.float16), tensor(0.0114, dtype=torch.float16)]",0.008255,0.2230224609375,0.00407,2.027,-4.797,-2.3984375,0.8716
+EleutherAI/pythia-12b,0.1,0,6,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It is a holiday. Stefan and Kim are sitting in the backseat of the car. They are fighting all the time. Their father says: ""Oh, it is so pleasant here."" What did the father want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He remembers about his wife's birthday.
+B. He enjoys listening to his kids fighting.
+C. AC gives them some needed cool.
+D. He does not want to listen to his kids' arguments.
+Your answer:
+",,A,target,He remembers about his wife's birthday.,distractor_nonsequitur,A,"tensor([-0.8311, -1.3359], dtype=torch.float16)","[tensor(0.4355, dtype=torch.float16), tensor(0.2629, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9951, -1.4912], dtype=torch.float16)","[tensor(0.3696, dtype=torch.float16), tensor(0.2251, dtype=torch.float16)]",0.1145,0.34912109375,0.0832,1.376,-2.168,-1.083984375,0.872
+EleutherAI/pythia-12b,0.1,0,6,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It is a holiday. Stefan and Kim are sitting in the backseat of the car. They are fighting all the time. Their father says: ""Oh, it is so pleasant here."" What did the father want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He remembers about his wife's birthday.
+B. He enjoys listening to his kids fighting.
+C. AC gives them some needed cool.
+D. He does not want to listen to his kids' arguments.
+Your answer:
+",,B,competitor,He enjoys listening to his kids fighting.,competitor,B,"tensor([-0.8311, -4.7891], dtype=torch.float16)","[tensor(0.4355, dtype=torch.float16), tensor(0.0083, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9951, -5.0625], dtype=torch.float16)","[tensor(0.3696, dtype=torch.float16), tensor(0.0063, dtype=torch.float16)]",0.003626,0.221923828125,0.002338,1.551,-5.62,-2.810546875,0.9277
+EleutherAI/pythia-12b,0.1,0,6,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It is a holiday. Stefan and Kim are sitting in the backseat of the car. They are fighting all the time. Their father says: ""Oh, it is so pleasant here."" What did the father want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He remembers about his wife's birthday.
+B. He enjoys listening to his kids fighting.
+C. AC gives them some needed cool.
+D. He does not want to listen to his kids' arguments.
+Your answer:
+",,C,distractor_associate,AC gives them some needed cool.,distractor_associate,C,"tensor([-0.8311, -4.8750], dtype=torch.float16)","[tensor(0.4355, dtype=torch.float16), tensor(0.0076, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9951, -4.7969], dtype=torch.float16)","[tensor(0.3696, dtype=torch.float16), tensor(0.0083, dtype=torch.float16)]",0.003325,0.2215576171875,0.003052,1.09,-5.707,-2.853515625,0.9854
+EleutherAI/pythia-12b,0.1,0,6,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It is a holiday. Stefan and Kim are sitting in the backseat of the car. They are fighting all the time. Their father says: ""Oh, it is so pleasant here."" What did the father want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He remembers about his wife's birthday.
+B. He enjoys listening to his kids fighting.
+C. AC gives them some needed cool.
+D. He does not want to listen to his kids' arguments.
+Your answer:
+",,D,distractor_nonsequitur,He does not want to listen to his kids' arguments.,target,D,"tensor([-0.8311, -4.5781], dtype=torch.float16)","[tensor(0.4355, dtype=torch.float16), tensor(0.0103, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9951, -4.1875], dtype=torch.float16)","[tensor(0.3696, dtype=torch.float16), tensor(0.0152, dtype=torch.float16)]",0.004475,0.222900390625,0.00561,0.7974,-5.41,-2.705078125,1.044
+EleutherAI/pythia-12b,0.1,0,7,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kim and Jane are leaving the football stadium. Jane says, ""What a wonderful game."" Kim looks disappointed. Kim replies: ""Sorry I made you come."" What did Jane want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The game ended too late.
+B. The game was a disaster.
+C. The game of chess was over.
+D. The game was outstanding.
+Your answer:
+",,A,target,The game ended too late.,distractor_associate,A,"tensor([-1.1309, -1.1855], dtype=torch.float16)","[tensor(0.3228, dtype=torch.float16), tensor(0.3057, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0293, -1.8389], dtype=torch.float16)","[tensor(0.3572, dtype=torch.float16), tensor(0.1591, dtype=torch.float16)]",0.09863,0.314208984375,0.05682,1.735,-2.316,-1.158203125,0.808
+EleutherAI/pythia-12b,0.1,0,7,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kim and Jane are leaving the football stadium. Jane says, ""What a wonderful game."" Kim looks disappointed. Kim replies: ""Sorry I made you come."" What did Jane want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The game ended too late.
+B. The game was a disaster.
+C. The game of chess was over.
+D. The game was outstanding.
+Your answer:
+",,B,competitor,The game was a disaster.,target,B,"tensor([-1.1309, -4.4180], dtype=torch.float16)","[tensor(0.3228, dtype=torch.float16), tensor(0.0121, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0293, -4.9805], dtype=torch.float16)","[tensor(0.3572, dtype=torch.float16), tensor(0.0069, dtype=torch.float16)]",0.003893,0.1673583984375,0.002455,1.586,-5.547,-2.7734375,0.9233
+EleutherAI/pythia-12b,0.1,0,7,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kim and Jane are leaving the football stadium. Jane says, ""What a wonderful game."" Kim looks disappointed. Kim replies: ""Sorry I made you come."" What did Jane want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The game ended too late.
+B. The game was a disaster.
+C. The game of chess was over.
+D. The game was outstanding.
+Your answer:
+",,C,distractor_associate,The game of chess was over.,distractor_nonsequitur,C,"tensor([-1.1309, -4.4258], dtype=torch.float16)","[tensor(0.3228, dtype=torch.float16), tensor(0.0120, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0293, -5.0898], dtype=torch.float16)","[tensor(0.3572, dtype=torch.float16), tensor(0.0062, dtype=torch.float16)]",0.00386,0.1673583984375,0.002201,1.754,-5.555,-2.77734375,0.908
+EleutherAI/pythia-12b,0.1,0,7,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kim and Jane are leaving the football stadium. Jane says, ""What a wonderful game."" Kim looks disappointed. Kim replies: ""Sorry I made you come."" What did Jane want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The game ended too late.
+B. The game was a disaster.
+C. The game of chess was over.
+D. The game was outstanding.
+Your answer:
+",,D,distractor_nonsequitur,The game was outstanding.,competitor,D,"tensor([-1.1309, -3.3965], dtype=torch.float16)","[tensor(0.3228, dtype=torch.float16), tensor(0.0335, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0293, -4.6602], dtype=torch.float16)","[tensor(0.3572, dtype=torch.float16), tensor(0.0095, dtype=torch.float16)]",0.0108,0.1781005859375,0.003382,3.195,-4.527,-2.263671875,0.796
+EleutherAI/pythia-12b,0.1,0,8,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark entered a golf tournament where he played badly and kept missing very easy shots. His friend Hal watched the tournament and afterwards he said to Mark, ""You sure are a good golfer."" What did Hal want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark forgot to thank his dentist.
+B. Mark is an exceptional player.
+C. Mark forgot to thank his caddy.
+D. Mark isn't a good player.
+Your answer:
+",,A,target,Mark forgot to thank his dentist.,distractor_nonsequitur,A,"tensor([-0.8823, -1.3594], dtype=torch.float16)","[tensor(0.4138, dtype=torch.float16), tensor(0.2568, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9155, -1.5273], dtype=torch.float16)","[tensor(0.4004, dtype=torch.float16), tensor(0.2172, dtype=torch.float16)]",0.10626,0.33544921875,0.087,1.222,-2.242,-1.12109375,0.9175
+EleutherAI/pythia-12b,0.1,0,8,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark entered a golf tournament where he played badly and kept missing very easy shots. His friend Hal watched the tournament and afterwards he said to Mark, ""You sure are a good golfer."" What did Hal want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark forgot to thank his dentist.
+B. Mark is an exceptional player.
+C. Mark forgot to thank his caddy.
+D. Mark isn't a good player.
+Your answer:
+",,B,competitor,Mark is an exceptional player.,competitor,B,"tensor([-0.8823, -4.9922], dtype=torch.float16)","[tensor(0.4138, dtype=torch.float16), tensor(0.0068, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9155, -4.6602], dtype=torch.float16)","[tensor(0.4004, dtype=torch.float16), tensor(0.0095, dtype=torch.float16)]",0.00281,0.2103271484375,0.003792,0.7407,-5.875,-2.9375,1.054
+EleutherAI/pythia-12b,0.1,0,8,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark entered a golf tournament where he played badly and kept missing very easy shots. His friend Hal watched the tournament and afterwards he said to Mark, ""You sure are a good golfer."" What did Hal want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark forgot to thank his dentist.
+B. Mark is an exceptional player.
+C. Mark forgot to thank his caddy.
+D. Mark isn't a good player.
+Your answer:
+",,C,distractor_associate,Mark forgot to thank his caddy.,distractor_associate,C,"tensor([-0.8823, -4.6484], dtype=torch.float16)","[tensor(0.4138, dtype=torch.float16), tensor(0.0096, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9155, -4.9492], dtype=torch.float16)","[tensor(0.4004, dtype=torch.float16), tensor(0.0071, dtype=torch.float16)]",0.003963,0.211669921875,0.002838,1.396,-5.53,-2.765625,0.9434
+EleutherAI/pythia-12b,0.1,0,8,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark entered a golf tournament where he played badly and kept missing very easy shots. His friend Hal watched the tournament and afterwards he said to Mark, ""You sure are a good golfer."" What did Hal want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark forgot to thank his dentist.
+B. Mark is an exceptional player.
+C. Mark forgot to thank his caddy.
+D. Mark isn't a good player.
+Your answer:
+",,D,distractor_nonsequitur,Mark isn't a good player.,target,D,"tensor([-0.8823, -3.7578], dtype=torch.float16)","[tensor(0.4138, dtype=torch.float16), tensor(0.0233, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9155, -3.8164], dtype=torch.float16)","[tensor(0.4004, dtype=torch.float16), tensor(0.0220, dtype=torch.float16)]",0.00965,0.2186279296875,0.00881,1.096,-4.64,-2.3203125,0.981
+EleutherAI/pythia-12b,0.1,0,9,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adrian's mother asks if he can look in his brother Tom's room to check if he has tidied up. Adrian opens the door to Tom's room, peers in, and sees that the room appears as it normally does - cluttered with toys and dirty clothes. He shouts to his mother: ""Mother, Tom, as usual, has done a splendid job tidying up!"" What did Adrian want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tom tidied up his room.
+B. Tom's room is still messy.
+C. Tom cannot find a vacuum.
+D. Tom cannot find a lawyer.
+Your answer:
+",,A,target,Tom tidied up his room.,competitor,A,"tensor([-0.9297, -1.3477], dtype=torch.float16)","[tensor(0.3948, dtype=torch.float16), tensor(0.2598, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9922, -1.3818], dtype=torch.float16)","[tensor(0.3708, dtype=torch.float16), tensor(0.2512, dtype=torch.float16)]",0.10254,0.3271484375,0.09314,1.101,-2.277,-1.138671875,0.959
+EleutherAI/pythia-12b,0.1,0,9,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adrian's mother asks if he can look in his brother Tom's room to check if he has tidied up. Adrian opens the door to Tom's room, peers in, and sees that the room appears as it normally does - cluttered with toys and dirty clothes. He shouts to his mother: ""Mother, Tom, as usual, has done a splendid job tidying up!"" What did Adrian want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tom tidied up his room.
+B. Tom's room is still messy.
+C. Tom cannot find a vacuum.
+D. Tom cannot find a lawyer.
+Your answer:
+",,B,competitor,Tom's room is still messy.,target,B,"tensor([-0.9297, -4.8789], dtype=torch.float16)","[tensor(0.3948, dtype=torch.float16), tensor(0.0076, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9922, -4.8438], dtype=torch.float16)","[tensor(0.3708, dtype=torch.float16), tensor(0.0079, dtype=torch.float16)]",0.003002,0.201171875,0.002922,1.027,-5.81,-2.904296875,0.995
+EleutherAI/pythia-12b,0.1,0,9,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adrian's mother asks if he can look in his brother Tom's room to check if he has tidied up. Adrian opens the door to Tom's room, peers in, and sees that the room appears as it normally does - cluttered with toys and dirty clothes. He shouts to his mother: ""Mother, Tom, as usual, has done a splendid job tidying up!"" What did Adrian want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tom tidied up his room.
+B. Tom's room is still messy.
+C. Tom cannot find a vacuum.
+D. Tom cannot find a lawyer.
+Your answer:
+",,C,distractor_associate,Tom cannot find a vacuum.,distractor_associate,C,"tensor([-0.9297, -3.9648], dtype=torch.float16)","[tensor(0.3948, dtype=torch.float16), tensor(0.0190, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9922, -4.5859], dtype=torch.float16)","[tensor(0.3708, dtype=torch.float16), tensor(0.0102, dtype=torch.float16)]",0.00749,0.2069091796875,0.00378,1.98,-4.895,-2.447265625,0.8774
+EleutherAI/pythia-12b,0.1,0,9,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adrian's mother asks if he can look in his brother Tom's room to check if he has tidied up. Adrian opens the door to Tom's room, peers in, and sees that the room appears as it normally does - cluttered with toys and dirty clothes. He shouts to his mother: ""Mother, Tom, as usual, has done a splendid job tidying up!"" What did Adrian want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tom tidied up his room.
+B. Tom's room is still messy.
+C. Tom cannot find a vacuum.
+D. Tom cannot find a lawyer.
+Your answer:
+",,D,distractor_nonsequitur,Tom cannot find a lawyer.,distractor_nonsequitur,D,"tensor([-0.9297, -3.5898], dtype=torch.float16)","[tensor(0.3948, dtype=torch.float16), tensor(0.0276, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9922, -4.6641], dtype=torch.float16)","[tensor(0.3708, dtype=torch.float16), tensor(0.0094, dtype=torch.float16)]",0.010895,0.211181640625,0.003496,3.115,-4.52,-2.259765625,0.799
+EleutherAI/pythia-12b,0.1,0,10,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Callie promised to bring a salad to Jason's dinner party. She arrived two hours late. Jason said, ""I'm so glad that you were able to fit us into your busy schedule."" What did Jason want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is annoyed that Callie showed up late.
+B. He is tired and is going to bed.
+C. He is happy that Callie made it to the party.
+D. He is hungry and wants to eat Callie's salad.
+Your answer:
+",,A,target,He is annoyed that Callie showed up late.,target,A,"tensor([-1.2178, -1.0342], dtype=torch.float16)","[tensor(0.2959, dtype=torch.float16), tensor(0.3555, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0635, -1.5156], dtype=torch.float16)","[tensor(0.3452, dtype=torch.float16), tensor(0.2197, dtype=torch.float16)]",0.10516,0.32568359375,0.07587,1.386,-2.252,-1.1259765625,0.8735
+EleutherAI/pythia-12b,0.1,0,10,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Callie promised to bring a salad to Jason's dinner party. She arrived two hours late. Jason said, ""I'm so glad that you were able to fit us into your busy schedule."" What did Jason want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is annoyed that Callie showed up late.
+B. He is tired and is going to bed.
+C. He is happy that Callie made it to the party.
+D. He is hungry and wants to eat Callie's salad.
+Your answer:
+",,B,competitor,He is tired and is going to bed.,distractor_nonsequitur,B,"tensor([-1.2178, -4.1836], dtype=torch.float16)","[tensor(0.2959, dtype=torch.float16), tensor(0.0152, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0635, -5.2344], dtype=torch.float16)","[tensor(0.3452, dtype=torch.float16), tensor(0.0053, dtype=torch.float16)]",0.00451,0.155517578125,0.00184,2.451,-5.402,-2.701171875,0.858
+EleutherAI/pythia-12b,0.1,0,10,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Callie promised to bring a salad to Jason's dinner party. She arrived two hours late. Jason said, ""I'm so glad that you were able to fit us into your busy schedule."" What did Jason want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is annoyed that Callie showed up late.
+B. He is tired and is going to bed.
+C. He is happy that Callie made it to the party.
+D. He is hungry and wants to eat Callie's salad.
+Your answer:
+",,C,distractor_associate,He is happy that Callie made it to the party.,competitor,C,"tensor([-1.2178, -4.2383], dtype=torch.float16)","[tensor(0.2959, dtype=torch.float16), tensor(0.0144, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0635, -4.8359], dtype=torch.float16)","[tensor(0.3452, dtype=torch.float16), tensor(0.0079, dtype=torch.float16)]",0.004272,0.1551513671875,0.00274,1.559,-5.457,-2.728515625,0.9253
+EleutherAI/pythia-12b,0.1,0,10,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Callie promised to bring a salad to Jason's dinner party. She arrived two hours late. Jason said, ""I'm so glad that you were able to fit us into your busy schedule."" What did Jason want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is annoyed that Callie showed up late.
+B. He is tired and is going to bed.
+C. He is happy that Callie made it to the party.
+D. He is hungry and wants to eat Callie's salad.
+Your answer:
+",,D,distractor_nonsequitur,He is hungry and wants to eat Callie's salad.,distractor_associate,D,"tensor([-1.2178, -3.4258], dtype=torch.float16)","[tensor(0.2959, dtype=torch.float16), tensor(0.0325, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0635, -3.9844], dtype=torch.float16)","[tensor(0.3452, dtype=torch.float16), tensor(0.0186, dtype=torch.float16)]",0.00963,0.1641845703125,0.00642,1.5,-4.645,-2.322265625,0.9204
+EleutherAI/pythia-12b,0.1,0,11,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John is a teacher at an elementary school. When talking with the principal about a new student, who did poorly on her entrance examination, John said, ""This one is really sharp."" What did John want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The student is not very clever.
+B. The pencils need to be sharpened.
+C. The entrance exam is unfair.
+D. The student is smart.
+Your answer:
+",,A,target,The student is not very clever.,target,A,"tensor([-0.9810, -1.6328], dtype=torch.float16)","[tensor(0.3750, dtype=torch.float16), tensor(0.1954, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1221, -1.6787], dtype=torch.float16)","[tensor(0.3257, dtype=torch.float16), tensor(0.1866, dtype=torch.float16)]",0.0733,0.28515625,0.0608,1.206,-2.613,-1.306640625,0.933
+EleutherAI/pythia-12b,0.1,0,11,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John is a teacher at an elementary school. When talking with the principal about a new student, who did poorly on her entrance examination, John said, ""This one is really sharp."" What did John want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The student is not very clever.
+B. The pencils need to be sharpened.
+C. The entrance exam is unfair.
+D. The student is smart.
+Your answer:
+",,B,competitor,The pencils need to be sharpened.,distractor_nonsequitur,B,"tensor([-0.9810, -4.9297], dtype=torch.float16)","[tensor(0.3750, dtype=torch.float16), tensor(0.0072, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1221, -4.7500], dtype=torch.float16)","[tensor(0.3257, dtype=torch.float16), tensor(0.0087, dtype=torch.float16)]",0.00271,0.191162109375,0.002817,0.962,-5.91,-2.955078125,1.007
+EleutherAI/pythia-12b,0.1,0,11,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John is a teacher at an elementary school. When talking with the principal about a new student, who did poorly on her entrance examination, John said, ""This one is really sharp."" What did John want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The student is not very clever.
+B. The pencils need to be sharpened.
+C. The entrance exam is unfair.
+D. The student is smart.
+Your answer:
+",,C,distractor_associate,The entrance exam is unfair.,distractor_associate,C,"tensor([-0.9810, -5.1172], dtype=torch.float16)","[tensor(0.3750, dtype=torch.float16), tensor(0.0060, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1221, -4.6406], dtype=torch.float16)","[tensor(0.3257, dtype=torch.float16), tensor(0.0097, dtype=torch.float16)]",0.002247,0.1905517578125,0.003143,0.715,-6.098,-3.048828125,1.059
+EleutherAI/pythia-12b,0.1,0,11,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John is a teacher at an elementary school. When talking with the principal about a new student, who did poorly on her entrance examination, John said, ""This one is really sharp."" What did John want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The student is not very clever.
+B. The pencils need to be sharpened.
+C. The entrance exam is unfair.
+D. The student is smart.
+Your answer:
+",,D,distractor_nonsequitur,The student is smart.,competitor,D,"tensor([-0.9810, -3.3750], dtype=torch.float16)","[tensor(0.3750, dtype=torch.float16), tensor(0.0342, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1221, -3.5137], dtype=torch.float16)","[tensor(0.3257, dtype=torch.float16), tensor(0.0298, dtype=torch.float16)]",0.01283,0.20458984375,0.0097,1.323,-4.355,-2.177734375,0.9395
+EleutherAI/pythia-12b,0.1,0,12,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Melissa's friend convinces her to accompany her to a nightclub that her friend says is ""super hot"". When they arrive, it is so cold inside that they can see their breath. Melissa turns to her friend and says, ""The heat is really on in here."" What did Melissa want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. It is too cold.
+B. It is too hot.
+C. It is too bright.
+D. It is too loud.
+Your answer:
+",,A,target,It is too cold.,target,A,"tensor([-0.8594, -1.4434], dtype=torch.float16)","[tensor(0.4233, dtype=torch.float16), tensor(0.2361, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0254, -1.7236], dtype=torch.float16)","[tensor(0.3586, dtype=torch.float16), tensor(0.1785, dtype=torch.float16)]",0.0999,0.32958984375,0.064,1.561,-2.303,-1.1513671875,0.8374
+EleutherAI/pythia-12b,0.1,0,12,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Melissa's friend convinces her to accompany her to a nightclub that her friend says is ""super hot"". When they arrive, it is so cold inside that they can see their breath. Melissa turns to her friend and says, ""The heat is really on in here."" What did Melissa want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. It is too cold.
+B. It is too hot.
+C. It is too bright.
+D. It is too loud.
+Your answer:
+",,B,competitor,It is too hot.,competitor,B,"tensor([-0.8594, -4.3125], dtype=torch.float16)","[tensor(0.4233, dtype=torch.float16), tensor(0.0134, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0254, -5.8320], dtype=torch.float16)","[tensor(0.3586, dtype=torch.float16), tensor(0.0029, dtype=torch.float16)]",0.005672,0.2183837890625,0.001051,5.4,-5.17,-2.5859375,0.754
+EleutherAI/pythia-12b,0.1,0,12,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Melissa's friend convinces her to accompany her to a nightclub that her friend says is ""super hot"". When they arrive, it is so cold inside that they can see their breath. Melissa turns to her friend and says, ""The heat is really on in here."" What did Melissa want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. It is too cold.
+B. It is too hot.
+C. It is too bright.
+D. It is too loud.
+Your answer:
+",,C,distractor_associate,It is too bright.,distractor_associate,C,"tensor([-0.8594, -4.4375], dtype=torch.float16)","[tensor(0.4233, dtype=torch.float16), tensor(0.0118, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0254, -4.9336], dtype=torch.float16)","[tensor(0.3586, dtype=torch.float16), tensor(0.0072, dtype=torch.float16)]",0.005005,0.217529296875,0.002583,1.9375,-5.297,-2.6484375,0.8887
+EleutherAI/pythia-12b,0.1,0,12,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Melissa's friend convinces her to accompany her to a nightclub that her friend says is ""super hot"". When they arrive, it is so cold inside that they can see their breath. Melissa turns to her friend and says, ""The heat is really on in here."" What did Melissa want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. It is too cold.
+B. It is too hot.
+C. It is too bright.
+D. It is too loud.
+Your answer:
+",,D,distractor_nonsequitur,It is too loud.,distractor_nonsequitur,D,"tensor([-0.8594, -4.8281], dtype=torch.float16)","[tensor(0.4233, dtype=torch.float16), tensor(0.0080, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0254, -4.7852], dtype=torch.float16)","[tensor(0.3586, dtype=torch.float16), tensor(0.0084, dtype=torch.float16)]",0.003387,0.2156982421875,0.002996,1.131,-5.688,-2.84375,0.9785
+EleutherAI/pythia-12b,0.1,0,13,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Your friend is working on his novel and is not making any progress. When you ask him how it is going he says, ""It couldn't be any better.""  What does your friend want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is happy with his work.
+B. He needs to buy a new car.
+C. He needs to polish his style.
+D. He is unhappy with his work.
+Your answer:
+",,A,target,He is happy with his work.,competitor,A,"tensor([-1.2480, -1.4922], dtype=torch.float16)","[tensor(0.2871, dtype=torch.float16), tensor(0.2249, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0225, -1.6572], dtype=torch.float16)","[tensor(0.3596, dtype=torch.float16), tensor(0.1907, dtype=torch.float16)]",0.0646,0.255859375,0.06854,0.942,-2.74,-1.3701171875,1.022
+EleutherAI/pythia-12b,0.1,0,13,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Your friend is working on his novel and is not making any progress. When you ask him how it is going he says, ""It couldn't be any better.""  What does your friend want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is happy with his work.
+B. He needs to buy a new car.
+C. He needs to polish his style.
+D. He is unhappy with his work.
+Your answer:
+",,B,competitor,He needs to buy a new car.,distractor_nonsequitur,B,"tensor([-1.2480, -4.2656], dtype=torch.float16)","[tensor(0.2871, dtype=torch.float16), tensor(0.0140, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0225, -5.6875], dtype=torch.float16)","[tensor(0.3596, dtype=torch.float16), tensor(0.0034, dtype=torch.float16)]",0.004032,0.150634765625,0.001218,3.31,-5.516,-2.7578125,0.822
+EleutherAI/pythia-12b,0.1,0,13,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Your friend is working on his novel and is not making any progress. When you ask him how it is going he says, ""It couldn't be any better.""  What does your friend want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is happy with his work.
+B. He needs to buy a new car.
+C. He needs to polish his style.
+D. He is unhappy with his work.
+Your answer:
+",,C,distractor_associate,He needs to polish his style.,distractor_associate,C,"tensor([-1.2480, -4.1953], dtype=torch.float16)","[tensor(0.2871, dtype=torch.float16), tensor(0.0151, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0225, -4.6797], dtype=torch.float16)","[tensor(0.3596, dtype=torch.float16), tensor(0.0093, dtype=torch.float16)]",0.004326,0.151123046875,0.00334,1.295,-5.445,-2.72265625,0.9546
+EleutherAI/pythia-12b,0.1,0,13,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Your friend is working on his novel and is not making any progress. When you ask him how it is going he says, ""It couldn't be any better.""  What does your friend want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is happy with his work.
+B. He needs to buy a new car.
+C. He needs to polish his style.
+D. He is unhappy with his work.
+Your answer:
+",,D,distractor_nonsequitur,He is unhappy with his work.,target,D,"tensor([-1.2480, -3.9609], dtype=torch.float16)","[tensor(0.2871, dtype=torch.float16), tensor(0.0190, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0225, -3.8066], dtype=torch.float16)","[tensor(0.3596, dtype=torch.float16), tensor(0.0222, dtype=torch.float16)]",0.005466,0.153076171875,0.00799,0.6846,-5.21,-2.60546875,1.079
+EleutherAI/pythia-12b,0.1,0,14,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Tom, who is who is a gourmet chef, was offered a job at a new restaurant. Tom's potential employer offered him really low pay and no benefits. When you ask Tom what he thinks of the offer he says, ""Well, their generosity knows no bounds."" What does Tom want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is tired of jogging every morning.
+B. He is excited about the job offer.
+C. He is glad to be employed.
+D. He is disappointed with the job offer.
+Your answer:
+",,A,target,He is tired of jogging every morning.,distractor_nonsequitur,A,"tensor([-1.0234, -1.1152], dtype=torch.float16)","[tensor(0.3594, dtype=torch.float16), tensor(0.3279, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0918, -1.5010], dtype=torch.float16)","[tensor(0.3357, dtype=torch.float16), tensor(0.2229, dtype=torch.float16)]",0.11786,0.34375,0.0748,1.575,-2.139,-1.0693359375,0.8247
+EleutherAI/pythia-12b,0.1,0,14,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Tom, who is who is a gourmet chef, was offered a job at a new restaurant. Tom's potential employer offered him really low pay and no benefits. When you ask Tom what he thinks of the offer he says, ""Well, their generosity knows no bounds."" What does Tom want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is tired of jogging every morning.
+B. He is excited about the job offer.
+C. He is glad to be employed.
+D. He is disappointed with the job offer.
+Your answer:
+",,B,competitor,He is excited about the job offer.,competitor,B,"tensor([-1.0234, -4.7148], dtype=torch.float16)","[tensor(0.3594, dtype=torch.float16), tensor(0.0090, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0918, -5.3984], dtype=torch.float16)","[tensor(0.3357, dtype=torch.float16), tensor(0.0045, dtype=torch.float16)]",0.003222,0.1842041015625,0.001519,2.121,-5.74,-2.869140625,0.884
+EleutherAI/pythia-12b,0.1,0,14,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Tom, who is who is a gourmet chef, was offered a job at a new restaurant. Tom's potential employer offered him really low pay and no benefits. When you ask Tom what he thinks of the offer he says, ""Well, their generosity knows no bounds."" What does Tom want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is tired of jogging every morning.
+B. He is excited about the job offer.
+C. He is glad to be employed.
+D. He is disappointed with the job offer.
+Your answer:
+",,C,distractor_associate,He is glad to be employed.,distractor_associate,C,"tensor([-1.0234, -4.2773], dtype=torch.float16)","[tensor(0.3594, dtype=torch.float16), tensor(0.0139, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0918, -5.0781], dtype=torch.float16)","[tensor(0.3357, dtype=torch.float16), tensor(0.0062, dtype=torch.float16)]",0.004986,0.1866455078125,0.002092,2.383,-5.3,-2.650390625,0.859
+EleutherAI/pythia-12b,0.1,0,14,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Tom, who is who is a gourmet chef, was offered a job at a new restaurant. Tom's potential employer offered him really low pay and no benefits. When you ask Tom what he thinks of the offer he says, ""Well, their generosity knows no bounds."" What does Tom want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is tired of jogging every morning.
+B. He is excited about the job offer.
+C. He is glad to be employed.
+D. He is disappointed with the job offer.
+Your answer:
+",,D,distractor_nonsequitur,He is disappointed with the job offer.,target,D,"tensor([-1.0234, -4.1992], dtype=torch.float16)","[tensor(0.3594, dtype=torch.float16), tensor(0.0150, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0918, -3.6582], dtype=torch.float16)","[tensor(0.3357, dtype=torch.float16), tensor(0.0258, dtype=torch.float16)]",0.005394,0.1871337890625,0.00865,0.6235,-5.223,-2.611328125,1.1
+EleutherAI/pythia-12b,0.1,0,15,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Megan and Kristine were looking after the neighbor's children one afternoon. The kids were energetic, enthusiastic, and well behaved. On the way home, Kristine said, ""Those kids were not fun at all."" What does Kristine want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Rock music should be prohibited.
+B. Babysitting was an unpleasant experience.
+C. Babysitting does not pay well.
+D. Babysitting was an enjoyable experience.
+Your answer:
+",,A,target,Rock music should be prohibited.,distractor_nonsequitur,A,"tensor([-0.9517, -1.3545], dtype=torch.float16)","[tensor(0.3860, dtype=torch.float16), tensor(0.2581, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9990, -1.6689], dtype=torch.float16)","[tensor(0.3682, dtype=torch.float16), tensor(0.1885, dtype=torch.float16)]",0.0996,0.322021484375,0.0694,1.436,-2.307,-1.1533203125,0.8647
+EleutherAI/pythia-12b,0.1,0,15,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Megan and Kristine were looking after the neighbor's children one afternoon. The kids were energetic, enthusiastic, and well behaved. On the way home, Kristine said, ""Those kids were not fun at all."" What does Kristine want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Rock music should be prohibited.
+B. Babysitting was an unpleasant experience.
+C. Babysitting does not pay well.
+D. Babysitting was an enjoyable experience.
+Your answer:
+",,B,competitor,Babysitting was an unpleasant experience.,competitor,B,"tensor([-0.9517, -4.2930], dtype=torch.float16)","[tensor(0.3860, dtype=torch.float16), tensor(0.0137, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9990, -5.0508], dtype=torch.float16)","[tensor(0.3682, dtype=torch.float16), tensor(0.0064, dtype=torch.float16)]",0.005276,0.1998291015625,0.002357,2.238,-5.246,-2.623046875,0.867
+EleutherAI/pythia-12b,0.1,0,15,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Megan and Kristine were looking after the neighbor's children one afternoon. The kids were energetic, enthusiastic, and well behaved. On the way home, Kristine said, ""Those kids were not fun at all."" What does Kristine want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Rock music should be prohibited.
+B. Babysitting was an unpleasant experience.
+C. Babysitting does not pay well.
+D. Babysitting was an enjoyable experience.
+Your answer:
+",,C,distractor_associate,Babysitting does not pay well.,distractor_associate,C,"tensor([-0.9517, -4.1055], dtype=torch.float16)","[tensor(0.3860, dtype=torch.float16), tensor(0.0165, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9990, -4.8164], dtype=torch.float16)","[tensor(0.3682, dtype=torch.float16), tensor(0.0081, dtype=torch.float16)]",0.00636,0.201171875,0.00298,2.135,-5.06,-2.529296875,0.8696
+EleutherAI/pythia-12b,0.1,0,15,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Megan and Kristine were looking after the neighbor's children one afternoon. The kids were energetic, enthusiastic, and well behaved. On the way home, Kristine said, ""Those kids were not fun at all."" What does Kristine want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Rock music should be prohibited.
+B. Babysitting was an unpleasant experience.
+C. Babysitting does not pay well.
+D. Babysitting was an enjoyable experience.
+Your answer:
+",,D,distractor_nonsequitur,Babysitting was an enjoyable experience.,target,D,"tensor([-0.9517, -3.7227], dtype=torch.float16)","[tensor(0.3860, dtype=torch.float16), tensor(0.0242, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9990, -4.3867], dtype=torch.float16)","[tensor(0.3682, dtype=torch.float16), tensor(0.0124, dtype=torch.float16)]",0.00933,0.205078125,0.00458,2.037,-4.676,-2.337890625,0.868
+EleutherAI/pythia-12b,0.1,0,16,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Laura and Lynn were having coffee at a local caf&eacute;. They were talking about a boring date that Laura had had the night before. They had watched old reruns of cartoons all evening. Lynn said, ""That sounds so exciting.""  What did Lynn want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Laura got food poisoning.
+B. Laura had a thrilling experience.
+C. Laura had a dull experience.
+D. Laura needs a babysitter.
+Your answer:
+",,A,target,Laura got food poisoning.,distractor_nonsequitur,A,"tensor([-1.3086, -1.4834], dtype=torch.float16)","[tensor(0.2703, dtype=torch.float16), tensor(0.2268, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9897, -1.6562], dtype=torch.float16)","[tensor(0.3716, dtype=torch.float16), tensor(0.1908, dtype=torch.float16)]",0.0613,0.24853515625,0.0709,0.8643,-2.793,-1.396484375,1.056
+EleutherAI/pythia-12b,0.1,0,16,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Laura and Lynn were having coffee at a local caf&eacute;. They were talking about a boring date that Laura had had the night before. They had watched old reruns of cartoons all evening. Lynn said, ""That sounds so exciting.""  What did Lynn want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Laura got food poisoning.
+B. Laura had a thrilling experience.
+C. Laura had a dull experience.
+D. Laura needs a babysitter.
+Your answer:
+",,B,competitor,Laura had a thrilling experience.,competitor,B,"tensor([-1.3086, -3.9688], dtype=torch.float16)","[tensor(0.2703, dtype=torch.float16), tensor(0.0189, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9897, -4.8750], dtype=torch.float16)","[tensor(0.3716, dtype=torch.float16), tensor(0.0076, dtype=torch.float16)]",0.005104,0.14453125,0.002836,1.8,-5.277,-2.638671875,0.9
+EleutherAI/pythia-12b,0.1,0,16,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Laura and Lynn were having coffee at a local caf&eacute;. They were talking about a boring date that Laura had had the night before. They had watched old reruns of cartoons all evening. Lynn said, ""That sounds so exciting.""  What did Lynn want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Laura got food poisoning.
+B. Laura had a thrilling experience.
+C. Laura had a dull experience.
+D. Laura needs a babysitter.
+Your answer:
+",,C,distractor_associate,Laura had a dull experience.,target,C,"tensor([-1.3086, -3.8672], dtype=torch.float16)","[tensor(0.2703, dtype=torch.float16), tensor(0.0209, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9897, -5.0078], dtype=torch.float16)","[tensor(0.3716, dtype=torch.float16), tensor(0.0067, dtype=torch.float16)]",0.005653,0.1456298828125,0.002485,2.275,-5.176,-2.587890625,0.8633
+EleutherAI/pythia-12b,0.1,0,16,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Laura and Lynn were having coffee at a local caf&eacute;. They were talking about a boring date that Laura had had the night before. They had watched old reruns of cartoons all evening. Lynn said, ""That sounds so exciting.""  What did Lynn want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Laura got food poisoning.
+B. Laura had a thrilling experience.
+C. Laura had a dull experience.
+D. Laura needs a babysitter.
+Your answer:
+",,D,distractor_nonsequitur,Laura needs a babysitter.,distractor_associate,D,"tensor([-1.3086, -2.6953], dtype=torch.float16)","[tensor(0.2703, dtype=torch.float16), tensor(0.0675, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9897, -4.6797], dtype=torch.float16)","[tensor(0.3716, dtype=torch.float16), tensor(0.0093, dtype=torch.float16)]",0.01825,0.1689453125,0.00345,5.29,-4.004,-2.001953125,0.7065
+EleutherAI/pythia-12b,0.1,0,17,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+While Tom and a new acquaintance from work, Sara, were chatting at a party, they noticed a colleague across the room. She was standing alone holding a drink and a CD. Tom points at the girl and comments:  ""The life of the party, right there."" What did Tom want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Their colleague is very sociable.
+B. Their colleague has good taste in music.
+C. Their colleague has good taste in fashion.
+D. Their colleague is quite unsociable.
+Your answer:
+",,A,target,Their colleague is very sociable.,competitor,A,"tensor([-1.0166, -1.6533], dtype=torch.float16)","[tensor(0.3618, dtype=torch.float16), tensor(0.1914, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1318, -1.4199], dtype=torch.float16)","[tensor(0.3225, dtype=torch.float16), tensor(0.2417, dtype=torch.float16)]",0.0693,0.276611328125,0.07794,0.8887,-2.67,-1.3349609375,1.047
+EleutherAI/pythia-12b,0.1,0,17,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+While Tom and a new acquaintance from work, Sara, were chatting at a party, they noticed a colleague across the room. She was standing alone holding a drink and a CD. Tom points at the girl and comments:  ""The life of the party, right there."" What did Tom want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Their colleague is very sociable.
+B. Their colleague has good taste in music.
+C. Their colleague has good taste in fashion.
+D. Their colleague is quite unsociable.
+Your answer:
+",,B,competitor,Their colleague has good taste in music.,distractor_associate,B,"tensor([-1.0166, -5.1445], dtype=torch.float16)","[tensor(0.3618, dtype=torch.float16), tensor(0.0058, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1318, -4.5273], dtype=torch.float16)","[tensor(0.3225, dtype=torch.float16), tensor(0.0108, dtype=torch.float16)]",0.00211,0.183837890625,0.003487,0.605,-6.16,-3.080078125,1.088
+EleutherAI/pythia-12b,0.1,0,17,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+While Tom and a new acquaintance from work, Sara, were chatting at a party, they noticed a colleague across the room. She was standing alone holding a drink and a CD. Tom points at the girl and comments:  ""The life of the party, right there."" What did Tom want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Their colleague is very sociable.
+B. Their colleague has good taste in music.
+C. Their colleague has good taste in fashion.
+D. Their colleague is quite unsociable.
+Your answer:
+",,C,distractor_associate,Their colleague has good taste in fashion.,distractor_nonsequitur,C,"tensor([-1.0166, -4.3164], dtype=torch.float16)","[tensor(0.3618, dtype=torch.float16), tensor(0.0134, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1318, -4.2227], dtype=torch.float16)","[tensor(0.3225, dtype=torch.float16), tensor(0.0147, dtype=torch.float16)]",0.00483,0.1876220703125,0.004726,1.021,-5.332,-2.666015625,0.9956
+EleutherAI/pythia-12b,0.1,0,17,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+While Tom and a new acquaintance from work, Sara, were chatting at a party, they noticed a colleague across the room. She was standing alone holding a drink and a CD. Tom points at the girl and comments:  ""The life of the party, right there."" What did Tom want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Their colleague is very sociable.
+B. Their colleague has good taste in music.
+C. Their colleague has good taste in fashion.
+D. Their colleague is quite unsociable.
+Your answer:
+",,D,distractor_nonsequitur,Their colleague is quite unsociable.,target,D,"tensor([-1.0166, -3.7539], dtype=torch.float16)","[tensor(0.3618, dtype=torch.float16), tensor(0.0234, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1318, -3.6152], dtype=torch.float16)","[tensor(0.3225, dtype=torch.float16), tensor(0.0269, dtype=torch.float16)]",0.00848,0.192626953125,0.00868,0.976,-4.77,-2.384765625,1.005
+EleutherAI/pythia-12b,0.1,0,18,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane and her best friend, Arthur, were selling chocolates door to door to raise money for a charity event. Jane and Arthur approached a house and tried to sell their candy to a mean couple. As they walked away, Jane comments: ""People in this community are so nice!""  What did Jane want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. It is a community of chocolate lovers.
+B. It is a community of animal lovers.
+C. It is an unfriendly community.
+D. It is an amicable community.
+Your answer:
+",,A,target,It is a community of chocolate lovers.,distractor_associate,A,"tensor([-1.2910, -1.4229], dtype=torch.float16)","[tensor(0.2749, dtype=torch.float16), tensor(0.2410, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1924, -1.7012], dtype=torch.float16)","[tensor(0.3035, dtype=torch.float16), tensor(0.1825, dtype=torch.float16)]",0.0662,0.2578125,0.0554,1.195,-2.715,-1.357421875,0.938
+EleutherAI/pythia-12b,0.1,0,18,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane and her best friend, Arthur, were selling chocolates door to door to raise money for a charity event. Jane and Arthur approached a house and tried to sell their candy to a mean couple. As they walked away, Jane comments: ""People in this community are so nice!""  What did Jane want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. It is a community of chocolate lovers.
+B. It is a community of animal lovers.
+C. It is an unfriendly community.
+D. It is an amicable community.
+Your answer:
+",,B,competitor,It is a community of animal lovers.,distractor_nonsequitur,B,"tensor([-1.2910, -4.6484], dtype=torch.float16)","[tensor(0.2749, dtype=torch.float16), tensor(0.0096, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1924, -4.4023], dtype=torch.float16)","[tensor(0.3035, dtype=torch.float16), tensor(0.0122, dtype=torch.float16)]",0.002632,0.1422119140625,0.003716,0.7085,-5.938,-2.96875,1.062
+EleutherAI/pythia-12b,0.1,0,18,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane and her best friend, Arthur, were selling chocolates door to door to raise money for a charity event. Jane and Arthur approached a house and tried to sell their candy to a mean couple. As they walked away, Jane comments: ""People in this community are so nice!""  What did Jane want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. It is a community of chocolate lovers.
+B. It is a community of animal lovers.
+C. It is an unfriendly community.
+D. It is an amicable community.
+Your answer:
+",,C,distractor_associate,It is an unfriendly community.,target,C,"tensor([-1.2910, -3.6406], dtype=torch.float16)","[tensor(0.2749, dtype=torch.float16), tensor(0.0262, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1924, -4.2070], dtype=torch.float16)","[tensor(0.3035, dtype=torch.float16), tensor(0.0149, dtype=torch.float16)]",0.00721,0.1505126953125,0.00452,1.595,-4.93,-2.46484375,0.913
+EleutherAI/pythia-12b,0.1,0,18,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane and her best friend, Arthur, were selling chocolates door to door to raise money for a charity event. Jane and Arthur approached a house and tried to sell their candy to a mean couple. As they walked away, Jane comments: ""People in this community are so nice!""  What did Jane want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. It is a community of chocolate lovers.
+B. It is a community of animal lovers.
+C. It is an unfriendly community.
+D. It is an amicable community.
+Your answer:
+",,D,distractor_nonsequitur,It is an amicable community.,competitor,D,"tensor([-1.2910, -2.7734], dtype=torch.float16)","[tensor(0.2749, dtype=torch.float16), tensor(0.0624, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1924, -3.6074], dtype=torch.float16)","[tensor(0.3035, dtype=torch.float16), tensor(0.0271, dtype=torch.float16)]",0.01717,0.168701171875,0.00823,2.086,-4.062,-2.03125,0.846
+EleutherAI/pythia-12b,0.1,0,19,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Penny, Juanita, and Jill have tickets to a basketball game. At halftime, Juanita offers to go get some drinks. Forty minutes later, she finally returns, and Jill remarks, ""That was quick."" What did Jill want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Juanita has the view of the game.
+B.  Juanita is always so fast.
+C. Juanita has the best cat.
+D. Juanita is always so slow.
+Your answer:
+",,A,target,Juanita has the view of the game.,distractor_associate,A,"tensor([-0.8936, -1.5225], dtype=torch.float16)","[tensor(0.4092, dtype=torch.float16), tensor(0.2181, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1562, -1.8809], dtype=torch.float16)","[tensor(0.3147, dtype=torch.float16), tensor(0.1525, dtype=torch.float16)]",0.08923,0.313720703125,0.04797,1.86,-2.416,-1.2080078125,0.7954
+EleutherAI/pythia-12b,0.1,0,19,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Penny, Juanita, and Jill have tickets to a basketball game. At halftime, Juanita offers to go get some drinks. Forty minutes later, she finally returns, and Jill remarks, ""That was quick."" What did Jill want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Juanita has the view of the game.
+B.  Juanita is always so fast.
+C. Juanita has the best cat.
+D. Juanita is always so slow.
+Your answer:
+",,B,competitor, Juanita is always so fast.,competitor,B,"tensor([-0.8936, -4.8438], dtype=torch.float16)","[tensor(0.4092, dtype=torch.float16), tensor(0.0079, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1562, -5.2539], dtype=torch.float16)","[tensor(0.3147, dtype=torch.float16), tensor(0.0052, dtype=torch.float16)]",0.003225,0.20849609375,0.001645,1.961,-5.74,-2.869140625,0.895
+EleutherAI/pythia-12b,0.1,0,19,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Penny, Juanita, and Jill have tickets to a basketball game. At halftime, Juanita offers to go get some drinks. Forty minutes later, she finally returns, and Jill remarks, ""That was quick."" What did Jill want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Juanita has the view of the game.
+B.  Juanita is always so fast.
+C. Juanita has the best cat.
+D. Juanita is always so slow.
+Your answer:
+",,C,distractor_associate,Juanita has the best cat.,distractor_nonsequitur,C,"tensor([-0.8936, -4.6016], dtype=torch.float16)","[tensor(0.4092, dtype=torch.float16), tensor(0.0100, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1562, -4.0508], dtype=torch.float16)","[tensor(0.3147, dtype=torch.float16), tensor(0.0174, dtype=torch.float16)]",0.004105,0.2095947265625,0.005478,0.7495,-5.496,-2.748046875,1.056
+EleutherAI/pythia-12b,0.1,0,19,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Penny, Juanita, and Jill have tickets to a basketball game. At halftime, Juanita offers to go get some drinks. Forty minutes later, she finally returns, and Jill remarks, ""That was quick."" What did Jill want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Juanita has the view of the game.
+B.  Juanita is always so fast.
+C. Juanita has the best cat.
+D. Juanita is always so slow.
+Your answer:
+",,D,distractor_nonsequitur,Juanita is always so slow.,target,D,"tensor([-0.8936, -3.4824], dtype=torch.float16)","[tensor(0.4092, dtype=torch.float16), tensor(0.0307, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1562, -4.0430], dtype=torch.float16)","[tensor(0.3147, dtype=torch.float16), tensor(0.0175, dtype=torch.float16)]",0.01257,0.219970703125,0.005524,2.275,-4.375,-2.1875,0.8413
+EleutherAI/pythia-12b,0.1,0,20,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark gave his former colleague Krista tickets to a lecture where he was a guest speaker. Within the first 20 minutes of the lecture, the audience started to leave. The next day Krista talked to Mary about the lecture. Krista said: "" Oh, Mark held the audience's attention so well."" What did Krista want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's speech was on captivating topic.
+B. Mark is a great speaker.
+C. Mark's speaking skills leave much to be desired.
+D. Mark's speech was about ants.
+Your answer:
+",,A,target,Mark's speech was on captivating topic.,distractor_associate,A,"tensor([-0.9272, -1.3037], dtype=torch.float16)","[tensor(0.3958, dtype=torch.float16), tensor(0.2715, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0654, -1.3242], dtype=torch.float16)","[tensor(0.3445, dtype=torch.float16), tensor(0.2661, dtype=torch.float16)]",0.1074,0.33349609375,0.0917,1.172,-2.23,-1.115234375,0.933
+EleutherAI/pythia-12b,0.1,0,20,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark gave his former colleague Krista tickets to a lecture where he was a guest speaker. Within the first 20 minutes of the lecture, the audience started to leave. The next day Krista talked to Mary about the lecture. Krista said: "" Oh, Mark held the audience's attention so well."" What did Krista want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's speech was on captivating topic.
+B. Mark is a great speaker.
+C. Mark's speaking skills leave much to be desired.
+D. Mark's speech was about ants.
+Your answer:
+",,B,competitor,Mark is a great speaker.,competitor,B,"tensor([-0.9272, -4.3359], dtype=torch.float16)","[tensor(0.3958, dtype=torch.float16), tensor(0.0131, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0654, -4.7305], dtype=torch.float16)","[tensor(0.3445, dtype=torch.float16), tensor(0.0088, dtype=torch.float16)]",0.00518,0.2044677734375,0.003038,1.705,-5.26,-2.630859375,0.9077
+EleutherAI/pythia-12b,0.1,0,20,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark gave his former colleague Krista tickets to a lecture where he was a guest speaker. Within the first 20 minutes of the lecture, the audience started to leave. The next day Krista talked to Mary about the lecture. Krista said: "" Oh, Mark held the audience's attention so well."" What did Krista want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's speech was on captivating topic.
+B. Mark is a great speaker.
+C. Mark's speaking skills leave much to be desired.
+D. Mark's speech was about ants.
+Your answer:
+",,C,distractor_associate,Mark's speaking skills leave much to be desired.,target,C,"tensor([-0.9272, -4.2109], dtype=torch.float16)","[tensor(0.3958, dtype=torch.float16), tensor(0.0148, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0654, -5.0664], dtype=torch.float16)","[tensor(0.3445, dtype=torch.float16), tensor(0.0063, dtype=torch.float16)]",0.00587,0.205322265625,0.002172,2.703,-5.137,-2.568359375,0.8374
+EleutherAI/pythia-12b,0.1,0,20,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark gave his former colleague Krista tickets to a lecture where he was a guest speaker. Within the first 20 minutes of the lecture, the audience started to leave. The next day Krista talked to Mary about the lecture. Krista said: "" Oh, Mark held the audience's attention so well."" What did Krista want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's speech was on captivating topic.
+B. Mark is a great speaker.
+C. Mark's speaking skills leave much to be desired.
+D. Mark's speech was about ants.
+Your answer:
+",,D,distractor_nonsequitur,Mark's speech was about ants.,distractor_nonsequitur,D,"tensor([-0.9272, -3.5000], dtype=torch.float16)","[tensor(0.3958, dtype=torch.float16), tensor(0.0302, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0654, -4.2305], dtype=torch.float16)","[tensor(0.3445, dtype=torch.float16), tensor(0.0145, dtype=torch.float16)]",0.01195,0.2130126953125,0.005013,2.383,-4.426,-2.212890625,0.8354
+EleutherAI/pythia-12b,0.1,0,21,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Tracy was in a dance recital and invited her roommate Steve to watch. Tracy tripped many times during her performance. The next day Steve was talking to Dawn about the recital. Steve said: ""Some people have such natural grace!"" What did Steve want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tracy is a great dancer.
+B. Tracy is not a good dancer.
+C. Tracy's math skills are impressive.
+D. Tracy's dancing outfit is impressive.
+Your answer:
+",,A,target,Tracy is a great dancer.,competitor,A,"tensor([-0.9429, -1.4453], dtype=torch.float16)","[tensor(0.3894, dtype=torch.float16), tensor(0.2357, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0322, -1.5898], dtype=torch.float16)","[tensor(0.3562, dtype=torch.float16), tensor(0.2040, dtype=torch.float16)]",0.0918,0.3125,0.07263,1.264,-2.389,-1.1943359375,0.911
+EleutherAI/pythia-12b,0.1,0,21,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Tracy was in a dance recital and invited her roommate Steve to watch. Tracy tripped many times during her performance. The next day Steve was talking to Dawn about the recital. Steve said: ""Some people have such natural grace!"" What did Steve want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tracy is a great dancer.
+B. Tracy is not a good dancer.
+C. Tracy's math skills are impressive.
+D. Tracy's dancing outfit is impressive.
+Your answer:
+",,B,competitor,Tracy is not a good dancer.,target,B,"tensor([-0.9429, -4.4844], dtype=torch.float16)","[tensor(0.3894, dtype=torch.float16), tensor(0.0113, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0322, -5.2070], dtype=torch.float16)","[tensor(0.3562, dtype=torch.float16), tensor(0.0055, dtype=torch.float16)]",0.004395,0.2003173828125,0.001951,2.252,-5.426,-2.712890625,0.8696
+EleutherAI/pythia-12b,0.1,0,21,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Tracy was in a dance recital and invited her roommate Steve to watch. Tracy tripped many times during her performance. The next day Steve was talking to Dawn about the recital. Steve said: ""Some people have such natural grace!"" What did Steve want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tracy is a great dancer.
+B. Tracy is not a good dancer.
+C. Tracy's math skills are impressive.
+D. Tracy's dancing outfit is impressive.
+Your answer:
+",,C,distractor_associate,Tracy's math skills are impressive.,distractor_nonsequitur,C,"tensor([-0.9429, -4.6484], dtype=torch.float16)","[tensor(0.3894, dtype=torch.float16), tensor(0.0096, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0322, -4.4414], dtype=torch.float16)","[tensor(0.3562, dtype=torch.float16), tensor(0.0118, dtype=torch.float16)]",0.003729,0.199462890625,0.004196,0.8887,-5.59,-2.794921875,1.021
+EleutherAI/pythia-12b,0.1,0,21,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Tracy was in a dance recital and invited her roommate Steve to watch. Tracy tripped many times during her performance. The next day Steve was talking to Dawn about the recital. Steve said: ""Some people have such natural grace!"" What did Steve want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tracy is a great dancer.
+B. Tracy is not a good dancer.
+C. Tracy's math skills are impressive.
+D. Tracy's dancing outfit is impressive.
+Your answer:
+",,D,distractor_nonsequitur,Tracy's dancing outfit is impressive.,distractor_associate,D,"tensor([-0.9429, -4.5312], dtype=torch.float16)","[tensor(0.3894, dtype=torch.float16), tensor(0.0108, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0322, -4.3008], dtype=torch.float16)","[tensor(0.3562, dtype=torch.float16), tensor(0.0136, dtype=torch.float16)]",0.004192,0.2000732421875,0.00483,0.868,-5.473,-2.736328125,1.026
+EleutherAI/pythia-12b,0.1,0,22,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John finished the race way ahead of the other competitors. His friend laughed and said to him, ""You are so slow!"" What did his friend want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. John is not a good runner.
+B. John is an outstanding runner.
+C. John needs new computer.
+D. John needs new running shoes.
+Your answer:
+",,A,target,John is not a good runner.,competitor,A,"tensor([-1.1084, -1.4141], dtype=torch.float16)","[tensor(0.3301, dtype=torch.float16), tensor(0.2432, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0850, -1.5547], dtype=torch.float16)","[tensor(0.3379, dtype=torch.float16), tensor(0.2113, dtype=torch.float16)]",0.08026,0.28662109375,0.0714,1.124,-2.523,-1.26171875,0.9556
+EleutherAI/pythia-12b,0.1,0,22,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John finished the race way ahead of the other competitors. His friend laughed and said to him, ""You are so slow!"" What did his friend want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. John is not a good runner.
+B. John is an outstanding runner.
+C. John needs new computer.
+D. John needs new running shoes.
+Your answer:
+",,B,competitor,John is an outstanding runner.,target,B,"tensor([-1.1084, -4.5938], dtype=torch.float16)","[tensor(0.3301, dtype=torch.float16), tensor(0.0101, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0850, -5.0156], dtype=torch.float16)","[tensor(0.3379, dtype=torch.float16), tensor(0.0066, dtype=torch.float16)]",0.00334,0.1700439453125,0.002241,1.49,-5.703,-2.8515625,0.9346
+EleutherAI/pythia-12b,0.1,0,22,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John finished the race way ahead of the other competitors. His friend laughed and said to him, ""You are so slow!"" What did his friend want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. John is not a good runner.
+B. John is an outstanding runner.
+C. John needs new computer.
+D. John needs new running shoes.
+Your answer:
+",,C,distractor_associate,John needs new computer.,distractor_nonsequitur,C,"tensor([-1.1084, -4.4375], dtype=torch.float16)","[tensor(0.3301, dtype=torch.float16), tensor(0.0118, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0850, -4.7734], dtype=torch.float16)","[tensor(0.3379, dtype=torch.float16), tensor(0.0085, dtype=torch.float16)]",0.003902,0.1708984375,0.002857,1.366,-5.547,-2.7734375,0.947
+EleutherAI/pythia-12b,0.1,0,22,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+John finished the race way ahead of the other competitors. His friend laughed and said to him, ""You are so slow!"" What did his friend want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. John is not a good runner.
+B. John is an outstanding runner.
+C. John needs new computer.
+D. John needs new running shoes.
+Your answer:
+",,D,distractor_nonsequitur,John needs new running shoes.,distractor_associate,D,"tensor([-1.1084, -3.3906], dtype=torch.float16)","[tensor(0.3301, dtype=torch.float16), tensor(0.0337, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0850, -4.3047], dtype=torch.float16)","[tensor(0.3379, dtype=torch.float16), tensor(0.0135, dtype=torch.float16)]",0.01112,0.181884765625,0.004562,2.438,-4.5,-2.25,0.835
+EleutherAI/pythia-12b,0.1,0,23,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The Jones' had hired a new gardener. After a week the lawn was looking particularly unkempt. John remarked to his wife, ""He does such a good job!"" What did John want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He likes thrillers.
+B. He is unhappy with the new gardener.
+C. He is happy with the new gardener.
+D. He likes daisies.
+Your answer:
+",,A,target,He likes thrillers.,distractor_nonsequitur,A,"tensor([-1.1523, -1.2197], dtype=torch.float16)","[tensor(0.3159, dtype=torch.float16), tensor(0.2954, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1152, -1.5127], dtype=torch.float16)","[tensor(0.3279, dtype=torch.float16), tensor(0.2203, dtype=torch.float16)]",0.0933,0.3056640625,0.07227,1.291,-2.371,-1.185546875,0.902
+EleutherAI/pythia-12b,0.1,0,23,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The Jones' had hired a new gardener. After a week the lawn was looking particularly unkempt. John remarked to his wife, ""He does such a good job!"" What did John want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He likes thrillers.
+B. He is unhappy with the new gardener.
+C. He is happy with the new gardener.
+D. He likes daisies.
+Your answer:
+",,B,competitor,He is unhappy with the new gardener.,target,B,"tensor([-1.1523, -4.1641], dtype=torch.float16)","[tensor(0.3159, dtype=torch.float16), tensor(0.0155, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1152, -4.8711], dtype=torch.float16)","[tensor(0.3279, dtype=torch.float16), tensor(0.0077, dtype=torch.float16)]",0.00491,0.165771484375,0.002512,1.954,-5.316,-2.658203125,0.888
+EleutherAI/pythia-12b,0.1,0,23,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The Jones' had hired a new gardener. After a week the lawn was looking particularly unkempt. John remarked to his wife, ""He does such a good job!"" What did John want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He likes thrillers.
+B. He is unhappy with the new gardener.
+C. He is happy with the new gardener.
+D. He likes daisies.
+Your answer:
+",,C,distractor_associate,He is happy with the new gardener.,competitor,C,"tensor([-1.1523, -4.1719], dtype=torch.float16)","[tensor(0.3159, dtype=torch.float16), tensor(0.0154, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1152, -4.0039], dtype=torch.float16)","[tensor(0.3279, dtype=torch.float16), tensor(0.0182, dtype=torch.float16)]",0.004875,0.1656494140625,0.005985,0.8145,-5.324,-2.662109375,1.04
+EleutherAI/pythia-12b,0.1,0,23,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The Jones' had hired a new gardener. After a week the lawn was looking particularly unkempt. John remarked to his wife, ""He does such a good job!"" What did John want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He likes thrillers.
+B. He is unhappy with the new gardener.
+C. He is happy with the new gardener.
+D. He likes daisies.
+Your answer:
+",,D,distractor_nonsequitur,He likes daisies.,distractor_associate,D,"tensor([-1.1523, -3.5547], dtype=torch.float16)","[tensor(0.3159, dtype=torch.float16), tensor(0.0286, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1152, -3.3320], dtype=torch.float16)","[tensor(0.3279, dtype=torch.float16), tensor(0.0357, dtype=torch.float16)]",0.00903,0.1722412109375,0.0117,0.772,-4.707,-2.353515625,1.059
+EleutherAI/pythia-12b,0.1,0,24,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It was the night before her exam and Tilly had read none of the course texts. Her brother said, ""I see your revision is going well.""  What did he want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tilly cannot find the textbook.
+B. Tilly is unready for the exam.
+C. Tilly is ready for the exam.
+D. Tilly cannot find the sneakers.
+Your answer:
+",,A,target,Tilly cannot find the textbook.,distractor_associate,A,"tensor([-1.1641, -1.9482], dtype=torch.float16)","[tensor(0.3123, dtype=torch.float16), tensor(0.1426, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1104, -1.7637], dtype=torch.float16)","[tensor(0.3293, dtype=torch.float16), tensor(0.1714, dtype=torch.float16)]",0.04453,0.2274169921875,0.05646,0.7886,-3.113,-1.556640625,1.083
+EleutherAI/pythia-12b,0.1,0,24,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It was the night before her exam and Tilly had read none of the course texts. Her brother said, ""I see your revision is going well.""  What did he want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tilly cannot find the textbook.
+B. Tilly is unready for the exam.
+C. Tilly is ready for the exam.
+D. Tilly cannot find the sneakers.
+Your answer:
+",,B,competitor,Tilly is unready for the exam.,target,B,"tensor([-1.1641, -5.3242], dtype=torch.float16)","[tensor(0.3123, dtype=torch.float16), tensor(0.0049, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1104, -5.1758], dtype=torch.float16)","[tensor(0.3293, dtype=torch.float16), tensor(0.0057, dtype=torch.float16)]",0.001521,0.1585693359375,0.001862,0.817,-6.49,-3.244140625,1.032
+EleutherAI/pythia-12b,0.1,0,24,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It was the night before her exam and Tilly had read none of the course texts. Her brother said, ""I see your revision is going well.""  What did he want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tilly cannot find the textbook.
+B. Tilly is unready for the exam.
+C. Tilly is ready for the exam.
+D. Tilly cannot find the sneakers.
+Your answer:
+",,C,distractor_associate,Tilly is ready for the exam.,competitor,C,"tensor([-1.1641, -4.6055], dtype=torch.float16)","[tensor(0.3123, dtype=torch.float16), tensor(0.0100, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1104, -4.1680], dtype=torch.float16)","[tensor(0.3293, dtype=torch.float16), tensor(0.0155, dtype=torch.float16)]",0.00312,0.1611328125,0.005096,0.6123,-5.77,-2.884765625,1.094
+EleutherAI/pythia-12b,0.1,0,24,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It was the night before her exam and Tilly had read none of the course texts. Her brother said, ""I see your revision is going well.""  What did he want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Tilly cannot find the textbook.
+B. Tilly is unready for the exam.
+C. Tilly is ready for the exam.
+D. Tilly cannot find the sneakers.
+Your answer:
+",,D,distractor_nonsequitur,Tilly cannot find the sneakers.,distractor_nonsequitur,D,"tensor([-1.1641, -3.9883], dtype=torch.float16)","[tensor(0.3123, dtype=torch.float16), tensor(0.0185, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1104, -3.6309], dtype=torch.float16)","[tensor(0.3293, dtype=torch.float16), tensor(0.0265, dtype=torch.float16)]",0.005783,0.1654052734375,0.00872,0.663,-5.152,-2.576171875,1.087
+EleutherAI/pythia-12b,0.1,0,25,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Barb and Tony went to a high school reunion. Barb was running late and came underdressed. Tony commented, ""Classy outfit."" What did Tony want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked her choice of dress.
+B. He thought that Barb forgot to call the cab.
+C. He thought that her dress was not appropriate for the occasion.
+D. He thought that Barb forgot her purse in the hall.
+Your answer:
+",,A,target,He liked her choice of dress.,competitor,A,"tensor([-1.0029, -1.0527], dtype=torch.float16)","[tensor(0.3667, dtype=torch.float16), tensor(0.3489, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0723, -1.4482], dtype=torch.float16)","[tensor(0.3423, dtype=torch.float16), tensor(0.2350, dtype=torch.float16)]",0.1279,0.35791015625,0.08044,1.59,-2.055,-1.02734375,0.8154
+EleutherAI/pythia-12b,0.1,0,25,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Barb and Tony went to a high school reunion. Barb was running late and came underdressed. Tony commented, ""Classy outfit."" What did Tony want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked her choice of dress.
+B. He thought that Barb forgot to call the cab.
+C. He thought that her dress was not appropriate for the occasion.
+D. He thought that Barb forgot her purse in the hall.
+Your answer:
+",,B,competitor,He thought that Barb forgot to call the cab.,distractor_nonsequitur,B,"tensor([-1.0029, -4.7656], dtype=torch.float16)","[tensor(0.3667, dtype=torch.float16), tensor(0.0085, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0723, -5.7148], dtype=torch.float16)","[tensor(0.3423, dtype=torch.float16), tensor(0.0033, dtype=torch.float16)]",0.003122,0.1876220703125,0.001128,2.768,-5.77,-2.884765625,0.8496
+EleutherAI/pythia-12b,0.1,0,25,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Barb and Tony went to a high school reunion. Barb was running late and came underdressed. Tony commented, ""Classy outfit."" What did Tony want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked her choice of dress.
+B. He thought that Barb forgot to call the cab.
+C. He thought that her dress was not appropriate for the occasion.
+D. He thought that Barb forgot her purse in the hall.
+Your answer:
+",,C,distractor_associate,He thought that her dress was not appropriate for the occasion.,target,C,"tensor([-1.0029, -4.6797], dtype=torch.float16)","[tensor(0.3667, dtype=torch.float16), tensor(0.0093, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0723, -4.7305], dtype=torch.float16)","[tensor(0.3423, dtype=torch.float16), tensor(0.0088, dtype=torch.float16)]",0.003405,0.18798828125,0.00302,1.128,-5.684,-2.841796875,0.979
+EleutherAI/pythia-12b,0.1,0,25,irony,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Barb and Tony went to a high school reunion. Barb was running late and came underdressed. Tony commented, ""Classy outfit."" What did Tony want to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked her choice of dress.
+B. He thought that Barb forgot to call the cab.
+C. He thought that her dress was not appropriate for the occasion.
+D. He thought that Barb forgot her purse in the hall.
+Your answer:
+",,D,distractor_nonsequitur,He thought that Barb forgot her purse in the hall.,distractor_associate,D,"tensor([-1.0029, -3.8418], dtype=torch.float16)","[tensor(0.3667, dtype=torch.float16), tensor(0.0215, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0723, -4.1680], dtype=torch.float16)","[tensor(0.3423, dtype=torch.float16), tensor(0.0155, dtype=torch.float16)]",0.007866,0.194091796875,0.0053,1.484,-4.844,-2.421875,0.924

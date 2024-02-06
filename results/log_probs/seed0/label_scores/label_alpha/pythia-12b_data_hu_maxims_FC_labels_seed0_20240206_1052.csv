@@ -1,0 +1,842 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+EleutherAI/pythia-12b,0.1,0,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked the talk that his boss gave but does not want to tell him about it.
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+D. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+Your answer:
+",Why has Bob responded like this?,A,target,He liked the talk that his boss gave but does not want to tell him about it.,incorrect_nonliteral,A,"tensor([-1.1943, -1.0908], dtype=torch.float16)","[tensor(0.3030, dtype=torch.float16), tensor(0.3359, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.3154, -1.2793], dtype=torch.float16)","[tensor(0.2683, dtype=torch.float16), tensor(0.2783, dtype=torch.float16)]",0.1018,0.3193359375,0.07465,1.364,-2.285,-1.142578125,0.881
+EleutherAI/pythia-12b,0.1,0,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked the talk that his boss gave but does not want to tell him about it.
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+D. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,He disliked the talk that his boss gave but does not want to criticize his boss.,target,B,"tensor([-1.1943, -4.7383], dtype=torch.float16)","[tensor(0.3030, dtype=torch.float16), tensor(0.0088, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.3154, -5.4023], dtype=torch.float16)","[tensor(0.2683, dtype=torch.float16), tensor(0.0045, dtype=torch.float16)]",0.002651,0.1558837890625,0.001208,2.193,-5.934,-2.966796875,0.8833
+EleutherAI/pythia-12b,0.1,0,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked the talk that his boss gave but does not want to tell him about it.
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+D. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,He is excited about the upcoming trip to Japan and does not want to talk about anything else.,incorrect_literal,C,"tensor([-1.1943, -4.6680], dtype=torch.float16)","[tensor(0.3030, dtype=torch.float16), tensor(0.0094, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.3154, -4.1758], dtype=torch.float16)","[tensor(0.2683, dtype=torch.float16), tensor(0.0154, dtype=torch.float16)]",0.002846,0.1561279296875,0.004124,0.69,-5.863,-2.931640625,1.067
+EleutherAI/pythia-12b,0.1,0,1,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Bob is having a lunch meeting with his boss, Mr. James. Mr. James asks Bob: ""Did you like the presentation that I gave at the board meeting yesterday?"" Bob responds: ""I cannot wait for our trip to Japan next week.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He liked the talk that his boss gave but does not want to tell him about it.
+B. He disliked the talk that his boss gave but does not want to criticize his boss.
+C. He is excited about the upcoming trip to Japan and does not want to talk about anything else.
+D. He wants to avoid going to Japan next week and wants to discuss it with his boss. 
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,He wants to avoid going to Japan next week and wants to discuss it with his boss. ,incorrect_associate,D,"tensor([-1.1943, -4.5352], dtype=torch.float16)","[tensor(0.3030, dtype=torch.float16), tensor(0.0107, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.3154, -3.7168], dtype=torch.float16)","[tensor(0.2683, dtype=torch.float16), tensor(0.0243, dtype=torch.float16)]",0.00325,0.1568603515625,0.006523,0.4983,-5.73,-2.865234375,1.139
+EleutherAI/pythia-12b,0.1,0,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex thinks that Richard's painting is mediocre.
+B.  Alex is proud of the painting job that he did.
+C. Alex is afraid that Richard will become a better painter than he is. 
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has Bob responded like this?,A,target,Alex thinks that Richard's painting is mediocre.,target,A,"tensor([-1.1523, -1.4238], dtype=torch.float16)","[tensor(0.3159, dtype=torch.float16), tensor(0.2408, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.3740, -1.4590], dtype=torch.float16)","[tensor(0.2532, dtype=torch.float16), tensor(0.2324, dtype=torch.float16)]",0.0761,0.2783203125,0.05884,1.294,-2.576,-1.2880859375,0.9097
+EleutherAI/pythia-12b,0.1,0,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex thinks that Richard's painting is mediocre.
+B.  Alex is proud of the painting job that he did.
+C. Alex is afraid that Richard will become a better painter than he is. 
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal, Alex is proud of the painting job that he did.,incorrect_literal,B,"tensor([-1.1523, -4.9805], dtype=torch.float16)","[tensor(0.3159, dtype=torch.float16), tensor(0.0069, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.3740, -4.8672], dtype=torch.float16)","[tensor(0.2532, dtype=torch.float16), tensor(0.0077, dtype=torch.float16)]",0.00217,0.161376953125,0.001948,1.114,-6.133,-3.06640625,0.9824
+EleutherAI/pythia-12b,0.1,0,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex thinks that Richard's painting is mediocre.
+B.  Alex is proud of the painting job that he did.
+C. Alex is afraid that Richard will become a better painter than he is. 
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Alex is afraid that Richard will become a better painter than he is. ,incorrect_associate,C,"tensor([-1.1523, -4.3711], dtype=torch.float16)","[tensor(0.3159, dtype=torch.float16), tensor(0.0126, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.3740, -4.0625], dtype=torch.float16)","[tensor(0.2532, dtype=torch.float16), tensor(0.0172, dtype=torch.float16)]",0.00399,0.164306640625,0.004356,0.916,-5.523,-2.76171875,1.016
+EleutherAI/pythia-12b,0.1,0,2,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard came to visit his friend, Alex. Alex is an artist. Richard brought one of his artworks to Alex and asked Alex: ""What do you think of my painting?"" Alex responds:""Have you noticed that I painted the walls?"" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Alex thinks that Richard's painting is mediocre.
+B.  Alex is proud of the painting job that he did.
+C. Alex is afraid that Richard will become a better painter than he is. 
+D. Alex wants Richards to help him paint the walls.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Alex wants Richards to help him paint the walls.,incorrect_nonliteral,D,"tensor([-1.1523, -3.8379], dtype=torch.float16)","[tensor(0.3159, dtype=torch.float16), tensor(0.0215, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.3740, -4.4922], dtype=torch.float16)","[tensor(0.2532, dtype=torch.float16), tensor(0.0112, dtype=torch.float16)]",0.006805,0.168701171875,0.002834,2.4,-4.992,-2.49609375,0.851
+EleutherAI/pythia-12b,0.1,0,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has Bob responded like this?,A,target,She does not want to discuss the topic that Leslie has raised.,target,A,"tensor([-1.0020, -1.1396], dtype=torch.float16)","[tensor(0.3672, dtype=torch.float16), tensor(0.3198, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0781, -1.6445], dtype=torch.float16)","[tensor(0.3403, dtype=torch.float16), tensor(0.1931, dtype=torch.float16)]",0.11743,0.343505859375,0.06573,1.786,-2.14,-1.0703125,0.786
+EleutherAI/pythia-12b,0.1,0,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,The man who Leslie saw makes unbelievable lattes.,incorrect_nonliteral,B,"tensor([-1.0020, -4.2656], dtype=torch.float16)","[tensor(0.3672, dtype=torch.float16), tensor(0.0140, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0781, -5.3398], dtype=torch.float16)","[tensor(0.3403, dtype=torch.float16), tensor(0.0048, dtype=torch.float16)]",0.005157,0.190673828125,0.001632,3.16,-5.266,-2.6328125,0.8203
+EleutherAI/pythia-12b,0.1,0,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,She thinks that it is the best latte in the town.,incorrect_literal,C,"tensor([-1.0020, -4.8047], dtype=torch.float16)","[tensor(0.3672, dtype=torch.float16), tensor(0.0082, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0781, -4.9805], dtype=torch.float16)","[tensor(0.3403, dtype=torch.float16), tensor(0.0069, dtype=torch.float16)]",0.003008,0.187744140625,0.002338,1.286,-5.805,-2.90234375,0.958
+EleutherAI/pythia-12b,0.1,0,3,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Leslie and Jane are chatting at a coffee shop. Leslie asks, ""Who was that man that I saw you with last night?"" Jane responds: ""The latte is unbelievable here.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She does not want to discuss the topic that Leslie has raised.
+B. The man who Leslie saw makes unbelievable lattes.
+C. She thinks that it is the best latte in the town.
+D. A coffee break is not a good time to discuss men.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,A coffee break is not a good time to discuss men.,incorrect_associate,D,"tensor([-1.0020, -3.8203], dtype=torch.float16)","[tensor(0.3672, dtype=torch.float16), tensor(0.0219, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0781, -4.0820], dtype=torch.float16)","[tensor(0.3403, dtype=torch.float16), tensor(0.0169, dtype=torch.float16)]",0.00805,0.194580078125,0.005745,1.401,-4.82,-2.41015625,0.934
+EleutherAI/pythia-12b,0.1,0,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is thankful for her offer of beer and chips.
+B. He pretends that he did not understand his wife's comment because he wants to watch the game.
+C. He is excited about seeing his wife. 
+D. He is happy to turn off the TV right away and to spend more time with his wife.
+Your answer:
+",Why has Bob responded like this?,A,target,He is thankful for her offer of beer and chips.,incorrect_literal,A,"tensor([-1.1982, -0.8960], dtype=torch.float16)","[tensor(0.3018, dtype=torch.float16), tensor(0.4082, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.2979, -1.4814], dtype=torch.float16)","[tensor(0.2732, dtype=torch.float16), tensor(0.2273, dtype=torch.float16)]",0.12317,0.35498046875,0.0621,1.983,-2.094,-1.046875,0.7534
+EleutherAI/pythia-12b,0.1,0,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is thankful for her offer of beer and chips.
+B. He pretends that he did not understand his wife's comment because he wants to watch the game.
+C. He is excited about seeing his wife. 
+D. He is happy to turn off the TV right away and to spend more time with his wife.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,He pretends that he did not understand his wife's comment because he wants to watch the game.,target,B,"tensor([-1.1982, -4.1445], dtype=torch.float16)","[tensor(0.3018, dtype=torch.float16), tensor(0.0159, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.2979, -5.5586], dtype=torch.float16)","[tensor(0.2732, dtype=torch.float16), tensor(0.0039, dtype=torch.float16)]",0.004784,0.1588134765625,0.001053,4.543,-5.344,-2.671875,0.7793
+EleutherAI/pythia-12b,0.1,0,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is thankful for her offer of beer and chips.
+B. He pretends that he did not understand his wife's comment because he wants to watch the game.
+C. He is excited about seeing his wife. 
+D. He is happy to turn off the TV right away and to spend more time with his wife.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,He is excited about seeing his wife. ,incorrect_associate,C,"tensor([-1.1982, -3.8652], dtype=torch.float16)","[tensor(0.3018, dtype=torch.float16), tensor(0.0210, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.2979, -4.1992], dtype=torch.float16)","[tensor(0.2732, dtype=torch.float16), tensor(0.0150, dtype=torch.float16)]",0.006325,0.161376953125,0.0041,1.542,-5.062,-2.53125,0.921
+EleutherAI/pythia-12b,0.1,0,4,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kelsey is in a bad mood. Every minor thing irritates her. When she sees her husband watching a football game, she yells: ""Can you turn off the TV?"" Her husband replies:""Beer and chips would be awesome. Thanks!""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is thankful for her offer of beer and chips.
+B. He pretends that he did not understand his wife's comment because he wants to watch the game.
+C. He is excited about seeing his wife. 
+D. He is happy to turn off the TV right away and to spend more time with his wife.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,He is happy to turn off the TV right away and to spend more time with his wife.,incorrect_nonliteral,D,"tensor([-1.1982, -4.0742], dtype=torch.float16)","[tensor(0.3018, dtype=torch.float16), tensor(0.0170, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.2979, -3.9902], dtype=torch.float16)","[tensor(0.2732, dtype=torch.float16), tensor(0.0185, dtype=torch.float16)]",0.00513,0.159423828125,0.00505,1.016,-5.273,-2.63671875,0.997
+EleutherAI/pythia-12b,0.1,0,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark is fond of people who have good handwriting.
+B. Mark's opinion of Jane as a financial manager is very low.
+C. Mark needs to get some new clothes.
+D. Mark's opinion of Jane as a financial manager is very high.
+Your answer:
+",Why has Bob responded like this?,A,target,Mark is fond of people who have good handwriting.,incorrect_nonliteral,A,"tensor([-0.8218, -1.1250], dtype=torch.float16)","[tensor(0.4397, dtype=torch.float16), tensor(0.3247, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9395, -1.5303], dtype=torch.float16)","[tensor(0.3909, dtype=torch.float16), tensor(0.2164, dtype=torch.float16)]",0.1428,0.38232421875,0.0846,1.688,-1.947,-0.9736328125,0.7886
+EleutherAI/pythia-12b,0.1,0,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark is fond of people who have good handwriting.
+B. Mark's opinion of Jane as a financial manager is very low.
+C. Mark needs to get some new clothes.
+D. Mark's opinion of Jane as a financial manager is very high.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Mark's opinion of Jane as a financial manager is very low.,target,B,"tensor([-0.8218, -4.3359], dtype=torch.float16)","[tensor(0.4397, dtype=torch.float16), tensor(0.0131, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9395, -4.6953], dtype=torch.float16)","[tensor(0.3909, dtype=torch.float16), tensor(0.0091, dtype=torch.float16)]",0.005756,0.2264404296875,0.003572,1.611,-5.156,-2.578125,0.9155
+EleutherAI/pythia-12b,0.1,0,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark is fond of people who have good handwriting.
+B. Mark's opinion of Jane as a financial manager is very low.
+C. Mark needs to get some new clothes.
+D. Mark's opinion of Jane as a financial manager is very high.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Mark needs to get some new clothes.,incorrect_associate,C,"tensor([-0.8218, -4.9219], dtype=torch.float16)","[tensor(0.4397, dtype=torch.float16), tensor(0.0073, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9395, -5.3359], dtype=torch.float16)","[tensor(0.3909, dtype=torch.float16), tensor(0.0048, dtype=torch.float16)]",0.003204,0.2235107421875,0.001882,1.703,-5.742,-2.87109375,0.9155
+EleutherAI/pythia-12b,0.1,0,5,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark is discussing Jane, a senior financial manager who he hired, with his colleague John. Mark asks: ""How is Jane managing her new position?"" Mark says:""She has excellent handwriting and is always dressed so nicely.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark is fond of people who have good handwriting.
+B. Mark's opinion of Jane as a financial manager is very low.
+C. Mark needs to get some new clothes.
+D. Mark's opinion of Jane as a financial manager is very high.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Mark's opinion of Jane as a financial manager is very high.,incorrect_literal,D,"tensor([-0.8218, -4.5625], dtype=torch.float16)","[tensor(0.4397, dtype=torch.float16), tensor(0.0104, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9395, -5.1562], dtype=torch.float16)","[tensor(0.3909, dtype=torch.float16), tensor(0.0058, dtype=torch.float16)]",0.00459,0.22509765625,0.002253,2.037,-5.383,-2.69140625,0.8833
+EleutherAI/pythia-12b,0.1,0,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has Bob responded like this?,A,target,Lucy's mom is afraid that Lucy will go to France.,incorrect_associate,A,"tensor([-1.0312, -0.9272], dtype=torch.float16)","[tensor(0.3564, dtype=torch.float16), tensor(0.3958, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1611, -1.5088], dtype=torch.float16)","[tensor(0.3132, dtype=torch.float16), tensor(0.2212, dtype=torch.float16)]",0.1411,0.3759765625,0.0693,2.037,-1.959,-0.9794921875,0.734
+EleutherAI/pythia-12b,0.1,0,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal, Lucy's mom knows that Vincent lives somewhere in France.,incorrect_literal,B,"tensor([-1.0312, -4.2461], dtype=torch.float16)","[tensor(0.3564, dtype=torch.float16), tensor(0.0143, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1611, -5.6172], dtype=torch.float16)","[tensor(0.3132, dtype=torch.float16), tensor(0.0036, dtype=torch.float16)]",0.005104,0.1854248046875,0.001139,4.48,-5.277,-2.638671875,0.779
+EleutherAI/pythia-12b,0.1,0,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Lucy's mom is jealous that she is not going to Paris.,incorrect_nonliteral,C,"tensor([-1.0312, -4.2227], dtype=torch.float16)","[tensor(0.3564, dtype=torch.float16), tensor(0.0147, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1611, -4.5391], dtype=torch.float16)","[tensor(0.3132, dtype=torch.float16), tensor(0.0107, dtype=torch.float16)]",0.005222,0.185546875,0.003345,1.561,-5.254,-2.626953125,0.922
+EleutherAI/pythia-12b,0.1,0,6,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lucy discusses her trip to Paris with her mom. Lucy says: ""I'd like to visit Vincent when I am in Paris. Where does he live?"" Her mom responds:""Somewhere in France.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Lucy's mom is afraid that Lucy will go to France.
+B.  Lucy's mom knows that Vincent lives somewhere in France.
+C. Lucy's mom is jealous that she is not going to Paris.
+D. Lucy's mom does not know where exactly Vincent lives.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Lucy's mom does not know where exactly Vincent lives.,target,D,"tensor([-1.0312, -4.0117], dtype=torch.float16)","[tensor(0.3564, dtype=torch.float16), tensor(0.0181, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1611, -4.0000], dtype=torch.float16)","[tensor(0.3132, dtype=torch.float16), tensor(0.0183, dtype=torch.float16)]",0.00645,0.187255859375,0.005737,1.124,-5.043,-2.521484375,0.977
+EleutherAI/pythia-12b,0.1,0,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The food at the wedding was outstanding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. There was not a lot of food at the wedding.
+Your answer:
+",Why has Bob responded like this?,A,target,The food at the wedding was outstanding.,incorrect_nonliteral,A,"tensor([-1.0791, -1.0283], dtype=torch.float16)","[tensor(0.3398, dtype=torch.float16), tensor(0.3577, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0908, -1.3906], dtype=torch.float16)","[tensor(0.3359, dtype=torch.float16), tensor(0.2489, dtype=torch.float16)]",0.1215,0.3486328125,0.0836,1.453,-2.107,-1.0537109375,0.8496
+EleutherAI/pythia-12b,0.1,0,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The food at the wedding was outstanding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. There was not a lot of food at the wedding.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,The food at the wedding was mediocre.,target,B,"tensor([-1.0791, -4.6602], dtype=torch.float16)","[tensor(0.3398, dtype=torch.float16), tensor(0.0095, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0908, -4.9531], dtype=torch.float16)","[tensor(0.3359, dtype=torch.float16), tensor(0.0071, dtype=torch.float16)]",0.003218,0.1746826171875,0.002373,1.356,-5.74,-2.869140625,0.9497
+EleutherAI/pythia-12b,0.1,0,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The food at the wedding was outstanding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. There was not a lot of food at the wedding.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,The wedding is not about food.,incorrect_associate,C,"tensor([-1.0791, -4.6133], dtype=torch.float16)","[tensor(0.3398, dtype=torch.float16), tensor(0.0099, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0908, -4.8906], dtype=torch.float16)","[tensor(0.3359, dtype=torch.float16), tensor(0.0075, dtype=torch.float16)]",0.00337,0.1749267578125,0.002525,1.335,-5.69,-2.845703125,0.9517
+EleutherAI/pythia-12b,0.1,0,7,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Luke missed a wedding reception and wants his wife Melanie to tell him about it. He asks: ""What were you served at the wedding?"" She responds:""Some food.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. The food at the wedding was outstanding.
+B. The food at the wedding was mediocre.
+C. The wedding is not about food.
+D. There was not a lot of food at the wedding.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,There was not a lot of food at the wedding.,incorrect_literal,D,"tensor([-1.0791, -4.1055], dtype=torch.float16)","[tensor(0.3398, dtype=torch.float16), tensor(0.0165, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0908, -4.4453], dtype=torch.float16)","[tensor(0.3359, dtype=torch.float16), tensor(0.0117, dtype=torch.float16)]",0.0056,0.17822265625,0.00394,1.421,-5.184,-2.591796875,0.9365
+EleutherAI/pythia-12b,0.1,0,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary is proud of the new cups that she got from Ken for her birthday.
+B. Mary wants Ken to serve her tea in a cup.
+C. Mary wants Ken to wash a cup that she sees in the sink. 
+D. Mary is irritated with Ken.
+Your answer:
+",Why has Bob responded like this?,A,target,Mary is proud of the new cups that she got from Ken for her birthday.,incorrect_associate,A,"tensor([-1.1240, -1.0312], dtype=torch.float16)","[tensor(0.3250, dtype=torch.float16), tensor(0.3564, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.3496, -1.3867], dtype=torch.float16)","[tensor(0.2593, dtype=torch.float16), tensor(0.2499, dtype=torch.float16)]",0.11584,0.3408203125,0.06476,1.789,-2.156,-1.078125,0.788
+EleutherAI/pythia-12b,0.1,0,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary is proud of the new cups that she got from Ken for her birthday.
+B. Mary wants Ken to serve her tea in a cup.
+C. Mary wants Ken to wash a cup that she sees in the sink. 
+D. Mary is irritated with Ken.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Mary wants Ken to serve her tea in a cup.,incorrect_literal,B,"tensor([-1.1240, -4.2969], dtype=torch.float16)","[tensor(0.3250, dtype=torch.float16), tensor(0.0136, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.3496, -4.9961], dtype=torch.float16)","[tensor(0.2593, dtype=torch.float16), tensor(0.0068, dtype=torch.float16)]",0.00442,0.1693115234375,0.001754,2.521,-5.42,-2.7109375,0.8545
+EleutherAI/pythia-12b,0.1,0,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary is proud of the new cups that she got from Ken for her birthday.
+B. Mary wants Ken to serve her tea in a cup.
+C. Mary wants Ken to wash a cup that she sees in the sink. 
+D. Mary is irritated with Ken.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Mary wants Ken to wash a cup that she sees in the sink. ,incorrect_nonliteral,C,"tensor([-1.1240, -4.7344], dtype=torch.float16)","[tensor(0.3250, dtype=torch.float16), tensor(0.0088, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.3496, -4.2773], dtype=torch.float16)","[tensor(0.2593, dtype=torch.float16), tensor(0.0139, dtype=torch.float16)]",0.002855,0.1668701171875,0.0036,0.7935,-5.86,-2.9296875,1.042
+EleutherAI/pythia-12b,0.1,0,8,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mary and Ken are having breakfast. Ken asks Mary: ""How would you like your tea, dear?"" Mary responds:""In a cup.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mary is proud of the new cups that she got from Ken for her birthday.
+B. Mary wants Ken to serve her tea in a cup.
+C. Mary wants Ken to wash a cup that she sees in the sink. 
+D. Mary is irritated with Ken.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Mary is irritated with Ken.,target,D,"tensor([-1.1240, -3.8984], dtype=torch.float16)","[tensor(0.3250, dtype=torch.float16), tensor(0.0203, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.3496, -3.9102], dtype=torch.float16)","[tensor(0.2593, dtype=torch.float16), tensor(0.0200, dtype=torch.float16)]",0.006588,0.172607421875,0.005196,1.268,-5.023,-2.51171875,0.9556
+EleutherAI/pythia-12b,0.1,0,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy does not know what type of shoes she wants to buy.
+C. Cindy has an obsession with shoes and buys them on every occasion.
+D. Cindy is excited about going shopping.
+Your answer:
+",Why has Bob responded like this?,A,target,Cindy does not plan to buy anything but shoes in this store.,incorrect_literal,A,"tensor([-1.0537, -1.0205], dtype=torch.float16)","[tensor(0.3486, dtype=torch.float16), tensor(0.3604, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0293, -1.5342], dtype=torch.float16)","[tensor(0.3572, dtype=torch.float16), tensor(0.2156, dtype=torch.float16)]",0.1256,0.3544921875,0.077,1.631,-2.074,-1.037109375,0.8096
+EleutherAI/pythia-12b,0.1,0,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy does not know what type of shoes she wants to buy.
+C. Cindy has an obsession with shoes and buys them on every occasion.
+D. Cindy is excited about going shopping.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Cindy does not know what type of shoes she wants to buy.,target,B,"tensor([-1.0537, -4.1445], dtype=torch.float16)","[tensor(0.3486, dtype=torch.float16), tensor(0.0159, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0293, -4.8398], dtype=torch.float16)","[tensor(0.3572, dtype=torch.float16), tensor(0.0079, dtype=torch.float16)]",0.005527,0.1822509765625,0.002827,1.955,-5.2,-2.599609375,0.886
+EleutherAI/pythia-12b,0.1,0,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy does not know what type of shoes she wants to buy.
+C. Cindy has an obsession with shoes and buys them on every occasion.
+D. Cindy is excited about going shopping.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Cindy has an obsession with shoes and buys them on every occasion.,incorrect_nonliteral,C,"tensor([-1.0537, -4.6055], dtype=torch.float16)","[tensor(0.3486, dtype=torch.float16), tensor(0.0100, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0293, -4.5273], dtype=torch.float16)","[tensor(0.3572, dtype=torch.float16), tensor(0.0108, dtype=torch.float16)]",0.003485,0.1793212890625,0.00386,0.903,-5.66,-2.830078125,1.019
+EleutherAI/pythia-12b,0.1,0,9,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+George and Cindy are about to enter their favorite shoe shop in the mall. George asks Cindy: ""What would you like to buy?"" Cindy responds:""A pair of shoes.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy does not plan to buy anything but shoes in this store.
+B. Cindy does not know what type of shoes she wants to buy.
+C. Cindy has an obsession with shoes and buys them on every occasion.
+D. Cindy is excited about going shopping.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Cindy is excited about going shopping.,incorrect_associate,D,"tensor([-1.0537, -3.9414], dtype=torch.float16)","[tensor(0.3486, dtype=torch.float16), tensor(0.0194, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0293, -3.9863], dtype=torch.float16)","[tensor(0.3572, dtype=torch.float16), tensor(0.0186, dtype=torch.float16)]",0.00677,0.18408203125,0.006634,1.0205,-4.996,-2.498046875,0.996
+EleutherAI/pythia-12b,0.1,0,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want to talk about school with his mom.
+B. He is too excited to talk about this at the moment.
+C. He has been doing lots of schoolwork at school.
+D. He is upset that his dad is not at home.
+Your answer:
+",Why has Bob responded like this?,A,target,He does not want to talk about school with his mom.,target,A,"tensor([-1.0312, -1.2578], dtype=torch.float16)","[tensor(0.3564, dtype=torch.float16), tensor(0.2842, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1377, -1.6250], dtype=torch.float16)","[tensor(0.3206, dtype=torch.float16), tensor(0.1969, dtype=torch.float16)]",0.1013,0.3203125,0.0631,1.605,-2.29,-1.14453125,0.8286
+EleutherAI/pythia-12b,0.1,0,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want to talk about school with his mom.
+B. He is too excited to talk about this at the moment.
+C. He has been doing lots of schoolwork at school.
+D. He is upset that his dad is not at home.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,He is too excited to talk about this at the moment.,incorrect_associate,B,"tensor([-1.0312, -5.0156], dtype=torch.float16)","[tensor(0.3564, dtype=torch.float16), tensor(0.0066, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1377, -5.5312], dtype=torch.float16)","[tensor(0.3206, dtype=torch.float16), tensor(0.0040, dtype=torch.float16)]",0.002365,0.1815185546875,0.001269,1.863,-6.047,-3.0234375,0.9067
+EleutherAI/pythia-12b,0.1,0,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want to talk about school with his mom.
+B. He is too excited to talk about this at the moment.
+C. He has been doing lots of schoolwork at school.
+D. He is upset that his dad is not at home.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,He has been doing lots of schoolwork at school.,incorrect_literal,C,"tensor([-1.0312, -4.5938], dtype=torch.float16)","[tensor(0.3564, dtype=torch.float16), tensor(0.0101, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1377, -4.6250], dtype=torch.float16)","[tensor(0.3206, dtype=torch.float16), tensor(0.0098, dtype=torch.float16)]",0.003607,0.1832275390625,0.003143,1.147,-5.625,-2.8125,0.976
+EleutherAI/pythia-12b,0.1,0,10,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike comes home from school. His mom asks him: ""What did you do at school today?"" Mike responds:""Some schoolwork.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want to talk about school with his mom.
+B. He is too excited to talk about this at the moment.
+C. He has been doing lots of schoolwork at school.
+D. He is upset that his dad is not at home.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,He is upset that his dad is not at home.,incorrect_nonliteral,D,"tensor([-1.0312, -4.1875], dtype=torch.float16)","[tensor(0.3564, dtype=torch.float16), tensor(0.0152, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1377, -4.3203], dtype=torch.float16)","[tensor(0.3206, dtype=torch.float16), tensor(0.0133, dtype=torch.float16)]",0.005413,0.185791015625,0.00426,1.2705,-5.22,-2.609375,0.9565
+EleutherAI/pythia-12b,0.1,0,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has little experience with cooking.
+B. Mark's wife has a lot of experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has been doing some scientific experiments instead of cooking.
+Your answer:
+",Why has Bob responded like this?,A,target,Mark's wife has little experience with cooking.,target,A,"tensor([-1.0645, -0.8760], dtype=torch.float16)","[tensor(0.3450, dtype=torch.float16), tensor(0.4165, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.2539, -1.2617], dtype=torch.float16)","[tensor(0.2854, dtype=torch.float16), tensor(0.2832, dtype=torch.float16)]",0.1437,0.380859375,0.0808,1.778,-1.94,-0.97021484375,0.7715
+EleutherAI/pythia-12b,0.1,0,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has little experience with cooking.
+B. Mark's wife has a lot of experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has been doing some scientific experiments instead of cooking.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Mark's wife has a lot of experience with cooking.,incorrect_associate,B,"tensor([-1.0645, -4.2812], dtype=torch.float16)","[tensor(0.3450, dtype=torch.float16), tensor(0.0138, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.2539, -4.9102], dtype=torch.float16)","[tensor(0.2854, dtype=torch.float16), tensor(0.0074, dtype=torch.float16)]",0.00477,0.179443359375,0.002104,2.266,-5.344,-2.671875,0.8667
+EleutherAI/pythia-12b,0.1,0,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has little experience with cooking.
+B. Mark's wife has a lot of experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has been doing some scientific experiments instead of cooking.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Mark's wife has been angry with Mark because he did not help her with dinner.  ,incorrect_nonliteral,C,"tensor([-1.0645, -4.0625], dtype=torch.float16)","[tensor(0.3450, dtype=torch.float16), tensor(0.0172, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.2539, -3.9180], dtype=torch.float16)","[tensor(0.2854, dtype=torch.float16), tensor(0.0199, dtype=torch.float16)]",0.00594,0.18115234375,0.005676,1.046,-5.125,-2.5625,0.9907
+EleutherAI/pythia-12b,0.1,0,11,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark, who is a newlywed, is talking to his mom over the phone. His mom asks: ""Did Julie cook your dinner last night?"" Mark responds:""Well, she placed a number of edible substances into a pot and then heated them until various chemical reactions took place.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Mark's wife has little experience with cooking.
+B. Mark's wife has a lot of experience with cooking.
+C. Mark's wife has been angry with Mark because he did not help her with dinner.  
+D. Mark's wife has been doing some scientific experiments instead of cooking.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Mark's wife has been doing some scientific experiments instead of cooking.,incorrect_literal,D,"tensor([-1.0645, -4.3516], dtype=torch.float16)","[tensor(0.3450, dtype=torch.float16), tensor(0.0129, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.2539, -3.8633], dtype=torch.float16)","[tensor(0.2854, dtype=torch.float16), tensor(0.0210, dtype=torch.float16)]",0.004444,0.178955078125,0.005993,0.7417,-5.414,-2.70703125,1.058
+EleutherAI/pythia-12b,0.1,0,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie wants Lenny to know how his breakfast was made.
+C. Marcie is really good at cooking eggs and making toast.
+D. Marcie thinks that breakfast is the main meal of the day.
+Your answer:
+",Why has Bob responded like this?,A,target,Marcie thinks that her husband's expectations about breakfast are too high.,target,A,"tensor([-0.9595, -1.1211], dtype=torch.float16)","[tensor(0.3831, dtype=torch.float16), tensor(0.3259, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1055, -1.4434], dtype=torch.float16)","[tensor(0.3311, dtype=torch.float16), tensor(0.2361, dtype=torch.float16)]",0.1249,0.3544921875,0.0782,1.598,-2.08,-1.0400390625,0.816
+EleutherAI/pythia-12b,0.1,0,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie wants Lenny to know how his breakfast was made.
+C. Marcie is really good at cooking eggs and making toast.
+D. Marcie thinks that breakfast is the main meal of the day.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Marcie wants Lenny to know how his breakfast was made.,incorrect_literal,B,"tensor([-0.9595, -4.5352], dtype=torch.float16)","[tensor(0.3831, dtype=torch.float16), tensor(0.0107, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1055, -5.0430], dtype=torch.float16)","[tensor(0.3311, dtype=torch.float16), tensor(0.0065, dtype=torch.float16)]",0.00411,0.1968994140625,0.002136,1.923,-5.496,-2.748046875,0.894
+EleutherAI/pythia-12b,0.1,0,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie wants Lenny to know how his breakfast was made.
+C. Marcie is really good at cooking eggs and making toast.
+D. Marcie thinks that breakfast is the main meal of the day.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Marcie is really good at cooking eggs and making toast.,incorrect_nonliteral,C,"tensor([-0.9595, -4.5273], dtype=torch.float16)","[tensor(0.3831, dtype=torch.float16), tensor(0.0108, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1055, -4.5430], dtype=torch.float16)","[tensor(0.3311, dtype=torch.float16), tensor(0.0106, dtype=torch.float16)]",0.004143,0.1968994140625,0.003523,1.176,-5.49,-2.744140625,0.9717
+EleutherAI/pythia-12b,0.1,0,12,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny comes to the kitchen and asks his wife, Marcie: ""What will we have for breakfast?"" Marcie responds:""A hard-boiled egg cooked in hot water and toast that is toasted evenly on both sides.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Marcie thinks that her husband's expectations about breakfast are too high.
+B. Marcie wants Lenny to know how his breakfast was made.
+C. Marcie is really good at cooking eggs and making toast.
+D. Marcie thinks that breakfast is the main meal of the day.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Marcie thinks that breakfast is the main meal of the day.,incorrect_associate,D,"tensor([-0.9595, -3.7148], dtype=torch.float16)","[tensor(0.3831, dtype=torch.float16), tensor(0.0244, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1055, -4.6289], dtype=torch.float16)","[tensor(0.3311, dtype=torch.float16), tensor(0.0098, dtype=torch.float16)]",0.00933,0.2037353515625,0.003233,2.887,-4.676,-2.337890625,0.8154
+EleutherAI/pythia-12b,0.1,0,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that statistical information is of great use in this debate.
+B. Melissa is very knowledgeable about the system of secondary education.
+C. Melissa thinks that kids attending schools lack subject knowledge. 
+D. Melissa thinks that statistical information is useless in this debate.
+Your answer:
+",Why has Bob responded like this?,A,target,Melissa thinks that statistical information is of great use in this debate.,incorrect_literal,A,"tensor([-0.9849, -1.1191], dtype=torch.float16)","[tensor(0.3735, dtype=torch.float16), tensor(0.3267, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1279, -1.5664], dtype=torch.float16)","[tensor(0.3237, dtype=torch.float16), tensor(0.2087, dtype=torch.float16)]",0.122,0.35009765625,0.06757,1.806,-2.104,-1.0517578125,0.7803
+EleutherAI/pythia-12b,0.1,0,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that statistical information is of great use in this debate.
+B. Melissa is very knowledgeable about the system of secondary education.
+C. Melissa thinks that kids attending schools lack subject knowledge. 
+D. Melissa thinks that statistical information is useless in this debate.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Melissa is very knowledgeable about the system of secondary education.,incorrect_associate,B,"tensor([-0.9849, -5.0078], dtype=torch.float16)","[tensor(0.3735, dtype=torch.float16), tensor(0.0067, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1279, -5.0977], dtype=torch.float16)","[tensor(0.3237, dtype=torch.float16), tensor(0.0061, dtype=torch.float16)]",0.002499,0.1900634765625,0.001978,1.264,-5.992,-2.99609375,0.9624
+EleutherAI/pythia-12b,0.1,0,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that statistical information is of great use in this debate.
+B. Melissa is very knowledgeable about the system of secondary education.
+C. Melissa thinks that kids attending schools lack subject knowledge. 
+D. Melissa thinks that statistical information is useless in this debate.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Melissa thinks that kids attending schools lack subject knowledge. ,incorrect_nonliteral,C,"tensor([-0.9849, -4.0078], dtype=torch.float16)","[tensor(0.3735, dtype=torch.float16), tensor(0.0182, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1279, -4.7148], dtype=torch.float16)","[tensor(0.3237, dtype=torch.float16), tensor(0.0090, dtype=torch.float16)]",0.00679,0.19580078125,0.002903,2.34,-4.992,-2.49609375,0.8545
+EleutherAI/pythia-12b,0.1,0,13,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mike and Melissa are arguing about the state of secondary education in their state. Mike states: ""Standardized test scores are up 42% in our schools."" Melissa responds:""And 47% of the kids didn't use the right pencil, 6% were chewing gum during the exam, and 32% yawned while completing their exams.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Melissa thinks that statistical information is of great use in this debate.
+B. Melissa is very knowledgeable about the system of secondary education.
+C. Melissa thinks that kids attending schools lack subject knowledge. 
+D. Melissa thinks that statistical information is useless in this debate.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Melissa thinks that statistical information is useless in this debate.,target,D,"tensor([-0.9849, -3.8691], dtype=torch.float16)","[tensor(0.3735, dtype=torch.float16), tensor(0.0209, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1279, -4.6211], dtype=torch.float16)","[tensor(0.3237, dtype=torch.float16), tensor(0.0098, dtype=torch.float16)]",0.007797,0.197265625,0.003185,2.447,-4.855,-2.427734375,0.844
+EleutherAI/pythia-12b,0.1,0,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He knows these people and their lifestyle very well.
+B. He thinks that people who ride subways have many good habits.
+C. He thinks that people who ride subways have many bad habits.
+D. He thinks that Rosy has no reason to believe that the strangers are nice.
+Your answer:
+",Why has Bob responded like this?,A,target,He knows these people and their lifestyle very well.,incorrect_associate,A,"tensor([-0.9897, -0.9985], dtype=torch.float16)","[tensor(0.3716, dtype=torch.float16), tensor(0.3684, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0547, -1.5811], dtype=torch.float16)","[tensor(0.3484, dtype=torch.float16), tensor(0.2058, dtype=torch.float16)]",0.1368,0.3701171875,0.0717,1.908,-1.988,-0.994140625,0.754
+EleutherAI/pythia-12b,0.1,0,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He knows these people and their lifestyle very well.
+B. He thinks that people who ride subways have many good habits.
+C. He thinks that people who ride subways have many bad habits.
+D. He thinks that Rosy has no reason to believe that the strangers are nice.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,He thinks that people who ride subways have many good habits.,incorrect_literal,B,"tensor([-0.9897, -4.5469], dtype=torch.float16)","[tensor(0.3716, dtype=torch.float16), tensor(0.0106, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0547, -5.8555], dtype=torch.float16)","[tensor(0.3484, dtype=torch.float16), tensor(0.0029, dtype=torch.float16)]",0.003937,0.1910400390625,0.0009985,3.943,-5.535,-2.767578125,0.801
+EleutherAI/pythia-12b,0.1,0,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He knows these people and their lifestyle very well.
+B. He thinks that people who ride subways have many good habits.
+C. He thinks that people who ride subways have many bad habits.
+D. He thinks that Rosy has no reason to believe that the strangers are nice.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,He thinks that people who ride subways have many bad habits.,incorrect_nonliteral,C,"tensor([-0.9897, -4.4844], dtype=torch.float16)","[tensor(0.3716, dtype=torch.float16), tensor(0.0113, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0547, -5.1367], dtype=torch.float16)","[tensor(0.3484, dtype=torch.float16), tensor(0.0059, dtype=torch.float16)]",0.004192,0.19140625,0.002048,2.047,-5.473,-2.736328125,0.884
+EleutherAI/pythia-12b,0.1,0,14,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Rosy notes to her friend Dan: ""Those strangers at the other end of the subway car are nice."" Dan replies:""Yeah, I bet they have only sweet dreams, eat organic food, do yoga every morning, plant trees, feed homeless, and read a lot of good books."" ","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He knows these people and their lifestyle very well.
+B. He thinks that people who ride subways have many good habits.
+C. He thinks that people who ride subways have many bad habits.
+D. He thinks that Rosy has no reason to believe that the strangers are nice.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,He thinks that Rosy has no reason to believe that the strangers are nice.,target,D,"tensor([-0.9897, -3.8105], dtype=torch.float16)","[tensor(0.3716, dtype=torch.float16), tensor(0.0221, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0547, -3.5801], dtype=torch.float16)","[tensor(0.3484, dtype=torch.float16), tensor(0.0279, dtype=torch.float16)]",0.008224,0.1968994140625,0.00971,0.8467,-4.8,-2.400390625,1.036
+EleutherAI/pythia-12b,0.1,0,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie considers giving the money to Berta. 
+B. Freddie can give Berta some money that he will get for his space expedition.
+C. Freddie is ready to give money to Berta without any questions.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has Bob responded like this?,A,target,Freddie considers giving the money to Berta. ,incorrect_associate,A,"tensor([-1.1631, -1.0146], dtype=torch.float16)","[tensor(0.3125, dtype=torch.float16), tensor(0.3625, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.3115, -1.5488], dtype=torch.float16)","[tensor(0.2695, dtype=torch.float16), tensor(0.2125, dtype=torch.float16)]",0.1133,0.33740234375,0.05728,1.978,-2.178,-1.0888671875,0.7617
+EleutherAI/pythia-12b,0.1,0,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie considers giving the money to Berta. 
+B. Freddie can give Berta some money that he will get for his space expedition.
+C. Freddie is ready to give money to Berta without any questions.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Freddie can give Berta some money that he will get for his space expedition.,incorrect_literal,B,"tensor([-1.1631, -4.1016], dtype=torch.float16)","[tensor(0.3125, dtype=torch.float16), tensor(0.0165, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.3115, -4.5625], dtype=torch.float16)","[tensor(0.2695, dtype=torch.float16), tensor(0.0104, dtype=torch.float16)]",0.00517,0.16455078125,0.002813,1.837,-5.266,-2.6328125,0.8965
+EleutherAI/pythia-12b,0.1,0,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie considers giving the money to Berta. 
+B. Freddie can give Berta some money that he will get for his space expedition.
+C. Freddie is ready to give money to Berta without any questions.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Freddie is ready to give money to Berta without any questions.,incorrect_nonliteral,C,"tensor([-1.1631, -4.0859], dtype=torch.float16)","[tensor(0.3125, dtype=torch.float16), tensor(0.0168, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.3115, -4.6016], dtype=torch.float16)","[tensor(0.2695, dtype=torch.float16), tensor(0.0100, dtype=torch.float16)]",0.00525,0.1646728515625,0.002705,1.94,-5.25,-2.625,0.8877
+EleutherAI/pythia-12b,0.1,0,15,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Berta often forgets to return money that she borrows from her friends. One day Berta asks her friend Freddie for $500. Freddie responds:""Of course, but only when I fly to space.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Freddie considers giving the money to Berta. 
+B. Freddie can give Berta some money that he will get for his space expedition.
+C. Freddie is ready to give money to Berta without any questions.
+D. Freddie will never give Berta any money.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Freddie will never give Berta any money.,target,D,"tensor([-1.1631, -3.8262], dtype=torch.float16)","[tensor(0.3125, dtype=torch.float16), tensor(0.0218, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.3115, -4.1875], dtype=torch.float16)","[tensor(0.2695, dtype=torch.float16), tensor(0.0152, dtype=torch.float16)]",0.00681,0.1671142578125,0.004093,1.663,-4.99,-2.494140625,0.9067
+EleutherAI/pythia-12b,0.1,0,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy knows that Mr. Smith's kids are kindergarteners.
+B. Katy agrees that Mr. Smith is a smart individual.
+C. Katy doubts that Mr. Smith is a smart individual.
+D. Katy thinks that Mr. Smith works at a kindergarten.
+Your answer:
+",Why has Bob responded like this?,A,target,Katy knows that Mr. Smith's kids are kindergarteners.,incorrect_associate,A,"tensor([-0.8662, -1.0283], dtype=torch.float16)","[tensor(0.4207, dtype=torch.float16), tensor(0.3577, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0156, -1.2998], dtype=torch.float16)","[tensor(0.3621, dtype=torch.float16), tensor(0.2727, dtype=torch.float16)]",0.1505,0.38916015625,0.09875,1.524,-1.895,-0.947265625,0.818
+EleutherAI/pythia-12b,0.1,0,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy knows that Mr. Smith's kids are kindergarteners.
+B. Katy agrees that Mr. Smith is a smart individual.
+C. Katy doubts that Mr. Smith is a smart individual.
+D. Katy thinks that Mr. Smith works at a kindergarten.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Katy agrees that Mr. Smith is a smart individual.,incorrect_literal,B,"tensor([-0.8662, -4.7305], dtype=torch.float16)","[tensor(0.4207, dtype=torch.float16), tensor(0.0088, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0156, -5.3555], dtype=torch.float16)","[tensor(0.3621, dtype=torch.float16), tensor(0.0047, dtype=torch.float16)]",0.00371,0.2147216796875,0.00171,2.17,-5.598,-2.798828125,0.8784
+EleutherAI/pythia-12b,0.1,0,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy knows that Mr. Smith's kids are kindergarteners.
+B. Katy agrees that Mr. Smith is a smart individual.
+C. Katy doubts that Mr. Smith is a smart individual.
+D. Katy thinks that Mr. Smith works at a kindergarten.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Katy doubts that Mr. Smith is a smart individual.,target,C,"tensor([-0.8662, -4.6602], dtype=torch.float16)","[tensor(0.4207, dtype=torch.float16), tensor(0.0095, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0156, -4.8086], dtype=torch.float16)","[tensor(0.3621, dtype=torch.float16), tensor(0.0082, dtype=torch.float16)]",0.003983,0.215087890625,0.002953,1.349,-5.527,-2.763671875,0.949
+EleutherAI/pythia-12b,0.1,0,16,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lars and Katy are discussing their CEO. Lars says: ""People regard our CEO Mr. Smith as a real intellectual."" Katy responds:""Sure, he is regarded as an intellectual by kindergarteners.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Katy knows that Mr. Smith's kids are kindergarteners.
+B. Katy agrees that Mr. Smith is a smart individual.
+C. Katy doubts that Mr. Smith is a smart individual.
+D. Katy thinks that Mr. Smith works at a kindergarten.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Katy thinks that Mr. Smith works at a kindergarten.,incorrect_nonliteral,D,"tensor([-0.8662, -3.5215], dtype=torch.float16)","[tensor(0.4207, dtype=torch.float16), tensor(0.0296, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0156, -4.1289], dtype=torch.float16)","[tensor(0.3621, dtype=torch.float16), tensor(0.0161, dtype=torch.float16)]",0.012436,0.22509765625,0.00583,2.133,-4.387,-2.193359375,0.8525
+EleutherAI/pythia-12b,0.1,0,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad thinks that Samantha's fiance is a saint.
+B. Samantha's dad thinks that John is too religious. 
+C. Samantha's dad is impressed with John's innocence.
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has Bob responded like this?,A,target,Samantha's dad thinks that Samantha's fiance is a saint.,incorrect_literal,A,"tensor([-1.1445, -0.9971], dtype=torch.float16)","[tensor(0.3184, dtype=torch.float16), tensor(0.3689, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.2402, -1.4463], dtype=torch.float16)","[tensor(0.2893, dtype=torch.float16), tensor(0.2355, dtype=torch.float16)]",0.11743,0.34375,0.0681,1.724,-2.14,-1.0703125,0.7964
+EleutherAI/pythia-12b,0.1,0,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad thinks that Samantha's fiance is a saint.
+B. Samantha's dad thinks that John is too religious. 
+C. Samantha's dad is impressed with John's innocence.
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Samantha's dad thinks that John is too religious. ,incorrect_nonliteral,B,"tensor([-1.1445, -3.8477], dtype=torch.float16)","[tensor(0.3184, dtype=torch.float16), tensor(0.0213, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.2402, -4.3594], dtype=torch.float16)","[tensor(0.2893, dtype=torch.float16), tensor(0.0128, dtype=torch.float16)]",0.00679,0.1697998046875,0.0037,1.835,-4.992,-2.49609375,0.891
+EleutherAI/pythia-12b,0.1,0,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad thinks that Samantha's fiance is a saint.
+B. Samantha's dad thinks that John is too religious. 
+C. Samantha's dad is impressed with John's innocence.
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Samantha's dad is impressed with John's innocence.,incorrect_associate,C,"tensor([-1.1445, -3.8633], dtype=torch.float16)","[tensor(0.3184, dtype=torch.float16), tensor(0.0210, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.2402, -3.9922], dtype=torch.float16)","[tensor(0.2893, dtype=torch.float16), tensor(0.0185, dtype=torch.float16)]",0.006683,0.169677734375,0.00534,1.251,-5.008,-2.50390625,0.9565
+EleutherAI/pythia-12b,0.1,0,17,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Samantha is talking with her dad about her fiance. Samantha notes: ""John is an innocent person."" Her dad replies:""Undoubtedly, as innocent as a saint.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Samantha's dad thinks that Samantha's fiance is a saint.
+B. Samantha's dad thinks that John is too religious. 
+C. Samantha's dad is impressed with John's innocence.
+D. Samantha's dad thinks that Samantha has an incorrect view of her fiance.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Samantha's dad thinks that Samantha has an incorrect view of her fiance.,target,D,"tensor([-1.1445, -3.6523], dtype=torch.float16)","[tensor(0.3184, dtype=torch.float16), tensor(0.0259, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.2402, -3.8984], dtype=torch.float16)","[tensor(0.2893, dtype=torch.float16), tensor(0.0203, dtype=torch.float16)]",0.008255,0.172119140625,0.005867,1.407,-4.797,-2.3984375,0.933
+EleutherAI/pythia-12b,0.1,0,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is not very well educated.
+B. Bianka tries to make Lenny angry with her.
+C. Bianka does not want Lenny to know her address.
+
+D. Bianka is an alien.
+Your answer:
+",Why has Bob responded like this?,A,target,Bianka is not very well educated.,incorrect_nonliteral,A,"tensor([-0.9312, -1.0029], dtype=torch.float16)","[tensor(0.3940, dtype=torch.float16), tensor(0.3667, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9189, -1.3135], dtype=torch.float16)","[tensor(0.3989, dtype=torch.float16), tensor(0.2688, dtype=torch.float16)]",0.1445,0.38037109375,0.10724,1.348,-1.934,-0.966796875,0.866
+EleutherAI/pythia-12b,0.1,0,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is not very well educated.
+B. Bianka tries to make Lenny angry with her.
+C. Bianka does not want Lenny to know her address.
+
+D. Bianka is an alien.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Bianka tries to make Lenny angry with her.,incorrect_associate,B,"tensor([-0.9312, -3.8691], dtype=torch.float16)","[tensor(0.3940, dtype=torch.float16), tensor(0.0209, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9189, -3.9922], dtype=torch.float16)","[tensor(0.3989, dtype=torch.float16), tensor(0.0185, dtype=torch.float16)]",0.008224,0.20751953125,0.007366,1.116,-4.8,-2.400390625,0.9775
+EleutherAI/pythia-12b,0.1,0,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is not very well educated.
+B. Bianka tries to make Lenny angry with her.
+C. Bianka does not want Lenny to know her address.
+
+D. Bianka is an alien.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,"Bianka does not want Lenny to know her address.
+",target,C,"tensor([-0.9312, -4.3633], dtype=torch.float16)","[tensor(0.3940, dtype=torch.float16), tensor(0.0127, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9189, -4.8203], dtype=torch.float16)","[tensor(0.3989, dtype=torch.float16), tensor(0.0081, dtype=torch.float16)]",0.005016,0.203369140625,0.003218,1.559,-5.293,-2.646484375,0.9224
+EleutherAI/pythia-12b,0.1,0,18,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Lenny is saying goodbye to his date Bianka. Lenny asks Bianka: ""Where do you live?"" Bianka responds:""I live on the moon.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Bianka is not very well educated.
+B. Bianka tries to make Lenny angry with her.
+C. Bianka does not want Lenny to know her address.
+
+D. Bianka is an alien.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Bianka is an alien.,incorrect_literal,D,"tensor([-0.9312, -4.0742], dtype=torch.float16)","[tensor(0.3940, dtype=torch.float16), tensor(0.0170, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9189, -4.0312], dtype=torch.float16)","[tensor(0.3989, dtype=torch.float16), tensor(0.0177, dtype=torch.float16)]",0.0067,0.20556640625,0.00708,0.9463,-5.004,-2.501953125,1.011
+EleutherAI/pythia-12b,0.1,0,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly cannot count very well.
+B. Kelly has made a list of books to read that contains one million titles.
+C. Kelly is a pathological liar.
+D. Kelly plans to devote a lot of time to reading this summer.
+Your answer:
+",Why has Bob responded like this?,A,target,Kelly cannot count very well.,incorrect_nonliteral,A,"tensor([-0.9917, -1.2100], dtype=torch.float16)","[tensor(0.3708, dtype=torch.float16), tensor(0.2981, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9795, -1.4746], dtype=torch.float16)","[tensor(0.3755, dtype=torch.float16), tensor(0.2289, dtype=torch.float16)]",0.11053,0.33447265625,0.08594,1.286,-2.201,-1.1005859375,0.8975
+EleutherAI/pythia-12b,0.1,0,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly cannot count very well.
+B. Kelly has made a list of books to read that contains one million titles.
+C. Kelly is a pathological liar.
+D. Kelly plans to devote a lot of time to reading this summer.
+Your answer:
+",Why has Bob responded like this?,B,incorrect_literal,Kelly has made a list of books to read that contains one million titles.,incorrect_literal,B,"tensor([-0.9917, -4.6250], dtype=torch.float16)","[tensor(0.3708, dtype=torch.float16), tensor(0.0098, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9795, -5.6719], dtype=torch.float16)","[tensor(0.3755, dtype=torch.float16), tensor(0.0034, dtype=torch.float16)]",0.003635,0.1903076171875,0.001292,2.812,-5.617,-2.80859375,0.844
+EleutherAI/pythia-12b,0.1,0,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly cannot count very well.
+B. Kelly has made a list of books to read that contains one million titles.
+C. Kelly is a pathological liar.
+D. Kelly plans to devote a lot of time to reading this summer.
+Your answer:
+",Why has Bob responded like this?,C,incorrect_nonliteral,Kelly is a pathological liar.,incorrect_associate,C,"tensor([-0.9917, -4.7969], dtype=torch.float16)","[tensor(0.3708, dtype=torch.float16), tensor(0.0083, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9795, -4.9141], dtype=torch.float16)","[tensor(0.3755, dtype=torch.float16), tensor(0.0073, dtype=torch.float16)]",0.003061,0.1895751953125,0.002758,1.11,-5.79,-2.89453125,0.982
+EleutherAI/pythia-12b,0.1,0,19,maxims,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Annie and Kelly are discussing their plans for summer. Annie asks Kelly: ""How many books do you plan to read this summer?"" Kelly responds:""A million.""","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Kelly cannot count very well.
+B. Kelly has made a list of books to read that contains one million titles.
+C. Kelly is a pathological liar.
+D. Kelly plans to devote a lot of time to reading this summer.
+Your answer:
+",Why has Bob responded like this?,D,incorrect_associate,Kelly plans to devote a lot of time to reading this summer.,target,D,"tensor([-0.9917, -4.0078], dtype=torch.float16)","[tensor(0.3708, dtype=torch.float16), tensor(0.0182, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9795, -4.7266], dtype=torch.float16)","[tensor(0.3755, dtype=torch.float16), tensor(0.0089, dtype=torch.float16)]",0.00674,0.1944580078125,0.003326,2.027,-5.0,-2.5,0.876
