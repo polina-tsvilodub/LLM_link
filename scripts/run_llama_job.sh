@@ -45,16 +45,19 @@ array2=("A,B" "A,B,C,D" "A,B,C,D,E" "A,B,C,D" "A,B,C,D" "A,B,C,D" "A,B,C,D,E")
 # and questions 
 array3=("Is this story coherent or not?" "" "" "" "" "Why has {} responded like this?" "")
 # models
-hf_models=("EleutherAI/pythia-12b" "microsoft/phi-2" "mistralai/Mistral-7B-Instruct-v0.2") #  "mistralai/Mixtral-8x7B-v0.1")
+hf_models=("EleutherAI/pythia-12b" "microsoft/phi-2") #  "mistralai/Mistral-7B-Instruct-v0.2") #  "mistralai/Mixtral-8x7B-v0.1")
 
-for i in ${!array[*]}; do
-    echo "phenomenon: ${array[$i]}"
-    echo "options: ${array2[$i]}"
-    python3 -u score_completions.py \
-        --phenomenon=${array[$i]} \
-        --question="${array3[$i]}" \
-        --model_name="${hf_models[$i]}" \
-        --option_numbering="${array2[$i]}" \
-        --use_labels_only=True \
-        --n_seeds=1
+for i in ${!hf_models[*]}; do
+    echo "model: ${hf_models[$i]}"
+    for j in ${!array[*]}; do
+        echo "phenomenon: ${array[$j]}"
+        echo "options: ${array2[$j]}"
+        python3 -u score_completions.py \
+            --phenomenon=${array[$j]} \
+            --question="${array3[$j]}" \
+            --model_name="${hf_models[$i]}" \
+            --option_numbering="${array2[$j]}" \
+            --use_labels_only=True \
+            --n_seeds=1
+    done
 done

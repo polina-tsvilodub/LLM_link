@@ -33,8 +33,10 @@ def load_model(model_name):
             model = T5ForConditionalGeneration.from_pretrained(model_name)
         else:
             # for LLaMA 2
-            model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', torch_dtype=torch.float16)
-
+            if "phi-2" in model_name:
+                model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', torch_dtype=torch.float16, trust_remote_code=True)
+            else:
+                model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', torch_dtype=torch.float16)
     return tokenizer, model
 
 def get_mlm_pl(

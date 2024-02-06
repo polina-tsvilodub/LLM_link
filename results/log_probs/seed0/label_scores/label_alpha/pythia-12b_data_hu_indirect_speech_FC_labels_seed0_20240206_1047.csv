@@ -1,0 +1,886 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+EleutherAI/pythia-12b,0.1,0,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He got this shirt on sale.
+B. He wants his wife to iron his shirt.
+C. He is unhappy that his shirt is wrinkled.
+D. He got his shoes on sale.
+
+Your answer:
+",,A,target,He got this shirt on sale.,distractor_lexical_overlap,A,"tensor([-0.8159, -1.4590], dtype=torch.float16)","[tensor(0.4421, dtype=torch.float16), tensor(0.2324, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.8921, -1.6250], dtype=torch.float16)","[tensor(0.4099, dtype=torch.float16), tensor(0.1969, dtype=torch.float16)]",0.1028,0.33740234375,0.0807,1.273,-2.275,-1.1376953125,0.904
+EleutherAI/pythia-12b,0.1,0,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He got this shirt on sale.
+B. He wants his wife to iron his shirt.
+C. He is unhappy that his shirt is wrinkled.
+D. He got his shoes on sale.
+
+Your answer:
+",,B,competitor,He wants his wife to iron his shirt.,target,B,"tensor([-0.8159, -3.2402], dtype=torch.float16)","[tensor(0.4421, dtype=torch.float16), tensor(0.0392, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.8921, -3.3672], dtype=torch.float16)","[tensor(0.4099, dtype=torch.float16), tensor(0.0345, dtype=torch.float16)]",0.01732,0.2406005859375,0.01414,1.225,-4.055,-2.02734375,0.952
+EleutherAI/pythia-12b,0.1,0,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He got this shirt on sale.
+B. He wants his wife to iron his shirt.
+C. He is unhappy that his shirt is wrinkled.
+D. He got his shoes on sale.
+
+Your answer:
+",,C,distractor_lexical_overlap,He is unhappy that his shirt is wrinkled.,competitor,C,"tensor([-0.8159, -3.2324], dtype=torch.float16)","[tensor(0.4421, dtype=torch.float16), tensor(0.0395, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.8921, -3.3750], dtype=torch.float16)","[tensor(0.4099, dtype=torch.float16), tensor(0.0342, dtype=torch.float16)]",0.01744,0.2408447265625,0.01402,1.244,-4.047,-2.0234375,0.9487
+EleutherAI/pythia-12b,0.1,0,1,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Paul has to go to an interview and he's running late. While he's cleaning his shoes he says to his wife, Jane, ""I want to wear that blue shirt, but it's very creased"". What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He got this shirt on sale.
+B. He wants his wife to iron his shirt.
+C. He is unhappy that his shirt is wrinkled.
+D. He got his shoes on sale.
+
+Your answer:
+",,D,distractor_associative,"He got his shoes on sale.
+",distractor_associative,D,"tensor([-0.8159, -2.8184], dtype=torch.float16)","[tensor(0.4421, dtype=torch.float16), tensor(0.0597, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.8921, -3.0625], dtype=torch.float16)","[tensor(0.4099, dtype=torch.float16), tensor(0.0468, dtype=torch.float16)]",0.0264,0.2509765625,0.01918,1.376,-3.635,-1.8173828125,0.919
+EleutherAI/pythia-12b,0.1,0,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want Cindy to start painting.
+B. He has some doubts whether Cindy should be painting.
+C. He wants Cindy to create a sculpture.
+D. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,A,target,He does not want Cindy to start painting.,target,A,"tensor([-1.0303, -1.2344], dtype=torch.float16)","[tensor(0.3569, dtype=torch.float16), tensor(0.2910, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1621, -1.5498], dtype=torch.float16)","[tensor(0.3127, dtype=torch.float16), tensor(0.2123, dtype=torch.float16)]",0.1039,0.323974609375,0.0664,1.564,-2.266,-1.1328125,0.836
+EleutherAI/pythia-12b,0.1,0,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want Cindy to start painting.
+B. He has some doubts whether Cindy should be painting.
+C. He wants Cindy to create a sculpture.
+D. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,B,competitor,He has some doubts whether Cindy should be painting.,competitor,B,"tensor([-1.0303, -4.5625], dtype=torch.float16)","[tensor(0.3569, dtype=torch.float16), tensor(0.0104, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1621, -4.8398], dtype=torch.float16)","[tensor(0.3127, dtype=torch.float16), tensor(0.0079, dtype=torch.float16)]",0.003725,0.1837158203125,0.002474,1.506,-5.594,-2.796875,0.932
+EleutherAI/pythia-12b,0.1,0,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want Cindy to start painting.
+B. He has some doubts whether Cindy should be painting.
+C. He wants Cindy to create a sculpture.
+D. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,C,distractor_lexical_overlap,He wants Cindy to create a sculpture.,distractor_associative,C,"tensor([-1.0303, -4.3359], dtype=torch.float16)","[tensor(0.3569, dtype=torch.float16), tensor(0.0131, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1621, -4.8555], dtype=torch.float16)","[tensor(0.3127, dtype=torch.float16), tensor(0.0078, dtype=torch.float16)]",0.004673,0.18505859375,0.002436,1.919,-5.367,-2.68359375,0.892
+EleutherAI/pythia-12b,0.1,0,2,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy wanted to paint a picture. She got her paints, paper and brushes ready. She has a meeting to go to in 10 minutes. Her dad said to her, ""I am not sure that now is the best time for painting."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He does not want Cindy to start painting.
+B. He has some doubts whether Cindy should be painting.
+C. He wants Cindy to create a sculpture.
+D. He wants Cindy to paint a picture for the meeting.
+Your answer:
+",,D,distractor_associative,He wants Cindy to paint a picture for the meeting.,distractor_lexical_overlap,D,"tensor([-1.0303, -3.7734], dtype=torch.float16)","[tensor(0.3569, dtype=torch.float16), tensor(0.0230, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1621, -4.3086], dtype=torch.float16)","[tensor(0.3127, dtype=torch.float16), tensor(0.0135, dtype=torch.float16)]",0.0082,0.18994140625,0.004208,1.949,-4.805,-2.40234375,0.8784
+EleutherAI/pythia-12b,0.1,0,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy might help her clean up the house.
+B. Cindy forgot to purchase a new toy for her brother.
+C. Cindy's brother creates a lot of mess.
+D. Cindy forgot to invite her brother to the movies.
+Your answer:
+",,A,target,Cindy might help her clean up the house.,target,A,"tensor([-1.0479, -1.1279], dtype=torch.float16)","[tensor(0.3506, dtype=torch.float16), tensor(0.3237, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9609, -1.4688], dtype=torch.float16)","[tensor(0.3826, dtype=torch.float16), tensor(0.2302, dtype=torch.float16)]",0.1135,0.337158203125,0.0881,1.289,-2.176,-1.087890625,0.8955
+EleutherAI/pythia-12b,0.1,0,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy might help her clean up the house.
+B. Cindy forgot to purchase a new toy for her brother.
+C. Cindy's brother creates a lot of mess.
+D. Cindy forgot to invite her brother to the movies.
+Your answer:
+",,B,competitor,Cindy forgot to purchase a new toy for her brother.,distractor_lexical_overlap,B,"tensor([-1.0479, -4.3242], dtype=torch.float16)","[tensor(0.3506, dtype=torch.float16), tensor(0.0132, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9609, -5.3359], dtype=torch.float16)","[tensor(0.3826, dtype=torch.float16), tensor(0.0048, dtype=torch.float16)]",0.004642,0.181884765625,0.001842,2.521,-5.37,-2.685546875,0.853
+EleutherAI/pythia-12b,0.1,0,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy might help her clean up the house.
+B. Cindy forgot to purchase a new toy for her brother.
+C. Cindy's brother creates a lot of mess.
+D. Cindy forgot to invite her brother to the movies.
+Your answer:
+",,C,distractor_lexical_overlap,Cindy's brother creates a lot of mess.,competitor,C,"tensor([-1.0479, -4.2539], dtype=torch.float16)","[tensor(0.3506, dtype=torch.float16), tensor(0.0142, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9609, -5.0703], dtype=torch.float16)","[tensor(0.3826, dtype=torch.float16), tensor(0.0063, dtype=torch.float16)]",0.004982,0.182373046875,0.002401,2.074,-5.3,-2.650390625,0.879
+EleutherAI/pythia-12b,0.1,0,3,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy asked her mom to take her to the movies. Her mom responds, ""Your little brother's toys are all over the house. I don't have time to clean up."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy might help her clean up the house.
+B. Cindy forgot to purchase a new toy for her brother.
+C. Cindy's brother creates a lot of mess.
+D. Cindy forgot to invite her brother to the movies.
+Your answer:
+",,D,distractor_associative,Cindy forgot to invite her brother to the movies.,distractor_associative,D,"tensor([-1.0479, -3.5566], dtype=torch.float16)","[tensor(0.3506, dtype=torch.float16), tensor(0.0285, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9609, -4.5781], dtype=torch.float16)","[tensor(0.3826, dtype=torch.float16), tensor(0.0103, dtype=torch.float16)]",0.01,0.1895751953125,0.003933,2.543,-4.605,-2.302734375,0.8315
+EleutherAI/pythia-12b,0.1,0,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wonders whether Matt knows something else interesting that he can share with her.
+B. She wishes that he stopped telling her about the movie.
+C. She wishes to build a kite with Matt.
+D. She wishes to have a date with Matt.
+Your answer:
+",,A,target,She wonders whether Matt knows something else interesting that he can share with her.,competitor,A,"tensor([-0.9058, -1.2822], dtype=torch.float16)","[tensor(0.4043, dtype=torch.float16), tensor(0.2773, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9941, -1.6709], dtype=torch.float16)","[tensor(0.3701, dtype=torch.float16), tensor(0.1881, dtype=torch.float16)]",0.1121,0.3408203125,0.06964,1.61,-2.188,-1.09375,0.8213
+EleutherAI/pythia-12b,0.1,0,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wonders whether Matt knows something else interesting that he can share with her.
+B. She wishes that he stopped telling her about the movie.
+C. She wishes to build a kite with Matt.
+D. She wishes to have a date with Matt.
+Your answer:
+",,B,competitor,She wishes that he stopped telling her about the movie.,target,B,"tensor([-0.9058, -4.9141], dtype=torch.float16)","[tensor(0.4043, dtype=torch.float16), tensor(0.0073, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9941, -5.7344], dtype=torch.float16)","[tensor(0.3701, dtype=torch.float16), tensor(0.0032, dtype=torch.float16)]",0.00297,0.205810546875,0.001197,2.48,-5.82,-2.91015625,0.865
+EleutherAI/pythia-12b,0.1,0,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wonders whether Matt knows something else interesting that he can share with her.
+B. She wishes that he stopped telling her about the movie.
+C. She wishes to build a kite with Matt.
+D. She wishes to have a date with Matt.
+Your answer:
+",,C,distractor_lexical_overlap,She wishes to build a kite with Matt.,distractor_associative,C,"tensor([-0.9058, -4.5703], dtype=torch.float16)","[tensor(0.4043, dtype=torch.float16), tensor(0.0104, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9941, -4.9219], dtype=torch.float16)","[tensor(0.3701, dtype=torch.float16), tensor(0.0073, dtype=torch.float16)]",0.004185,0.207275390625,0.002697,1.552,-5.477,-2.73828125,0.926
+EleutherAI/pythia-12b,0.1,0,4,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Matt was telling Cindy about a scary movie that he saw. Cindy was listening to him for a while and then responded, ""Can we talk about something else?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wonders whether Matt knows something else interesting that he can share with her.
+B. She wishes that he stopped telling her about the movie.
+C. She wishes to build a kite with Matt.
+D. She wishes to have a date with Matt.
+Your answer:
+",,D,distractor_associative,She wishes to have a date with Matt.,distractor_lexical_overlap,D,"tensor([-0.9058, -3.9375], dtype=torch.float16)","[tensor(0.4043, dtype=torch.float16), tensor(0.0195, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9941, -3.9902], dtype=torch.float16)","[tensor(0.3701, dtype=torch.float16), tensor(0.0185, dtype=torch.float16)]",0.00788,0.2119140625,0.006844,1.151,-4.844,-2.421875,0.9717
+EleutherAI/pythia-12b,0.1,0,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy should meet Matt's other friends.
+B. Cindy should stop teasing him if she wants to be his friend.
+C. Cindy should meet a new principal.
+D. His friends are very friendly.
+Your answer:
+",,A,target,Cindy should meet Matt's other friends.,distractor_lexical_overlap,A,"tensor([-0.9238, -1.4102], dtype=torch.float16)","[tensor(0.3970, dtype=torch.float16), tensor(0.2441, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0410, -1.6064], dtype=torch.float16)","[tensor(0.3530, dtype=torch.float16), tensor(0.2006, dtype=torch.float16)]",0.0969,0.320556640625,0.0708,1.369,-2.334,-1.1669921875,0.8813
+EleutherAI/pythia-12b,0.1,0,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy should meet Matt's other friends.
+B. Cindy should stop teasing him if she wants to be his friend.
+C. Cindy should meet a new principal.
+D. His friends are very friendly.
+Your answer:
+",,B,competitor,Cindy should stop teasing him if she wants to be his friend.,target,B,"tensor([-0.9238, -4.5195], dtype=torch.float16)","[tensor(0.3970, dtype=torch.float16), tensor(0.0109, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0410, -5.2461], dtype=torch.float16)","[tensor(0.3530, dtype=torch.float16), tensor(0.0053, dtype=torch.float16)]",0.004326,0.2039794921875,0.00186,2.326,-5.445,-2.72265625,0.8657
+EleutherAI/pythia-12b,0.1,0,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy should meet Matt's other friends.
+B. Cindy should stop teasing him if she wants to be his friend.
+C. Cindy should meet a new principal.
+D. His friends are very friendly.
+Your answer:
+",,C,distractor_lexical_overlap,Cindy should meet a new principal.,distractor_associative,C,"tensor([-0.9238, -4.6055], dtype=torch.float16)","[tensor(0.3970, dtype=torch.float16), tensor(0.0100, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0410, -4.8242], dtype=torch.float16)","[tensor(0.3530, dtype=torch.float16), tensor(0.0080, dtype=torch.float16)]",0.003967,0.2034912109375,0.002836,1.398,-5.53,-2.765625,0.943
+EleutherAI/pythia-12b,0.1,0,5,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy and Matt had been good friends for a long time. Recently Cindy started teasing Matt a lot every day. He got mad and said, ""My friends do not say hurtful things to me."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Cindy should meet Matt's other friends.
+B. Cindy should stop teasing him if she wants to be his friend.
+C. Cindy should meet a new principal.
+D. His friends are very friendly.
+Your answer:
+",,D,distractor_associative,His friends are very friendly.,competitor,D,"tensor([-0.9238, -4.0430], dtype=torch.float16)","[tensor(0.3970, dtype=torch.float16), tensor(0.0175, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0410, -4.3242], dtype=torch.float16)","[tensor(0.3530, dtype=torch.float16), tensor(0.0132, dtype=torch.float16)]",0.006966,0.207275390625,0.004677,1.489,-4.97,-2.484375,0.926
+EleutherAI/pythia-12b,0.1,0,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He likes to live in the city.
+B. All of the boys were not very cautious.
+C. He likes to live in the wilderness.
+D. It was not his fault.
+Your answer:
+",,A,target,He likes to live in the city.,distractor_associative,A,"tensor([-0.9683, -1.1543], dtype=torch.float16)","[tensor(0.3796, dtype=torch.float16), tensor(0.3152, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-0.9634, -1.4014], dtype=torch.float16)","[tensor(0.3816, dtype=torch.float16), tensor(0.2462, dtype=torch.float16)]",0.1196,0.347412109375,0.09393,1.273,-2.123,-1.0615234375,0.8975
+EleutherAI/pythia-12b,0.1,0,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He likes to live in the city.
+B. All of the boys were not very cautious.
+C. He likes to live in the wilderness.
+D. It was not his fault.
+Your answer:
+",,B,competitor,All of the boys were not very cautious.,competitor,B,"tensor([-0.9683, -4.4258], dtype=torch.float16)","[tensor(0.3796, dtype=torch.float16), tensor(0.0120, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-0.9634, -4.9336], dtype=torch.float16)","[tensor(0.3816, dtype=torch.float16), tensor(0.0072, dtype=torch.float16)]",0.004543,0.19580078125,0.002748,1.653,-5.395,-2.697265625,0.9146
+EleutherAI/pythia-12b,0.1,0,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He likes to live in the city.
+B. All of the boys were not very cautious.
+C. He likes to live in the wilderness.
+D. It was not his fault.
+Your answer:
+",,C,distractor_lexical_overlap,He likes to live in the wilderness.,distractor_lexical_overlap,C,"tensor([-0.9683, -4.6445], dtype=torch.float16)","[tensor(0.3796, dtype=torch.float16), tensor(0.0096, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-0.9634, -4.5430], dtype=torch.float16)","[tensor(0.3816, dtype=torch.float16), tensor(0.0106, dtype=torch.float16)]",0.003649,0.194580078125,0.004063,0.898,-5.613,-2.806640625,1.02
+EleutherAI/pythia-12b,0.1,0,6,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The boys were playing around. Dan accidentally tripped Scott. Scott got very angry about falling. Dan said: ""Everybody's being wild."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He likes to live in the city.
+B. All of the boys were not very cautious.
+C. He likes to live in the wilderness.
+D. It was not his fault.
+Your answer:
+",,D,distractor_associative,It was not his fault.,target,D,"tensor([-0.9683, -3.8730], dtype=torch.float16)","[tensor(0.3796, dtype=torch.float16), tensor(0.0208, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-0.9634, -4.3789], dtype=torch.float16)","[tensor(0.3816, dtype=torch.float16), tensor(0.0125, dtype=torch.float16)]",0.0079,0.2001953125,0.004787,1.649,-4.84,-2.419921875,0.906
+EleutherAI/pythia-12b,0.1,0,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to learn how to make these cookies.
+B. He wants Kate to give him some cookies.
+C. He wants to learn how to make a roast beef.
+D. She is a great baker who makes good cookies.
+Your answer:
+",,A,target,He wants to learn how to make these cookies.,distractor_lexical_overlap,A,"tensor([-1.2158, -1.0215], dtype=torch.float16)","[tensor(0.2964, dtype=torch.float16), tensor(0.3601, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1172, -1.5684], dtype=torch.float16)","[tensor(0.3271, dtype=torch.float16), tensor(0.2084, dtype=torch.float16)]",0.10675,0.328125,0.0682,1.565,-2.238,-1.119140625,0.8335
+EleutherAI/pythia-12b,0.1,0,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to learn how to make these cookies.
+B. He wants Kate to give him some cookies.
+C. He wants to learn how to make a roast beef.
+D. She is a great baker who makes good cookies.
+Your answer:
+",,B,competitor,He wants Kate to give him some cookies.,target,B,"tensor([-1.2158, -4.4375], dtype=torch.float16)","[tensor(0.2964, dtype=torch.float16), tensor(0.0118, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1172, -5.3750], dtype=torch.float16)","[tensor(0.3271, dtype=torch.float16), tensor(0.0046, dtype=torch.float16)]",0.003506,0.154052734375,0.001515,2.312,-5.652,-2.826171875,0.8706
+EleutherAI/pythia-12b,0.1,0,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to learn how to make these cookies.
+B. He wants Kate to give him some cookies.
+C. He wants to learn how to make a roast beef.
+D. She is a great baker who makes good cookies.
+Your answer:
+",,C,distractor_lexical_overlap,He wants to learn how to make a roast beef.,distractor_associative,C,"tensor([-1.2158, -4.2578], dtype=torch.float16)","[tensor(0.2964, dtype=torch.float16), tensor(0.0142, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1172, -4.6094], dtype=torch.float16)","[tensor(0.3271, dtype=torch.float16), tensor(0.0100, dtype=torch.float16)]",0.004196,0.1552734375,0.003258,1.288,-5.473,-2.736328125,0.9556
+EleutherAI/pythia-12b,0.1,0,7,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Kate brought some cookies to school. Matt has a sweet tooth. He says, ""Your cookies smell delicious. They must be really tasty."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to learn how to make these cookies.
+B. He wants Kate to give him some cookies.
+C. He wants to learn how to make a roast beef.
+D. She is a great baker who makes good cookies.
+Your answer:
+",,D,distractor_associative,She is a great baker who makes good cookies.,competitor,D,"tensor([-1.2158, -3.7012], dtype=torch.float16)","[tensor(0.2964, dtype=torch.float16), tensor(0.0247, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1172, -4.8672], dtype=torch.float16)","[tensor(0.3271, dtype=torch.float16), tensor(0.0077, dtype=torch.float16)]",0.007317,0.1605224609375,0.002518,2.906,-4.918,-2.458984375,0.822
+EleutherAI/pythia-12b,0.1,0,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants kids to work on a project about dinosaurs.
+B. Matt is unfair to the teacher.
+C. She wants kids to work on a project about fairness.
+D. She wants him to stop talking.
+Your answer:
+",,A,target,She wants kids to work on a project about dinosaurs.,distractor_associative,A,"tensor([-0.9556, -1.3213], dtype=torch.float16)","[tensor(0.3845, dtype=torch.float16), tensor(0.2668, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1084, -1.5244], dtype=torch.float16)","[tensor(0.3301, dtype=torch.float16), tensor(0.2178, dtype=torch.float16)]",0.1026,0.32568359375,0.0719,1.427,-2.277,-1.138671875,0.8647
+EleutherAI/pythia-12b,0.1,0,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants kids to work on a project about dinosaurs.
+B. Matt is unfair to the teacher.
+C. She wants kids to work on a project about fairness.
+D. She wants him to stop talking.
+Your answer:
+",,B,competitor,Matt is unfair to the teacher.,competitor,B,"tensor([-0.9556, -4.8203], dtype=torch.float16)","[tensor(0.3845, dtype=torch.float16), tensor(0.0081, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1084, -5.2734], dtype=torch.float16)","[tensor(0.3301, dtype=torch.float16), tensor(0.0051, dtype=torch.float16)]",0.003101,0.1962890625,0.001692,1.833,-5.777,-2.888671875,0.9053
+EleutherAI/pythia-12b,0.1,0,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants kids to work on a project about dinosaurs.
+B. Matt is unfair to the teacher.
+C. She wants kids to work on a project about fairness.
+D. She wants him to stop talking.
+Your answer:
+",,C,distractor_lexical_overlap,She wants kids to work on a project about fairness.,distractor_lexical_overlap,C,"tensor([-0.9556, -4.5938], dtype=torch.float16)","[tensor(0.3845, dtype=torch.float16), tensor(0.0101, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1084, -4.8281], dtype=torch.float16)","[tensor(0.3301, dtype=torch.float16), tensor(0.0080, dtype=torch.float16)]",0.003891,0.197265625,0.002642,1.473,-5.55,-2.775390625,0.935
+EleutherAI/pythia-12b,0.1,0,8,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+The teacher said that she was feeling sick today and asked the kids to work in groups quietly. Matt kept talking loudly with his friends. The teacher said, ""Matt, I think you are being unfair to me now."" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants kids to work on a project about dinosaurs.
+B. Matt is unfair to the teacher.
+C. She wants kids to work on a project about fairness.
+D. She wants him to stop talking.
+Your answer:
+",,D,distractor_associative,She wants him to stop talking.,target,D,"tensor([-0.9556, -3.8750], dtype=torch.float16)","[tensor(0.3845, dtype=torch.float16), tensor(0.0208, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1084, -4.3516], dtype=torch.float16)","[tensor(0.3301, dtype=torch.float16), tensor(0.0129, dtype=torch.float16)]",0.00798,0.20263671875,0.004253,1.876,-4.832,-2.416015625,0.885
+EleutherAI/pythia-12b,0.1,0,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is too tired and the girls are making a lot of noise.
+B. He wants the girls to be quiet.
+C. He wants the girls to listen to some music.
+D. He wants the girls to go shopping.
+Your answer:
+",,A,target,He is too tired and the girls are making a lot of noise.,competitor,A,"tensor([-1.0996, -1.2822], dtype=torch.float16)","[tensor(0.3330, dtype=torch.float16), tensor(0.2773, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1514, -1.6025], dtype=torch.float16)","[tensor(0.3162, dtype=torch.float16), tensor(0.2014, dtype=torch.float16)]",0.09235,0.30517578125,0.06366,1.45,-2.383,-1.19140625,0.865
+EleutherAI/pythia-12b,0.1,0,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is too tired and the girls are making a lot of noise.
+B. He wants the girls to be quiet.
+C. He wants the girls to listen to some music.
+D. He wants the girls to go shopping.
+Your answer:
+",,B,competitor,He wants the girls to be quiet.,target,B,"tensor([-1.0996, -5.0469], dtype=torch.float16)","[tensor(0.3330, dtype=torch.float16), tensor(0.0064, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1514, -5.7969], dtype=torch.float16)","[tensor(0.3162, dtype=torch.float16), tensor(0.0030, dtype=torch.float16)]",0.00214,0.169677734375,0.00096,2.23,-6.15,-3.07421875,0.885
+EleutherAI/pythia-12b,0.1,0,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is too tired and the girls are making a lot of noise.
+B. He wants the girls to be quiet.
+C. He wants the girls to listen to some music.
+D. He wants the girls to go shopping.
+Your answer:
+",,C,distractor_lexical_overlap,He wants the girls to listen to some music.,distractor_lexical_overlap,C,"tensor([-1.0996, -4.3594], dtype=torch.float16)","[tensor(0.3330, dtype=torch.float16), tensor(0.0128, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1514, -4.9609], dtype=torch.float16)","[tensor(0.3162, dtype=torch.float16), tensor(0.0070, dtype=torch.float16)]",0.004257,0.1728515625,0.002216,1.921,-5.46,-2.73046875,0.893
+EleutherAI/pythia-12b,0.1,0,9,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Cindy was having a slumber party with two of her friends. It was very late, but they kept talking and laughing. Her dad came in and said, ""I would like to go to bed but it is too loud in here."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is too tired and the girls are making a lot of noise.
+B. He wants the girls to be quiet.
+C. He wants the girls to listen to some music.
+D. He wants the girls to go shopping.
+Your answer:
+",,D,distractor_associative,He wants the girls to go shopping.,distractor_associative,D,"tensor([-1.0996, -4.2109], dtype=torch.float16)","[tensor(0.3330, dtype=torch.float16), tensor(0.0148, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1514, -3.9844], dtype=torch.float16)","[tensor(0.3162, dtype=torch.float16), tensor(0.0186, dtype=torch.float16)]",0.00494,0.1739501953125,0.005882,0.84,-5.312,-2.65625,1.034
+EleutherAI/pythia-12b,0.1,0,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Matt should look around where he is walking.
+B. Matt should get a new pet.
+C. Walking on shattered glass is something that Matt enjoys.
+D. Matt should buy new shoes.
+Your answer:
+",,A,target,Matt should look around where he is walking.,target,A,"tensor([-0.9971, -0.9263], dtype=torch.float16)","[tensor(0.3689, dtype=torch.float16), tensor(0.3960, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0283, -1.4512], dtype=torch.float16)","[tensor(0.3577, dtype=torch.float16), tensor(0.2343, dtype=torch.float16)]",0.1461,0.38232421875,0.0838,1.743,-1.924,-0.9619140625,0.7754
+EleutherAI/pythia-12b,0.1,0,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Matt should look around where he is walking.
+B. Matt should get a new pet.
+C. Walking on shattered glass is something that Matt enjoys.
+D. Matt should buy new shoes.
+Your answer:
+",,B,competitor,Matt should get a new pet.,distractor_associative,B,"tensor([-0.9971, -4.5352], dtype=torch.float16)","[tensor(0.3689, dtype=torch.float16), tensor(0.0107, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0283, -5.4844], dtype=torch.float16)","[tensor(0.3577, dtype=torch.float16), tensor(0.0042, dtype=torch.float16)]",0.003956,0.1898193359375,0.001485,2.664,-5.53,-2.765625,0.8496
+EleutherAI/pythia-12b,0.1,0,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Matt should look around where he is walking.
+B. Matt should get a new pet.
+C. Walking on shattered glass is something that Matt enjoys.
+D. Matt should buy new shoes.
+Your answer:
+",,C,distractor_lexical_overlap,Walking on shattered glass is something that Matt enjoys.,competitor,C,"tensor([-0.9971, -4.3711], dtype=torch.float16)","[tensor(0.3689, dtype=torch.float16), tensor(0.0126, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0283, -4.9688], dtype=torch.float16)","[tensor(0.3577, dtype=torch.float16), tensor(0.0070, dtype=torch.float16)]",0.00466,0.1907958984375,0.002485,1.876,-5.367,-2.68359375,0.895
+EleutherAI/pythia-12b,0.1,0,10,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Chad and Matt were walking. The sidewalk was being fixed and there was lots of shattered glass on the sidewalk. Matt was not paying attention to the sidewalk. Chad said, ""I guess you like walking on shattered glass."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. Matt should look around where he is walking.
+B. Matt should get a new pet.
+C. Walking on shattered glass is something that Matt enjoys.
+D. Matt should buy new shoes.
+Your answer:
+",,D,distractor_associative,Matt should buy new shoes.,distractor_lexical_overlap,D,"tensor([-0.9971, -3.9414], dtype=torch.float16)","[tensor(0.3689, dtype=torch.float16), tensor(0.0194, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0283, -4.9141], dtype=torch.float16)","[tensor(0.3577, dtype=torch.float16), tensor(0.0073, dtype=torch.float16)]",0.007164,0.1942138671875,0.002626,2.729,-4.938,-2.46875,0.831
+EleutherAI/pythia-12b,0.1,0,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants her to tell him the house number.
+B. He wants her to see a dentist.
+C. He wants her to see an eye doctor.
+D. He wants to know how good her vision is.
+Your answer:
+",,A,target,He wants her to tell him the house number.,target,A,"tensor([-0.9199, -1.5879], dtype=torch.float16)","[tensor(0.3984, dtype=torch.float16), tensor(0.2043, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0732, -1.5723], dtype=torch.float16)","[tensor(0.3418, dtype=torch.float16), tensor(0.2075, dtype=torch.float16)]",0.0814,0.30126953125,0.0709,1.148,-2.508,-1.25390625,0.948
+EleutherAI/pythia-12b,0.1,0,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants her to tell him the house number.
+B. He wants her to see a dentist.
+C. He wants her to see an eye doctor.
+D. He wants to know how good her vision is.
+Your answer:
+",,B,competitor,He wants her to see a dentist.,distractor_associative,B,"tensor([-0.9199, -5.6719], dtype=torch.float16)","[tensor(0.3984, dtype=torch.float16), tensor(0.0034, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0732, -5.5820], dtype=torch.float16)","[tensor(0.3418, dtype=torch.float16), tensor(0.0038, dtype=torch.float16)]",0.001371,0.200927734375,0.0012865,1.066,-6.594,-3.296875,0.9907
+EleutherAI/pythia-12b,0.1,0,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants her to tell him the house number.
+B. He wants her to see a dentist.
+C. He wants her to see an eye doctor.
+D. He wants to know how good her vision is.
+Your answer:
+",,C,distractor_lexical_overlap,He wants her to see an eye doctor.,distractor_lexical_overlap,C,"tensor([-0.9199, -5.5234], dtype=torch.float16)","[tensor(0.3984, dtype=torch.float16), tensor(0.0040, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0732, -4.6680], dtype=torch.float16)","[tensor(0.3418, dtype=torch.float16), tensor(0.0094, dtype=torch.float16)]",0.001592,0.201171875,0.00321,0.4958,-6.445,-3.22265625,1.122
+EleutherAI/pythia-12b,0.1,0,11,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Richard is driving his wife home from church. On the way home they want to stop at a new gourmet grocery store at 2401 Main Street. It is in a part of town that they are not familiar with. Richard points at a building and asks his wife: ""Can you see that house number?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants her to tell him the house number.
+B. He wants her to see a dentist.
+C. He wants her to see an eye doctor.
+D. He wants to know how good her vision is.
+Your answer:
+",,D,distractor_associative,He wants to know how good her vision is.,competitor,D,"tensor([-0.9199, -5.0859], dtype=torch.float16)","[tensor(0.3984, dtype=torch.float16), tensor(0.0062, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0732, -3.9785], dtype=torch.float16)","[tensor(0.3418, dtype=torch.float16), tensor(0.0187, dtype=torch.float16)]",0.002464,0.2022705078125,0.006393,0.3855,-6.008,-3.00390625,1.189
+EleutherAI/pythia-12b,0.1,0,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants to know whether he has time and a desire to water the lawn.
+B. She wants to know whether he is allowed to water the lawn.
+C. She wants to know whether he will water the plants in the office.
+D. She wants to know whether he won the golf tournament.
+Your answer:
+",,A,target,She wants to know whether he has time and a desire to water the lawn.,target,A,"tensor([-1.0518, -1.1230], dtype=torch.float16)","[tensor(0.3494, dtype=torch.float16), tensor(0.3252, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1504, -1.3838], dtype=torch.float16)","[tensor(0.3164, dtype=torch.float16), tensor(0.2507, dtype=torch.float16)]",0.1136,0.33740234375,0.07935,1.432,-2.176,-1.087890625,0.8584
+EleutherAI/pythia-12b,0.1,0,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants to know whether he has time and a desire to water the lawn.
+B. She wants to know whether he is allowed to water the lawn.
+C. She wants to know whether he will water the plants in the office.
+D. She wants to know whether he won the golf tournament.
+Your answer:
+",,B,competitor,She wants to know whether he is allowed to water the lawn.,competitor,B,"tensor([-1.0518, -4.8711], dtype=torch.float16)","[tensor(0.3494, dtype=torch.float16), tensor(0.0077, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1504, -5.3828], dtype=torch.float16)","[tensor(0.3164, dtype=torch.float16), tensor(0.0046, dtype=torch.float16)]",0.002678,0.178466796875,0.001454,1.842,-5.92,-2.9609375,0.9067
+EleutherAI/pythia-12b,0.1,0,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants to know whether he has time and a desire to water the lawn.
+B. She wants to know whether he is allowed to water the lawn.
+C. She wants to know whether he will water the plants in the office.
+D. She wants to know whether he won the golf tournament.
+Your answer:
+",,C,distractor_lexical_overlap,She wants to know whether he will water the plants in the office.,distractor_lexical_overlap,C,"tensor([-1.0518, -4.5508], dtype=torch.float16)","[tensor(0.3494, dtype=torch.float16), tensor(0.0106, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1504, -4.6406], dtype=torch.float16)","[tensor(0.3164, dtype=torch.float16), tensor(0.0097, dtype=torch.float16)]",0.003689,0.179931640625,0.003054,1.208,-5.6,-2.80078125,0.968
+EleutherAI/pythia-12b,0.1,0,12,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+It has been a hot day. Juan's wife is leaving the house and says to him, ""Can you water the lawn?'' What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants to know whether he has time and a desire to water the lawn.
+B. She wants to know whether he is allowed to water the lawn.
+C. She wants to know whether he will water the plants in the office.
+D. She wants to know whether he won the golf tournament.
+Your answer:
+",,D,distractor_associative,She wants to know whether he won the golf tournament.,distractor_associative,D,"tensor([-1.0518, -4.1133], dtype=torch.float16)","[tensor(0.3494, dtype=torch.float16), tensor(0.0164, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1504, -4.0625], dtype=torch.float16)","[tensor(0.3164, dtype=torch.float16), tensor(0.0172, dtype=torch.float16)]",0.005714,0.182861328125,0.005447,1.049,-5.164,-2.58203125,0.991
+EleutherAI/pythia-12b,0.1,0,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to know whether his brother is strong enough to move the ladder.
+B. He wants him to bring tires from the truck.
+C. He wants him to bring brushes from the truck.
+D. He wants him to move the ladder.
+Your answer:
+",,A,target,He wants to know whether his brother is strong enough to move the ladder.,competitor,A,"tensor([-1.2900, -1.5732], dtype=torch.float16)","[tensor(0.2751, dtype=torch.float16), tensor(0.2074, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.2578, -1.5273], dtype=torch.float16)","[tensor(0.2842, dtype=torch.float16), tensor(0.2172, dtype=torch.float16)]",0.05707,0.2412109375,0.0617,0.925,-2.863,-1.431640625,1.028
+EleutherAI/pythia-12b,0.1,0,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to know whether his brother is strong enough to move the ladder.
+B. He wants him to bring tires from the truck.
+C. He wants him to bring brushes from the truck.
+D. He wants him to move the ladder.
+Your answer:
+",,B,competitor,He wants him to bring tires from the truck.,distractor_associative,B,"tensor([-1.2900, -5.4102], dtype=torch.float16)","[tensor(0.2751, dtype=torch.float16), tensor(0.0045, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.2578, -5.6211], dtype=torch.float16)","[tensor(0.2842, dtype=torch.float16), tensor(0.0036, dtype=torch.float16)]",0.00123,0.1397705078125,0.001029,1.195,-6.7,-3.349609375,0.974
+EleutherAI/pythia-12b,0.1,0,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to know whether his brother is strong enough to move the ladder.
+B. He wants him to bring tires from the truck.
+C. He wants him to bring brushes from the truck.
+D. He wants him to move the ladder.
+Your answer:
+",,C,distractor_lexical_overlap,He wants him to bring brushes from the truck.,distractor_lexical_overlap,C,"tensor([-1.2900, -4.2539], dtype=torch.float16)","[tensor(0.2751, dtype=torch.float16), tensor(0.0142, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.2578, -4.2305], dtype=torch.float16)","[tensor(0.2842, dtype=torch.float16), tensor(0.0145, dtype=torch.float16)]",0.00391,0.1446533203125,0.004135,0.946,-5.543,-2.771484375,1.01
+EleutherAI/pythia-12b,0.1,0,13,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+A house painter is carrying a heavy tray of paints. A small ladder is blocking the sidewalk and the painter cannot get around it. He calls out to his brother: ""Can you move the ladder?""  What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to know whether his brother is strong enough to move the ladder.
+B. He wants him to bring tires from the truck.
+C. He wants him to bring brushes from the truck.
+D. He wants him to move the ladder.
+Your answer:
+",,D,distractor_associative,He wants him to move the ladder.,target,D,"tensor([-1.2900, -3.6035], dtype=torch.float16)","[tensor(0.2751, dtype=torch.float16), tensor(0.0272, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.2578, -3.3633], dtype=torch.float16)","[tensor(0.2842, dtype=torch.float16), tensor(0.0346, dtype=torch.float16)]",0.00749,0.151123046875,0.009834,0.761,-4.895,-2.447265625,1.06
+EleutherAI/pythia-12b,0.1,0,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to get good grades on his math test.
+B. He wants to know their opinion.
+C. He wants to get a new uniform.
+D. He wants to join their game.
+Your answer:
+",,A,target,He wants to get good grades on his math test.,distractor_associative,A,"tensor([-0.9907, -1.6387], dtype=torch.float16)","[tensor(0.3713, dtype=torch.float16), tensor(0.1942, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1885, -1.6377], dtype=torch.float16)","[tensor(0.3047, dtype=torch.float16), tensor(0.1945, dtype=torch.float16)]",0.07214,0.28271484375,0.05923,1.218,-2.629,-1.314453125,0.93
+EleutherAI/pythia-12b,0.1,0,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to get good grades on his math test.
+B. He wants to know their opinion.
+C. He wants to get a new uniform.
+D. He wants to join their game.
+Your answer:
+",,B,competitor,He wants to know their opinion.,competitor,B,"tensor([-0.9907, -5.3047], dtype=torch.float16)","[tensor(0.3713, dtype=torch.float16), tensor(0.0050, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1885, -5.1680], dtype=torch.float16)","[tensor(0.3047, dtype=torch.float16), tensor(0.0057, dtype=torch.float16)]",0.001844,0.1881103515625,0.001736,1.0625,-6.297,-3.1484375,0.9907
+EleutherAI/pythia-12b,0.1,0,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to get good grades on his math test.
+B. He wants to know their opinion.
+C. He wants to get a new uniform.
+D. He wants to join their game.
+Your answer:
+",,C,distractor_lexical_overlap,He wants to get a new uniform.,distractor_lexical_overlap,C,"tensor([-0.9907, -4.9531], dtype=torch.float16)","[tensor(0.3713, dtype=torch.float16), tensor(0.0071, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1885, -4.6367], dtype=torch.float16)","[tensor(0.3047, dtype=torch.float16), tensor(0.0097, dtype=torch.float16)]",0.002623,0.189208984375,0.002953,0.888,-5.945,-2.97265625,1.0205
+EleutherAI/pythia-12b,0.1,0,14,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Brad is interested in basketball and wants to join his school's basketball team. One day he comes to the basketball court and asks the players there: ""Do you think I can play basketball with you?"" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants to get good grades on his math test.
+B. He wants to know their opinion.
+C. He wants to get a new uniform.
+D. He wants to join their game.
+Your answer:
+",,D,distractor_associative,He wants to join their game.,target,D,"tensor([-0.9907, -4.2734], dtype=torch.float16)","[tensor(0.3713, dtype=torch.float16), tensor(0.0139, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1885, -4.2695], dtype=torch.float16)","[tensor(0.3047, dtype=torch.float16), tensor(0.0140, dtype=torch.float16)]",0.005173,0.192626953125,0.00426,1.214,-5.266,-2.6328125,0.965
+EleutherAI/pythia-12b,0.1,0,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Jane to help her with painting the house.
+B. She suspects that someone is standing at their door.
+C. She wants Jane to help her with cooking.
+D. She wants Jane to open the door.
+Your answer:
+",,A,target,She wants Jane to help her with painting the house.,distractor_associative,A,"tensor([-1.0273, -1.5225], dtype=torch.float16)","[tensor(0.3579, dtype=torch.float16), tensor(0.2181, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0732, -1.6426], dtype=torch.float16)","[tensor(0.3418, dtype=torch.float16), tensor(0.1935, dtype=torch.float16)]",0.07806,0.2880859375,0.0661,1.181,-2.55,-1.275390625,0.9395
+EleutherAI/pythia-12b,0.1,0,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Jane to help her with painting the house.
+B. She suspects that someone is standing at their door.
+C. She wants Jane to help her with cooking.
+D. She wants Jane to open the door.
+Your answer:
+",,B,competitor,She suspects that someone is standing at their door.,competitor,B,"tensor([-1.0273, -5.0469], dtype=torch.float16)","[tensor(0.3579, dtype=torch.float16), tensor(0.0064, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0732, -5.7773], dtype=torch.float16)","[tensor(0.3418, dtype=torch.float16), tensor(0.0031, dtype=torch.float16)]",0.0023,0.18212890625,0.001059,2.174,-6.074,-3.037109375,0.8867
+EleutherAI/pythia-12b,0.1,0,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Jane to help her with painting the house.
+B. She suspects that someone is standing at their door.
+C. She wants Jane to help her with cooking.
+D. She wants Jane to open the door.
+Your answer:
+",,C,distractor_lexical_overlap,She wants Jane to help her with cooking.,distractor_lexical_overlap,C,"tensor([-1.0273, -5.0234], dtype=torch.float16)","[tensor(0.3579, dtype=torch.float16), tensor(0.0066, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0732, -4.7383], dtype=torch.float16)","[tensor(0.3418, dtype=torch.float16), tensor(0.0088, dtype=torch.float16)]",0.002356,0.1822509765625,0.00299,0.7876,-6.05,-3.025390625,1.041
+EleutherAI/pythia-12b,0.1,0,15,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Jane is watching TV while her mom is cooking dinner in the kitchen. The doorbell rings. Jane's mother says: ""Someone is at the door"". What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Jane to help her with painting the house.
+B. She suspects that someone is standing at their door.
+C. She wants Jane to help her with cooking.
+D. She wants Jane to open the door.
+Your answer:
+",,D,distractor_associative,She wants Jane to open the door.,target,D,"tensor([-1.0273, -5.0781], dtype=torch.float16)","[tensor(0.3579, dtype=torch.float16), tensor(0.0062, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0732, -4.8008], dtype=torch.float16)","[tensor(0.3418, dtype=torch.float16), tensor(0.0082, dtype=torch.float16)]",0.002232,0.18212890625,0.002811,0.794,-6.105,-3.052734375,1.039
+EleutherAI/pythia-12b,0.1,0,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants Adam to invite Julie to the movies.
+B. He wants to describe his physical state to Adam.
+C. He wants Adam to close the window.
+D. He wants Adam to get back to the project.
+Your answer:
+",,A,target,He wants Adam to invite Julie to the movies.,distractor_associative,A,"tensor([-1.1035, -1.3906], dtype=torch.float16)","[tensor(0.3318, dtype=torch.float16), tensor(0.2489, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1699, -1.5703], dtype=torch.float16)","[tensor(0.3103, dtype=torch.float16), tensor(0.2080, dtype=torch.float16)]",0.0826,0.290283203125,0.0646,1.279,-2.494,-1.2470703125,0.91
+EleutherAI/pythia-12b,0.1,0,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants Adam to invite Julie to the movies.
+B. He wants to describe his physical state to Adam.
+C. He wants Adam to close the window.
+D. He wants Adam to get back to the project.
+Your answer:
+",,B,competitor,He wants to describe his physical state to Adam.,competitor,B,"tensor([-1.1035, -4.4219], dtype=torch.float16)","[tensor(0.3318, dtype=torch.float16), tensor(0.0120, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1699, -5.3047], dtype=torch.float16)","[tensor(0.3103, dtype=torch.float16), tensor(0.0050, dtype=torch.float16)]",0.003983,0.171875,0.001541,2.584,-5.523,-2.76171875,0.853
+EleutherAI/pythia-12b,0.1,0,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants Adam to invite Julie to the movies.
+B. He wants to describe his physical state to Adam.
+C. He wants Adam to close the window.
+D. He wants Adam to get back to the project.
+Your answer:
+",,C,distractor_lexical_overlap,He wants Adam to close the window.,target,C,"tensor([-1.1035, -4.8828], dtype=torch.float16)","[tensor(0.3318, dtype=torch.float16), tensor(0.0076, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1699, -4.7656], dtype=torch.float16)","[tensor(0.3103, dtype=torch.float16), tensor(0.0085, dtype=torch.float16)]",0.002514,0.169677734375,0.002642,0.9517,-5.984,-2.9921875,1.008
+EleutherAI/pythia-12b,0.1,0,16,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Adam and Bill are working together on a project. Adam decides to take a break, and opens a window. A cold breeze blows in. Bill says, ""I am getting cold."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants Adam to invite Julie to the movies.
+B. He wants to describe his physical state to Adam.
+C. He wants Adam to close the window.
+D. He wants Adam to get back to the project.
+Your answer:
+",,D,distractor_associative,He wants Adam to get back to the project.,distractor_lexical_overlap,D,"tensor([-1.1035, -3.6875], dtype=torch.float16)","[tensor(0.3318, dtype=torch.float16), tensor(0.0250, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1699, -3.7422], dtype=torch.float16)","[tensor(0.3103, dtype=torch.float16), tensor(0.0237, dtype=torch.float16)]",0.00831,0.178466796875,0.007355,1.13,-4.79,-2.39453125,0.9746
+EleutherAI/pythia-12b,0.1,0,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is upset that they will not be able to drink beer.
+B. He wants Mark to bring some wine.
+C. He wants Mark to bring some pancakes.
+D. He wants Mark to get a bottle opener.
+Your answer:
+",,A,target,He is upset that they will not be able to drink beer.,competitor,A,"tensor([-0.9980, -1.3145], dtype=torch.float16)","[tensor(0.3687, dtype=torch.float16), tensor(0.2686, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1514, -1.4648], dtype=torch.float16)","[tensor(0.3162, dtype=torch.float16), tensor(0.2311, dtype=torch.float16)]",0.099,0.318603515625,0.07306,1.355,-2.312,-1.15625,0.884
+EleutherAI/pythia-12b,0.1,0,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is upset that they will not be able to drink beer.
+B. He wants Mark to bring some wine.
+C. He wants Mark to bring some pancakes.
+D. He wants Mark to get a bottle opener.
+Your answer:
+",,B,competitor,He wants Mark to bring some wine.,distractor_lexical_overlap,B,"tensor([-0.9980, -4.9414], dtype=torch.float16)","[tensor(0.3687, dtype=torch.float16), tensor(0.0071, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1514, -5.7148], dtype=torch.float16)","[tensor(0.3162, dtype=torch.float16), tensor(0.0033, dtype=torch.float16)]",0.002634,0.1878662109375,0.001042,2.527,-5.938,-2.96875,0.8647
+EleutherAI/pythia-12b,0.1,0,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is upset that they will not be able to drink beer.
+B. He wants Mark to bring some wine.
+C. He wants Mark to bring some pancakes.
+D. He wants Mark to get a bottle opener.
+Your answer:
+",,C,distractor_lexical_overlap,He wants Mark to bring some pancakes.,distractor_associative,C,"tensor([-0.9980, -5.0820], dtype=torch.float16)","[tensor(0.3687, dtype=torch.float16), tensor(0.0062, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1514, -4.9883], dtype=torch.float16)","[tensor(0.3162, dtype=torch.float16), tensor(0.0068, dtype=torch.float16)]",0.002289,0.1873779296875,0.002155,1.062,-6.08,-3.0390625,0.9897
+EleutherAI/pythia-12b,0.1,0,17,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Mark invited Josh to his house to watch a football game. Josh brings a six-pack of beer with him. Josh picks up one bottle, examines it and then says to Mark: ""Hmm, this isn't a twist off."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He is upset that they will not be able to drink beer.
+B. He wants Mark to bring some wine.
+C. He wants Mark to bring some pancakes.
+D. He wants Mark to get a bottle opener.
+Your answer:
+",,D,distractor_associative,He wants Mark to get a bottle opener.,target,D,"tensor([-0.9980, -4.1211], dtype=torch.float16)","[tensor(0.3687, dtype=torch.float16), tensor(0.0162, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1514, -3.8711], dtype=torch.float16)","[tensor(0.3162, dtype=torch.float16), tensor(0.0208, dtype=torch.float16)]",0.00598,0.1923828125,0.006584,0.9087,-5.117,-2.55859375,1.019
+EleutherAI/pythia-12b,0.1,0,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Alex to prepare some dinner.
+B. She wants Alex to apply for a job.
+C. She wants Alex to clean the mess.
+D. She wants Alex to know when her parents will arrive.
+Your answer:
+",,A,target,She wants Alex to prepare some dinner.,distractor_lexical_overlap,A,"tensor([-1.2324, -1.2783], dtype=torch.float16)","[tensor(0.2915, dtype=torch.float16), tensor(0.2786, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0762, -1.5186], dtype=torch.float16)","[tensor(0.3408, dtype=torch.float16), tensor(0.2190, dtype=torch.float16)]",0.0812,0.28515625,0.07465,1.088,-2.512,-1.255859375,0.9683
+EleutherAI/pythia-12b,0.1,0,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Alex to prepare some dinner.
+B. She wants Alex to apply for a job.
+C. She wants Alex to clean the mess.
+D. She wants Alex to know when her parents will arrive.
+Your answer:
+",,B,competitor,She wants Alex to apply for a job.,distractor_associative,B,"tensor([-1.2324, -4.6992], dtype=torch.float16)","[tensor(0.2915, dtype=torch.float16), tensor(0.0091, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0762, -5.9414], dtype=torch.float16)","[tensor(0.3408, dtype=torch.float16), tensor(0.0026, dtype=torch.float16)]",0.002653,0.1502685546875,0.000896,2.96,-5.93,-2.96484375,0.845
+EleutherAI/pythia-12b,0.1,0,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Alex to prepare some dinner.
+B. She wants Alex to apply for a job.
+C. She wants Alex to clean the mess.
+D. She wants Alex to know when her parents will arrive.
+Your answer:
+",,C,distractor_lexical_overlap,She wants Alex to clean the mess.,target,C,"tensor([-1.2324, -4.3477], dtype=torch.float16)","[tensor(0.2915, dtype=torch.float16), tensor(0.0129, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0762, -4.7461], dtype=torch.float16)","[tensor(0.3408, dtype=torch.float16), tensor(0.0087, dtype=torch.float16)]",0.003773,0.1522216796875,0.002958,1.275,-5.58,-2.7890625,0.9585
+EleutherAI/pythia-12b,0.1,0,18,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Natalie returns home to find that her partner, Alex, created a big mess on the table. Natalie says: ""Alex, my parents are going to be here any minute"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Alex to prepare some dinner.
+B. She wants Alex to apply for a job.
+C. She wants Alex to clean the mess.
+D. She wants Alex to know when her parents will arrive.
+Your answer:
+",,D,distractor_associative,She wants Alex to know when her parents will arrive.,competitor,D,"tensor([-1.2324, -3.7773], dtype=torch.float16)","[tensor(0.2915, dtype=torch.float16), tensor(0.0229, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0762, -4.0586], dtype=torch.float16)","[tensor(0.3408, dtype=torch.float16), tensor(0.0173, dtype=torch.float16)]",0.00667,0.1572265625,0.005886,1.134,-5.008,-2.50390625,0.9756
+EleutherAI/pythia-12b,0.1,0,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Nate to spend more time with the family.
+B. She wants to know Nate's plans.
+C. She wants Nate to bring his friends over.
+D. She wants Nate to take the garbage out.
+Your answer:
+",,A,target,She wants Nate to spend more time with the family.,distractor_lexical_overlap,A,"tensor([-1.0225, -1.4902], dtype=torch.float16)","[tensor(0.3596, dtype=torch.float16), tensor(0.2253, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.1455, -1.5186], dtype=torch.float16)","[tensor(0.3181, dtype=torch.float16), tensor(0.2190, dtype=torch.float16)]",0.08105,0.29248046875,0.06964,1.164,-2.512,-1.255859375,0.943
+EleutherAI/pythia-12b,0.1,0,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Nate to spend more time with the family.
+B. She wants to know Nate's plans.
+C. She wants Nate to bring his friends over.
+D. She wants Nate to take the garbage out.
+Your answer:
+",,B,competitor,She wants to know Nate's plans.,competitor,B,"tensor([-1.0225, -5.5273], dtype=torch.float16)","[tensor(0.3596, dtype=torch.float16), tensor(0.0040, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.1455, -5.5820], dtype=torch.float16)","[tensor(0.3181, dtype=torch.float16), tensor(0.0038, dtype=torch.float16)]",0.00143,0.1817626953125,0.001198,1.193,-6.55,-3.275390625,0.9736
+EleutherAI/pythia-12b,0.1,0,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Nate to spend more time with the family.
+B. She wants to know Nate's plans.
+C. She wants Nate to bring his friends over.
+D. She wants Nate to take the garbage out.
+Your answer:
+",,C,distractor_lexical_overlap,She wants Nate to bring his friends over.,distractor_associative,C,"tensor([-1.0225, -4.7539], dtype=torch.float16)","[tensor(0.3596, dtype=torch.float16), tensor(0.0086, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.1455, -4.9805], dtype=torch.float16)","[tensor(0.3181, dtype=torch.float16), tensor(0.0069, dtype=torch.float16)]",0.0031,0.18408203125,0.002186,1.418,-5.777,-2.888671875,0.9434
+EleutherAI/pythia-12b,0.1,0,19,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Nate is about to leave the house. His wife points at a full bag of garbage and asks: ""Are you going out?"" What might she be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. She wants Nate to spend more time with the family.
+B. She wants to know Nate's plans.
+C. She wants Nate to bring his friends over.
+D. She wants Nate to take the garbage out.
+Your answer:
+",,D,distractor_associative,She wants Nate to take the garbage out.,target,D,"tensor([-1.0225, -5.1680], dtype=torch.float16)","[tensor(0.3596, dtype=torch.float16), tensor(0.0057, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.1455, -4.4883], dtype=torch.float16)","[tensor(0.3181, dtype=torch.float16), tensor(0.0112, dtype=torch.float16)]",0.002048,0.1826171875,0.003574,0.573,-6.19,-3.095703125,1.1
+EleutherAI/pythia-12b,0.1,0,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants Peter to bring him some sunscreen.
+B. He wants Peter to know that he might get bitten.
+C. He wants Peter to close the screen door.
+D. He wants Peter to bring him some flowers.
+Your answer:
+",,A,target,He wants Peter to bring him some sunscreen.,distractor_lexical_overlap,A,"tensor([-1.0039, -1.3184], dtype=torch.float16)","[tensor(0.3665, dtype=torch.float16), tensor(0.2676, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0654, -1.7314], dtype=torch.float16)","[tensor(0.3445, dtype=torch.float16), tensor(0.1770, dtype=torch.float16)]",0.0981,0.31689453125,0.06097,1.608,-2.322,-1.1611328125,0.83
+EleutherAI/pythia-12b,0.1,0,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants Peter to bring him some sunscreen.
+B. He wants Peter to know that he might get bitten.
+C. He wants Peter to close the screen door.
+D. He wants Peter to bring him some flowers.
+Your answer:
+",,B,competitor,He wants Peter to know that he might get bitten.,competitor,B,"tensor([-1.0039, -5.1289], dtype=torch.float16)","[tensor(0.3665, dtype=torch.float16), tensor(0.0059, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0654, -5.4492], dtype=torch.float16)","[tensor(0.3445, dtype=torch.float16), tensor(0.0043, dtype=torch.float16)]",0.00217,0.1861572265625,0.001481,1.466,-6.133,-3.06640625,0.9414
+EleutherAI/pythia-12b,0.1,0,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants Peter to bring him some sunscreen.
+B. He wants Peter to know that he might get bitten.
+C. He wants Peter to close the screen door.
+D. He wants Peter to bring him some flowers.
+Your answer:
+",,C,distractor_lexical_overlap,He wants Peter to close the screen door.,target,C,"tensor([-1.0039, -4.8789], dtype=torch.float16)","[tensor(0.3665, dtype=torch.float16), tensor(0.0076, dtype=torch.float16)]","tensor([-5.3906], dtype=torch.float16)","tensor([-1.0654, -4.6758], dtype=torch.float16)","[tensor(0.3445, dtype=torch.float16), tensor(0.0093, dtype=torch.float16)]",0.002787,0.18701171875,0.003208,0.8687,-5.883,-2.94140625,1.024
+EleutherAI/pythia-12b,0.1,0,20,indirect_speech,"You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Sam is sunning himself on the porch. Peter comes out of the house and forgets to close the screen door. Sam says, ""Peter, there are many flies and mosquitoes outside."" What might he be trying to convey?","You will read a short story that describes an everyday situation. Your task is to interpret what the character in the story is trying to convey.
+
+Choose one of the following options and return the label of that option.
+A. He wants Peter to bring him some sunscreen.
+B. He wants Peter to know that he might get bitten.
+C. He wants Peter to close the screen door.
+D. He wants Peter to bring him some flowers.
+Your answer:
+",,D,distractor_associative,He wants Peter to bring him some flowers.,distractor_associative,D,"tensor([-1.0039, -3.8730], dtype=torch.float16)","[tensor(0.3665, dtype=torch.float16), tensor(0.0208, dtype=torch.float16)]","tensor([-5.5391], dtype=torch.float16)","tensor([-1.0654, -4.2383], dtype=torch.float16)","[tensor(0.3445, dtype=torch.float16), tensor(0.0144, dtype=torch.float16)]",0.00762,0.193603515625,0.004974,1.532,-4.875,-2.4375,0.919

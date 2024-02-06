@@ -1,0 +1,721 @@
+model_name,temperature,seed,item_id,phenomenon,prompt,prior_prompt,question,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-6.0815, -0.0295])","[tensor(0.0023), tensor(0.9709)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.0022181943,0.4865913987159729,0.0018743558,1.1834435,-6.111062,-3.0555310249328613,0.973178
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,1,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Her palms were sweaty. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-6.0815, -3.7170])","[tensor(0.0023), tensor(0.0243)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",5.5531396e-05,0.013295318931341171,0.005910335,0.009395642,-9.798562,-4.899281024932861,1.9096591
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-4.7444, -0.0106])","[tensor(0.0087), tensor(0.9895)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.008608531,0.49907878041267395,0.0018743558,4.5927944,-4.7550015,-2.3775007724761963,0.7572273
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,2,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Laura got a lot of mail today. Some of her friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-4.7444, -6.8231])","[tensor(0.0087), tensor(0.0011)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",9.468865e-06,0.004894299432635307,0.005910335,0.001602086,-11.567501,-5.783750534057617,2.2544107
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-7.0328, -0.0680])","[tensor(0.0009), tensor(0.9343)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0008244215,0.4675813615322113,0.0035368784,0.23309298,-7.1008286,-3.5504143238067627,1.2580061
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,3,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sometimes a truck drives by the house. The dishes start to rattle.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-7.0328, -2.9586])","[tensor(0.0009), tensor(0.0519)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",4.5789606e-05,0.026386870071291924,0.0011754864,0.038953755,-9.991453,-4.995726585388184,1.4810768
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-7.7153, -3.5182])","[tensor(0.0004), tensor(0.0297)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",1.3223282e-05,0.015048709698021412,0.0018743558,0.0070548407,-11.233532,-5.616765975952148,1.7889241
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,4,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. The car doesn't start.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-7.7153, -0.0339])","[tensor(0.0004), tensor(0.9667)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.000431106,0.4835720956325531,0.005910335,0.07294104,-7.7491565,-3.8745782375335693,1.5102469
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-5.9589, -0.3890])","[tensor(0.0026), tensor(0.6777)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.0017504623,0.34016379714012146,0.0018743558,0.9339008,-6.3478756,-3.1739377975463867,1.0108902
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,5,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Susan felt her baby's forehead with her palm. She begged her family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-5.9589, -1.2015])","[tensor(0.0026), tensor(0.3007)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.0007767629,0.1516651064157486,0.005910335,0.13142452,-7.1603756,-3.5801877975463867,1.3954983
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-6.0152, -0.4184])","[tensor(0.0024), tensor(0.6581)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.0016066588,0.33027318120002747,0.0018743558,0.85717916,-6.4335985,-3.216799259185791,1.0245415
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,6,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-6.0152, -1.0903])","[tensor(0.0024), tensor(0.3361)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.00082060107,0.16928425431251526,0.005910335,0.13884172,-7.1054735,-3.552736759185791,1.3847983
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-7.0327, -2.2711])","[tensor(0.0009), tensor(0.1032)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",9.107193e-05,0.05203860253095627,0.0018743558,0.04858839,-9.303861,-4.651930332183838,1.4816266
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,7,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She went to the bank hoping to get a loan.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-7.0327, -0.1149])","[tensor(0.0009), tensor(0.8915)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.00078674144,0.4461742341518402,0.005910335,0.13311283,-7.147611,-3.573805570602417,1.3930106
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-5.0727, -0.2763])","[tensor(0.0063), tensor(0.7586)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.004752927,0.38241469860076904,0.0018743558,2.5357656,-5.3489947,-2.674497365951538,0.8518199
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,8,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cathy worked very hard and became exhausted. She was carried unconscious to the hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-5.0727, -1.4638])","[tensor(0.0063), tensor(0.2313)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.001449561,0.11880728602409363,0.005910335,0.24525867,-6.5364947,-3.268247365951538,1.2739091
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-6.7176, -4.1299])","[tensor(0.0012), tensor(0.0161)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",1.945311e-05,0.008647141978144646,0.0018743558,0.010378557,-10.847504,-5.4237518310546875,1.7274497
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,9,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She was knocked down and shouted for her mother. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-6.7176, -0.0205])","[tensor(0.0012), tensor(0.9797)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.0011848623,0.4904586970806122,0.005910335,0.20047295,-6.7381287,-3.3690643310546875,1.3132058
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-5.4506, -0.1892])","[tensor(0.0043), tensor(0.8276)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0035533174,0.41594263911247253,0.0035368784,1.0046479,-5.6398735,-2.819936752319336,0.99917847
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,10,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-5.4506, -1.8142])","[tensor(0.0043), tensor(0.1630)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",0.00069968967,0.08362801373004913,0.0011754864,0.5952342,-7.2648735,-3.632436752319336,1.076904
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-5.9514, -0.1060])","[tensor(0.0026), tensor(0.8994)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0023404825,0.4510045647621155,0.0035368784,0.6617368,-6.0573983,-3.0286991596221924,1.0731485
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,11,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. She put her favorite bathing suit in her bag.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-5.9514, -2.3404])","[tensor(0.0026), tensor(0.0963)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",0.0002505698,0.04944593831896782,0.0011754864,0.21316266,-8.291773,-4.145886421203613,1.2291259
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-7.0656, -1.5607])","[tensor(0.0009), tensor(0.2100)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.00017932884,0.10542211681604385,0.0018743558,0.09567492,-8.626289,-4.313144683837891,1.3737245
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,12,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. A mirror fell down and shattered on the floor. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-7.0656, -0.2638])","[tensor(0.0009), tensor(0.7681)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.0006559576,0.3844831883907318,0.005910335,0.11098484,-7.3294144,-3.6647071838378906,1.4284426
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-7.0639, -0.0283])","[tensor(0.0009), tensor(0.9721)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0008315787,0.4864770174026489,0.0035368784,0.23511656,-7.0921845,-3.5460922718048096,1.2564746
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,13,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The Senator wanted to practice corporate law. He decided not to run for re-election.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-7.0639, -3.7627])","[tensor(0.0009), tensor(0.0232)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",1.9864829e-05,0.012038514949381351,0.0011754864,0.016899241,-10.82656,-5.413280010223389,1.6048684
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-7.1116, -0.0348])","[tensor(0.0008), tensor(0.9658)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.000787711,0.48329517245292664,0.0035368784,0.22271362,-7.1463795,-3.5731897354125977,1.266076
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,14,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Joey got angry at his brother in a game. The next day his body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-7.1116, -3.8395])","[tensor(0.0008), tensor(0.0215)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",1.7539298e-05,0.011159858666360378,0.0011754864,0.014920886,-10.951067,-5.475533485412598,1.6233246
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-6.2025, -1.8067])","[tensor(0.0020), tensor(0.1642)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.00033240128,0.08311302214860916,0.0018743558,0.17734161,-8.009168,-4.004583835601807,1.2754487
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,15,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-6.2025, -0.1817])","[tensor(0.0020), tensor(0.8339)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.001688073,0.417954683303833,0.005910335,0.28561378,-6.3841677,-3.1920838356018066,1.2442217
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-5.6022, -0.1434])","[tensor(0.0037), tensor(0.8664)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0031968663,0.4350651204586029,0.0035368784,0.9038666,-5.745584,-2.8727920055389404,1.0179064
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,16,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-5.6022, -2.0965])","[tensor(0.0037), tensor(0.1229)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",0.0004534121,0.06328853964805603,0.0011754864,0.38572297,-7.698709,-3.8493545055389404,1.1412134
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-6.3014, -0.2687])","[tensor(0.0018), tensor(0.7644)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.0014017154,0.38310328125953674,0.0018743558,0.7478385,-6.5700583,-3.285029172897339,1.0462725
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,17,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. She opened the paper to look at the apartment listing.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-6.3014, -1.4874])","[tensor(0.0018), tensor(0.2259)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.00041434632,0.11389099061489105,0.005910335,0.07010538,-7.7888083,-3.894404172897339,1.5179746
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-4.4685, -1.1007])","[tensor(0.0115), tensor(0.3326)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0038134635,0.17205266654491425,0.0035368784,1.0782003,-5.5692177,-2.784608840942383,0.98666084
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,18,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Richard remembered it was a big day for Karen. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-4.4685, -0.4132])","[tensor(0.0115), tensor(0.6615)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",0.007583978,0.33650004863739014,0.0011754864,6.451779,-4.881717,-2.4408586025238037,0.72363836
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,competitor,A,"tensor([-7.0563, -0.0166])","[tensor(0.0009), tensor(0.9836)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.00084778765,0.49221059679985046,0.0035368784,0.23969941,-7.0728803,-3.536440134048462,1.2530546
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,19,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. The next day he yelled at his secretary.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,target,B,"tensor([-7.0563, -4.9385])","[tensor(0.0009), tensor(0.0072)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",6.1765227e-06,0.004013820085674524,0.0011754864,0.00525444,-11.994755,-5.997377395629883,1.778035
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,target,A,"tensor([-6.7505, -2.2829])","[tensor(0.0012), tensor(0.1020)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.00011935541,0.05157781392335892,0.0018743558,0.0636781,-9.033405,-4.516702651977539,1.438557
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,20,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,competitor,B,"tensor([-6.7505, -0.1111])","[tensor(0.0012), tensor(0.8949)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.0010473105,0.4480315148830414,0.005910335,0.17719986,-6.86153,-3.43076491355896,1.3372557
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-7.3037, -0.2064])","[tensor(0.0007), tensor(0.8135)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.00054750574,0.4070820212364197,0.0035368784,0.15479915,-7.5101376,-3.755068778991699,1.3305205
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,21,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Mary's exam was about to start. Some friends had remembered her birthday.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-7.3037, -1.7845])","[tensor(0.0007), tensor(0.1679)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",0.0001129842,0.08427318930625916,0.0011754864,0.09611698,-9.088263,-4.544131278991699,1.347193
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-5.9216, -0.3368])","[tensor(0.0027), tensor(0.7141)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.0019143239,0.3583778142929077,0.0018743558,1.0213237,-6.258391,-3.12919545173645,0.9966399
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,22,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The lights have been on since last night. He turned on the TV for a weather report.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-5.9216, -1.2899])","[tensor(0.0027), tensor(0.2753)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.0007380377,0.1389906108379364,0.005910335,0.124872394,-7.2115154,-3.605757713317871,1.405465
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-5.6370, -0.0164])","[tensor(0.0036), tensor(0.9837)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0035057673,0.4936531186103821,0.0035368784,0.9912038,-5.653346,-2.8266730308532715,1.0015653
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,23,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bob was looking forward to the long holiday. He begged his family doctor to come at once.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-5.6370, -4.4695])","[tensor(0.0036), tensor(0.0115)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",4.0814586e-05,0.007508279290050268,0.0011754864,0.034721445,-10.106471,-5.0532355308532715,1.4981265
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-7.3994, -0.0113])","[tensor(0.0006), tensor(0.9887)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.000604754,0.49467965960502625,0.0035368784,0.17098525,-7.410689,-3.7053444385528564,1.3129019
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,24,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Sharon's car was totally wrecked last week. She was knocked down and shouted for her mother","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-7.3994, -5.0504])","[tensor(0.0006), tensor(0.0064)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",3.918697e-06,0.0035092714242637157,0.0011754864,0.0033336815,-12.449751,-6.224875450134277,1.8454812
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-6.2914, -0.0211])","[tensor(0.0019), tensor(0.9791)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0018135718,0.4904992878437042,0.0035368784,0.5127606,-6.312457,-3.156228542327881,1.1183356
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,25,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Allen told his mother that he had a car accident. She began to worry about her final exam.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-6.2914, -4.2554])","[tensor(0.0019), tensor(0.0142)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",2.6276588e-05,0.008019455708563328,0.0011754864,0.0223538,-10.546832,-5.273416042327881,1.5634031
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([ -6.1129, -12.9144])","[tensor(0.0022), tensor(2.4624e-06)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",5.4522036e-09,0.0011083006393164396,0.0018743558,2.9088412e-06,-19.027246,-9.513623237609863,3.0300622
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,26,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+A dog ran toward a little girl eating ice cream. She went to the bank hoping to get a loan. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-6.1129e+00, -2.9178e-04])","[tensor(0.0022), tensor(0.9997)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.002213493,0.5009612441062927,0.005910335,0.37451226,-6.1131835,-3.056591749191284,1.1914091
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-6.0363, -0.0544])","[tensor(0.0024), tensor(0.9471)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0022637497,0.4747239649295807,0.0035368784,0.6400417,-6.0907326,-3.0453662872314453,1.0790541
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,27,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jane skipped her English class every now and then. She got upset and began to cry suddenly. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-6.0363, -3.1169])","[tensor(0.0024), tensor(0.0443)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",0.00010587697,0.02334238402545452,0.0011754864,0.09007078,-9.153233,-4.576616287231445,1.3568238
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-6.5967, -0.0101])","[tensor(0.0014), tensor(0.9900)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0013512566,0.49567973613739014,0.0035368784,0.3820478,-6.6067204,-3.3033602237701416,1.1704682
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,28,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bart sat next to a pretty girl in his class. She was carried unconscious to a hospital. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-6.5967, -5.3616])","[tensor(0.0014), tensor(0.0047)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",6.4059523e-06,0.003029108513146639,0.0011754864,0.0054496187,-11.958282,-5.9791412353515625,1.7726287
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-6.6499e+00, -4.8576e-03])","[tensor(0.0013), tensor(0.9952)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0012878391,0.498224139213562,0.0035368784,0.36411744,-6.6547894,-3.327394723892212,1.1789843
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,29,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Vicky was planning her first trip to Europe. A mirror fell down and shattered on the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-6.6499, -7.3408])","[tensor(0.0013), tensor(0.0006)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",8.392754e-07,0.0009713224717415869,0.0011754864,0.0007139814,-13.990726,-6.995363235473633,2.0739067
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-6.9860, -3.1265])","[tensor(0.0009), tensor(0.0439)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",4.0571427e-05,0.022398939356207848,0.0018743558,0.021645531,-10.112447,-5.056223392486572,1.6103929
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,30,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Dick tripped over a chair and hit his head. He decided not to run for re-election. ","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-6.9860, -0.0483])","[tensor(0.0009), tensor(0.9528)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.00088111573,0.47687289118766785,0.005910335,0.1490805,-7.034322,-3.5171608924865723,1.3709314
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-8.0060, -5.0386])","[tensor(0.0003), tensor(0.0065)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",2.1616852e-06,0.003408021992072463,0.0018743558,0.001153295,-13.044622,-6.522311210632324,2.0773377
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,31,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Tony had a fight with his friend near a pond. His driving became more dangerous each day.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-8.0060e+00, -7.3863e-03])","[tensor(0.0003), tensor(0.9926)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.00033100648,0.49648717045783997,0.005910335,0.05600469,-8.013372,-4.006686210632324,1.5617404
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-8.0156, -2.6116])","[tensor(0.0003), tensor(0.0734)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",2.4247902e-05,0.03687302768230438,0.0018743558,0.012936659,-10.62718,-5.313590049743652,1.6923634
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,32,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+The rain storm was approaching the city. The next day the boy's body was covered with bruises.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-8.0156, -0.0804])","[tensor(0.0003), tensor(0.9228)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.0003047769,0.4615541696548462,0.005910335,0.051566772,-8.09593,-4.047965049743652,1.5778302
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-7.0323, -0.0071])","[tensor(0.0009), tensor(0.9929)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0008765917,0.4968913793563843,0.0035368784,0.24784333,-7.0394692,-3.5197346210479736,1.2471354
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,33,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Bill considered various high-tech careers. He walked home, soaking wet, to change his clothes.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-7.0323, -5.4212])","[tensor(0.0009), tensor(0.0044)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",3.903911e-06,0.002652375493198633,0.0011754864,0.0033211028,-12.453531,-6.2267656326293945,1.8460416
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-5.5833, -0.4785])","[tensor(0.0038), tensor(0.6197)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.002330369,0.31174662709236145,0.0018743558,1.2432907,-6.0617285,-3.0308642387390137,0.9653217
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,34,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ed wanted to leave his father's business. He decided not to go out with him any more.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-5.5833, -0.9941])","[tensor(0.0038), tensor(0.3701)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.0013915268,0.18690983951091766,0.005910335,0.23543957,-6.5773535,-3.2886767387390137,1.281872
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-7.3292, -0.0081])","[tensor(0.0007), tensor(0.9920)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0006508123,0.49630433320999146,0.0035368784,0.18400754,-7.3372893,-3.668644666671753,1.2998981
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,35,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ann had been absent from school for weeks. The papers on the desk blew off onto the floor.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-7.3292, -6.0706])","[tensor(0.0007), tensor(0.0023)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",1.5154634e-06,0.0014829626306891441,0.0011754864,0.0012892224,-13.39979,-6.699894905090332,1.9863095
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-5.8950, -0.0791])","[tensor(0.0028), tensor(0.9239)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.0025437262,0.46333253383636475,0.0035368784,0.7192009,-5.9741254,-2.987062692642212,1.0583956
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,36,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Greg was working too hard to have enough rest. He spent the whole day shopping for a present.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-5.8950, -2.7041])","[tensor(0.0028), tensor(0.0669)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",0.00018426692,0.03484058380126953,0.0011754864,0.15675803,-8.599125,-4.299562454223633,1.274686
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-7.4238, -9.5944])","[tensor(0.0006), tensor(6.8111e-05)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",4.0653575e-08,0.0003324907156638801,0.0018743558,2.1689359e-05,-17.018179,-8.509089469909668,2.710121
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,37,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Ellen was not able to eat breakfast before work. She had a heated discussion until midnight.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-7.4238e+00, -6.1803e-04])","[tensor(0.0006), tensor(0.9994)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.00059650134,0.49998950958251953,0.005910335,0.10092513,-7.424429,-3.712214469909668,1.4469601
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,A,target,incoherent,target,A,"tensor([-8.1489, -0.0226])","[tensor(0.0003), tensor(0.9777)]",tensor([-8.3492]),"tensor([-4.5002, -1.1443])","[tensor(0.0111), tensor(0.3184)]",0.00028259307,0.488991379737854,0.0035368784,0.079899006,-8.171503,-4.085751533508301,1.4476902
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,38,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Lisa commuted to her office an hour each way. The water spilled onto the expensive carpet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. incoherent
+B. coherent
+Your answer:
+",Is this story coherent or not?,B,competitor,coherent,competitor,B,"tensor([-8.1489, -4.8194])","[tensor(0.0003), tensor(0.0081)]",tensor([-9.4039]),"tensor([-4.5002, -2.2459])","[tensor(0.0111), tensor(0.1058)]",2.3329487e-06,0.004180198535323143,0.0011754864,0.0019846668,-12.968378,-6.484189033508301,1.9223595
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-6.8057, -1.5559])","[tensor(0.0011), tensor(0.2110)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",0.00023367374,0.10605691373348236,0.0018743558,0.12466882,-8.361585,-4.180792331695557,1.3315705
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,39,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Jerry read the copy of his manuscript. Frantically, he searched through the medicine cabinet.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-6.8057, -0.2434])","[tensor(0.0011), tensor(0.7840)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.0008682033,0.3925457000732422,0.005910335,0.14689578,-7.0490847,-3.5245423316955566,1.3738086
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,A,target,coherent,competitor,A,"tensor([-7.9479, -3.4396])","[tensor(0.0004), tensor(0.0321)]",tensor([-8.3492]),"tensor([-3.9814, -2.2981])","[tensor(0.0187), tensor(0.1004)]",1.1335989e-05,0.016215598210692406,0.0018743558,0.006047939,-11.387527,-5.693763732910156,1.8134477
+mistralai/Mistral-7B-Instruct-v0.2,0.1,0,40,coherence,"You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Cleo brushed against a table with a vase on it. She decided to study harder to catch up.","You will read a pair of sentences. Your task is to decide whether they form a coherent story.
+
+Choose one of the following options and return the label of that option.
+A. coherent
+B. incoherent
+Your answer:
+",Is this story coherent or not?,B,competitor,incoherent,target,B,"tensor([-7.9479, -0.0333])","[tensor(0.0004), tensor(0.9672)]",tensor([-9.4039]),"tensor([-3.9814, -1.1497])","[tensor(0.0187), tensor(0.3167)]",0.00034180234,0.483781099319458,0.005910335,0.057831295,-7.981278,-3.9906389713287354,1.5554854
