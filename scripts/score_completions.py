@@ -84,42 +84,95 @@ def retrieve_log_probs(
 
         # Tokenize the prompt
         if ("t5" not in model_name) and ("gpt-3.5" not in model_name):
-            
             print("Using HF code")
-            ##### retreive conditional log prob #####
-            # tokenize whole prompt and context only to get IDs of completion
-            input_ids = tokenizer(
-                prompt + o,
-                return_tensors="pt",
-            ).input_ids.to(DEVICE)
+            if "mistral" not in model_name:
+                raw_input_ids = tokenizer.encode(
+                    prompt + o,
+                    add_special_tokens=False
+                )
+                # print(len(input_ids))
+                input_ids = torch.tensor(
+                    [tokenizer.bos_token_id] + raw_input_ids
+                ).unsqueeze(0).to(DEVICE)
+                raw_input_ids_prompt = tokenizer.encode(
+                    prompt.strip(),
+                    add_special_tokens=False
+                )
+                input_ids_prompt = torch.tensor(
+                    [tokenizer.bos_token_id] + raw_input_ids_prompt
+                ).unsqueeze(0)
 
-            input_ids_prompt = tokenizer(
-                prompt.strip(), 
-                return_tensors="pt",
-            ).input_ids
-            print("Prompt input ids ", input_ids_prompt)
-            # input_ids_options = tokenizer(
-            #     o, 
-            #     return_tensors="pt",
-            # ).input_ids
-            # input option is sliced so that the SOS token isn't included again
-            # input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
-            print("input ids shape: ", input_ids.shape)
-            #### retrieve unconditional log prob of the option ####
-            option_input_ids = tokenizer(
-                o, 
-                return_tensors="pt",
-            ).to(DEVICE)
-            print("Option input ids ", option_input_ids.input_ids)
-            # also, compute null prompt prior
-            null_option_input_ids = tokenizer(
-                prior_prompt + o, 
-                return_tensors="pt",
-            ).input_ids.to(DEVICE)
-            input_ids_prior_prompt = tokenizer(
-                prior_prompt.strip(), 
-                return_tensors="pt",
-            ).input_ids
+                print("Prompt input ids ", input_ids_prompt)
+                # input_ids_options = tokenizer(
+                #     o, 
+                #     return_tensors="pt",
+                # ).input_ids
+                # input option is sliced so that the SOS token isn't included again
+                # input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
+                print("input ids shape: ", input_ids.shape)
+                #### retrieve unconditional log prob of the option ####
+                option_input_ids_raw = tokenizer.encode(
+                    o, 
+                    add_special_tokens=False,
+                )
+                option_input_ids = torch.tensor(
+                    [tokenizer.bos_token_id] + option_input_ids_raw
+                ).unsqueeze(0).to(DEVICE)
+
+                print("Option input ids ", option_input_ids.input_ids)
+                # also, compute null prompt prior
+                null_option_input_ids_raw = tokenizer.encode(
+                    prior_prompt + o, 
+                    add_special_tokens=False,
+                )
+                null_option_input_ids = torch.tensor(
+                    [tokenizer.bos_token_id] + null_option_input_ids_raw
+                ).unsqueeze(0).to(DEVICE)
+
+                input_ids_prior_prompt_raw = tokenizer.encode(
+                    prior_prompt.strip(), 
+                    add_special_tokens=False,
+                )
+                input_ids_prior_prompt = torch.tensor(
+                    [tokenizer.bos_token_id] + input_ids_prior_prompt_raw
+                ).unsqueeze(0)
+
+            else:
+                
+                ##### retreive conditional log prob #####
+                # tokenize whole prompt and context only to get IDs of completion
+                input_ids = tokenizer(
+                    prompt + o,
+                    return_tensors="pt",
+                ).input_ids.to(DEVICE)
+
+                input_ids_prompt = tokenizer(
+                    prompt.strip(), 
+                    return_tensors="pt",
+                ).input_ids
+                print("Prompt input ids ", input_ids_prompt)
+                # input_ids_options = tokenizer(
+                #     o, 
+                #     return_tensors="pt",
+                # ).input_ids
+                # input option is sliced so that the SOS token isn't included again
+                # input_ids = torch.cat((input_ids_prompt, input_ids_options[:, 1:]), -1).to(DEVICE)
+                print("input ids shape: ", input_ids.shape)
+                #### retrieve unconditional log prob of the option ####
+                option_input_ids = tokenizer(
+                    o, 
+                    return_tensors="pt",
+                ).to(DEVICE)
+                print("Option input ids ", option_input_ids.input_ids)
+                # also, compute null prompt prior
+                null_option_input_ids = tokenizer(
+                    prior_prompt + o, 
+                    return_tensors="pt",
+                ).input_ids.to(DEVICE)
+                input_ids_prior_prompt = tokenizer(
+                    prior_prompt.strip(), 
+                    return_tensors="pt",
+                ).input_ids
 
             # create masked labels for log prob computation
             labels = torch.clone(input_ids)
