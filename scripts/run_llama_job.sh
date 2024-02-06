@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=single
 #SBATCH --ntasks=1
-#SBATCH --time=01:00:00
+#SBATCH --time=03:00:00
 #SBATCH --mem=20gb
 #SBATCH --gres=gpu:A40:1
 
@@ -45,7 +45,7 @@ array2=("A,B" "A,B,C,D" "A,B,C,D,E" "A,B,C,D" "A,B,C,D" "A,B,C,D" "A,B,C,D,E")
 # and questions 
 array3=("Is this story coherent or not?" "" "" "" "" "Why has {} responded like this?" "")
 # models
-hf_models=(EleutherAI/pythia-12b "microsoft/phi-2" "mistralai/Mistral-7B-Instruct-v0.2")
+hf_models=("EleutherAI/pythia-12b" "microsoft/phi-2" "mistralai/Mistral-7B-Instruct-v0.2") #  "mistralai/Mixtral-8x7B-v0.1")
 
 for i in ${!array[*]}; do
     echo "phenomenon: ${array[$i]}"
