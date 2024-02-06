@@ -83,7 +83,7 @@ def retrieve_log_probs(
         print("\n---- INPUT PROMPT ----- \n ", input_prompt, "\n----------------------")
 
         # Tokenize the prompt
-        if "meta" in model_name:
+        if ("t5" not in model_name) and ("gpt-3.5" not in model_name):
             
             print("Using HF code")
             ##### retreive conditional log prob #####
