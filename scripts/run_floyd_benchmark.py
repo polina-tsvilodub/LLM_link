@@ -81,10 +81,8 @@ def main(
                     options = quantifier_scope_options[q]
 
                      # set option numbering
-                    if option_numbering is None:
-                        option_numbering = list(string.ascii_uppercase[:len(options)])
-                    else:
-                        option_numbering = option_numbering.split(",")
+                    
+                    option_numbering = list(string.ascii_uppercase[:len(options)])
                     option_names = options.copy()
             
                     # shuffle options
@@ -248,10 +246,7 @@ def main(
                     options = quantifier_scope_options[q]
 
                      # set option numbering
-                    if option_numbering is None:
-                        option_numbering = list(string.ascii_uppercase[:len(options)])
-                    else:
-                        option_numbering = option_numbering.split(",")
+                    option_numbering = list(string.ascii_uppercase[:len(options)])
                     option_names = options.copy()
             
                     # shuffle options
