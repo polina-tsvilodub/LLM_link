@@ -163,7 +163,7 @@ def retrieve_log_probs(
                     o, 
                     return_tensors="pt",
                 ).input_ids.to(DEVICE)
-                print("Option input ids ", option_input_ids.input_ids)
+                print("Option input ids ", option_input_ids)
                 # also, compute null prompt prior
                 null_option_input_ids = tokenizer(
                     prior_prompt + o, 
