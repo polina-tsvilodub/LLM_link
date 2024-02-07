@@ -1,0 +1,23 @@
+model_name,temperature,seed,item_id,task,prompt,prior_prompt,question_number,question,item,item_type,correct1,correct2,correct3,options,option_names,shuffled_options,shuffled_option_names,option_numbering,token_cond_log_probs,token_cond_probs,prior_token_log_probs,null_prior_token_log_probs,token_probs,sentence_cond_probs,mean_sentence_cond_probs,prior_sentence_probs,sentence_mi,sentence_surprisal,mean_sentence_surprisal,sentence_mi_surprisal
+EleutherAI/pythia-12b,0.1,0,5,Scalar_Implicatures,"You will read a short story that describes an everyday situation. Your task is to answer a question about the story.
+
+Letters to Laura's company almost always have checks inside. Today Laura needs to find out whether 3 of the letters have checks inside. Laura tells you on the phone: I have now looked at 2 of the 3 letters, and given what I saw, I can tell you that some of today's letters have checks inside.","You will read a short story that describes an everyday situation. Your task is to answer a question about the story.
+
+Letters to Laura's company almost always have checks inside. Today Laura needs to find out whether 3 of the letters have checks inside. Laura tells you on the phone: I have now looked at 2 of the 3 letters, and given what I saw, I can tell you that some of today's letters have checks inside.
+
+Choose one of the following options and return the label of that option.
+A. No
+B. Yes
+Your answer:
+",Question,Did Laura look at all of today's letters?,Critical,Partial,No,Yes,Over50,A,Yes,No,No,A,"tensor([-1.0049, -1.6260], dtype=torch.float16)","[tensor(0.3660, dtype=torch.float16), tensor(0.1968, dtype=torch.float16)]","tensor([-3.5957], dtype=torch.float16)","tensor([-1.0322, -2.0781], dtype=torch.float16)","[tensor(0.3562, dtype=torch.float16), tensor(0.1251, dtype=torch.float16)]",0.072,0.28125,0.04456,1.616,-2.63,-1.3154296875,0.846
+EleutherAI/pythia-12b,0.1,0,5,Scalar_Implicatures,"You will read a short story that describes an everyday situation. Your task is to answer a question about the story.
+
+Letters to Laura's company almost always have checks inside. Today Laura needs to find out whether 3 of the letters have checks inside. Laura tells you on the phone: I have now looked at 2 of the 3 letters, and given what I saw, I can tell you that some of today's letters have checks inside.","You will read a short story that describes an everyday situation. Your task is to answer a question about the story.
+
+Letters to Laura's company almost always have checks inside. Today Laura needs to find out whether 3 of the letters have checks inside. Laura tells you on the phone: I have now looked at 2 of the 3 letters, and given what I saw, I can tell you that some of today's letters have checks inside.
+
+Choose one of the following options and return the label of that option.
+A. No
+B. Yes
+Your answer:
+",Question,Did Laura look at all of today's letters?,Critical,Partial,No,Yes,Over50,B,No,Yes,Yes,B,"tensor([-1.0049, -4.6875], dtype=torch.float16)","[tensor(0.3660, dtype=torch.float16), tensor(0.0092, dtype=torch.float16)]","tensor([-5.1289], dtype=torch.float16)","tensor([-1.0322, -5.6953], dtype=torch.float16)","[tensor(0.3562, dtype=torch.float16), tensor(0.0034, dtype=torch.float16)]",0.00337,0.1876220703125,0.001197,2.816,-5.69,-2.845703125,0.846

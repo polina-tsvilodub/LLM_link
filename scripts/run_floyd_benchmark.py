@@ -243,7 +243,7 @@ def main(
                         
             else:
                 for q in ["Question", "Question2", "Question3"]:
-                    options = quantifier_scope_options[q]
+                    options = si_options[q]
 
                      # set option numbering
                     option_numbering = list(string.ascii_uppercase[:len(options)])
